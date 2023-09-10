@@ -235,7 +235,7 @@
 				.player {
 					display: grid;
 					overflow: hidden;
-					grid-template: 1fr 2.8em / 1fr;
+					grid-template: 1fr auto 2.8em / 1fr;
 					gap: 4px;
 					padding: 4px;
 					width: 260px;
@@ -251,6 +251,7 @@
 					background-position: 50% 80%;
 				}
 					.player-picture-container {
+						grid-area: 1/1 / 3/2;
 						overflow: hidden;
 						opacity: 0.7;
 						transition: opacity ease-out 180ms 180ms;
@@ -271,45 +272,109 @@
 						display: grid;
 						align-items: center;
 					}
-						.player-info {
-							text-align: center;
-							margin-top: 30%;
-							font-size: min(1.9vw, 1.12em);
-							padding: 4px 29% 4px 12%;
-							background: #000A;
-							opacity: 0;
-							transition: opacity ease-out 240ms;
-							white-space: nowrap;
-						}
+					.player-info {
+						z-index: 1;
+						grid-area: 2/1 / 3/2;
+						text-align: center;
+						font-size: min(1.9vw, 1.12em);
+						padding: 4px 2px;
+						background: #000A;
+						opacity: 0;
+						transition: opacity ease-out 240ms;
+						white-space: nowrap;
+					}
 
-						.player-info > a {
-							display: inline-block;
-							width: min(4vw, 2.4em);
-							aspect-ratio: 1/1;
-							background-image: url('./tag.webp');
-							background-size: var(--tag-bg-size);
-							background-position:
-								calc(var(--x) * var(--tag-tile-coef))
-								calc(var(--y) * var(--tag-tile-coef));
-						}
-						.p-twitter {
-							--x: 1;
-							--y: 3;
-						}
-						.p-twitch {
-							--x: 0;
-							--y: 3;
-						}
-						.p-youtube {
-							--x: 0;
-							--y: 2;
-						}
+					.player-info > a,
+					.player-info > a:after,
+					.player-info > a::before {
+						display: block;
+						aspect-ratio: 1/1;
+						background-image: url('./tag.webp');
+						background-size: var(--tag-bg-size);
+						background-position:
+							calc(var(--x) * var(--tag-tile-coef))
+							calc(var(--y) * var(--tag-tile-coef));
+					}
+
+					.player-info > a {
+						position: relative;
+						width: min(6vw, 3.6em);
+						margin: 8px auto;
+					}
+					.player-info > a:after,
+					.player-info > a::before {
+						content: '';
+						position: absolute;
+						width: 102%;
+						opacity: 0.8;
+						display: none;
+					}
+
+					.player-info > a:after {
+						margin: -6% 0 0 -4%;
+						filter: invert(15%) hue-rotate(5deg);
+					}
+					.player-info > a:hover:after {
+						display: block;
+						animation: infinite 1000ms glitch-after;
+					}
+					@keyframes glitch-after {
+						0%{clip-path:path("M3,69 l70,0 l0,8 l-70,0 Z M4,34 l70,0 l0,12 l-70,0 Z M-20,34 l70,0 l0,8 l-70,0 Z M19,46 l70,0 l0,12 l-70,0 Z")}
+						10%{clip-path:path("M-3,21 l70,0 l0,8 l-70,0 Z M2,72 l70,0 l0,9 l-70,0 Z M-9,72 l70,0 l0,10 l-70,0 Z")}
+						20%{clip-path:path("M-15,12 l70,0 l0,9 l-70,0 Z M3,88 l70,0 l0,6 l-70,0 Z M13,78 l70,0 l0,12 l-70,0 Z M-17,12 l70,0 l0,10 l-70,0 Z")}
+						30%{clip-path:path("M-10,14 l70,0 l0,10 l-70,0 Z M-15,51 l70,0 l0,11 l-70,0 Z M12,80 l70,0 l0,8 l-70,0 Z")}
+						40%{clip-path:path("M0,47 l70,0 l0,9 l-70,0 Z M19,30 l70,0 l0,6 l-70,0 Z M15,64 l70,0 l0,9 l-70,0 Z M17,80 l70,0 l0,9 l-70,0 Z")}
+						50%{clip-path:path("M13,12 l70,0 l0,7 l-70,0 Z M-4,8 l70,0 l0,9 l-70,0 Z M6,14 l70,0 l0,11 l-70,0 Z")}
+						60%{clip-path:path("M-10,23 l70,0 l0,12 l-70,0 Z M-2,85 l70,0 l0,10 l-70,0 Z M-4,61 l70,0 l0,7 l-70,0 Z M-3,20 l70,0 l0,6 l-70,0 Z")}
+						70%{clip-path:path("M-10,30 l70,0 l0,6 l-70,0 Z M-12,15 l70,0 l0,9 l-70,0 Z M15,10 l70,0 l0,6 l-70,0 Z")}
+						80%{clip-path:path("M19,38 l70,0 l0,8 l-70,0 Z M16,49 l70,0 l0,12 l-70,0 Z M11,82 l70,0 l0,9 l-70,0 Z M-5,1 l70,0 l0,11 l-70,0 Z")}
+						90%{clip-path:path("M-12,15 l70,0 l0,10 l-70,0 Z M-19,52 l70,0 l0,8 l-70,0 Z M6,1 l70,0 l0,6 l-70,0 Z")}
+						100%{clip-path:path("M3,69 l70,0 l0,8 l-70,0 Z M4,34 l70,0 l0,12 l-70,0 Z M-20,34 l70,0 l0,8 l-70,0 Z M19,46 l70,0 l0,12 l-70,0 Z")}
+					}
+
+					.player-info > a::before {
+						margin: 6% 0 0 4%;
+						filter: invert(10%) hue-rotate(-5deg);
+					}
+					.player-info > a:hover:before {
+						display: block;
+						animation: infinite 1200ms 50ms glitch-before;
+					}
+					@keyframes glitch-before {
+						0%{clip-path:path("M11,81 l70,0 l0,11 l-70,0 Z M-13,9 l70,0 l0,10 l-70,0 Z M5,37 l70,0 l0,7 l-70,0 Z")}
+						8%{clip-path:path("M-9,62 l70,0 l0,6 l-70,0 Z M7,60 l70,0 l0,9 l-70,0 Z M13,28 l70,0 l0,8 l-70,0 Z M-11,93 l70,0 l0,7 l-70,0 Z")}
+						16%{clip-path:path("M-7,23 l70,0 l0,12 l-70,0 Z M-12,70 l70,0 l0,9 l-70,0 Z M8,67 l70,0 l0,9 l-70,0 Z")}
+						25%{clip-path:path("M-3,22 l70,0 l0,12 l-70,0 Z M-13,0 l70,0 l0,9 l-70,0 Z M-8,86 l70,0 l0,11 l-70,0 Z M-7,1 l70,0 l0,9 l-70,0 Z")}
+						33%{clip-path:path("M20,86 l70,0 l0,7 l-70,0 Z M6,56 l70,0 l0,8 l-70,0 Z M4,79 l70,0 l0,6 l-70,0 Z")}
+						41%{clip-path:path("M3,44 l70,0 l0,8 l-70,0 Z M10,30 l70,0 l0,7 l-70,0 Z M0,18 l70,0 l0,11 l-70,0 Z M5,78 l70,0 l0,6 l-70,0 Z")}
+						50%{clip-path:path("M-5,43 l70,0 l0,12 l-70,0 Z M-3,27 l70,0 l0,8 l-70,0 Z M-15,26 l70,0 l0,11 l-70,0 Z")}
+						58%{clip-path:path("M-20,27 l70,0 l0,12 l-70,0 Z M-19,20 l70,0 l0,9 l-70,0 Z M18,56 l70,0 l0,6 l-70,0 Z M7,57 l70,0 l0,10 l-70,0 Z")}
+						66%{clip-path:path("M0,45 l70,0 l0,7 l-70,0 Z M-6,2 l70,0 l0,12 l-70,0 Z M-11,38 l70,0 l0,10 l-70,0 Z")}
+						75%{clip-path:path("M13,71 l70,0 l0,6 l-70,0 Z M-19,62 l70,0 l0,9 l-70,0 Z M10,47 l70,0 l0,6 l-70,0 Z M17,17 l70,0 l0,10 l-70,0 Z")}
+						83%{clip-path:path("M2,46 l70,0 l0,6 l-70,0 Z M-3,16 l70,0 l0,8 l-70,0 Z M-19,45 l70,0 l0,9 l-70,0 Z")}
+						91%{clip-path:path("M18,80 l70,0 l0,6 l-70,0 Z M-19,78 l70,0 l0,9 l-70,0 Z M20,14 l70,0 l0,8 l-70,0 Z M16,41 l70,0 l0,9 l-70,0 Z")}
+						100%{clip-path:path("M11,81 l70,0 l0,11 l-70,0 Z M-13,9 l70,0 l0,10 l-70,0 Z M5,37 l70,0 l0,7 l-70,0 Z")}
+					}
+
+					.p-twitter {
+						--x: 1;
+						--y: 3;
+					}
+					.p-twitch {
+						--x: 0;
+						--y: 3;
+					}
+					.p-youtube {
+						--x: 0;
+						--y: 2;
+					}
 
 					.player:hover .player-info {
 						opacity: 1;
 					}
 
 					.player-name {
+						grid-area: 3/1 / 4/2;
 						font-size: 1.4em;
 						text-align: center;
 						background: #000C;
@@ -541,57 +606,52 @@
 			<div class="roster-name"> Counter-Strike: Global Offensive </div>
 			<div class="players">
 				<div class="player" data-action="display-player" data-id="0">
-					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PA.png)">
-							<div class="player-info">
-								<a href="https://twitter.com/arno3K" class="p-twitter"></a>
-								<a href="https://twitch.tv/arno3k" class="p-twitch"></a>
-								<a href="https://youtube.com/@manilefuret219" class="p-youtube"></a>
-							</div>
-						</div>
-					</div>
 					<span class="player-name"> Arno3K </span>
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PA.png)"></div>
+					</div>
+					<div class="player-info">
+						<a href="https://twitter.com/arno3K" class="p-twitter"></a>
+						<a href="https://twitch.tv/arno3k" class="p-twitch"></a>
+						<a href="https://youtube.com/@manilefuret219" class="p-youtube"></a>
+					</div>
 				</div>
 				<div class="player" data-action="display-player" data-id="1">
-					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PB.png)">
-							<div class="player-info">
-								<a href="https://twitter.com/ImVaal_" class="p-twitter"></a>
-								<a href="https://twitch.tv/imvaal_" class="p-twitch"></a>
-								<a href="https://youtube.com/@ImVaal" class="p-youtube"></a>
-							</div>
-						</div>
-					</div>
 					<span class="player-name"> ImVaal </span>
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PB.png)"></div>
+					</div>
+					<div class="player-info">
+						<a href="https://twitter.com/ImVaal_" class="p-twitter"></a>
+						<a href="https://twitch.tv/imvaal_" class="p-twitch"></a>
+						<a href="https://youtube.com/@ImVaal" class="p-youtube"></a>
+					</div>
 				</div>
 				<div class="player" data-action="display-player" data-id="2">
-					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PC.png)">
-							<div class="player-info">
-							</div>
-						</div>
-					</div>
 					<span class="player-name"> Moldown </span>
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PC.png)"></div>
+					</div>
+					<div class="player-info">
+					</div>
 				</div>
 				<div class="player" data-action="display-player" data-id="3">
-					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PD.png)">
-							<div class="player-info">
-								<a href="https://twitter.com/soencsgo" class="p-twitter"></a>
-							</div>
-						</div>
-					</div>
 					<span class="player-name"> Soen </span>
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PD.png)"></div>
+					</div>
+					<div class="player-info">
+						<a href="https://twitter.com/soencsgo" class="p-twitter"></a>
+					</div>
 				</div>
 				<div class="player" data-action="display-player" data-id="4">
-					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PE.png)">
-							<div class="player-info">
-								<a href="https://twitter.com/Sye_Cs" class="p-twitter"></a>
-							</div>
-						</div>
-					</div>
 					<span class="player-name"> Sye </span>
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PE.png)"></div>
+					</div>
+					<div class="player-info">
+						<a href="https://twitter.com/Sye_Cs" class="p-twitter"></a>
+					</div>
 				</div>
 			</div>
 		</div>
