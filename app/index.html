@@ -272,6 +272,7 @@
 						align-items: center;
 					}
 						.player-info {
+							text-align: center;
 							margin-top: 30%;
 							font-size: min(1.9vw, 1.12em);
 							padding: 4px 29% 4px 12%;
@@ -280,9 +281,30 @@
 							transition: opacity ease-out 240ms;
 							white-space: nowrap;
 						}
-						.center {
-							text-align: center;
+
+						.player-info > a {
+							display: inline-block;
+							width: min(4vw, 2.4em);
+							aspect-ratio: 1/1;
+							background-image: url('./tag.webp');
+							background-size: var(--tag-bg-size);
+							background-position:
+								calc(var(--x) * var(--tag-tile-coef))
+								calc(var(--y) * var(--tag-tile-coef));
 						}
+						.p-twitter {
+							--x: 1;
+							--y: 3;
+						}
+						.p-twitch {
+							--x: 0;
+							--y: 3;
+						}
+						.p-youtube {
+							--x: 0;
+							--y: 2;
+						}
+
 					.player:hover .player-info {
 						opacity: 1;
 					}
@@ -487,8 +509,13 @@
 			.preview:hover .pd { transform: translateX(140px); }
 			.preview:hover .pd::after {
 				transform: translateY(-100px) rotate(10deg) scale(1);
-			}
+		}
 
+			.asso {
+				text-align: center;
+				margin: 32px 0;
+				font-size: 1.4em;
+			}
 	</style>
 </head>
 <body>
@@ -517,10 +544,10 @@
 					<div class="player-picture-container">
 						<div class="player-picture" style="--bg:url(./players/PA.png)">
 							<div class="player-info">
-								<span class="bold">Age:</span> 24 ans <br>
-								<span class="bold">Role:</span> entry et co-lead <br>
-								<span class="bold">Heures de jeu:</span> 6500 <br>
-								</div>
+								<a href="https://twitter.com/arno3K" class="p-twitter"></a>
+								<a href="https://twitch.tv/arno3k" class="p-twitch"></a>
+								<a href="https://youtube.com/@manilefuret219" class="p-youtube"></a>
+							</div>
 						</div>
 					</div>
 					<span class="player-name"> Arno3K </span>
@@ -529,9 +556,9 @@
 					<div class="player-picture-container">
 						<div class="player-picture" style="--bg:url(./players/PB.png)">
 							<div class="player-info">
-								<span class="bold">Age:</span> 23 ans <br>
-								<span class="bold">Role:</span> --- <br>
-								<span class="bold">Heures de jeu:</span> --- <br>
+								<a href="https://twitter.com/ImVaal_" class="p-twitter"></a>
+								<a href="https://twitch.tv/imvaal_" class="p-twitch"></a>
+								<a href="https://youtube.com/@ImVaal" class="p-youtube"></a>
 							</div>
 						</div>
 					</div>
@@ -541,9 +568,6 @@
 					<div class="player-picture-container">
 						<div class="player-picture" style="--bg:url(./players/PC.png)">
 							<div class="player-info">
-								<span class="bold">Age:</span> 17 ans <br>
-								<span class="bold">Role:</span> --- <br>
-								<span class="bold">Heures de jeu:</span> --- <br>
 							</div>
 						</div>
 					</div>
@@ -553,9 +577,7 @@
 					<div class="player-picture-container">
 						<div class="player-picture" style="--bg:url(./players/PD.png)">
 							<div class="player-info">
-								<span class="bold">Age:</span> 29 ans <br>
-								<span class="bold">Role:</span> --- <br>
-								<span class="bold">Heures de jeu:</span> --- <br>
+								<a href="https://twitter.com/soencsgo" class="p-twitter"></a>
 							</div>
 						</div>
 					</div>
@@ -565,9 +587,7 @@
 					<div class="player-picture-container">
 						<div class="player-picture" style="--bg:url(./players/PE.png)">
 							<div class="player-info">
-								<span class="bold">Age:</span> 28 ans <br>
-								<span class="bold">Role:</span> --- <br>
-								<span class="bold">Heures de jeu:</span> --- <br>
+								<a href="https://twitter.com/Sye_Cs" class="p-twitter"></a>
 							</div>
 						</div>
 					</div>
@@ -707,6 +727,8 @@
 		Pour l'avenir, notre vision est de soutenir et de représenter des équipes de haut niveau. Sur le plan communautaire, nous souhaitons élargir notre présence dans le streaming et sur YouTube. Nous continuerons à organiser des événements, mais nous envisageons également des projets d'envergure pour les années à venir. 
 		<br><br>
 		Si vous cherchez une communauté soudée, active et en pleine croissance, nos portes vous sont ouvertes !
+
+		<p class="asso"> Aztec - Association sous loi 1901 </p>
 	</section>
 </body>
 </html>
