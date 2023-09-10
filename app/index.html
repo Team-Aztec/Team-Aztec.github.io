@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Aztec </title>
+	<link rel="icon" href="favicon.ico">
+	<script src="./aztec-app.js" type="module"></script>
+	<style>
+		html {
+			overflow: hidden;
+			--tag-tile-coef: 33.33%;
+			--tag-bg-size: 400% 400%;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100vh;
+			font-size: 16pt;
+			overflow: hidden scroll;
+			font-family: Calibri, roboto, sans-serif;
+			background-color: #12300c;
+			background-image: url(background.webp);
+			background-size: cover;
+			background-position: center;
+			color: #FFFE;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		#background {
+			position: absolute;
+			transition: opacity ease-out 240ms;
+			opacity: 0;
+			z-index: -1;
+			top: 65px;
+			height: calc(100% - 65px);
+			width: 100%;
+			filter: blur(0.8px);
+		}
+
+		header {
+			color: #FFF;
+			position: sticky;
+			top: 0;
+			margin-top: -66px;
+			font-size: 1.6em;
+			background: #0008;
+			border-bottom: solid 1px #000;
+			backdrop-filter: blur(5px);
+			z-index: 10;
+		}
+			nav {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+				column-gap: 16px;
+				white-space: nowrap;
+			}
+			.nav-list {
+				display: contents;
+				list-style: none;
+			}
+			.nav-link {
+				position: relative;
+				text-decoration: none;
+				padding: 0 8px;
+				line-height: 64px;
+				display: block;
+				transition: background 180ms ease-out;
+			}
+			.nav-link::before {
+				position: absolute;
+				content: '';
+				bottom: 0;
+				left: 0;
+				border-bottom: solid 2px;
+				transform-origin: center;
+				width: 100%;
+				transform: scaleX(0);
+				transition: transform 180ms ease-out;
+			}
+			.nav-link:hover {
+				background: #fff2;
+			}
+			.nav-link:hover::before {
+				transform: scaleX(1);
+				transition: transform 180ms ease-in;
+			}
+
+
+		section {
+			display: block;
+			margin: 0 auto;
+			padding-top: 73px;
+		}
+		#equipe {
+			max-width: 1400px;
+			padding: 128px 0;
+			display: grid;
+			grid-template: auto / 100%;
+			align-items: center;
+		}
+		#rencontres {
+			max-width: 750px;
+		}
+		#sponsors {
+			max-width: 1200px;
+		}
+		#reseaux {
+			margin-top: 128px;
+			max-width: 1000px;
+		}
+		#a-propos {
+			margin-top: 128px;
+			max-width: 750px;
+			margin-bottom: 100vh;
+		}
+
+		p {
+			padding: 0 4px;
+		}
+
+		h1 {
+			font-size: 2em;
+			font-weight: bold;
+			margin: 0 0 32px 0;
+			display: grid;
+			grid-template-columns: 1fr auto 1fr;
+			align-items: center;
+			width: calc(100vw - 64px);
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+		h1:before,
+		h1:after {
+			content: '';
+			border: solid 1px white;
+			margin: 0 64px;
+		}
+		h3 {
+			text-align: center;
+		}
+
+
+		.sponsors {
+			display: flex;
+			gap: 32px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.reseaux {
+			display: flex;
+			gap: 16px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+			.sponsor, .reseau {
+				padding: 8px;
+				display: grid;
+				width: 340px;
+				max-width: calc(100vw - 16px);
+				text-align: center;
+				font-size: 1.2em;
+				border-radius: 8px;
+				grid-template: 1fr / auto 1fr;
+				align-items: center;
+				cursor: pointer;
+			}
+			.sponsor {
+				aspect-ratio: 6/2;
+				border: solid 2px #ffd700;
+				background: #0004;
+				transition: all ease-out 180ms;
+			}
+			.sponsor:hover {
+				transform: scale(1.05);
+				background: #0008;
+			}
+			.become-sponsor {
+				grid-template: 1fr / 1fr;
+				font-size: 1.8em;
+				font-weight: bold;
+				width: max-content;
+				margin: 64px auto 32px auto;
+				padding: 0 32px;
+				border: solid 4px #FFF;
+			}
+			.reseau {
+				aspect-ratio: 9/2;
+				width: 300px;
+				box-shadow: 0 3px 6px rgba(0 0 0 0.16), 0 3px 6px rgba(0 0 0 0.23);
+				background-color: #000A;
+				transition: 180ms ease-out;
+				transition-property: box-shadow, background;
+			}
+			.reseau:hover {
+				background-color: var(--bg);
+				box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+			}
+				.button-icon {
+					height: 100%;
+					aspect-ratio: 140 / 120;
+					fill: #FFF;
+				}
+
+		.roster {
+			margin: 4px 16px;
+			transform: skewX(-9deg);
+		}
+			.roster-name {
+				background: black;
+				font-size: 2em;
+				padding: 8px 0;
+				margin-bottom: 8px;
+				text-align: center;
+				font-weight: bold;
+			}
+
+			.players {
+				display: flex;
+				gap: 8px;
+				justify-content: center;
+			}
+				.player {
+					display: grid;
+					overflow: hidden;
+					grid-template: 1fr 2.8em / 1fr;
+					gap: 4px;
+					padding: 4px;
+					width: 260px;
+					aspect-ratio: 1 / 2;
+
+					background: linear-gradient(0deg, rgba(255,215,0,1) 40%, rgba(0,0,0,1) 60%);
+					background-position: 50% 0%;
+					background-size: 100% 200%;
+					cursor: pointer;
+					transition: background-position ease-out 240ms;
+				}
+				.player:hover {
+					background-position: 50% 80%;
+				}
+					.player-picture-container {
+						overflow: hidden;
+						opacity: 0.7;
+						transition: opacity ease-out 180ms 180ms;
+					}
+					.player:hover > .player-picture-container {
+						opacity: 1;
+					}
+					.player-picture {
+						height: 100%;
+						width: 158%;
+						margin-left: -20%;
+						transform: skewX(8.5deg);
+						background-color: #000A;
+						background-image: var(--bg);
+						background-size: auto 100%;
+						background-position: center;
+						background-repeat: no-repeat;
+						display: grid;
+						align-items: center;
+					}
+						.player-info {
+							margin-top: 30%;
+							font-size: min(1.9vw, 1.12em);
+							padding: 4px 29% 4px 12%;
+							background: #000A;
+							opacity: 0;
+							transition: opacity ease-out 240ms;
+							white-space: nowrap;
+						}
+						.center {
+							text-align: center;
+						}
+					.player:hover .player-info {
+						opacity: 1;
+					}
+
+					.player-name {
+						font-size: 1.4em;
+						text-align: center;
+						background: #000C;
+						box-sizing: content-box;
+						line-height: 2em;
+					}
+
+		#rencontres {
+			display: grid;
+			grid-template: auto / 100%;
+			align-items: center;
+			padding: 0 0 64px 0;
+		}
+		.rencontres {
+			background: #000A;
+			border: solid 1px #000;
+			min-width: 750px;
+			padding: 8px;
+			margin: 0 auto;
+
+		}
+			.rencontre {
+				border-bottom: solid 2px #666;
+				display: grid;
+				grid-template: 64px / 64px 210px 1fr auto;
+				align-items: center;
+				padding: 0 0;
+			}
+			.rencontre:last-of-type {
+				border-bottom: none;
+			}
+			.rencontre.active {
+				animation: infinite active-rencontre 2.4s ease-in-out;
+				background-size: 200% 200%;
+				background-image: linear-gradient(0deg, rgba(255,215,0,0.4) 0%, rgba(255,215,0,0.0) 60%);
+			}
+			@keyframes active-rencontre {
+				from { background-position: 50% 50%; }
+				50% { background-position: 50% 100%; }
+				to { background-position: 50% 50%; }
+			}
+
+			.r-tag {
+				height: 100%;
+				width: 100%;
+				background-image: url('./tag.webp');
+				background-size: var(--tag-bg-size);
+				background-position:
+					calc(var(--x) * var(--tag-tile-coef))
+					calc(var(--y) * var(--tag-tile-coef));
+			}
+			.r-time {
+				padding: 0 32px 0 4px;
+				text-align: right;
+				font-family: monospace;
+			}
+			.r-stream {
+				height: 48px;
+				width: 48px;
+				margin: 8px;
+				display: inline-block;
+				background-image: url('./tag.webp');
+				background-size: var(--tag-bg-size);
+				background-position:
+					calc(0 * var(--tag-tile-coef))
+					calc(3 * var(--tag-tile-coef));
+			}
+
+
+			.preview {
+				color: inherit;
+				margin: 64px auto 0 auto;
+				position: relative;
+				display: grid;
+				text-decoration: none;
+				aspect-ratio: 16/9;
+				cursor: pointer;
+				max-width: 520px;
+				border-radius: 8px;
+				background-image: var(--bg);
+				background-size: 142.5%;
+				grid-template: 1fr auto 1fr 54px / 1fr 200px 1fr;
+				transition: transform 240ms cubic-bezier(0.22, 0.61, 0.36, 1);
+				box-shadow: #00000029 0 3px 6px, #0000003B 0 3px 6px;
+				animation: display 240ms var(--delay, 0) forwards;
+			}
+			.preview:hover {
+				transform: scale(1.05);
+				z-index: 1;
+			}
+			.video-background {
+				grid-area:1/1/5/4;
+				border-radius: 8px;
+				transition: opacity 180ms ease-in;
+				opacity: 0;
+				height: 100%;
+				width: 100%;
+			}
+			.preview:hover .video-background {
+				transition: opacity 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
+				opacity: 1;
+			}
+			.title {
+				grid-area:4/2/5/3;
+				transition: transform 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
+				width: 200px;
+				height: 70px;
+				object-fit: none;
+				object-position: -480px -200px;
+			}
+			.preview:hover > .title {
+				transform: translateY(-16px) scale(1.15);
+			}
+
+			.time {
+				grid-area: 2/1/3/4;
+				text-align: center;
+				padding: 0 16px;
+				font-size: 2.4em;
+				filter: drop-shadow(1px 1px 2px black) drop-shadow(-1px -1px 1px black);
+				
+				font-weight: bold;
+				background-image: linear-gradient(40deg, rgb(234,179,67) 40%, rgb(255,240,220) 50%, rgb(234,179,67) 60%);
+				background-size: 200%;
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				animation: swip 3s linear infinite;
+			}
+			@keyframes swip {
+				from { background-position: 160% 50%; }
+				to { background-position: -60% 50%; }
+			}
+
+
+			.particle {
+				position: absolute;
+				height: 100px;
+				width: 100px;
+				transition: transform 280ms linear;
+				pointer-events: none;
+				transform-origin: center;
+				transition-delay: 0ms;
+			}
+			.particle::after {
+				content: '';
+				opacity: 0;
+				display: block;
+				height: 100px;
+				width: 100px;
+				background: var(--bg);
+				transform: scale(0.3);
+				transition: transform 280ms cubic-bezier(0.5, 1.4, 0.95, 1),
+					opacity 100ms ease-out;
+				transition-delay: 0ms;
+			}
+			.preview:hover .particle::after {
+				opacity: 1;
+			}
+			.pa::after,
+			.pd::after {
+				transition: transform 280ms cubic-bezier(0.5, 2.0, 0.9, 1),
+					opacity 100ms ease-out;
+			}
+			.pa { bottom:-20px; left:80px; }
+			.pa::after { background-position: -480px 0px; }
+			.preview:hover .pa { 
+				transform: translateX(-140px);
+				transition-delay: 100ms;
+			}
+			.preview:hover .pa::after {
+				transform: translateY(-100px) rotate(-10deg) scale(1);
+				transition-delay: 100ms;
+			}
+			.pb { top:100px; right:50%; transform:rotate(15deg); }
+			.pb::after { background-position: -480px -100px; }
+			.preview:hover .pb {
+				transform: translateX(-40px) rotate(-15deg);
+				transition-delay: 40ms;
+			}
+			.preview:hover .pb::after {
+				transform: translateY(-160px) rotate(-10deg) scale(1);
+				transition-delay: 40ms;
+			}
+			.pc { top:100px; left:50%; transform:rotate(-15deg); }
+			.pc::after { background-position: -580px 0px; }
+			.preview:hover .pc {
+				transform: translateX(40px) rotate(15deg);
+				transition-delay: 80ms;
+			}
+			.preview:hover .pc::after {
+				transform: translateY(-160px) rotate(10deg) scale(1);
+				transition-delay: 80ms;
+			}
+			.pd { bottom:-20px; right:80px; }
+			.pd::after { background-position: -580px -100px; }
+			.preview:hover .pd { transform: translateX(140px); }
+			.preview:hover .pd::after {
+				transform: translateY(-100px) rotate(10deg) scale(1);
+			}
+
+	</style>
+</head>
+<body>
+	<header is="azt-header" id="header">
+		<nav>
+			<ul class="nav-list">
+				<li> <a class="nav-link" data-action="scroll-to" href="#equipe"> Équipe </a> </li>
+				<!--li> <a class="nav-link" data-action="scroll-to" href="#sponsors"> Sponsors </a> </li-->
+				<li> <a class="nav-link" data-action="scroll-to" href="#reseaux"> Réseaux </a> </li>
+				<li> <a class="nav-link" data-action="scroll-to" href="#a-propos"> À Propos </a> </li>
+			</ul>
+		</nav>
+	</header>
+
+	<svg id="background" viewbox="200 0 600 950"
+			preserveAspectRatio="xMidYMid meet"
+			xmlns="http://www.w3.org/2000/svg">
+		<image href="./logo.svg"/>
+	</svg>
+
+	<section id="equipe">
+		<div class="roster">
+			<div class="roster-name"> Counter-Strike: Global Offensive </div>
+			<div class="players">
+				<div class="player" data-action="display-player" data-id="0">
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PA.png)">
+							<div class="player-info">
+								<span class="bold">Age:</span> 24 ans <br>
+								<span class="bold">Role:</span> entry et co-lead <br>
+								<span class="bold">Heures de jeu:</span> 6500 <br>
+								</div>
+						</div>
+					</div>
+					<span class="player-name"> Arno3K </span>
+				</div>
+				<div class="player" data-action="display-player" data-id="1">
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PB.png)">
+							<div class="player-info">
+								<span class="bold">Age:</span> 23 ans <br>
+								<span class="bold">Role:</span> --- <br>
+								<span class="bold">Heures de jeu:</span> --- <br>
+							</div>
+						</div>
+					</div>
+					<span class="player-name"> ImVaal </span>
+				</div>
+				<div class="player" data-action="display-player" data-id="2">
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PC.png)">
+							<div class="player-info">
+								<span class="bold">Age:</span> 17 ans <br>
+								<span class="bold">Role:</span> --- <br>
+								<span class="bold">Heures de jeu:</span> --- <br>
+							</div>
+						</div>
+					</div>
+					<span class="player-name"> Moldown </span>
+				</div>
+				<div class="player" data-action="display-player" data-id="3">
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PD.png)">
+							<div class="player-info">
+								<span class="bold">Age:</span> 29 ans <br>
+								<span class="bold">Role:</span> --- <br>
+								<span class="bold">Heures de jeu:</span> --- <br>
+							</div>
+						</div>
+					</div>
+					<span class="player-name"> Soen </span>
+				</div>
+				<div class="player" data-action="display-player" data-id="4">
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/PE.png)">
+							<div class="player-info">
+								<span class="bold">Age:</span> 28 ans <br>
+								<span class="bold">Role:</span> --- <br>
+								<span class="bold">Heures de jeu:</span> --- <br>
+							</div>
+						</div>
+					</div>
+					<span class="player-name"> Sye </span>
+				</div>
+			</div>
+		</div>
+
+		<div class="roster">
+			<div class="roster-name" style="margin: 0 30% 8px 30%;"> Staff </div>
+			<div class="players">
+				<div style="width: 414px;"></div>
+				<div class="player" data-action="display-player" data-id="0">
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/staff-A.png)">
+							<div class="player-info center">
+								Manager
+							</div>
+						</div>
+					</div>
+					<span class="player-name"> EvazZz </span>
+				</div>
+				<div class="player" data-action="display-player" data-id="0">
+					<div class="player-picture-container">
+						<div class="player-picture" style="--bg:url(./players/staff-B.png)">
+							<div class="player-info center">
+								Coach
+							</div>
+						</div>
+					</div>
+					<span class="player-name"> Coach B </span>
+				</div>
+				<div style="width: 414px;"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="rencontres">
+		<div class="rencontres">
+			<div class="rencontre">
+			</div>
+			<div class="rencontre">
+			</div>
+			<div class="rencontre">
+			</div>
+			<div class="rencontre">
+			</div>
+		</div>
+	</section>
+
+	<!--section id="sponsors">
+		<h1> Sponsors </h1>
+		<div class="sponsors">
+			<div class="sponsor" style="--bg:#">
+				<svg class="button-icon" viewBox="-10 -10 120 120">
+					<path d="M 36,35 28,43 42,57 36,63 16,43 36,23 50,37 64,23 84,43 64,63 58,57 72,43 64,35 50,49 Z M 50,65 64,79 100,43 64,7 50,21 36,7 0,43 36,79 Z M 50,73 60,83 50,93 40,83 Z"></path>
+				</svg>
+				Sponsor A
+			</div>
+			<div class="sponsor" style="--bg:#">
+				<svg class="button-icon" viewBox="-10 -10 120 120">
+					<path d="M 36,35 28,43 42,57 36,63 16,43 36,23 50,37 64,23 84,43 64,63 58,57 72,43 64,35 50,49 Z M 50,65 64,79 100,43 64,7 50,21 36,7 0,43 36,79 Z M 50,73 60,83 50,93 40,83 Z"></path>
+				</svg>
+				Sponsor B
+			</div>
+			<div class="sponsor" style="--bg:#">
+				<svg class="button-icon" viewBox="-10 -10 120 120">
+					<path d="M 36,35 28,43 42,57 36,63 16,43 36,23 50,37 64,23 84,43 64,63 58,57 72,43 64,35 50,49 Z M 50,65 64,79 100,43 64,7 50,21 36,7 0,43 36,79 Z M 50,73 60,83 50,93 40,83 Z"></path>
+				</svg>
+				Sponsor C
+			</div>
+			<div class="sponsor" style="--bg:#">
+				<svg class="button-icon" viewBox="-10 -10 120 120">
+					<path d="M 36,35 28,43 42,57 36,63 16,43 36,23 50,37 64,23 84,43 64,63 58,57 72,43 64,35 50,49 Z M 50,65 64,79 100,43 64,7 50,21 36,7 0,43 36,79 Z M 50,73 60,83 50,93 40,83 Z"></path>
+				</svg>
+				Sponsor D
+			</div>
+			<div class="sponsor" style="--bg:#">
+				<svg class="button-icon" viewBox="-10 -10 120 120">
+					<path d="M 36,35 28,43 42,57 36,63 16,43 36,23 50,37 64,23 84,43 64,63 58,57 72,43 64,35 50,49 Z M 50,65 64,79 100,43 64,7 50,21 36,7 0,43 36,79 Z M 50,73 60,83 50,93 40,83 Z"></path>
+				</svg>
+				Sponsor E
+			</div>
+		</div>
+
+		<a class="sponsor become-sponsor" href="./sponsor.html"> Devenir Sponsor </a>
+	</section-->
+
+	<section id="reseaux">
+		<h1> Réseaux </h1>
+		<div class="reseaux">
+			<a class="reseau" href="#/" style="--bg:#7289DA">
+				<svg class="button-icon" viewBox="-10 -5 120 110">
+					<path d="M 36,12 C 30,13 19,16 15,19 5,34 -2,53 1,75 6,81 26,88 26,88 l 5,-9 c -6,-2 -8,-4 -8,-4 l 2,-2 c 15,8 35,8 50,0 l 2,2 c 0,0 -2,2 -8,4 l 5,9 C 74,88 94,81 99,75 102,53 95,34 85,19 81,16 70,13 64,12 l -3,6 C 51,17 48,17 39,18 Z M 33,64 a 9,10 0 1 1 0.1,0z M 67,64 a 9,10 0 1 1 0.1,0z"></path>
+				</svg>
+				Discord
+			</a>
+			<a class="reseau" style="--bg:#E02020" href="#/">
+				<svg class="button-icon" viewbox="-10 -10 120 120">
+					<path d="m 50,15 c 49,0 50,1 50,35 0,34 -1,35 -50,35 C 1,85 0,84 0,50 0,16 1,15 50,15 Z M 40,35 V 65 L 66,50 Z"/>
+				</svg>
+				Youtube
+			</a>
+			<a class="reseau" style="--bg:#1DA1F2" href="#/">
+				<svg class="button-icon" viewbox="-10 -10 120 120">
+					<path d="m 100,19 c -5,2 -12,3 -12,3 0,0 8,-4 9,-11 -5,3 -13,5 -13,5 C 70,1 45,14 49,35 49,35 23,34 7,13 c -9,16 6,28 6,28 0,0 -7,-1 -9,-3 0,18 16,20 16,20 0,0 -4,2 -9,1 7,15 19,14 19,14 0,0 -12,11 -30,8 41,27 91,-5 90,-51 0,0 6,-5 10,-11 z"/>
+				</svg>
+				Twitter
+			</a>
+		</div>
+
+		<a class="preview" href="#" style="--bg:url('./join-banner.webp');">
+			<video class="video-background" loop autoplay muted></video>
+			<div class="particle pa"></div>
+			<div class="particle pb"></div>
+			<div class="particle pc"></div>
+			<div class="particle pd"></div>
+			<img class="title" src="./join-banner.webp" width=""/>
+			<p class="time"> Rejoindre Aztec </p>
+		</a>
+	</section>
+
+	<section id="a-propos">
+		<h1> À Propos </h1>
+		<br><br>
+		Voici l'histoire d’Aztec ! Tout a commencé après notre dernier progress sur World of Warcraft, lorsque Riggow et moi-même, Ironpol, avons ressenti le désir de créer quelque chose de plus grand. Notre passé commun en tant que joueurs compétitifs, ayant évolué ensemble pendant 3 ans dans la même équipe de Counter-Strike: Global Offensive, ainsi que notre expérience dans la gestion d'équipes, nous ont permis de prendre cette décision. 
+		<br><br>
+		Nos objectifs sont clairs : rassembler des joueurs autour de jeux tels que Diablo IV et Dofus Temporis. Nous avons choisi de nous concentrer sur ces deux jeux pour favoriser la construction d'une communauté solide et pouvoir organiser régulièrement des événements. De plus, nous avons pour ambition de nous établir dans l'esport, en commençant par Counter-Strike 2. Cependant, nous restons ouverts à d'autres opportunités qui pourraient se présenter plus tôt que prévu. 
+		<br><br>
+		Notre structure est encore jeune, mais elle se développe rapidement. Notre équipe CS:GO a réussi à atteindre les playoffs de la saison 45 de l'ESEA Open. Bien que nous n'ayons pas pu passer en intermediate cette fois-ci, nous sommes fiers des progrès accomplis et nous sommes déterminés à continuer sur notre lancée. 
+		Du côté de la communauté, nous avons déjà rassemblé plus de 200 membres sur notre serveur Discord, grâce notamment à notre implication dans Dofus Temporis Retro Parchomancia et Diablo IV. Nous sommes ravis de constater que les joueurs s’impliquent activement à nos événements. Nous avons également participé aux tournois Temporis organisés par Retro Esport Cup. 
+		<br><br>
+		Au sein de notre communauté, Riggow et moi-même sommes les fondateurs et nous jouons des rôles polyvalents au sein de la structure. Nous sommes également accompagnés de Luciole, notre talentueux développeur web qui nous apporte son aide en matière de graphisme. Luciole, qui nous a rejoint après notre dernier progress sur World of Warcraft, est devenu un membre du staff très impliqué. Lyretech, rencontré également lors de notre dernier progress, est un conseiller précieux, bien qu'actuellement occupé par d'autres projets. Il nous apportera son soutien lorsque le moment sera opportun. Wolaïd joue un rôle essentiel dans l'aspect administratif. Enfin, Sam est notre nouveau responsable sponsoring, un véritable touche-à-tout. 
+		<br><br>
+		Nous organisons régulièrement des événements destinés à notre communauté, sur nos jeux favoris. Cela nous permet de maintenir une équipe soudée, et une atmosphère conviviale, tout en restant compétitifs.
+		<br><br>
+		Pour l'avenir, notre vision est de soutenir et de représenter des équipes de haut niveau. Sur le plan communautaire, nous souhaitons élargir notre présence dans le streaming et sur YouTube. Nous continuerons à organiser des événements, mais nous envisageons également des projets d'envergure pour les années à venir. 
+		<br><br>
+		Si vous cherchez une communauté soudée, active et en pleine croissance, nos portes vous sont ouvertes !
+	</section>
+</body>
+</html>
