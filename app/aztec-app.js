@@ -1,9 +1,9 @@
 const RENCONTRES = [
 	//[ "AAAA-MM-JJ hh:mm", "Text affiché", "https://www.twitch.tv/ironpol33" ]
-	[ "2023-10-08 15:43", "Text affiché", "https://www.twitch.tv/ironpol33" ],
-	[ "2023-09-09 15:43", "Text affiché", "https://www.twitch.tv/ironpol33" ],
-	[ "2023-10-03 15:43", "Text affiché", "https://www.twitch.tv/ironpol33" ],
-	[ "2023-08-03 15:43", "Text affiché", "https://www.twitch.tv/ironpol33" ],
+	[ "2023-11-08 15:43", "Text affiché", "https://www.twitch.tv/ironpol33" ],
+	[ "2023-11-09 15:43", "Text affiché", "https://www.twitch.tv/ironpol33" ],
+	[ "2023-12-10 15:43", "Text affiché", "https://www.twitch.tv/ironpol33" ],
+	[ "2023-11-11 15:43", "Text affiché", "https://www.twitch.tv/ironpol33" ],
 ];
 
 
