@@ -18,11 +18,11 @@ const EXT_TO_MIME = new Map([
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname).replace(/^\/[A-Za-z]:/, '')
 
-const port = process.argv[2]
+const port = process.argv[2] || 8080
 
 http.createServer((req, res) => {
 	let url = req.url.split(/[?#]/)[0].split('/').slice(1).join('/')
-	let localPath = path.join(__dirname, '../app/', url)
+	let localPath = path.join(__dirname, '../', url)
 
 	let extName = path.extname(localPath)
 	if (extName === '') {

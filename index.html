@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Aztec </title>
 	<link rel="icon" href="favicon.ico">
-	<script src="./aztec-app.js" type="module"></script>
+	<script src="./app/aztec-app.js" type="module"></script>
 	<style>
 		html {
 			overflow: hidden;
@@ -21,8 +21,8 @@
 			font-size: 16pt;
 			overflow: hidden scroll;
 			font-family: Calibri, roboto, sans-serif;
-			background-color: #12300c;
-			background-image: url(background.webp);
+			background-color: #112a1d;
+			background-image: url(./app/background.webp);
 			background-size: cover;
 			background-position: center;
 			color: #FFFE;
@@ -292,7 +292,7 @@
 					.player-info > a::before {
 						display: block;
 						aspect-ratio: 1/1;
-						background-image: url('./tag.webp');
+						background-image: url('./app/tag.webp');
 						background-size: var(--tag-bg-size);
 						background-position:
 							calc(var(--x) * var(--tag-tile-coef))
@@ -423,7 +423,7 @@
 			.r-tag {
 				height: 100%;
 				width: 100%;
-				background-image: url('./tag.webp');
+				background-image: url('./app/tag.webp');
 				background-size: var(--tag-bg-size);
 				background-position:
 					calc(var(--x) * var(--tag-tile-coef))
@@ -439,7 +439,7 @@
 				width: 48px;
 				margin: 8px;
 				display: inline-block;
-				background-image: url('./tag.webp');
+				background-image: url('./app/tag.webp');
 				background-size: var(--tag-bg-size);
 				background-position:
 					calc(0 * var(--tag-tile-coef))
@@ -601,7 +601,7 @@
 	<svg id="background" viewbox="200 0 600 950"
 			preserveAspectRatio="xMidYMid meet"
 			xmlns="http://www.w3.org/2000/svg">
-		<image href="./logo.svg"/>
+		<image href="./app/logo.svg"/>
 	</svg>
 
 	<section id="equipe">
@@ -611,7 +611,7 @@
 				<div class="player" data-action="display-player" data-id="0">
 					<span class="player-name"> Arno3K </span>
 					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PA.png)"></div>
+						<div class="player-picture" style="--bg:url(./app/players/PA.png)"></div>
 					</div>
 					<div class="player-info">
 						<a href="https://twitter.com/arno3K" class="p-twitter"></a>
@@ -622,7 +622,7 @@
 				<div class="player" data-action="display-player" data-id="1">
 					<span class="player-name"> ImVaal </span>
 					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PB.png)"></div>
+						<div class="player-picture" style="--bg:url(./app/players/PB.png)"></div>
 					</div>
 					<div class="player-info">
 						<a href="https://twitter.com/ImVaal_" class="p-twitter"></a>
@@ -633,7 +633,7 @@
 				<div class="player" data-action="display-player" data-id="2">
 					<span class="player-name"> Moldown </span>
 					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PC.png)"></div>
+						<div class="player-picture" style="--bg:url(./app/players/PC.png)"></div>
 					</div>
 					<div class="player-info">
 					</div>
@@ -641,7 +641,7 @@
 				<div class="player" data-action="display-player" data-id="3">
 					<span class="player-name"> Soen </span>
 					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PD.png)"></div>
+						<div class="player-picture" style="--bg:url(./app/players/PD.png)"></div>
 					</div>
 					<div class="player-info">
 						<a href="https://twitter.com/soencsgo" class="p-twitter"></a>
@@ -650,7 +650,7 @@
 				<div class="player" data-action="display-player" data-id="4">
 					<span class="player-name"> Sye </span>
 					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/PE.png)"></div>
+						<div class="player-picture" style="--bg:url(./app/players/PE.png)"></div>
 					</div>
 					<div class="player-info">
 						<a href="https://twitter.com/Sye_Cs" class="p-twitter"></a>
@@ -666,7 +666,7 @@
 				<div class="player" data-action="display-player" data-id="0">
 					<span class="player-name"> EvazZz </span>
 					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/staff-A.png)"></div>
+						<div class="player-picture" style="--bg:url(./app/players/staff-A.png)"></div>
 					</div>
 					<div class="player-info center">
 						Manager
@@ -675,7 +675,7 @@
 				<div class="player" data-action="display-player" data-id="0">
 					<span class="player-name"> Katop </span>
 					<div class="player-picture-container">
-						<div class="player-picture" style="--bg:url(./players/staff-B.png)"></div>
+						<div class="player-picture" style="--bg:url(./app/players/staff-B.png)"></div>
 					</div>
 					<div class="player-info center">
 						Coach
@@ -760,13 +760,13 @@
 			</a>
 		</div>
 
-		<a class="preview" href="#" style="--bg:url('./join-banner.webp');">
+		<a class="preview" href="#" style="--bg:url('./app/join-banner.webp');">
 			<video class="video-background" loop autoplay muted></video>
 			<div class="particle pa"></div>
 			<div class="particle pb"></div>
 			<div class="particle pc"></div>
 			<div class="particle pd"></div>
-			<img class="title" src="./join-banner.webp" width=""/>
+			<img class="title" src="./app/join-banner.webp" width=""/>
 			<p class="time"> Rejoindre Aztec </p>
 		</a>
 	</section>
