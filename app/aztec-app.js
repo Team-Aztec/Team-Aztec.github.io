@@ -35,7 +35,7 @@ class AztecApp {
 
 		document.body.addEventListener('hash', e => this.onScroll(e))
 		document.body.addEventListener('click', e => this.dispatchAction(e))
-		document.getElementById('reseaux')
+		document.querySelector('.preview')
 			.addEventListener('mouseenter', e => this.loadJoinVideo(e), { once:true })
 		document.body.addEventListener('scroll', e => this.onScroll(e), { passive:true })
 
@@ -107,7 +107,7 @@ class AztecApp {
 	}
 
 	loadJoinVideo() {
-		this.joinVideo.setAttribute('src', './join-preview.webm')
+		this.joinVideo.setAttribute('src', './app/join-preview.webm')
 	}
 }
 
