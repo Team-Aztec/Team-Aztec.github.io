@@ -37,7 +37,7 @@ class AztecApp {
 		document.body.addEventListener('click', e => this.dispatchAction(e))
 		document.querySelector('.preview')
 			.addEventListener('mouseenter', e => this.loadJoinVideo(e), { once:true })
-		//document.body.addEventListener('scroll', e => this.onScroll(e), { passive:true })
+		document.body.addEventListener('scroll', e => this.onScroll(e), { passive:true })
 
 		this.init()
 	}
