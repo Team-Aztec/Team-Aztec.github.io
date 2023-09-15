@@ -70,7 +70,7 @@ class AztecApp {
 			node.innerHTML  = /*html*/`
 				<span class="r-tag" style="--x:2;--y:0"></span>
 				<span class="r-time"> ${parseTime(time)} </span>
-				<span class=""> ${title} </span>
+				<span class="r-title"> ${title} </span>
 				${ stream && isToday && /*html*/`<a href="${stream}" class="r-stream"></a>` || '' } `
 		}
 	}
