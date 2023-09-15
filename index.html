@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Aztec </title>
 	<link rel="icon" href="./app/favicon.ico">
-	<script src="./app/aztec-app.js?v=1" type="module"></script>
+	<script src="./app/aztec-app.js?1" type="module"></script>
 	<style>
 		html {
 			overflow: hidden;
@@ -63,7 +63,7 @@
 				display: flex;
 				flex-flow: row nowrap;
 				justify-content: center;
-				column-gap: 16px;
+				column-gap: min(16px, 1vw);
 				white-space: nowrap;
 				font-size: min(7vw, 1em);
 			}
@@ -136,7 +136,7 @@
 		h1 {
 			font-size: 2em;
 			font-weight: bold;
-			margin: 0 0 32px 0;
+			margin: 0 0 min(32px, 1vw) 0;
 			display: grid;
 			grid-template-columns: 1fr auto 1fr;
 			align-items: center;
@@ -432,6 +432,8 @@
 			padding: 8px;
 			margin: 0 auto;
 			box-sizing: border-box;
+			font-size: min(1em, 5vw);
+			line-height: 32px;
 		}
 			.rencontre {
 				border-bottom: solid 2px #666;
@@ -506,7 +508,8 @@
 				max-width: 519px;
 				border-radius: 8px;
 				background-image: var(--bg);
-				background-size: 142.5%;
+				background-size: cover;
+				background-position: 50%;
 				grid-template: 1fr auto 1fr 54px / 1fr 200px 1fr;
 				transition: transform 240ms cubic-bezier(0.22, 0.61, 0.36, 1);
 				box-shadow: #00000029 0 3px 6px, #0000003B 0 3px 6px;
@@ -522,7 +525,6 @@
 				transition: opacity 180ms ease-in;
 				opacity: 0;
 				height: 100%;
-				width: 100%;
 			}
 			.preview:hover .video-background {
 				transition: opacity 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -534,7 +536,7 @@
 				width: 200px;
 				height: 70px;
 				object-fit: none;
-				object-position: -480px -200px;
+				object-position: 0px -200px;
 			}
 			.preview:hover > .title {
 				transform: translateY(-16px) scale(1.15);
@@ -576,7 +578,7 @@
 				display: block;
 				height: 100px;
 				width: 100px;
-				background: var(--bg);
+				background: var(--icons);
 				transform: scale(0.3);
 				transition: transform 280ms cubic-bezier(0.5, 1.4, 0.95, 1),
 					opacity 100ms ease-out;
@@ -591,7 +593,7 @@
 					opacity 100ms ease-out;
 			}
 			.pa { bottom:-20px; left:80px; }
-			.pa::after { background-position: -480px 0px; }
+			.pa::after { background-position: 0px 0px; }
 			.preview:hover .pa { 
 				transform: translateX(-140px);
 				transition-delay: 100ms;
@@ -601,7 +603,7 @@
 				transition-delay: 100ms;
 			}
 			.pb { top:100px; right:50%; transform:rotate(15deg); }
-			.pb::after { background-position: -480px -100px; }
+			.pb::after { background-position: 0px -100px; }
 			.preview:hover .pb {
 				transform: translateX(-40px) rotate(-15deg);
 				transition-delay: 40ms;
@@ -611,7 +613,7 @@
 				transition-delay: 40ms;
 			}
 			.pc { top:100px; left:50%; transform:rotate(-15deg); }
-			.pc::after { background-position: -580px 0px; }
+			.pc::after { background-position: -100px 0px; }
 			.preview:hover .pc {
 				transform: translateX(40px) rotate(15deg);
 				transition-delay: 80ms;
@@ -621,7 +623,7 @@
 				transition-delay: 80ms;
 			}
 			.pd { bottom:-20px; right:80px; }
-			.pd::after { background-position: -580px -100px; }
+			.pd::after { background-position: -100px -100px; }
 			.preview:hover .pd { transform: translateX(140px); }
 			.preview:hover .pd::after {
 				transform: translateY(-100px) rotate(10deg) scale(1);
@@ -809,13 +811,14 @@
 			</a>
 		</div>
 
-		<a class="preview" href="https://discord.com/invite/PKFcXzezRj" style="--bg:url('./app/join-banner.webp');">
+		<a class="preview" href="https://discord.com/invite/PKFcXzezRj"
+				style="--bg:url('./app/join-banner.webp?1'); --icons:url('./app/join-icons.webp');">
 			<video class="video-background" loop autoplay muted></video>
 			<div class="particle pa"></div>
 			<div class="particle pb"></div>
 			<div class="particle pc"></div>
 			<div class="particle pd"></div>
-			<img class="title" src="./app/join-banner.webp" width=""/>
+			<img class="title" src="./app/join-icons.webp" width=""/>
 			<p class="time"> Rejoindre Aztec </p>
 		</a>
 	</section>
