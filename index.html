@@ -296,11 +296,11 @@
 						opacity: 0;
 						visibility: hidden;
 						transition: opacity ease-out 240ms;
-						white-space: nowrap;
-						display: flex;
-						flex-flow: column;
-						align-content: center;
-						container-type: normal;
+						display: grid;
+						grid-template-columns: 1fr;
+						grid-auto-rows: 1fr;
+						justify-items: center;
+
 					}
 					.player-info.center {
 						margin-bottom: 50%;
@@ -322,8 +322,10 @@
 					.player-info > a {
 						position: relative;
 						aspect-ratio: 1/1;
-						margin: 4% 30%;
 						font-size: 1.2em;
+						max-width: 100px;
+						width: 9vw;
+						margin: 4px 0;
 					}
 					.player-info > a:after,
 					.player-info > a::before {
@@ -403,6 +405,7 @@
 						.player-info-text {
 							position: absolute;
 							z-index: 2;
+							white-space: nowrap;
 							left: 50%;
 							top: 50%;
 							transform: translate(-50%, -50%);
