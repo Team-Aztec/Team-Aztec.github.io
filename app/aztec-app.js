@@ -35,7 +35,7 @@ class AztecApp {
 
 		document.body.addEventListener('hash', e => this.onScroll(e))
 		document.body.addEventListener('click', e => this.dispatchAction(e))
-		document.getElementById('reseaux')
+		document.querySelector('.preview')
 			.addEventListener('mouseenter', e => this.loadJoinVideo(e), { once:true })
 		document.body.addEventListener('scroll', e => this.onScroll(e), { passive:true })
 
@@ -70,7 +70,7 @@ class AztecApp {
 			node.innerHTML  = /*html*/`
 				<span class="r-tag" style="--x:2;--y:0"></span>
 				<span class="r-time"> ${parseTime(time)} </span>
-				<span class=""> ${title} </span>
+				<span class="r-title"> ${title} </span>
 				${ stream && isToday && /*html*/`<a href="${stream}" class="r-stream"></a>` || '' } `
 		}
 	}
@@ -84,7 +84,7 @@ class AztecApp {
 
 		if (opacity != this.currentOpacity) {
 			this.currentOpacity = opacity
-			background.style.opacity = opacity
+			this.background.style.opacity = opacity
 		}
 	}
 
@@ -107,7 +107,7 @@ class AztecApp {
 	}
 
 	loadJoinVideo() {
-		this.joinVideo.setAttribute('src', './join-preview.webm')
+		this.joinVideo.setAttribute('src', './app/join-preview.webm')
 	}
 }
 
