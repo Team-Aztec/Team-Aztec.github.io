@@ -1,7 +1,7 @@
 const RENCONTRES = [
 	//[ "AAAA-MM-JJ hh:mm", "Text affiché", "https://www.twitch.tv/ironpol33" ]
-	[ "2023-11-20 20:30", "vs TeamOFF", "https://www.twitch.tv/ironpol33" ],
-	[ "2023-11-22 21:30", "vs Faded Squad", "https://www.twitch.tv/ironpol33" ],
+	[ "2023-11-27 21:30", "vs N1GHT Esports", "https://www.twitch.tv/the_pp5" ],
+	[ "2023-11-29 21:00", "vs dunderhonung", "https://www.twitch.tv/the_pp5" ],
 	[ "2023-11-15 20:30", "vs EWAVE", "https://www.twitch.tv/ironpol33" ],
 
 ];
