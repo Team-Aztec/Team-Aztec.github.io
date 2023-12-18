@@ -634,9 +634,44 @@
 
 			.asso {
 				text-align: center;
-				margin: 32px 0;
+				margin: 48px 0 32px 0;
 				font-size: 1.4em;
 			}
+
+
+	#record {
+		padding: 0 16px;
+	}
+
+		.record-card {
+			background: #000A;
+			border: solid 2px #666;
+			border-radius: 8px;
+			text-align: center;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-auto-rows: auto;
+			padding: 8px;
+			margin: 32px auto;
+			max-width: 400px;
+		}
+			.rank {
+				font-weight: bold;
+				font-size: 1.4em;
+			}
+			.win-loss {
+				color: #BBB;
+				font-weight: bold;
+				font-size: 1.1em;
+			}
+			.win {
+				color: #3bc030;
+			}
+			.loss {
+				color: #dd1f0e;
+			}
+
+	
 	</style>
 </head>
 <body>
@@ -750,6 +785,21 @@
 			<div class="rencontre">
 			</div>
 		</div>
+	</section>
+
+	<section id="record">
+		<h1> Palmarès </h1>
+
+		<div class="record-card">
+			<span class="rank"> 9e - 16e </span>
+			<span class="win-loss">
+				<span class="win"> 4W </span> - <span class="loss"> 1L </span>
+			</span>
+			<span class="league"> ESEA League </span>
+			<span> OPEN • PLAYOFFS </span>
+			<span> Season 47 </span>
+		</div>
+
 	</section>
 
 	<!--section id="sponsors">
