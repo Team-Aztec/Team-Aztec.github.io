@@ -33,11 +33,11 @@ class AztecApp {
 		this.activePlayer = null
 		this.currentOpacity = -1
 
-		document.body.addEventListener('hash', e => this.onScroll(e))
+		//document.body.addEventListener('hash', e => this.onScroll(e))
 		document.body.addEventListener('click', e => this.dispatchAction(e))
 		document.querySelector('.preview')
 			.addEventListener('mouseenter', e => this.loadJoinVideo(e), { once:true })
-		document.body.addEventListener('scroll', e => this.onScroll(e), { passive:true })
+		//document.body.addEventListener('scroll', e => this.onScroll(e), { passive:true })
 
 		this.init()
 	}
