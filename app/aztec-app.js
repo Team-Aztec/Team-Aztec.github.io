@@ -23,6 +23,9 @@ class AztecApp {
 	constructor() {
 		/**@type {HTMLElement} */
 		this.background = document.getElementById('background')
+
+		this.backgroundLogo = this.background.querySelector('.bg-logo')
+
 		/**@type {HTMLElement} */
 		this.sponsors = document.getElementById('sponsors')
 		/**@type {HTMLElement} */
@@ -31,13 +34,13 @@ class AztecApp {
 		this.joinVideo = document.querySelector('.video-background')
 		/**@type {HTMLDivElement} */
 		this.activePlayer = null
-		this.currentOpacity = -1
+		this.logoScale = 180
 
-		//document.body.addEventListener('hash', e => this.onScroll(e))
+		document.body.addEventListener('hash', e => this.onScroll(e))
 		document.body.addEventListener('click', e => this.dispatchAction(e))
 		document.querySelector('.preview')
 			.addEventListener('mouseenter', e => this.loadJoinVideo(e), { once:true })
-		//document.body.addEventListener('scroll', e => this.onScroll(e), { passive:true })
+		document.body.addEventListener('scroll', e => this.onScroll(e), { passive:true })
 
 		this.init()
 	}
@@ -46,6 +49,7 @@ class AztecApp {
 		if (location.hash)
 			this.scrollTo(location.hash)
 		this.renderMatches()
+		this.moveBackgroundTargets()
 	}
 
 	renderMatches() {
@@ -75,16 +79,60 @@ class AztecApp {
 		}
 	}
 
+	moveBackgroundTargets() {
+		const targets = [...this.background.querySelectorAll('.bg-moving-target')]
+		let index = 0
+		function moveTarget() {
+			const scaleX = index&1 ? 1 : -1
+			const scaleY = index&2 ? 1 : -1
+
+			const screenRatio = window.innerWidth/window.innerHeight
+
+			const offset = 40
+			const sizeX = Math.min(screenRatio, 1) * 500 - offset*2
+			const sizeY = (1/Math.max(screenRatio, 1)) * 500 - offset*2
+			
+			const x = scaleX * (sizeX * Math.random() + offset)
+			const y = scaleY * (sizeY * Math.random() + offset)
+
+			targets[index%targets.length].style.transform = `translate(${x}px, ${y}px)`
+			index++
+		}
+
+		setTimeout(() => {
+			moveTarget()
+			moveTarget()
+			moveTarget()
+			moveTarget()
+		})
+		setInterval(moveTarget, 3000)
+	}
+
 	onScroll(e) {
 		const { scrollTop, scrollHeight, offsetHeight, } = document.body
 
-		let opacity = 0.0
-		if (scrollTop > scrollHeight-offsetHeight-100)
-			opacity = 1.0
+		let offset = scrollHeight - offsetHeight - scrollTop
+		let scale = 85 + (offset - 300) / 20
+		scale = Math.min(Math.max(85, scale), 180)
 
-		if (opacity != this.currentOpacity) {
-			this.currentOpacity = opacity
-			this.background.style.opacity = opacity
+		if (scale != this.logoScale) {
+			this.logoScale = scale
+			let style = this.backgroundLogo.style
+			style.maxHeight = `${scale}vmin`
+			style.maxWidth = `${scale}vmin`
+
+			if (scale === 180) {
+				style.zIndex = -1
+				style.opacity = 0.1
+			}
+
+			this.backgroundLogo.style.opacity = 0.1
+		}
+
+		if (scale === 85) {
+			let style = this.backgroundLogo.style
+			style.zIndex = 1
+			style.opacity = Math.min(Math.max(0.1, 0.1+(300-offset)/300 ), 1)
 		}
 	}
 
