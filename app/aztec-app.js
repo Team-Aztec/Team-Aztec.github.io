@@ -110,30 +110,27 @@ class AztecApp {
 
 	onScroll(e) {
 		const { scrollTop, scrollHeight, offsetHeight, } = document.body
+		let style = this.backgroundLogo.style
 
 		let offset = scrollHeight - offsetHeight - scrollTop
 		let scale = 85 + (offset - 300) / 20
-		scale = Math.min(Math.max(85, scale), 180)
+		scale = Math.min(Math.max(85, scale), 160)
 
-		if (scale != this.logoScale) {
+		if (scale !== this.logoScale) {
 			this.logoScale = scale
-			let style = this.backgroundLogo.style
 			style.maxHeight = `${scale}vmin`
 			style.maxWidth = `${scale}vmin`
+
+			style.filter = `grayscale(${(scale-85)/95})`
 
 			if (scale === 180) {
 				style.zIndex = -1
 				style.opacity = 0.1
-			}
-
-			this.backgroundLogo.style.opacity = 0.1
+			} else if (scale === 85)
+				style.zIndex = 1
 		}
 
-		if (scale === 85) {
-			let style = this.backgroundLogo.style
-			style.zIndex = 1
-			style.opacity = Math.min(Math.max(0.1, 0.1+(300-offset)/300 ), 1)
-		}
+		style.opacity = Math.min(Math.max(0.1, 0.1+(800-offset)/800 ), 1)
 	}
 
 	dispatchAction(e) {
