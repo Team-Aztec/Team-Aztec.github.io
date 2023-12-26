@@ -1,5 +1,5 @@
 git add -A
-git pull
+git pull --rebase
 git commit -m"update website"
 git push
 pause
