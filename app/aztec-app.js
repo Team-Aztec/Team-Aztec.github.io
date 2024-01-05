@@ -1,6 +1,6 @@
 const RENCONTRES = [
 	//[ "AAAA-MM-JJ hh:mm", "Text affiché", "https://www.twitch.tv/teamaztec_tv" ]
-	[ "2024-01-04 21:00", "L'Echauffement BEHOP", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-05 21:00", "L'Echauffement BEHOP", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-06 13:00", "Les Espoirs 2", "https://www.twitch.tv/jawedcs" ],
 	[ "2024-01-15 20:30", "ESEA Saison 48 Intermediate", "https://www.twitch.tv/teamaztec_tv" ],
 
