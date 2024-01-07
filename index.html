@@ -37,20 +37,20 @@
 			color: #FFF;
 			position: sticky;
 			top: 0;
-			margin-bottom: -66px;
+			height: 0;
 			font-size: 1.6em;
-			background: #0008;
-			border-bottom: solid 1px #000;
-			backdrop-filter: blur(5px);
 			z-index: 10;
 		}
 			nav {
 				display: flex;
-				flex-flow: row nowrap;
+				flex-flow: row wrap;
 				justify-content: center;
 				column-gap: min(16px, 1vw);
 				white-space: nowrap;
 				font-size: min(7vw, 1em);
+				background: #0008;
+				border-bottom: solid 1px #000;
+				backdrop-filter: blur(5px);
 			}
 			.nav-list {
 				display: contents;
@@ -82,6 +82,24 @@
 				transform: scaleX(1);
 				transition: transform 180ms ease-in;
 			}
+				.sparks {
+					position: absolute;
+					z-index: -1;
+					left: -2px;
+					height: 100%;
+					width: 100%;
+				}
+				.sparks use {
+					animation: spark infinite linear 1800ms var(--delay);
+					transform-origin: calc(var(--x) + 50px) calc(var(--y) + 50px);
+					x: var(--x);
+					y: var(--y);
+				}
+				@keyframes spark {
+					from { opacity: 0; transform: scale(0.1) rotate(45deg); }
+					20% { opacity: 0.3; transform: scale(0.65); }
+					40%, to {opacity: 0; transform: scale(0.25) rotate(-45deg); }
+				}
 
 
 		section {
@@ -679,7 +697,64 @@
 				color: #dd1f0e;
 			}
 
-	
+	</style>
+	<style id="style-was-playing">
+		.was-playing {
+			text-transform: uppercase;
+			max-width: 800px;
+			width: fit-content;
+			padding: 0 8px;
+			margin: 32px auto;
+			position: sticky;
+			top: 60vh;
+			font-size: 1.7em;
+			vertical-align: middle;
+			height: 2em;
+			line-height: 2em;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			border-radius: 16px;
+			background: #000A;
+		}
+
+		.wp-role {
+			height: 2em;
+			display: inline-block;
+			mask-image: linear-gradient(
+				to bottom,
+				transparent 0%,
+				black 35%,
+				black 65%,
+				transparent 100%);
+		}
+
+		.wp-role span {
+			margin-top: -2em;
+			text-wrap: nowrap;
+			display: block;
+			text-align: center;
+			transform: translate(0px, 4em);
+			animation: loop-name infinite linear
+				calc(var(--count) * var(--duration))
+				calc(var(--index) * var(--duration) * -1);
+
+			font-weight: bold;
+			color: transparent;
+			background-image: repeating-linear-gradient(132deg,
+					#f6b84e, #f6b84e 15px,
+					#ffdd8b 18px, #ffdd8b 22px,
+					#f6b84e 25px);
+			background-clip: text;
+		}
+
+		@keyframes loop-name {
+			0%, 68% { transform: translate(0, 4em); }
+			73%, 95% { transform: translate(0, 2em); }
+			100% { transform: translate(0, 0em); }
+		}
+
+
 	</style>
 	<style id="style-background">
 		#background {
@@ -761,6 +836,20 @@
 				<!--li> <a class="nav-link" data-action="scroll-to" href="#sponsors"> Sponsors </a> </li-->
 				<li> <a class="nav-link" data-action="scroll-to" href="#reseaux"> Réseaux </a> </li>
 				<li> <a class="nav-link" data-action="scroll-to" href="#a-propos"> À Propos </a> </li>
+				<!--li>
+					<a class="nav-link" href="">
+						<svg class="sparks" viewBox="0 0 142 64">
+							<defs>
+								<path id="spark" d="M 50,10 C 50,30 30,50 10,50 30,50 50,70 50,90 50,70 70,50 90,50 70,50 50,30 50,10 Z" fill="#f6a429"></path>
+							</defs>
+							<use xlink:href="#spark" style="--x: 60px; --y:  0px; --delay:   -0ms"></use>
+							<use xlink:href="#spark" style="--x: 35px; --y:-30px; --delay: -900ms"></use>
+							<use xlink:href="#spark" style="--x:-16px; --y:-24px; --delay: -450ms"></use>
+							<use xlink:href="#spark" style="--x:  0px; --y: -6px; --delay:-1350ms"></use>
+						</svg>
+						Boutique
+					</a>
+				</li-->
 			</ul>
 		</nav>
 	</header>
@@ -1077,6 +1166,17 @@
 		Pour l'avenir, notre vision est de soutenir et de représenter des équipes de haut niveau. Sur le plan communautaire, nous souhaitons élargir notre présence dans le streaming et sur YouTube. Nous continuerons à organiser des événements, mais nous envisageons également des projets d'envergure pour les années à venir. 
 		<br><br>
 		Si vous cherchez une communauté soudée, active et en pleine croissance, nos portes vous sont ouvertes !
+
+
+		<!--div class="was-playing" style="--count:4; --duration:1500ms">
+			<div class="wp-role">
+				<span style="--index:0"> Player A </span>
+				<span style="--index:1"> Player B ef e f fe eff</span>
+				<span style="--index:2"> Player C</span>
+				<span style="--index:3"> Player D </span>
+			</div>
+			<span>&nbsp;était&nbsp;chez&nbsp;Aztec.</span>
+		</div-->
 
 		<p class="asso"> Aztec - Association sous loi 1901 </p>
 		<div class="end-spacer"></div>

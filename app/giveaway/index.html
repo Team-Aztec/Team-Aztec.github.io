@@ -181,7 +181,6 @@
 			<text x="480" y="160" fill="url('#textGradient')" stroke="none"> GIVEAWAY </text>
 			<image href="/app/giveaway/gun.png" xlink:href="/app/giveaway/gun.png"
 				preserveaspectratio="xMidYMid meet"/>
-
 			<use xlink:href="#bracket-g" style="
 				fill: none;
 				stroke: rgba(var(--main), 0.3);
@@ -245,9 +244,19 @@
 			parseImage(e.clipboardData.files[0])
 		})
 
-
 		button.addEventListener('click', async (e) => {
-			const svgData = new XMLSerializer().serializeToString(bg)
+			let style = bg.childNodes[1].sheet.rules[3].style
+			let img = bg.querySelector('image')
+
+			const svgData = new XMLSerializer()
+				.serializeToString(bg)
+				.replace(/image [^}]*}/, (m) => `image {
+					x: ${style.x};
+					y: ${style.y};
+					width: ${style.width};
+					height: ${style.height};
+				}`)
+
 			const svgDataBase64 = btoa(unescape(encodeURIComponent(svgData)))
 			const resultDataUrl = await toDataUrl(
 				`data:image/svg+xml;charset=utf-8;base64,${svgDataBase64}`,
