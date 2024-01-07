@@ -631,9 +631,21 @@
 
 	#record {
 		padding: 0 16px;
+		display: grid;
 	}
 
+		.record-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 16px;
+			justify-content: center;
+			max-width: 1300px;
+			margin: 32px auto;
+		}
+
 		.record-card {
+			text-decoration: none;
+			color: inherit;
 			background: #000A;
 			border: solid 2px #666;
 			border-radius: 8px;
@@ -642,9 +654,15 @@
 			grid-template-columns: 1fr;
 			grid-auto-rows: auto;
 			padding: 8px;
-			margin: 32px auto;
 			max-width: 400px;
+			width: 95vw;
+			cursor: pointer;
 		}
+		.record-card[href]:hover {
+			border-color: #DDD;
+			background: #222B;
+		}
+
 			.rank {
 				font-weight: bold;
 				font-size: 1.4em;
@@ -719,7 +737,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			opacity: 0.08;
-			filter: grayscale(1);
+			filter: grayscale(1) blur(0.7px);
 			transition: opacity 250ms ease-out;
 		}
 
@@ -946,16 +964,27 @@
 	<section id="record">
 		<h1> Palmarès </h1>
 
-		<div class="record-card">
-			<span class="rank"> 9e - 16e </span>
-			<span class="win-loss">
-				<span class="win"> 4W </span> - <span class="loss"> 1L </span>
-			</span>
-			<span class="league"> ESEA League </span>
-			<span> OPEN • PLAYOFFS </span>
-			<span> Season 47 </span>
-		</div>
+		<div class="record-container">
+			<a class="record-card" href="https://www.faceit.com/fr/cs2/league/ESEA%20League/a14b8616-45b9-4581-8637-4dfd0b5f6af8/ddc31c1e-7392-4859-a509-dd98fdbb824e/overview">
+				<span class="rank"> 9e - 16e </span>
+				<span class="win-loss">
+					<span class="win"> 4W </span> - <span class="loss"> 1L </span>
+				</span>
+				<span class="league"> ESEA League </span>
+				<span> OPEN • PLAYOFFS </span>
+				<span> Season 47 </span>
+			</a>
 
+			<a class="record-card" href="https://liquipedia.net/counterstrike/L'Echauffement">
+				<span class="rank"> 4e </span>
+				<span class="win-loss">
+					<span class="win"> 3W </span> - <span class="loss"> 2L </span>
+				</span>
+				<span class="league"> L'Echauffement </span>
+				<span> SWISS STAGE • PLAYOFFS </span>
+				<span> &nbsp; </span>
+			</a>
+		</div>
 	</section>
 
 	<!--section id="sponsors">

@@ -121,7 +121,7 @@ class AztecApp {
 			style.maxHeight = `${scale}vmin`
 			style.maxWidth = `${scale}vmin`
 
-			style.filter = `grayscale(${(scale-85)/95})`
+			style.filter = `grayscale(${(scale-85)/95}) blur(0.7px)`
 
 			if (scale === 180) {
 				style.zIndex = -1
