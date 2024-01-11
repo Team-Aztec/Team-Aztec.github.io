@@ -141,7 +141,6 @@
 			max-width: 1000px;
 		}
 		#a-propos {
-			margin-top: 128px;
 			margin-bottom: 0;
 			max-width: 750px;
 			padding:73px 4px 0 4px;
@@ -316,9 +315,9 @@
 				position: relative;
 				display: grid;
 				text-decoration: none;
-				aspect-ratio: 23/9;
+				aspect-ratio: 20/9;
 				cursor: pointer;
-				max-width: 519px;
+				max-width: 600px;
 				border-radius: 8px;
 				background-image: var(--bg);
 				background-size: cover;
@@ -335,12 +334,15 @@
 			.video-background {
 				grid-area:1/1/5/4;
 				border-radius: 8px;
-				transition: opacity 180ms ease-in;
+				transition: opacity 280ms ease-in;
 				opacity: 0;
 				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				background: #000;
 			}
 			.preview:hover .video-background {
-				transition: opacity 180ms cubic-bezier(0.22, 0.61, 0.36, 1);
+				transition: opacity 380ms cubic-bezier(0.22, 0.61, 0.36, 1);
 				opacity: 1;
 			}
 			.title {
@@ -526,14 +528,38 @@
 			font-weight: bold;
 			transform: skewX(-9deg);
 			text-shadow: -1px -1px 3px #000, 1px 1px 4px #000;
+			align-items: center;
+			user-select: none;
 		}
 		.roster-name > svg {
-			margin: -24px -16px;
-			height: calc(1.2em + 48px);
-			width: 2em;
+			height: calc(1.2em + 16px);
+			margin: -8px 0px;
+			width: calc(2em + 80px);
 			cursor: pointer;
 		}
-		.roster-name > svg:hover {
+		path.rn-chevron {
+			transform-origin: 50% 36%;
+			transition: ease-out 520ms;
+			transition-property: transform, opacity;
+		}
+		svg:hover > path.rn-chevron {
+			animation: chevron infinite ease-out 1000ms var(--delay, 0ms);
+		}
+		@keyframes chevron {
+			0% { transform: translate(0,0) scale(1.0, 1.0); }
+			10% { transform: translate(calc(var(--dir)*6px),0) scale(1.03, 1.01); }
+			20% { transform: translate(calc(var(--dir)*12px),0) scale(1.08, 1.02); }
+			30% { transform: translate(calc(var(--dir)*18px),0) scale(1.15, 1.03); }
+			100% { transform: translate(0,0) scale(1.0); }
+		}
+		svg.active:hover > path.rn-chevron,
+		svg.active > path.rn-chevron {
+			animation: chevron-on 1 ease-out 1000ms 0ms;
+		}
+		@keyframes chevron-on {
+			30% { transform: translate(calc(var(--dir)*120px),0) scale(1.8, 1.0); opacity:0; }
+			75% { transform: translate(calc(var(--dir)*-20px),0) scale(1.0); opacity:0; }
+			100% { transform: translate(0,0) scale(1.0); opacity:1; }
 		}
 
 		.roster-logo-container {
@@ -569,7 +595,7 @@
 				max-width: 260px;
 				width: 22vw;
 				flex: 0 0 auto;
-				aspect-ratio: 10/18;
+				aspect-ratio: 9/16;
 
 				background: linear-gradient(0deg, rgba(255,215,0,1) 40%, rgba(0,0,0,1) 60%);
 				background-position: 50% 0%;
@@ -593,9 +619,9 @@
 				}
 				.player-picture {
 					height: 100%;
-					width: 158%;
-					margin-left: -20%;
-					transform: skewX(8.5deg);
+					width: 130%;
+					margin-left: -15%;
+					transform: skewX(9deg);
 					background-color: #000A;
 					background-image: var(--bg);
 					background-size: auto 100%;
@@ -838,8 +864,8 @@
 			display: block;
 			font-weight: bold;
 			text-align: center;
-			transform: translate(0, 3.6em) rotate(-9deg);
-			transform-origin: 75% 50%;
+			transform: translate(0, 3.6em) rotate(-18deg);
+			transform-origin: 65% 50%;
 			color: transparent;
 			background-image: repeating-linear-gradient(132deg,
 					#f6b84e, #f6b84e 15px,
@@ -855,7 +881,7 @@
 
 		.wp-role > span.wp-slide-out {
 			transition: transform ease-in 350ms 25ms;
-			transform: translate(0, 0.4em) rotate(9deg);
+			transform: translate(0, 0.4em) rotate(18deg);
 		}
 
 		@keyframes loop-name {
@@ -1069,14 +1095,18 @@
 	<section id="equipe" class="hiden">
 		<div class="roster">
 			<div class="roster-name">
-				<svg viewBox="0 0 100 100" data-action="prev-team">
-					<path d="M 30,10 10,50 30,90 H 50 L 30,50 50,10 Z M 70,10 50,50 70,90 H 90 L 70,50 90,10 Z"
-							fill="#f6b84e"></path>
+				<svg viewBox="-5 -5 110 110" data-action="prev-team"
+						style="--dir:-1; transform: translate(-40px,0);"
+						preserveaspectratio="xMaxYMid">
+					<path class="rn-chevron" style="--delay:65ms" d="M 30,10 10,50 30,90 H 50 L 30,50 50,10 Z" fill="#f6b84e"></path>
+					<path class="rn-chevron" d="M 70,10 50,50 70,90 H 90 L 70,50 90,10 Z" fill="#f6b84e"></path>
 				</svg>
 				<span class="roster-full-name"></span>
-				<svg viewBox="0 0 100 100" data-action="next-team">
-					<path d="M 10 10 L 30 50 L 10 90 L 30 90 L 50 50 L 30 10 L 10 10 z M 50 10 L 70 50 L 50 90 L 70 90 L 90 50 L 70 10 L 50 10 Z"
-							fill="#f6b84e"></path>
+				<svg viewBox="-5 -5 110 110" data-action="next-team"
+						style="--dir:1;  transform: translate(40px,0);"
+						preserveaspectratio="xMinYMid">
+					<path class="rn-chevron" d="M 10 10 L 30 50 L 10 90 L 30 90 L 50 50 L 30 10 L 10 10 Z" fill="#f6b84e"></path>
+					<path class="rn-chevron" style="--delay:65ms" d="M 50 10 L 70 50 L 50 90 L 70 90 L 90 50 L 70 10 L 50 10 Z" fill="#f6b84e"></path>
 				</svg>
 			</div>
 			<div class="players">
@@ -1263,8 +1293,8 @@
 				<span> ImVaal </span>
 				<span> m0nstrGG </span>
 				<span> Sparta </span>
-				<span> Sye </span>
 				<span> Ironpol </span>
+				<span> Sye </span>
 				<span> Riggow </span>
 				<span> Bond1e </span>
 				<span> Ay0k </span>

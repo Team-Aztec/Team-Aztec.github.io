@@ -189,6 +189,8 @@ class AztecApp {
 		this.team.running = true
 
 		try {
+			node?.classList.add('active')
+
 			this.team.index = (this.team.index + offset + TEAMS.length) % TEAMS.length
 
 			const teamData = TEAMS[this.team.index]
@@ -200,6 +202,7 @@ class AztecApp {
 				...teamData.roster.map(([ _a, bg]) =>this.awaitImg(`./app/players/${bg}`)),
 				wasHiden ? null : this.wait(750)
 			])
+			
 
 			this.team.nameNode.innerHTML = teamData.name
 			for (let [ i, node ] of this.team.playersNodes.entries()) {
@@ -231,6 +234,7 @@ class AztecApp {
 			}
 			this.team.section.classList.remove('hiden')
 			await this.wait(350)
+			node?.classList.remove('active')
 
 		} finally {
 			this.team.running = false
@@ -243,7 +247,7 @@ class AztecApp {
 		clearTimeout(this.team.nextAutoDisplayId)
 		if (!this.team.isIntersecting)
 			return
-		this.team.nextAutoDisplayId = setTimeout(() => this.displayTeam(1), 6000)
+		this.team.nextAutoDisplayId = setTimeout(() => this.displayTeam(1), 996000)
 	}
 
 	async displayWasPlaying() {
@@ -261,7 +265,7 @@ class AztecApp {
 				active.classList.add('wp-slide-out')
 				next.classList.add('wp-slide-in')
 				this.wasPlaying.activeNode = next
-				await this.wait(240)
+				await this.wait(280)
 
 				setTimeout(() => active.classList.remove('wp-slide-in', 'wp-slide-out'), 500)
 			}
@@ -290,6 +294,7 @@ class AztecApp {
 		return new Promise(resolve => {
 			const img = new Image()
 			img.onload = resolve
+			img.onerror = resolve
 			img.src = src
 		})
 	}
