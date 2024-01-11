@@ -247,7 +247,7 @@ class AztecApp {
 		clearTimeout(this.team.nextAutoDisplayId)
 		if (!this.team.isIntersecting)
 			return
-		this.team.nextAutoDisplayId = setTimeout(() => this.displayTeam(1), 996000)
+		this.team.nextAutoDisplayId = setTimeout(() => this.displayTeam(1), 6000)
 	}
 
 	async displayWasPlaying() {
