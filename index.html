@@ -682,7 +682,7 @@
 
 				.player-info > a:after {
 					margin: -6% 0 0 -4%;
-					filter: invert(15%) hue-rotate(5deg);
+					filter: invert(18%) hue-rotate(8deg);
 				}
 				.player-info > a:hover:after {
 					display: block;
@@ -703,12 +703,12 @@
 				}
 
 				.player-info > a::before {
-					margin: 6% 0 0 4%;
-					filter: invert(10%) hue-rotate(-5deg);
+					margin: 4% 0 0 6%;
+					filter: invert(12%) hue-rotate(-8deg);
 				}
 				.player-info > a:hover:before {
 					display: block;
-					animation: infinite 1200ms 50ms glitch-before;
+					animation: infinite 1200ms -50ms glitch-before;
 				}
 				@keyframes glitch-before {
 					0%{clip-path:path("M11,81 l70,0 l0,11 l-70,0 Z M-13,9 l70,0 l0,10 l-70,0 Z M5,37 l70,0 l0,7 l-70,0 Z")}
