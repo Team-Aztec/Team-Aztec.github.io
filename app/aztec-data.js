@@ -50,9 +50,9 @@ export const TEAMS = [
 				],
 			[ 'DeeN', 'aztec-talent/DeeN.webp',
 				],
-			[ 'Kodak', 'default.webp',
+			[ 'Kodak', 'aztec-talent/Kodak.webp',
 				],
-			[ 'T3zisswes', 'default.webp',
+			[ 'T3zisswes', 'aztec-talent/T3zisswes.webp',
 				],
 		],
 		staff: [
