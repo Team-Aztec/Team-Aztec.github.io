@@ -1,8 +1,8 @@
 export const RENCONTRES = [
 	//[ "AAAA-MM-JJ hh:mm", "Team/Talent", "Text affiché", "https://www.twitch.tv/teamaztec_tv" ],
 	[ "2024-01-05 21:00", "Team", "L'Echauffement BEHOP", "https://www.twitch.tv/djiimy" ],
-	[ "2024-01-15 20:30", "Talent", "ESEA Saison 48 Main", "https://www.twitch.tv/teamaztec_tv" ],
-	[ "2024-01-15 20:30", "Team", "ESEA Saison 48 Intermediate", "https://www.twitch.tv/teamaztec_tv" ],
+	[ "2024-01-16 20:00", "Talent", "vs mYinsanity", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-17 20:30", "Team", "vs ZAKAT", "https://www.twitch.tv/djiimy" ],
 ]
 
 
