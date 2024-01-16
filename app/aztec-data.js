@@ -18,12 +18,12 @@ export const TEAMS = [
 				Team Aztec
 			</span>`,
 		roster: [
-			[ 'Arno3K', 'team-aztec/Arno3K.png',
-				'twitter.com/arno3K', 'twitch.tv/arno3k', 'youtube.com/@manilefuret219' ],
 			[ 'ImVaal', 'team-aztec/ImVaal.png',
 				'twitter.com/ImVaal_', 'twitch.tv/imvaal_', 'youtube.com/@ImVaal' ],
-			[ 'm0nstrGG', 'default.webp',
+			[ 'm0nstrGG', 'team-aztec/M0nstrGG.webp',
 				'twitter.com/m0nstrGG' ],
+			[ 'Arno3K', 'team-aztec/Arno3K.png',
+				'twitter.com/arno3K', 'twitch.tv/arno3k', 'youtube.com/@manilefuret219' ],
 			[ 'Sparta', 'team-aztec/Sparta.png',
 				'twitter.com/SpartaCSGO', 'twitch.tv/spartacsgo' ],
 			[ 'Sye', 'team-aztec/Sye.png',
@@ -44,12 +44,12 @@ export const TEAMS = [
 				Aztec Talent
 			</span>`,
 		roster: [
-			[ 'Bond1e', 'aztec-talent/Bond1e.webp',
-				'twitter.com/bond1e_cs' ],
 			[ 'Ay0k', 'aztec-talent/Ay0k.webp',
 				'twitter.com/Ay0kcs' ],
 			[ 'DeeN', 'aztec-talent/DeeN.webp',
 				'twitter.com/deeN_cs' ],
+			[ 'Bond1e', 'aztec-talent/Bond1e.webp',
+				'twitter.com/bond1e_cs' ],
 			[ 'Kodak', 'aztec-talent/Kodak.webp',
 				'twitter.com/kodak444' ],
 			[ 'T3zisswes', 'aztec-talent/T3zisswes.webp',
