@@ -237,8 +237,11 @@ export default class AztecMatchHistory extends HTMLElement {
 			.map(([ time, vs, _, result, title, link ]) => {
 				let [ aztec, against ] = vs.split('vs')
 				aztec = aztec.toLowerCase().replace(/ /g, '')
-				const [ match, win, lose ] = result ? (/(\d+)w.*(\d+)l/i).exec(result) : [0,0,0]
-				return { time, aztec, against, win, lose, title, link }
+				const [ match, win, lose ] = result ? (/(\d+).*(\d+)/i).exec(result) : [0,0,0]
+				return {
+					time, aztec, against, title, link,
+					win: Number(win),
+					lose: Number(lose), }
 			})
 
 		this.renderNextRange()
@@ -321,7 +324,10 @@ export default class AztecMatchHistory extends HTMLElement {
 				${ title ? `<span class="title"> ${title} </span>` : '' }
 				<div class="match">
 					<span class="right ${win>lose?'winner':''}"> ${aztecData.name} </span> VS <span class="left ${win<lose?'winner':''}"> ${against} </span>
-					<span class="right ${win>lose?'win-score':''}"> ${win}W </span> - <span class="left ${win<lose?'lose-score':''}"> ${lose}L </span>
+					${ win||lose ? /*html*/`
+						<span class="right ${win>lose?'win-score':''}"> ${win} </span>
+						-
+						<span class="left ${win<lose?'lose-score':''}"> ${lose} </span>` : '' }
 				</div>
 			</a>`
 	}

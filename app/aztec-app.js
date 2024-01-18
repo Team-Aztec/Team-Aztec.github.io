@@ -95,7 +95,9 @@ class AztecApp {
 				break;
 
 			const [ team, against ] = title.split('vs')
-			const [ _, w, l ] = result ? (/(\d+)w.*(\d+)l/i).exec(result) : [0,0,0]
+			let [ _, w, l ] = result ? /(\d+).*(\d+)/i.exec(result) : [0,0,0]
+			w = Number(w)
+			l = Number(l)
 
 			const isToday = time.startsWith(today)
 			if (isToday && !result)
@@ -113,9 +115,9 @@ class AztecApp {
 						<span>VS</span>
 					<span ${l>w?'class="r-victory"':''}>${against}</span>
 					${ result ? /*html*/`
-						<span class="r-count ${w>l?'win':''}">${w}W</span>
+						<span class="r-count ${w>l?'win':''}">${w}</span>
 						<span>-</span>
-						<span class="r-count ${l>w?'lose':''}">${l}L</span>
+						<span class="r-count ${l>w?'lose':''}">${l}</span>
 						` : '' }
 				</div>
 				${ (!result && stream && isToday) ? /*html*/`<a href="${stream}" target="_blank" class="r-stream"></a>` : '' } `
