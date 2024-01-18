@@ -1,10 +1,13 @@
 export const RENCONTRES = [
-	//[ "AAAA-MM-JJ hh:mm", "Team/Talent", "Text affiché", "https://www.twitch.tv/teamaztec_tv" ],
-	[ "2024-01-18 20:00", "Talent", "Aztec Talent vs Royals", "https://www.twitch.tv/djiimy" ],
-	[ "2024-01-23 21:00", "Talent", "Aztec Talent vs mYinsanity", "https://www.twitch.tv/djiimy" ],
-	[ "2024-01-23 21:00", "Team", "Team Aztec vs ex-Overlooked", "https://www.twitch.tv/djiimy" ],
-	[ "2024-01-24 21:00", "Team", "Team Aztec vs LAssos", "https://www.twitch.tv/djiimy" ],
-]
+//[ "AAAA-MM-JJ hh:mm", "Aztec vs Autre", "https://www.twitch.tv/teamaztec_tv", "5W - 4L", "ESEA League OPEN", "https://www.CS2.com/link/to/match/recap"],
+	[ "2024-01-18 20:00", "Aztec Talent vs Royals", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-23 21:00", "Aztec Talent vs mYinsanity", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-23 21:00", "Team Aztec vs ex-Overlooked", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-24 21:00", "Team Aztec vs LAssos", "https://www.twitch.tv/djiimy" ],
+
+]//NOT HERE
+///NOT HERE
+///NOT HERE
 
 
 

@@ -4,6 +4,7 @@ class AztecApp {
 	constructor() {
 		this.backgroundLogo = document.querySelector('.bg-logo')
 		this.joinVideo = document.querySelector('.video-background')
+		this.activeMatchHistory = null
 
 		this.logoScale = 180
 
@@ -51,7 +52,6 @@ class AztecApp {
 					this.team.isIntersecting = intersection.isIntersecting
 					this.scheduleNextDisplayTeam()
 				break; case this.wasPlaying.section:
-				console.log('match:', intersection.isIntersecting)
 					this.wasPlaying.isIntersecting = intersection.isIntersecting
 					this.scheduleNextWasPlaying()
 				}
@@ -79,22 +79,26 @@ class AztecApp {
 		}
 
 		const today = new Date().toISOString().slice(0, 10).replace('T', ' ')
+		const yesterday = new Date(Date.now() - 24*3600*1000).toISOString().slice(0, 10).replace('T', ' ')
 		const dtf = new Intl.DateTimeFormat('fr-FR', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' })
 		const parseTime = (date) => dtf.format(new Date(date)).replace(',', '')
 
 		const matches = RENCONTRES
-			.filter(match => today < match[0])
+			.filter(match => today<match[0] || match[3] && yesterday<match[0])
 			.sort((a,b) => (a[0]>b[0])-(a[0]<b[0]))
 
 		let nodes = [...document.querySelector(".rencontres").children]
-		for (const [ time, team, title, stream ] of matches) {
-			const teamData = teamsData[team.toLowerCase()]
+		for (const [ time, title, stream, result ] of matches) {
+			const teamData = /team.*aztec/i.test(title) ? teamsData.team : teamsData.talent
 			const node = nodes.shift()
 			if (!node)
 				break;
 
+			const [ team, against ] = title.split('vs')
+			const [ _, w, l ] = result ? (/(\d+)w.*(\d+)l/i).exec(result) : [0,0,0]
+
 			const isToday = time.startsWith(today)
-			if (isToday)
+			if (isToday && !result)
 				node.classList.add('active')
 
 			node.innerHTML  = /*html*/`
@@ -104,8 +108,17 @@ class AztecApp {
 							xlink:href="#logo-aztec"></use>
 				</svg>
 				<span class="r-time"> ${parseTime(time)} </span>
-				<span class="r-title"> ${title} </span>
-				${ stream && isToday && /*html*/`<a href="${stream}" class="r-stream"></a>` || '' } `
+				<div class="r-title">
+					<span ${w>l?'class="r-victory"':''}>${team}</span>
+						<span>VS</span>
+					<span ${l>w?'class="r-victory"':''}>${against}</span>
+					${ result ? /*html*/`
+						<span class="r-count ${w>l?'win':''}">${w}W</span>
+						<span>-</span>
+						<span class="r-count ${l>w?'lose':''}">${l}L</span>
+						` : '' }
+				</div>
+				${ (!result && stream && isToday) ? /*html*/`<a href="${stream}" target="_blank" class="r-stream"></a>` : '' } `
 		}
 	}
 
@@ -169,7 +182,18 @@ class AztecApp {
 		case 'scroll-to': return this.scrollTo(target.getAttribute('href'), e)
 		case 'prev-team': return this.displayTeam(-1, target)
 		case 'next-team': return this.displayTeam(1, target)
+		case 'display-history': return this.displayHistory()
 		}
+	}
+
+	async displayHistory() {
+		if (!this.activeMatchHistory) {
+			const AztecMatchHistory = (await import('./aztec-match-history.js')).default
+			this.activeMatchHistory = new AztecMatchHistory()
+		}
+
+		if (!this.activeMatchHistory.isConnected)
+			document.body.appendChild(this.activeMatchHistory)
 	}
 
 	/**
@@ -202,7 +226,6 @@ class AztecApp {
 				...teamData.roster.map(([ _a, bg]) =>this.awaitImg(`./app/players/${bg}`)),
 				wasHiden ? null : this.wait(750)
 			])
-			
 
 			this.team.nameNode.innerHTML = teamData.name
 			for (let [ i, node ] of this.team.playersNodes.entries()) {
@@ -217,7 +240,7 @@ class AztecApp {
 				node.children[0].textContent = name
 				node.children[1].children[0].setAttribute('style', `--bg:url(./app/players/${background})`)
 				node.children[2].innerHTML = links
-					.map(link => `<a href="https://www.${link}"></a>`)
+					.map(link => `<a href="https://www.${link}" target="_blank"></a>`)
 					.join('')
 			}
 
@@ -251,7 +274,6 @@ class AztecApp {
 	}
 
 	async displayWasPlaying() {
-		console.log('displayWasPlaying', this.wasPlaying.running)
 		if (this.wasPlaying.running)
 			return
 		this.wasPlaying.running = true
