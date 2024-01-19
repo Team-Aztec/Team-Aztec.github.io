@@ -95,7 +95,7 @@ class AztecApp {
 				break;
 
 			const [ team, against ] = title.split('vs')
-			let [ _, w, l ] = result ? /(\d+).*(\d+)/i.exec(result) : [0,0,0]
+			let [ _, w, l ] = result ? /(\d+).*?(\d+)/i.exec(result) : [0,0,0]
 			w = Number(w)
 			l = Number(l)
 

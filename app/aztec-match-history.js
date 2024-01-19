@@ -237,7 +237,7 @@ export default class AztecMatchHistory extends HTMLElement {
 			.map(([ time, vs, _, result, title, link ]) => {
 				let [ aztec, against ] = vs.split('vs')
 				aztec = aztec.toLowerCase().replace(/ /g, '')
-				const [ match, win, lose ] = result ? (/(\d+).*(\d+)/i).exec(result) : [0,0,0]
+				const [ match, win, lose ] = result ? (/(\d+).*?(\d+)/i).exec(result) : [0,0,0]
 				return {
 					time, aztec, against, title, link,
 					win: Number(win),
