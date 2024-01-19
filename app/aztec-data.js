@@ -4,7 +4,8 @@ export const RENCONTRES = [
 	[ "2024-01-23 21:00", "Aztec Talent vs mYinsanity", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-23 21:00", "Team Aztec vs ex-Overlooked", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-24 21:00", "Team Aztec vs LAssos", "https://www.twitch.tv/djiimy" ],
-
+	[ "2024-01-17 20:30", "Team Aztec vs ZAKAT", "https://www.twitch.tv/djiimy", "13-10", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-f4b1bc09-ca20-465d-8705-499ad29a4c71/scoreboard" ],
+	
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
