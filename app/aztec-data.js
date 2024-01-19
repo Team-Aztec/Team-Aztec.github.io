@@ -1,6 +1,6 @@
 export const RENCONTRES = [
 //[ "AAAA-MM-JJ hh:mm", "Aztec vs Autre", "https://www.twitch.tv/teamaztec_tv", "5-4", "ESEA League OPEN", "https://www.CS2.com/link/to/match/recap"],
-	[ "2024-01-18 20:00", "Aztec Talent vs Royals", "https://www.twitch.tv/djiimy", "16-14" ],
+	[ "2024-01-18 20:00", "Aztec Talent vs Royals", "https://www.twitch.tv/djiimy", "16-14", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-c28298e4-c18f-4ebd-bbbe-63aa96d5b3a7/scoreboard" ],
 	[ "2024-01-23 21:00", "Aztec Talent vs mYinsanity", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-23 21:00", "Team Aztec vs ex-Overlooked", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-24 21:00", "Team Aztec vs LAssos", "https://www.twitch.tv/djiimy" ],
