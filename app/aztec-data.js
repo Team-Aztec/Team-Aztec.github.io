@@ -1,13 +1,13 @@
 export const RENCONTRES = [
 //[ "AAAA-MM-JJ hh:mm", "Aztec vs Autre", "https://www.twitch.tv/teamaztec_tv", "5-4", "ESEA League OPEN", "https://www.CS2.com/link/to/match/recap"],
 	[ "2024-01-18 20:00", "Aztec Talent vs Royals", "https://www.twitch.tv/djiimy", "16-14", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-c28298e4-c18f-4ebd-bbbe-63aa96d5b3a7/scoreboard" ],
-	[ "2024-01-23 21:00", "Aztec Talent vs mYinsanity", "https://www.twitch.tv/djiimy" ],
-	[ "2024-01-23 21:00", "Team Aztec vs ex-Overlooked", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-23 21:00", "Aztec Talent vs mYinsanity", "https://www.twitch.tv/djiimy", "13-6", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-d453e631-726e-4d7e-bd8c-3dec87694320/scoreboard" ],
+	[ "2024-01-23 21:00", "Team Aztec vs ex-Overlooked", "https://www.twitch.tv/djiimy", "8-13", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-ded34a57-0630-45d1-af96-21d36d9ff5d9/scoreboard" ],
 	[ "2024-01-24 21:00", "Team Aztec vs LAssos", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-17 20:30", "Team Aztec vs ZAKAT", "https://www.twitch.tv/djiimy", "13-10", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-f4b1bc09-ca20-465d-8705-499ad29a4c71/scoreboard" ],
 	[ "2024-01-25 21:00", "Team Aztec vs white Iverson", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-25 20:00", "Aztec Talent vs RGW Esports", "https://www.twitch.tv/djiimy" ],
-	[ "2024-01-23 20:00", "Aztec Talent vs SHIPACHI", "https://www.twitch.tv/djiimy" ],	
+	[ "2024-01-23 20:00", "Aztec Talent vs SHIPACHI", "https://www.twitch.tv/djiimy", "13-10", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-9222ca50-41b5-4de8-adde-8ee06fe6b028/scoreboard" ],	
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
