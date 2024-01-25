@@ -29,7 +29,7 @@ export const TEAMS = [
 				Team Aztec
 			</span>`,
 		roster: [
-			[ 'ImVaal', 'team-aztec/ImVaal.png',
+			[ 'ImVaal', 'team-aztec/ImVaal.webp',
 				'twitter.com/ImVaal_', 'twitch.tv/imvaal_', 'youtube.com/@ImVaal' ],
 			[ 'm0nstrGG', 'team-aztec/M0nstrGG.webp',
 				'twitter.com/m0nstrGG' ],
