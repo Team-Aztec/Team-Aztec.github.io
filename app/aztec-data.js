@@ -11,7 +11,7 @@ export const RENCONTRES = [
 	[ "2024-01-30 20:00", "Aztec Talent vs GEEKZ Energy", "https://www.twitch.tv/djiimy" ],
 	[ "2024-02-01 20:00", "Aztec Talent vs Phantom troupe", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-30 20:00", "Team Aztec vs k0ncept kuwlaka", "https://www.twitch.tv/djiimy" ],
-	[ "2024-02-01 20:00", "Team Aztec vs Quickplay Grey", "https://www.twitch.tv/djiimy" ],
+	[ "2024-02-01 21:00", "Team Aztec vs Quickplay Grey", "https://www.twitch.tv/djiimy" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
