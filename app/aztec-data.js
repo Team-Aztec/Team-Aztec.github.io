@@ -8,9 +8,9 @@ export const RENCONTRES = [
 	[ "2024-01-25 21:00", "Team Aztec vs white Iverson", "https://www.twitch.tv/djiimy", "13-4", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-9af25516-278e-41b3-bb89-e8385ba328bb/scoreboard" ],
 	[ "2024-02-02 20:00", "Aztec Talent vs RGW Esports", "https://www.twitch.tv/djiimy" ],
 	[ "2024-01-23 20:00", "Aztec Talent vs SHIPACHI", "https://www.twitch.tv/djiimy", "13-10", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-9222ca50-41b5-4de8-adde-8ee06fe6b028/scoreboard" ],	
-	[ "2024-01-30 20:00", "Aztec Talent vs GEEKZ Energy", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-30 20:00", "Aztec Talent vs GEEKZ Energy", "https://www.twitch.tv/djiimy", "13-0", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-930d11bf-42e9-43da-bd6f-0f917352dcbc/scoreboard" ],
 	[ "2024-02-01 20:00", "Aztec Talent vs Phantom troupe", "https://www.twitch.tv/djiimy" ],
-	[ "2024-01-30 20:00", "Team Aztec vs k0ncept kuwlaka", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-30 20:00", "Team Aztec vs k0ncept kuwlaka", "https://www.twitch.tv/djiimy", "1-0", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-adc3846e-c604-4a07-aaba-0a4b0ea292e5/scoreboard" ],
 	[ "2024-02-01 21:00", "Team Aztec vs Quickplay Grey", "https://www.twitch.tv/djiimy" ],
 ]//NOT HERE
 ///NOT HERE
