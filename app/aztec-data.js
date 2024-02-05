@@ -16,6 +16,7 @@ export const RENCONTRES = [
 	[ "2024-02-12 21:00", "Team Aztec vs 95Vikings", "https://www.twitch.tv/djiimy" ],
 	[ "2024-02-06 20:00", "Aztec Talent vs 100", "https://www.twitch.tv/djiimy" ],
 	[ "2024-02-08 20:00", "Aztec Talent vs Griefers", "https://www.twitch.tv/djiimy" ],
+	[ "2024-01-30 19:00", "Aztec Talent vs Sunnuntai", "https://www.twitch.tv/EU_SGL", "13-5", "SGL Spring 2024", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
