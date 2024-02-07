@@ -63,8 +63,8 @@ export const TEAMS = [
 				'twitter.com/bond1e_cs' ],
 			[ 'Dorz14', 'aztec-talent/Dorz14.webp',
 				],
-			[ 'T3zisswes', 'aztec-talent/T3zisswes.webp',
-				'twitter.com/t3zisswes' ],
+			[ 'le0nich', 'default.webp',
+				],
 		],
 		staff: [
 			[ 'E1mantas', 'Manager',
