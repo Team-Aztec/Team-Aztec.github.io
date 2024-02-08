@@ -42,7 +42,7 @@ export const TEAMS = [
 				'twitter.com/arno3K', 'twitch.tv/arno3k', 'youtube.com/@manilefuret219' ],
 			[ 'Sparta', 'team-aztec/Sparta.webp',
 				'twitter.com/SpartaCSGO', 'twitch.tv/spartacsgo' ],
-			[ 'Sye', 'team-aztec/Sye.png',
+			[ 'Sye', 'team-aztec/Sye.webp',
 				'twitter.com/Sye_Cs' ],
 		],
 		staff: [
