@@ -13,10 +13,14 @@ export const RENCONTRES = [
 	[ "2024-01-30 20:00", "Team Aztec vs k0ncept kuwlaka", "https://www.twitch.tv/djiimy", "1-0", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-adc3846e-c604-4a07-aaba-0a4b0ea292e5/scoreboard" ],
 	[ "2024-02-01 21:00", "Team Aztec vs Quickplay Grey", "https://www.twitch.tv/djiimy", "13-8", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-363595cf-1c9a-4d47-8e43-9136ef090cd4/scoreboard" ],
 	[ "2024-02-06 20:00", "Team Aztec vs GTZ-Esports", "https://www.twitch.tv/fantiin/", "4-13", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-16c35555-234f-4fdb-9ffa-57943f044f6e/scoreboard" ],
-	[ "2024-02-12 21:00", "Team Aztec vs 95Vikings", "https://www.twitch.tv/djiimy" ],
+	[ "2024-02-12 21:00", "Team Aztec vs 95Vikings", "https://www.twitch.tv/nagu_fr" ],
 	[ "2024-02-06 20:00", "Aztec Talent vs 100", "https://www.twitch.tv/djiimy","10-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-d6fe07e4-def6-4d63-91b8-66ec92e6a129/scoreboard" ],
-	[ "2024-02-08 20:00", "Aztec Talent vs Griefers", "https://www.twitch.tv/djiimy" ],
+	[ "2024-02-08 20:00", "Aztec Talent vs Griefers", "https://www.twitch.tv/RyanRumbles" ],
 	[ "2024-02-05 19:00", "Aztec Talent vs Sunnuntai", "https://www.twitch.tv/EU_SGL", "13-5", "SGL Spring 2024", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
+	[ "2024-02-13 20:00", "Team Aztec vs Nordix Esport", "https://www.twitch.tv/djiimy" ],
+	[ "2024-02-15 20:00", "Team Aztec vs BOROWKA", "https://www.twitch.tv/djiimy" ],
+	[ "2024-02-13 20:00", "Aztec Talent vs Heimo Esports", "https://www.twitch.tv/RyanRumbles" ],
+	[ "2024-02-15 20:00", "Aztec Talent vs Kronjylland", "https://www.twitch.tv/RyanRumbles" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
