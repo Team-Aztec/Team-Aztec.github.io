@@ -24,9 +24,13 @@ export const RENCONTRES = [
 	[ "2024-02-12 20:00", "Aztec Talent vs N1GHT Esports", "", "13-0", "SGL Spring 2024", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
 	[ "2024-02-20 20:00", "Team Aztec vs AMANEKMYSELF", "https://www.twitch.tv/djiimy", "13-7", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-99a5f4a6-6bd1-4f5c-b381-1604f9a3cee2/scoreboard" ],
 	[ "2024-02-22 20:00", "Team Aztec vs Enjoyers", "https://www.twitch.tv/djiimy" ],
-	[ "2024-02-20 20:00", "Aztec Talent vs TEAM BRUTE", "https://www.twitch.tv/m1nusf" ],
+	[ "2024-02-25 18:00", "Aztec Talent vs TEAM BRUTE", "https://www.twitch.tv/m1nusf" ],
 	[ "2024-02-22 20:00", "Aztec Talent vs iDestructive", "https://www.twitch.tv/m1nusf" ],
+	[ "2024-02-27 20:00", "Aztec Talent vs AMIGOSI", "https://www.twitch.tv/m1nusf" ],
+	[ "2024-02-29 20:00", "Aztec Talent vs aTTax Evo", "https://www.twitch.tv/m1nusf" ],
 	[ "2024-02-19 20:00", "Aztec Talent vs EstroxalE", "https://www.twitch.tv/m1nusf", "2-0", "SGL Spring 2024", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
+	[ "2024-02-22 20:00", "Team Aztec vs KellyClan", "https://www.twitch.tv/djiimy" ],
+	[ "2024-02-22 20:00", "Team Aztec vs OlgodEfterskole", "https://www.twitch.tv/djiimy" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
