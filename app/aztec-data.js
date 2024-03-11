@@ -31,7 +31,7 @@ export const RENCONTRES = [
 	[ "2024-02-19 20:00", "Aztec Talent vs EstroxalE", "https://www.twitch.tv/m1nusf", "2-0", "SGL Spring 2024", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
 	[ "2024-02-27 20:00", "Team Aztec vs KellyClan", "https://www.twitch.tv/djiimy", "1-0", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-0b62789f-318d-453f-9de5-4d0095fbde1a/scoreboard" ],
 	[ "2024-02-29 20:00", "Team Aztec vs OlgodEfterskole", "https://www.twitch.tv/djiimy", "11-13", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-d7486677-afce-4323-a842-f69ea339f616/scoreboard" ],
-	[ "2024-03-10 19:00", "Aztec Talent vs Energise Club", "" ],
+	[ "2024-03-10 19:00", "Aztec Talent vs Energise Club", "", "2-0", "SGL Spring 2024", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
