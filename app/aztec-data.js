@@ -53,8 +53,7 @@ export const TEAMS = [
 			[ 'Ironpol', 'Manager' ],
 			[ 'Riggow', 'Coach' ],
 		],
-	},
-	{
+	}, {
 		name: /*html*/`Counter-Strike 2 :
 			<span class="roster-logo-container">
 				<svg class="roster-logo" viewBox="0 0 1000 1000">
@@ -78,6 +77,31 @@ export const TEAMS = [
 		staff: [
 			[ 'E1mantas', 'Manager',
 				'twitter.com/E1mantasCS2' ],
+		],
+	}, {
+		name: /*html*/`Counter-Strike 2 :
+			<span class="roster-logo-container">
+				<svg class="roster-logo" viewBox="0 0 1000 1000">
+					<use style="--stroke-width:0; --inner-fill:white; --outer-fill:white;"
+							xlink:href="#logo-aztec"></use>
+				</svg>
+				Aztec Evolved
+			</span>`,
+		roster: [
+			[ 'Atrium', 'aztec-evolved/Atrium.webp',
+				'twitter.com/__Atrium__' ],
+			[ 'CRAZYMATT', 'aztec-evolved/CRAZYMATT.webp',
+				'twitter.com/MattCr4zy' ],
+			[ 'RedShotSmqked', 'aztec-evolved/RedShotSmqked.webp',
+				'twitter.com/redshot_cs' ],
+			[ 'Sandro', 'aztec-evolved/Sandro.webp',
+				'twitter.com/saNdro98'],
+			[ 'Silent', 'aztec-evolved/Silent.webp',
+				'twitter.com/siilentcs'],
+		],
+		staff: [
+			[ '-', '-',
+				'' ],
 		],
 	},
 ]
