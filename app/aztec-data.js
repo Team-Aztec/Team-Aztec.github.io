@@ -56,14 +56,13 @@ export const TEAMS = [
 				'twitter.com/m0nstrGG' ],
 			[ 'Arno3K', 'team-aztec/Arno3K.webp',
 				'twitter.com/arno3K', 'twitch.tv/arno3k', 'youtube.com/@manilefuret219' ],
-			[ 'Sparta', 'team-aztec/Sparta.webp',
-				'twitter.com/SpartaCSGO', 'twitch.tv/spartacsgo' ],
+			[ 'Rain', 'default.webp',
+				'' ],
 			[ 'Sye', 'team-aztec/Sye.webp',
 				'twitter.com/Sye_Cs' ],
 		],
 		staff: [
-			[ 'Ironpol', 'Manager' ],
-			[ 'Riggow', 'Coach' ],
+			[ 'Oxbrandd', 'Coach' ],
 		],
 	}, {
 		name: /*html*/`Counter-Strike 2 :
@@ -112,7 +111,32 @@ export const TEAMS = [
 				'twitter.com/siilentcs'],
 		],
 		staff: [
-			[ '-', '-',
+			[ 'THs', 'Manager',
+				'' ],
+		],
+	}, {
+		name: /*html*/`Counter-Strike 2 :
+			<span class="roster-logo-container">
+				<svg class="roster-logo" viewBox="0 0 1000 1000">
+					<use style="--stroke-width:0; --inner-fill:white; --outer-fill:white;"
+							xlink:href="#logo-aztec"></use>
+				</svg>
+				Aztec Primal
+			</span>`,
+		roster: [
+			[ 'Mzizou', 'default.webp',
+				''],
+			[ 'Sparro', 'default.webp',
+				''],
+			[ 'Ironpol', 'default.webp',
+				''],
+			[ 'Sparta', 'aztec-primal/Sparta.webp',
+				'twitter.com/SpartaCSGO', 'twitch.tv/spartacsgo' ],
+			[ 'WaRRyX', 'default.webp',
+				''],
+		],
+		staff: [
+			[ 'THs', 'Manager',
 				'' ],
 		],
 	},
