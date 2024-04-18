@@ -6,6 +6,7 @@ const DTFMonth = new Intl.DateTimeFormat('fr-FR', { month:'long' })
 
 const teamsData = {
 	'teamaztec': { name:'Team Aztec', logo:''},
+		'aztecprimal': { name:'Aztec Primal', logo:''},
 	'aztectalent': { name:'Aztec Talent', logo:'--stroke-width:1; --inner-fill:#f6b84e;' },
 	'aztecevolved': { name:'Aztec Evolved', logo:'--stroke-width:0; --inner-fill:white; --outer-fill:white;' },
 }

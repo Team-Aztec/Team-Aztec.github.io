@@ -33,6 +33,21 @@ export const RENCONTRES = [
 	[ "2024-02-29 20:00", "Team Aztec vs OlgodEfterskole", "https://www.twitch.tv/djiimy", "11-13", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-d7486677-afce-4323-a842-f69ea339f616/scoreboard" ],
 	[ "2024-03-10 19:00", "Aztec Talent vs Energise Club", "", "2-0", "SGL Spring 2024", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
 	[ "2024-03-14 19:00", "Aztec Talent vs FALKE ESPORTS", "https://www.twitch.tv/SGL", "2-0", "SGL Spring 2024", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
+	[ "2024-04-09 20:00", "Team Aztec vs PCIFIC ESPOR", "https://www.twitch.tv/djiimy", "6-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-d4d58baa-0bce-4979-b1b3-7bded409dcfa/scoreboard" ],
+	[ "2024-04-09 20:00", "Aztec Primal vs 1WIN academy", "https://www.twitch.tv/djiimy", "5-13", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-2bd9fb45-68e5-499b-a688-12f1c51a73fc/scoreboard" ],
+	[ "2024-04-08 20:00", "Aztec Evolved vs Fodlers", "https://www.twitch.tv/djiimy", "13-0", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-5ed2336e-beb8-40ac-b882-38478e0a2a53/scoreboard" ],
+	[ "2024-04-15 20:00", "Team Aztec vs INFINITE", "https://www.twitch.tv/djiimy", "6-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-d4d58baa-0bce-4979-b1b3-7bded409dcfa/scoreboard" ],
+	[ "2024-04-11 20:00", "Aztec Primal vs Oxuji Mint", "https://www.twitch.tv/djiimy", "13-3", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-e22a8511-aac4-4efa-aa03-86ddab3fee23/scoreboard" ],
+	[ "2024-04-10 20:00", "Aztec Evolved vs -H-omeless", "https://www.twitch.tv/djiimy", "13-0", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-a575d089-345f-4e1b-a75d-7029f4ba0b07/scoreboard" ],
+	[ "2024-04-16 20:00", "Team Aztec vs SNOGARD Dragons", "https://www.twitch.tv/djiimy", "0-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-3d9ed578-c3b1-4620-8025-85327abc2c01/scoreboard" ],
+	[ "2024-04-16 20:00", "Aztec Primal vs EITONNEPAASE", "https://www.twitch.tv/djiimy", "13-3", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-4e915dcf-a4b7-4612-b5fd-2d66fa49f7ff/scoreboard" ],
+	[ "2024-04-15 20:00", "Aztec Evolved vs CFRovince", "https://www.twitch.tv/djiimy", "13-11", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-b280b286-55f1-4bb9-8af7-cd471af4bce7/scoreboard" ],
+	[ "2024-04-18 20:00", "Team Aztec vs Dynamo Eclot Thunders", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
+	[ "2024-04-17 21:00", "Aztec Primal vs K10 FWRD", "https://www.twitch.tv/djiimy", "8-13", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-ef7eaa23-f7b7-42d6-afa9-98db5801d09a/scoreboard" ],
+	[ "2024-04-17 20:30", "Aztec Evolved vs NA VYPICHU", "https://www.twitch.tv/djiimy", "13-9", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-f770e02b-0b0f-45c7-aec2-fbdf59bcc3a8/scoreboard" ],
+	[ "2024-04-23 20:00", "Team Aztec vs DAViNCi ESPORTS", "https://www.twitch.tv/djiimy", "3-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-1222e358-7f23-4fa7-ac33-3b1ab2e89f4f/scoreboard" ],
+	[ "2024-04-23 20:00", "Aztec Primal vs KaFFa", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
+	[ "2024-04-22 20:30", "Aztec Evolved vs ImpUdent Boys", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
