@@ -57,7 +57,7 @@ export const TEAMS = [
 			[ 'Arno3K', 'team-aztec/Arno3K.webp',
 				'twitter.com/arno3K', 'twitch.tv/arno3k', 'youtube.com/@manilefuret219' ],
 			[ 'Rain', 'default.webp',
-				'' ],
+				'twitter.com/Rainn_420' ],
 			[ 'Sye', 'team-aztec/Sye.webp',
 				'twitter.com/Sye_Cs' ],
 		],
@@ -112,7 +112,7 @@ export const TEAMS = [
 		],
 		staff: [
 			[ 'THs', 'Manager',
-				'' ],
+				'twitter.com/THsPvP1' ],
 		],
 	}, {
 		name: /*html*/`Counter-Strike 2 :
@@ -125,19 +125,19 @@ export const TEAMS = [
 			</span>`,
 		roster: [
 			[ 'Mzizou', 'default.webp',
-				''],
+				'twitter.com/Mzizouoff'],
 			[ 'Sparro', 'default.webp',
-				''],
+				'twitter.com/Sparro77819891'],
 			[ 'Ironpol', 'default.webp',
-				''],
+				'twitter.com/IronpolCSGO'],
 			[ 'Sparta', 'aztec-primal/Sparta.webp',
 				'twitter.com/SpartaCSGO', 'twitch.tv/spartacsgo' ],
 			[ 'WaRRyX', 'default.webp',
-				''],
+				'twitter.com/WaRRyXCS'],
 		],
 		staff: [
 			[ 'THs', 'Manager',
-				'' ],
+				'twitter.com/THsPvP1' ],
 		],
 	},
 ]
