@@ -48,11 +48,16 @@ export const RENCONTRES = [
 	[ "2024-04-23 20:00", "Team Aztec vs DAViNCi ESPORTS", "https://www.twitch.tv/djiimy", "8-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-803ca0ce-85de-4bcb-8632-a3643d0d90d0/scoreboard" ],
 	[ "2024-04-23 20:00", "Aztec Primal vs KaFFa", "https://www.twitch.tv/djiimy", "13-11", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-441fc668-5fb4-4200-827b-bc81b7660aae/scoreboard" ],
 	[ "2024-04-22 20:30", "Aztec Evolved vs ImpUdent Boys", "https://www.twitch.tv/djiimy", "8-13", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-2b714814-b408-42a8-a080-c7ce74f02dcd/scoreboard" ],
-	[ "2024-04-18 20:00", "Team Aztec vs Dynamo Eclot Thunders", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
-	[ "2024-04-25 20:00", "Aztec Primal vs IWCATS", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
-	[ "2024-04-24 20:30", "Aztec Evolved vs AL-QATRAO BLACK", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
-	[ "2024-04-25 20:00", "Team Aztec vs HAVENs", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
-	[ "2024-04-28 18:00", "Aztec Talent vs Nii Kerge", "https://www.twitch.tv/ryanrumbles", "", "Grand Final SGL", "" ],
+	[ "2024-04-25 20:00", "Aztec Primal vs IWCATS", "https://www.twitch.tv/djiimy", "6-13", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-c6c7e473-4a0c-4228-ab80-bfa969c0beab/scoreboard" ],
+	[ "2024-04-24 20:30", "Aztec Evolved vs AL-QATRAO BLACK", "https://www.twitch.tv/djiimy", "13-8", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-75ee4acb-64af-4ae0-9202-98748c9beb77/scoreboard" ],
+	[ "2024-04-25 20:00", "Team Aztec vs HAVENs", "https://www.twitch.tv/djiimy", "5-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-b7454b20-1deb-4af7-abc5-5932644f5907/scoreboard" ],
+	[ "2024-04-28 18:00", "Aztec Talent vs Nii Kerge", "https://www.twitch.tv/ryanrumbles", "3-2", "Grand Final SGL", "https://liquipedia.net/counterstrike/User:SGL/2024/Spring" ],
+	[ "2024-04-30 20:00", "Aztec Primal vs YondaleAthletic", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
+	[ "2024-04-29 20:30", "Aztec Evolved vs JlyDoMaHbl", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
+	[ "2024-04-30 20:00", "Team Aztec vs AMIGOSI", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
+	[ "2024-05-02 20:00", "Aztec Primal vs Team Linejka", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
+	[ "2024-05-01 20:30", "Aztec Evolved vs Nik Le Content", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
+	[ "2024-05-02 21:00", "Team Aztec vs ultrawhite", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
