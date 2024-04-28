@@ -52,6 +52,7 @@ export const RENCONTRES = [
 	[ "2024-04-25 20:00", "Aztec Primal vs IWCATS", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
 	[ "2024-04-24 20:30", "Aztec Evolved vs AL-QATRAO BLACK", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
 	[ "2024-04-25 20:00", "Team Aztec vs HAVENs", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
+	[ "2024-04-28 18:00", "Aztec Talent vs Nii Kerge", "https://www.twitch.tv/ryanrumbles", "", "Grand Final SGL", "" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
