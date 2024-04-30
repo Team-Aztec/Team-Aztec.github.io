@@ -93,31 +93,6 @@ export const TEAMS = [
 		name: /*html*/`Counter-Strike 2 :
 			<span class="roster-logo-container">
 				<svg class="roster-logo" viewBox="0 0 1000 1000">
-					<use style="--stroke-width:1; --inner-fill:url(#innerGradient);"
-							xlink:href="#logo-aztec"></use>
-				</svg>
-				Aztec Talent
-			</span>`,
-		roster: [
-			[ 'Ay0k', 'aztec-talent/Ay0k.webp',
-				'twitter.com/Ay0kcs' ],
-			[ 'DeeN', 'aztec-talent/DeeN.webp',
-				'twitter.com/deeN_cs' ],
-			[ 'Bond1e', 'aztec-talent/Bond1e.webp',
-				'twitter.com/bond1e_cs' ],
-			[ 'Dorz14', 'aztec-talent/Dorz14.webp',
-				],
-			[ 'le0nich', 'default.webp',
-				],
-		],
-		staff: [
-			[ 'E1mantas', 'Manager',
-				'twitter.com/E1mantasCS2' ],
-		],
-	}, {
-		name: /*html*/`Counter-Strike 2 :
-			<span class="roster-logo-container">
-				<svg class="roster-logo" viewBox="0 0 1000 1000">
 					<use style="--stroke-width:0; --inner-fill:white; --outer-fill:white;"
 							xlink:href="#logo-aztec"></use>
 				</svg>
@@ -143,7 +118,7 @@ export const TEAMS = [
 		name: /*html*/`Counter-Strike 2 :
 			<span class="roster-logo-container">
 				<svg class="roster-logo" viewBox="0 0 1000 1000">
-					<use style="--stroke-width:0; --inner-fill:white; --outer-fill:white;"
+					<use style="--stroke-width:1; --inner-fill:url(#innerGradient);"
 							xlink:href="#logo-aztec"></use>
 				</svg>
 				Aztec Primal
