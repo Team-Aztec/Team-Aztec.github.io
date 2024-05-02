@@ -55,9 +55,9 @@ export const RENCONTRES = [
 	[ "2024-04-30 20:00", "Aztec Primal vs YondaleAthletic", "https://www.twitch.tv/djiimy", "13-8", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-d25383c0-20a5-4e9c-979a-9891df5d5425/scoreboard" ],
 	[ "2024-04-29 20:30", "Aztec Evolved vs JlyDoMaHbl", "https://www.twitch.tv/djiimy", "10-13", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-dac499f9-8790-498f-8537-a119ab6781d5/scoreboard" ],
 	[ "2024-04-30 20:00", "Team Aztec vs AMIGOSI", "https://www.twitch.tv/djiimy", "16-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-90d375f5-030e-4cde-b41b-ff3f58030336/scoreboard" ],
-	[ "2024-05-02 20:00", "Aztec Primal vs Team Linejka", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
+	[ "2024-05-02 20:00", "Aztec Primal vs Team Linejka", "https://www.twitch.tv/djiimy", "13-9", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-33f165f6-21b6-434a-8928-c40412e03cfe" ],
 	[ "2024-05-01 20:30", "Aztec Evolved vs Nik Le Content", "https://www.twitch.tv/djiimy", "13-10", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-cc16dcba-1bc3-4066-91f8-31514f1d9561/scoreboard" ],
-	[ "2024-05-02 21:00", "Team Aztec vs ultrawhite", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
+	[ "2024-05-02 21:00", "Team Aztec vs ultrawhite", "https://www.twitch.tv/djiimy", "13-4", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-48711b8b-0243-49b3-9cff-76eca1f5a6f7/scoreboard" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
