@@ -58,12 +58,12 @@ export const RENCONTRES = [
 	[ "2024-05-02 20:00", "Aztec Primal vs Team Linejka", "https://www.twitch.tv/djiimy", "13-9", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-33f165f6-21b6-434a-8928-c40412e03cfe" ],
 	[ "2024-05-01 20:30", "Aztec Evolved vs Nik Le Content", "https://www.twitch.tv/djiimy", "13-10", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-cc16dcba-1bc3-4066-91f8-31514f1d9561/scoreboard" ],
 	[ "2024-05-02 21:00", "Team Aztec vs ultrawhite", "https://www.twitch.tv/djiimy", "13-4", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-48711b8b-0243-49b3-9cff-76eca1f5a6f7/scoreboard" ],
-	[ "2024-05-07 20:00", "Aztec Primal vs Bitshock", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
+	[ "2024-05-07 20:00", "Aztec Primal vs Bitshock", "https://www.twitch.tv/djiimy", "14-16", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-bc499ade-b066-4353-8062-aa4e4e8a4f96/scoreboard" ],
 	[ "2024-05-06 20:30", "Aztec Evolved vs papparefut", "https://www.twitch.tv/djiimy", "1-0", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-4b53596a-f47e-4b72-a8c5-6a5cfeab2809" ],
-	[ "2024-05-07 20:00", "Team Aztec vs SHIPACHI", "https://www.twitch.tv/djiimy", "1-0", "ESEA Main", "" ],
-	[ "2024-05-09 20:00", "Aztec Primal vs Team Sufarex", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
-	[ "2024-05-08 20:30", "Aztec Evolved vs Ducator eSports", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
-	[ "2024-05-09 20:00", "Team Aztec vs antitrolli", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
+	[ "2024-05-07 20:00", "Team Aztec vs SHIPACHI", "https://www.twitch.tv/djiimy", "1-0", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-6ddbfa49-48e0-4cab-a644-ce4f4fa04784" ],
+	[ "2024-05-09 20:00", "Aztec Primal vs Team Sufarex", "https://www.twitch.tv/djiimy", "1-0", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-22aceca2-6bb0-4cbc-bae2-de93f709b3de/scoreboard" ],
+	[ "2024-05-08 20:30", "Aztec Evolved vs Ducator eSports", "https://www.twitch.tv/djiimy", "1-0", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-3bf45985-d0d4-4552-9d38-ee8b816c7d55/scoreboard" ],
+	[ "2024-05-09 20:00", "Team Aztec vs antitrolli", "https://www.twitch.tv/djiimy", "7-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-f48a31f1-0ee6-478c-9585-4f362f9a268c/scoreboard" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
