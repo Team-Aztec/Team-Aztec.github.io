@@ -67,9 +67,9 @@ export const RENCONTRES = [
 	[ "2024-05-14 20:00", "Aztec Primal vs GOLIRA", "https://www.twitch.tv/", "0-1", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-6e0c98a7-5bdb-4574-9e7d-7c467f296591" ],
 	[ "2024-05-13 20:30", "Aztec Evolved vs RGW Esports", "https://www.twitch.tv/ths____", "6-13", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-276849d0-f3bd-4632-a7af-0afb8e7f4b59/scoreboard" ],
 	[ "2024-05-14 21:00", "Team Aztec vs Reveal", "https://www.twitch.tv/nagu_fr", "8-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-1b7178ec-8713-4818-8ece-c1889bbe042d/scoreboard" ],
-	[ "2024-05-16 20:00", "Aztec Primal vs BLUEJAYS Ember", "https://www.twitch.tv/", "", "ESEA Intermediate", "" ],
-	[ "2024-05-15 20:30", "Aztec Evolved vs Insomnia", "https://twitch.tv/JexTv_", "2-13", "ESEA Open", "" ],
-	[ "2024-05-16 20:00", "Team Aztec vs xdddd", "https://www.twitch.tv/", "", "ESEA Main", "" ],
+	[ "2024-05-16 20:00", "Aztec Primal vs BLUEJAYS Ember", "https://www.twitch.tv/", "0-1", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-9dd37cb7-94a4-4196-8d2a-ab89c9a752e2" ],
+	[ "2024-05-15 20:30", "Aztec Evolved vs Insomnia", "https://twitch.tv/JexTv_", "2-13", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-7f61bdeb-4f13-41d0-80e0-837bca73284f/scoreboard" ],
+	[ "2024-05-16 20:00", "Team Aztec vs xdddd", "https://www.twitch.tv/", "1-0", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-af40a2e1-8860-48df-99ac-8a07177b8b40" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
