@@ -72,7 +72,7 @@ export const RENCONTRES = [
 	[ "2024-05-16 20:00", "Team Aztec vs xdddd", "https://www.twitch.tv/", "1-0", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-af40a2e1-8860-48df-99ac-8a07177b8b40" ],
 	[ "2024-05-21 20:00", "Team Aztec vs Entropy Future", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
 	[ "2024-05-21 20:00", "Aztec Primal vs Team Rayvenclaw", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
-	[ "2024-05-20 20:30", "Aztec Evolved vs HStore", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
+	[ "2024-05-20 21:30", "Aztec Evolved vs HStore", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
 	[ "2024-05-23 20:00", "Team Aztec vs Flares Ascent", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
 	[ "2024-05-23 20:00", "Aztec Primal vs UNEVEN", "https://www.twitch.tv/djiimy", "", "ESEA Intermediate", "" ],
 	[ "2024-05-22 20:30", "Aztec Evolved vs Globulos", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
