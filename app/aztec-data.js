@@ -73,9 +73,10 @@ export const RENCONTRES = [
 	[ "2024-05-21 20:00", "Team Aztec vs Entropy Future", "https://www.twitch.tv/djiimy", "13-3", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-6685b75a-156e-4ebf-a194-6727e4020c9d/scoreboard" ],
 	[ "2024-05-21 20:00", "Aztec Primal vs Team Rayvenclaw", "https://www.twitch.tv/djiimy", "9-13", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-623052ba-3636-47e5-8812-97908c545077/scoreboard" ],
 	[ "2024-05-20 21:30", "Aztec Evolved vs HStore", "https://www.twitch.tv/djiimy", "11-13", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-552f57ff-ee74-4469-a08b-0c841494d225/scoreboard" ],
-	[ "2024-05-23 21:00", "Team Aztec vs Flares Ascent", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
-	[ "2024-05-23 20:00", "Aztec Primal vs UNEVEN", "https://www.twitch.tv/djiimy", "0-1", "ESEA Intermediate", "" ],
+	[ "2024-05-23 21:00", "Team Aztec vs Flares Ascent", "https://www.twitch.tv/djiimy", "9-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-6a536e72-ad14-4cb4-a27d-44c96a205f25" ],
+	[ "2024-05-23 20:00", "Aztec Primal vs UNEVEN", "https://www.twitch.tv/djiimy", "0-1", "ESEA Intermediate", "https://www.faceit.com/fr/cs2/room/1-a9a55ab2-c1e4-4e97-ad1d-d878bf8a76bf" ],
 	[ "2024-05-22 20:30", "Aztec Evolved vs Globulos", "https://www.twitch.tv/djiimy", "19-15", "ESEA Open", "https://www.faceit.com/fr/cs2/room/1-c9eaf5c6-ec3b-44ae-829b-13a6f5a45397/scoreboard" ],
+	[ "2024-05-30 20:30", "Aztec Evolved vs MXTM", "https://www.twitch.tv/djiimy", "", "ESEA Open", "" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
