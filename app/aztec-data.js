@@ -108,7 +108,7 @@ export const TEAMS = [
 			[ '1nless', 'Coach',
 				'https://www.x.com/1nless_' ],
 			[ 'On recrute!', 'Manager',
-				],
+				'https://x.com/Team_Aztec_' ],
 		],
 	},
 ]
