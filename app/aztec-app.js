@@ -247,7 +247,11 @@ class AztecApp {
 			}
 
 			for (let [ i, node ] of this.team.staffNodes.entries()) {
-				const [ name, role ] = teamData.staff[i] ?? []
+				const [ name, role, link ] = teamData.staff[i] ?? []
+
+				;link ?
+					node.setAttribute('href', link) :
+					node.removeAttribute('href')
 
 				if (!name) {
 					node.style.display = 'none'

@@ -106,7 +106,9 @@ export const TEAMS = [
 		],
 		staff: [
 			[ '1nless', 'Coach',
-				'twitter.com/1nless_' ],
+				'https://www.x.com/1nless_' ],
+			[ 'On recrute!', 'Manager',
+				],
 		],
 	},
 ]
