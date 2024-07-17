@@ -99,7 +99,7 @@ export const TEAMS = [
 				'twitter.com/m0nstrGG' ],
 			[ 'Ace', 'team-aztec/Ace.webp',
 				'twitter.com/AceleleCS2' ],
-			[ 'Rain', 'default.webp',
+			[ 'Rain', 'team-aztec/Rain.webp',
 				'twitter.com/Rainn_420' ],
 			[ 'Sye', 'team-aztec/Sye.webp',
 				'twitter.com/Sye_Cs' ],
