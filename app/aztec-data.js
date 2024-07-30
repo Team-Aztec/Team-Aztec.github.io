@@ -79,9 +79,11 @@ export const RENCONTRES = [
 	[ "2024-07-16 20:00", "Team Aztec vs Wastedpotential", "https://www.twitch.tv/djiimy", "13-4", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-26c12c64-7170-4602-b5c3-0604b923990a/scoreboard" ],
 	[ "2024-07-18 20:00", "Team Aztec vs k0ncePt Kuwlaka", "https://www.twitch.tv/djiimy", "6-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-59abd827-aff5-4b1a-ae14-92882a27f5ab/scoreboard" ],
 	[ "2024-07-23 20:00", "Team Aztec vs Senshi eSports", "https://www.twitch.tv/NAGU_FR", "6-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-ada4d3dc-078f-4ff7-a556-622a665665fd/scoreboard" ],
-	[ "2024-07-25 20:00", "Team Aztec vs NIKAKIX", "https://www.twitch.tv/", "", "ESEA Main", "" ],
-	[ "2024-07-30 21:00", "Team Aztec vs LookingForOrg", "https://www.twitch.tv/Fantiin", "", "ESEA Main", "" ],
+	[ "2024-07-25 20:00", "Team Aztec vs NIKAKIX", "https://www.twitch.tv/Fantiin", "13-7", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-b5447dc2-2fcd-4a90-9e98-4671a726226b/scoreboard" ],
+	[ "2024-07-30 21:00", "Team Aztec vs LookingForOrg", "https://www.twitch.tv/Fantiin", "8-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-6909899e-d1bf-4250-a7e0-90a7829b6d81/scoreboard" ],
 	[ "2024-08-01 20:00", "Team Aztec vs yengi", "https://www.twitch.tv/", "", "ESEA Main", "" ],
+	[ "2024-08-06 20:00", "Team Aztec vs WAFAW", "https://www.twitch.tv/", "", "ESEA Main", "" ],
+	[ "2024-08-08 20:00", "Team Aztec vs RAKETKA", "https://www.twitch.tv/", "", "ESEA Main", "" ],
 ]//NOT HERE
 ///NOT HERE
 ///NOT HERE
