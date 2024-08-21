@@ -84,7 +84,7 @@ export const RENCONTRES = [
 	[ "2024-08-01 20:00", "Team Aztec vs yengi", "https://www.twitch.tv/", "13-8", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-1766e73b-e554-4012-9091-882340a63140/scoreboard" ],
 	[ "2024-08-06 20:00", "Team Aztec vs WAFAW", "https://www.twitch.tv/NAGU_FR", "11-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-13ca093e-75d3-4550-ab58-2fae382a9ca4/scoreboard" ],
 	[ "2024-08-08 20:00", "Team Aztec vs RAKETKA", "https://www.twitch.tv/phobcs", "6-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-c8835718-0fae-49b4-9fd8-6b1e824cdd63/scoreboard" ],
-	[ "2024-08-21 20:00", "Team Aztec vs Be Five", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
+	[ "2024-08-21 20:00", "Team Aztec vs Be Five", "https://www.twitch.tv/fantiin", "", "ESEA Main", "" ],
 	[ "2024-08-15 20:00", "Team Aztec vs Scammers", "https://www.twitch.tv/", "1-0", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-de642146-1700-45dd-aeaa-28089bc5f0c3" ],
 	[ "2024-08-20 20:00", "Team Aztec vs Turritos", "https://www.twitch.tv/djiimy", "5-13", "ESEA Main", "https://www.faceit.com/fr/cs2/room/1-6f411394-379e-4d1d-bf55-8e3930a38ce4/scoreboard" ],
 	[ "2024-08-27 20:00", "Team Aztec vs innocent zero", "https://www.twitch.tv/djiimy", "", "ESEA Main", "" ],
