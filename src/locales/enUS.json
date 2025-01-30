@@ -1,0 +1,8 @@
+{
+    "navbar": {
+        "home" : "Home",
+        "tournament": "Tournaments",
+        "rankings": "Rankings",
+        "login": "Log in"
+    }
+}
