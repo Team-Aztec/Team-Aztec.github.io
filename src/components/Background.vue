@@ -193,11 +193,11 @@
 
 <style scoped>
 #background {
-  position: sticky;
+  position: absolute;
   z-index: -1;
   top: 0;
   height: 100%;
-
+  width: 100%;
   margin-bottom: -100vh;
   overflow: hidden;
   background: #000;
