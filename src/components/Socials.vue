@@ -111,7 +111,7 @@ h1:after {
 }
 
 #reseaux {
-  margin-top: 128px;
+  margin-top: 100px;
   max-width: 1000px;
 }
 
