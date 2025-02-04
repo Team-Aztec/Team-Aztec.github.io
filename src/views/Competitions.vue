@@ -20,6 +20,14 @@
     </div>
     <div class="competitions-behopxaztec">
       <h2 class="competitions-behopxaztec-title">BeHopGG 𝑥 Aztec</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        mattis diam odio, quis condimentum nibh molestie sit amet. Nullam nisl
+        neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu.
+        Suspendisse potenti. Mauris in eleifend enim. Morbi nec quam laoreet,
+        porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum
+        commodo, ipsum augue tincidunt lorem, eu iaculis est lectus non nisl.
+      </p>
     </div>
   </div>
 </template>

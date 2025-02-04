@@ -15,6 +15,16 @@
           </router-link>
         </li>
         <li>
+          <router-link class="nav-link" :to="{ name: 'Statistiques' }">
+            Statistiques
+          </router-link>
+        </li>
+        <li>
+          <router-link class="nav-link" :to="{ name: 'Contact' }">
+            Contact
+          </router-link>
+        </li>
+        <li>
           <a class="nav-link nav-soon">
             <svg class="sparks" viewBox="0 0 142 64">
               <defs>
