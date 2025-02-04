@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from './../views/Home.vue'
-import Competitions from './../views/Competitions.vue'
-import Stats from './../views/Stats.vue'
+import Home from '@/views/Home.vue'
+import Competitions from '@/views/Competitions.vue'
+import Stats from '@/views/Stats.vue'
 
 const routes = [
   {
@@ -32,7 +32,7 @@ const router = createRouter({
   linkActiveClass: 'is-active',
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((_to, _from, next) => {
   next()
 })
 

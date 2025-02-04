@@ -3,7 +3,7 @@ import { createI18n } from 'vue-i18n'
 import './style.css'
 import App from './App.vue'
 
-import router from './router'
+import router from './router/index.ts'
 import enUs from './locales/enUS.json'
 import frFR from './locales/frFR.json'
 
