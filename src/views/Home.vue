@@ -1,25 +1,29 @@
 <template>
   <div class="home">
-    <h1>Qui sommes nous ?</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie sit
-      amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris in
-      eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo, ipsum
-      augue tincidunt lorem, eu iaculis est lectus non nisl. Curabitur id purus laoreet, aliquet enim vitae, gravida tortor.
-      Integer mi odio, consequat iaculis nunc vel, pellentesque euismod neque. Sed ultrices porttitor porta. In imperdiet eu diam
-      ac pretium. Nullam vulputate massa vitae enim sollicitudin rutrum. Donec ornare eleifend dui, vel ullamcorper metus volutpat
-      vitae. Nunc cursus auctor dui et consequat. Nulla facilisi. Aenean consectetur felis et mauris bibendum elementum.
-    </p>
+    <div class="home-content">
+      <h1 class="home-content-title">Qui sommes nous ?</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie sit
+        amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris in
+        eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo, ipsum
+        augue tincidunt lorem, eu iaculis est lectus non nisl. Curabitur id purus laoreet, aliquet enim vitae, gravida tortor.
+        Integer mi odio, consequat iaculis nunc vel, pellentesque euismod neque. Sed ultrices porttitor porta. In imperdiet eu
+        diam ac pretium. Nullam vulputate massa vitae enim sollicitudin rutrum. Donec ornare eleifend dui, vel ullamcorper metus
+        volutpat vitae. Nunc cursus auctor dui et consequat. Nulla facilisi. Aenean consectetur felis et mauris bibendum
+        elementum.
+      </p>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie sit
-      amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris in
-      eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo, ipsum
-      augue tincidunt lorem, eu iaculis est lectus non nisl. Curabitur id purus laoreet, aliquet enim vitae, gravida tortor.
-      Integer mi odio, consequat iaculis nunc vel, pellentesque euismod neque. Sed ultrices porttitor porta. In imperdiet eu diam
-      ac pretium. Nullam vulputate massa vitae enim sollicitudin rutrum. Donec ornare eleifend dui, vel ullamcorper metus volutpat
-      vitae. Nunc cursus auctor dui et consequat. Nulla facilisi. Aenean consectetur felis et mauris bibendum elementum.
-    </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie sit
+        amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris in
+        eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo, ipsum
+        augue tincidunt lorem, eu iaculis est lectus non nisl. Curabitur id purus laoreet, aliquet enim vitae, gravida tortor.
+        Integer mi odio, consequat iaculis nunc vel, pellentesque euismod neque. Sed ultrices porttitor porta. In imperdiet eu
+        diam ac pretium. Nullam vulputate massa vitae enim sollicitudin rutrum. Donec ornare eleifend dui, vel ullamcorper metus
+        volutpat vitae. Nunc cursus auctor dui et consequat. Nulla facilisi. Aenean consectetur felis et mauris bibendum
+        elementum.
+      </p>
+    </div>
 
     <img
       class="home-banner"
@@ -59,11 +63,17 @@
       width: 85%;
       height: 500px;
     }
-  }
 
-  .home-banner {
-    width: 100%;
-    border: 1px solid #666;
-    border-radius: 4px;
+    &-content-title {
+      text-align: center;
+      text-decoration: underline;
+      text-decoration-color: #f6a429;
+    }
+
+    &-banner {
+      width: 100%;
+      border: 1px solid #666;
+      border-radius: 4px;
+    }
   }
 </style>
