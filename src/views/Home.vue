@@ -42,11 +42,14 @@
       allowfullscreen
     ></iframe>
 
+    <Sponsors />
+
     <Socials />
   </div>
 </template>
 <script setup>
   import Socials from '../components/Socials.vue'
+  import Sponsors from '../components/Sponsors.vue'
 </script>
 
 <style scoped lang="scss">
