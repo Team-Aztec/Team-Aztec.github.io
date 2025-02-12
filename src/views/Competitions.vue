@@ -2,36 +2,80 @@
   <div class="competitions">
     <div class="competitions-description">
       <h1 class="competitions-description-title">Nos compétitions</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie sit
-        amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris in
-        eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo, ipsum
-        augue tincidunt lorem, eu iaculis est lectus non nisl. Curabitur id purus laoreet, aliquet enim vitae, gravida tortor.
-        Integer mi odio, consequat iaculis nunc vel, pellentesque euismod neque. Sed ultrices porttitor porta. In imperdiet eu
-        diam ac pretium. Nullam vulputate massa vitae enim sollicitudin rutrum. Donec ornare eleifend dui, vel ullamcorper metus
-        volutpat vitae. Nunc cursus auctor dui et consequat. Nulla facilisi. Aenean consectetur felis et mauris bibendum
-        elementum.
-      </p>
+      <p>Aztec est un acteur majeur de la scène francophone dans l'organisation de compétitions sur Counter-Strike 2.</p>
+      <p
+        >Grâce à des événements compétitifs de qualité, Aztec s’impose comme une plateforme incontournable pour les joueurs et les
+        équipes souhaitant se mesurer aux meilleurs. Vous pourrez notamment trouver ici :</p
+      >
+      <ul>
+        <li>La Aztec Arena</li>
+        <li>Les Aztec Cup</li>
+      </ul>
+
+      <img
+        class="competitions-description-banner"
+        src="./../assets/images/banniere.jpeg"
+        alt="Bannière aztec organisateur de tournois esports"
+        title="Bannière aztec organisateur de tournois esports"
+      />
     </div>
-    <div class="competitions-behopxaztec">
-      <div class="competitions-behopxaztec-content">
-        <h2 class="competitions-behopxaztec-content-title">BeHopGG 𝑥 Aztec</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie
-          sit amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris
-          in eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo,
-          ipsum augue tincidunt lorem, eu iaculis est lectus non nisl.
+
+    <div class="competitions-azteccup">
+      <div class="competitions-azteccup-content">
+        <h3 class="competitions-azteccup-content-title">Aztec Cups</h3>
+        <p
+          >Les <strong>Aztec Cups</strong> sont des tournois hebdomadaires organisés chaque dimanche soir, servant de phase
+          qualificative pour les prestigieuses <strong>Aztec Arena</strong>.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie
-          sit amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris
-          in eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo,
-          ipsum augue tincidunt lorem, eu iaculis est lectus non nisl.
+          Historiquement, ces compétitions ont permis aux équipes de s’affronter dans un
+          <strong>format 3 BO1 à élimination directe</strong>, avec <strong>50€</strong> en jeu pour le vainqueur.
         </p>
-        <a class="competitions-behopxaztec-content-link" href="#">En savoir plus</a>
+        <p
+          >Véritable tremplin pour les talents émergents, les Aztec Cups offrent une opportunité aux joueurs de prouver leur
+          valeur et de gravir les échelons vers la scène compétitive de haut niveau.</p
+        >
+        <br />
+        <router-link class="competitions-azteccup-content-link" :to="{ name: 'Tournament', params: { tournamentId: 1 } }">
+          En savoir plus
+        </router-link>
       </div>
-      <div class="competitions-behopxaztec-image">
+      <div class="competitions-azteccup-image">
         <img src="./../assets/images/behop.jpeg" alt="Tournoi Behop x Aztec" title="Tournoi Behop x Aztec" />
+      </div>
+    </div>
+
+    <div class="competitions-aztecarena">
+      <div class="competitions-aztecarena-image">
+        <img src="./../assets/images/behop.jpeg" alt="Tournoi Behop x Aztec" title="Tournoi Behop x Aztec" />
+      </div>
+
+      <div class="competitions-aztecarena-content">
+        <h3 class="competitions-aztecarena-content-title">Aztec Arena</h3>
+        <p
+          >La <strong>Aztec Arena</strong> est un tournoi majeur rassemblant les meilleures équipes de Counter-Strike 2, avec un
+          cash prize de <strong>500€</strong>
+          en jeu.
+        </p>
+        <p>
+          Initialement disputée avec <strong>16 équipes</strong>, la compétition évolue désormais vers un format plus sélectif
+          avec <strong>8 équipes</strong>
+          qualifiées de différentes manières :
+        </p>
+        <ul>
+          <li>4 équipes ayant remporté une Aztec Cup et obtenu leur ticket direct.</li>
+          <li
+            >4 équipes sélectionnées grâce à un système de points, récompensant leur régularité et leur engagement, ou invitées si
+            elles évoluent au niveau Advanced ou supérieur.</li
+          >
+        </ul>
+        <p
+          >La Aztec Arena est l’ultime étape des compétitions Aztec, offrant un défi intense et un spectacle de haut niveau aux
+          joueurs comme aux spectateurs.</p
+        >
+        <router-link class="competitions-aztecarena-content-link" :to="{ name: 'Tournament', params: { tournamentId: 1 } }">
+          En savoir plus
+        </router-link>
       </div>
     </div>
   </div>
@@ -49,12 +93,32 @@
     &-description {
       &-title {
         text-align: center;
-        text-decoration: underline;
-        text-decoration-color: #f6a429;
+        position: relative;
+
+        &::after {
+          background-color: #f6a429;
+          bottom: 0;
+          content: '';
+          display: block;
+          height: 0.1875rem;
+          margin-top: 1rem;
+          width: 8rem;
+          left: 0;
+          margin-left: auto;
+          margin-right: auto;
+          right: 0;
+        }
+      }
+
+      &-banner {
+        width: 100%;
+        border: 1px solid #666;
+        border-radius: 4px;
       }
     }
 
-    &-behopxaztec {
+    &-azteccup,
+    &-aztecarena {
       display: flex;
       gap: 20px;
 
@@ -66,7 +130,27 @@
           width: 100%;
         }
 
+        &-title {
+          position: relative;
+
+          &::after {
+            background-color: #ffffff;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 0.1875rem;
+            margin-top: 1rem;
+            width: 5rem;
+          }
+        }
+
         &-link {
+          text-decoration: underline;
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
         }
       }
     }

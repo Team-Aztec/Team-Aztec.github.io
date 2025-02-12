@@ -17,8 +17,21 @@
 
     &-content-title {
       text-align: center;
-      text-decoration: underline;
-      text-decoration-color: #f6a429;
+      position: relative;
+
+      &::after {
+        background-color: #f6a429;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 0.1875rem;
+        margin-top: 1rem;
+        width: 8rem;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+      }
     }
   }
 </style>

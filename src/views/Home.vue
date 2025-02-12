@@ -25,13 +25,6 @@
       </p>
     </div>
 
-    <img
-      class="home-banner"
-      src="./../assets/images/banniere.jpeg"
-      alt="Bannière aztec organisateur de tournois esports"
-      title="Bannière aztec organisateur de tournois esports"
-    />
-
     <iframe
       class="home-video"
       src="https://www.youtube.com/embed/YbJGUhsfnu4?si=mNA5IHyWff8TlEzw&autoplay=1&mute=1"
@@ -69,14 +62,21 @@
 
     &-content-title {
       text-align: center;
-      text-decoration: underline;
-      text-decoration-color: #f6a429;
-    }
+      position: relative;
 
-    &-banner {
-      width: 100%;
-      border: 1px solid #666;
-      border-radius: 4px;
+      &::after {
+        background-color: #f6a429;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 0.1875rem;
+        margin-top: 1rem;
+        width: 8rem;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+      }
     }
   }
 </style>

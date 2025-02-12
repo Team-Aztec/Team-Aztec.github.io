@@ -1,15 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    id="background"
-    style="--logo-color: #fff; --target: #8e652f; --line: #235535"
-  >
-    <svg
-      class="bg-decoration"
-      viewBox="0 0 1000 1000"
-      preserveaspectratio="xMidYMid slice"
-    >
+  <div id="background" style="--logo-color: #fff; --target: #8e652f; --line: #235535">
+    <svg class="bg-decoration" viewBox="0 0 1000 1000" preserveaspectratio="xMidYMid slice">
       <defs>
         <linearGradient id="gradientColorDef">
           <stop style="stop-color: #f6b84e; stop-opacity: 1" offset="0.6" />
@@ -52,11 +45,7 @@
 							L 780,340 V 300 L 690,278 V 138 L710,143 710,53 L 500,0 Z"
           ></path>
           <path
-            style="
-              fill: var(--inner-fill, none);
-              stroke-width: var(--stroke-width, 6);
-              stroke: url(#innerGradient);
-            "
+            style="fill: var(--inner-fill, none); stroke-width: var(--stroke-width, 6); stroke: url(#innerGradient)"
             d="M300,60V130L500,80L700,130V60L500,10Z
 							M320,150V260L350,252.5V170L460,142.5V225L490,217.5V107.5Z
 							M365,180V248.75L385,243.75V195L425,185V233.75L445,228.75V160Z
@@ -82,78 +71,22 @@
         </g>
 
         <filter id="noiseFilter">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="0.75"
-            numOctaves="1"
-            stitchTiles="stitch"
-          />
+          <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="1" stitchTiles="stitch" />
         </filter>
         <g id="target">
-          <path
-            d="M0,-30L0,-5 M-30,0L-5,0 M5,0L30,0 M0,5L0,30"
-            stroke="var(--target)"
-            stroke-width="2"
-          />
-          <circle
-            cx="0"
-            cy="0"
-            r="22"
-            fill="none"
-            stroke="var(--target)"
-            stroke-width="2"
-          />
-          <circle
-            cx="0"
-            cy="0"
-            r="16"
-            fill="none"
-            stroke="var(--target)"
-            stroke-width="2"
-          />
+          <path d="M0,-30L0,-5 M-30,0L-5,0 M5,0L30,0 M0,5L0,30" stroke="var(--target)" stroke-width="2" />
+          <circle cx="0" cy="0" r="22" fill="none" stroke="var(--target)" stroke-width="2" />
+          <circle cx="0" cy="0" r="16" fill="none" stroke="var(--target)" stroke-width="2" />
         </g>
       </defs>
       <!--FAC868-->
-      <path
-        style="opacity: 0.25"
-        fill="#F80"
-        filter="url(#noiseFilter)"
-        d="M0,0V1000H1000V0Z"
-      ></path>
-      <use
-        class="bg-moving-target"
-        xlink:href="#target"
-        x="500"
-        y="500"
-        style="transform: translate(-150px, -250px)"
-      ></use>
-      <use
-        class="bg-moving-target"
-        xlink:href="#target"
-        x="500"
-        y="500"
-        style="transform: translate(250px, -200px)"
-      ></use>
-      <use
-        class="bg-moving-target"
-        xlink:href="#target"
-        x="500"
-        y="500"
-        style="transform: translate(-250px, 200px)"
-      ></use>
-      <use
-        class="bg-moving-target"
-        xlink:href="#target"
-        x="500"
-        y="500"
-        style="transform: translate(150px, 250px)"
-      ></use>
+      <path style="opacity: 0.25" fill="#F80" filter="url(#noiseFilter)" d="M0,0V1000H1000V0Z"></path>
+      <use class="bg-moving-target" xlink:href="#target" x="500" y="500" style="transform: translate(-150px, -250px)"></use>
+      <use class="bg-moving-target" xlink:href="#target" x="500" y="500" style="transform: translate(250px, -200px)"></use>
+      <use class="bg-moving-target" xlink:href="#target" x="500" y="500" style="transform: translate(-250px, 200px)"></use>
+      <use class="bg-moving-target" xlink:href="#target" x="500" y="500" style="transform: translate(150px, 250px)"></use>
     </svg>
-    <svg
-      class="bg-center bg-green-box"
-      viewbox="0 0 100 100"
-      preserveAspectRatio="none"
-    >
+    <svg class="bg-center bg-green-box" viewbox="0 0 100 100" preserveAspectRatio="none">
       <path
         class="bg-green"
         d="M0,0L100,100 M100,0L0,100 M50,0L50,100 M0,50L100,50"
@@ -161,11 +94,7 @@
         vector-effect="non-scaling-stroke"
       ></path>
     </svg>
-    <svg
-      class="bg-arrow"
-      viewbox="0 0 70 70"
-      preserveaspectratio="xMidYMax meet"
-    >
+    <svg class="bg-arrow bg-arrow-top" viewbox="0 0 70 70" preserveaspectratio="xMidYMax meet">
       <path class="bg-arrow-path" d="M23,23L47,47 M23,43L23,23L43,23"></path>
     </svg>
     <div class="bg-green-box bg-top"></div>
@@ -181,91 +110,92 @@
     <svg class="bg-arrow" viewbox="0 0 70 70">
       <path class="bg-arrow-path" d="M23,23L47,47 M27,47L47,47L47,27"></path>
     </svg>
-    <svg
-      class="bg-logo"
-      viewBox="0 0 1000 1000"
-      preserveaspectratio="xMidYMid slice"
-    >
+    <svg class="bg-logo" viewBox="0 0 1000 1000" preserveaspectratio="xMidYMid slice">
       <use xlink:href="#logo-aztec"></use>
     </svg>
   </div>
 </template>
 
-<style scoped>
-#background {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  margin-bottom: -100vh;
-  overflow: hidden;
-  background: #000;
-  display: grid;
-  grid-template: calc(70px + 65px) 1fr 1fr 70px / 70px 1fr 1fr 70px;
-}
+<style scoped lang="scss">
+  #background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin-bottom: -100vh;
+    overflow: hidden;
+    background: #000;
+    display: grid;
+    grid-template: calc(70px + 65px) 1fr 1fr 70px / 70px 1fr 1fr 70px;
+  }
 
-.bg-arrow {
-  background: #f6a429;
-  height: 100%;
-  width: 100%;
-}
-.bg-arrow-path {
-  fill: none;
-  stroke: black;
-  stroke-width: 2;
-}
+  .bg-arrow {
+    background: #f6a429;
+    height: 100%;
+    width: 100%;
 
-.bg-center {
-  grid-area: 2/2/4/4;
-  height: 100%;
-  width: 100%;
-}
+    &-top {
+      padding-top: 95%;
+      height: 50%;
+    }
+  }
+  .bg-arrow-path {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+  }
 
-.bg-green {
-  stroke: var(--line);
-}
+  .bg-center {
+    grid-area: 2/2/4/4;
+    height: 100%;
+    width: 100%;
+  }
 
-.bg-green-box {
-  border: solid 1px var(--line);
-  box-sizing: border-box;
-}
+  .bg-green {
+    stroke: var(--line);
+  }
 
-.bg-left {
-  border-left-width: 0;
-}
-.bg-right {
-  border-right-width: 0;
-}
-.bg-top {
-  border-top-width: 0;
-}
-.bg-bottom {
-  border-bottom-width: 0;
-}
+  .bg-green-box {
+    border: solid 1px var(--line);
+    box-sizing: border-box;
+  }
 
-.bg-logo {
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  max-height: 160vmin;
-  max-width: 160vmin;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.08;
-  filter: grayscale(1) blur(0.7px);
-  transition: opacity 250ms ease-out;
-}
+  .bg-left {
+    border-left-width: 0;
+  }
+  .bg-right {
+    border-right-width: 0;
+  }
+  .bg-top {
+    border-top-width: 0;
+  }
+  .bg-bottom {
+    border-bottom-width: 0;
+  }
 
-.bg-decoration {
-  position: absolute;
-  width: 100%;
-}
-/* height: 100%; */
+  .bg-logo {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    max-height: 160vmin;
+    max-width: 160vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+    filter: grayscale(1) blur(0.7px);
+    transition: opacity 250ms ease-out;
+  }
 
-.bg-moving-target {
-  transition: transform 10s ease-in-out;
-}
+  .bg-decoration {
+    position: absolute;
+    width: 100%;
+  }
+  /* height: 100%; */
+
+  .bg-moving-target {
+    transition: transform 10s ease-in-out;
+  }
 </style>
