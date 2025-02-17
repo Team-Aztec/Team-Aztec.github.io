@@ -8,8 +8,8 @@
         équipes souhaitant se mesurer aux meilleurs. Vous pourrez notamment trouver ici :</p
       >
       <ul>
+        <li>Les Aztec Cups</li>
         <li>La Aztec Arena</li>
-        <li>Les Aztec Cup</li>
       </ul>
 
       <img
@@ -36,9 +36,7 @@
           valeur et de gravir les échelons vers la scène compétitive de haut niveau.</p
         >
         <br />
-        <router-link class="competitions-azteccup-content-link" :to="{ name: 'Tournament', params: { tournamentId: 1 } }">
-          En savoir plus
-        </router-link>
+        <router-link class="competitions-azteccup-content-link" :to="{ name: 'Aztec Cups' }"> En savoir plus </router-link>
       </div>
       <div class="competitions-azteccup-image">
         <img src="./../assets/images/behop.jpeg" alt="Tournoi Behop x Aztec" title="Tournoi Behop x Aztec" />
@@ -73,9 +71,7 @@
           >La Aztec Arena est l’ultime étape des compétitions Aztec, offrant un défi intense et un spectacle de haut niveau aux
           joueurs comme aux spectateurs.</p
         >
-        <router-link class="competitions-aztecarena-content-link" :to="{ name: 'Tournament', params: { tournamentId: 1 } }">
-          En savoir plus
-        </router-link>
+        <router-link class="competitions-aztecarena-content-link" :to="{ name: 'Aztec Arena' }"> En savoir plus </router-link>
       </div>
     </div>
   </div>

@@ -4,6 +4,8 @@ import Home from '@/views/Home.vue'
 import Competitions from '@/views/Competitions.vue'
 import Stats from '@/views/Stats.vue'
 import Tournament from '@/views/Tournament.vue'
+import Cups from '@/views/Cups.vue'
+import Arena from '@/views/Arena.vue'
 
 const routes = [
   {
@@ -17,10 +19,21 @@ const routes = [
     component: Competitions,
   },
   {
-    path: '/tournament/:tournamentId',
-    name: 'Tournament',
-    component: Tournament,
+    path: '/aztec-cups',
+    name: 'Aztec Cups',
+    component: Cups,
   },
+  {
+    path: '/aztec-arena',
+    name: 'Aztec Arena',
+    component: Arena,
+  },
+  // {
+  //   path: '/tournament/:tournamentId',
+  //   name: 'Tournament',
+  //   component: Tournament,
+  // },
+
   {
     path: '/statistiques',
     name: 'Statistiques',
