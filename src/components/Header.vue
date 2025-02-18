@@ -39,7 +39,8 @@
 <style scoped>
   header {
     color: #fff;
-    position: sticky;
+    position: absolute;
+    width: 100%;
     top: 0;
     height: 0;
     font-size: 1.6em;

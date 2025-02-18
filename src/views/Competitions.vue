@@ -76,7 +76,7 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup lang="ts"></script>
 <style scoped lang="scss">
   .competitions {
     max-width: 85%;
@@ -142,6 +142,7 @@
 
         &-link {
           text-decoration: underline;
+          color: #f6a429;
 
           &:hover,
           &:focus {
