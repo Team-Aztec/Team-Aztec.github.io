@@ -6,65 +6,12 @@
     "login": "Se connecter",
     "last": "Dernier évènement"
   },
-  "home": {
-    "creationTitle": "Création de leagues / tournois",
-    "creationDesc": "Permet aux utilisateurs de créer et de personnaliser des tournois en fonction de leurs préférences, en définissant les règles, les dates, les jeux, etc.",
-    "manageAllTitle": "Gestion des équipes et des joueurs",
-    "manageAllDesc": "Offre aux utilisateurs la possibilité de créer et de gérer leurs équipes, ainsi que de suivre la progression collective et individuelle des joueurs.",
-    "statsTitle": "Statistiques des événements",
-    "statsDesc": "Fournit des statistiques globales sur tous les événements auxquels les utilisateurs ont participé depuis l'application, comme le nombre total de matchs joués, les victoires, les défaites, les performances moyennes, etc...",
-    "createTitle": "Création de leagues / tournois",
-    "createDesc": "Permet aux utilisateurs de créer et de personnaliser des tournois en fonction de leurs préférences, en définissant les règles, les dates, les jeux, etc..."
-  },
   "general": {
     "form": {
       "writeHere": "écrire ici..."
     },
     "footer": {
-      "creators": "Powered by Lucas <span class='pseudo'>\"Wolfound\"</span> Vantomme"
-    }
-  },
-  "team": {
-    "form": {
-      "title": "CREATION EQUIPE",
-      "info": "Informations de l'équipe",
-      "name": "Nom de l'équipe",
-      "shortName": "Nom court de l'équipe",
-      "country": "Pays"
-    }
-  },
-  "tournament": {
-    "form": {
-      "title": "CREATION TOURNOIS",
-      "info": "Informations de l'évènement",
-      "name": "Nom de l'évènement",
-      "description": "Description de l'évènement",
-      "format": "Selectionnez le format de l'évènement",
-      "directElimSimple": "Élimination directe (simple)",
-      "directElimDouble": "Élimination directe (double)",
-      "roundRobin": "Round-robin (chaque équipe joue contre toutes les autres)",
-      "poolElim": "Groupes suivis d'une phase d'élimination (pool + éliminations)",
-      "poolDoubleElim": "Groupes suivis d'une phase d'élimination (pool + double éliminations)",
-      "teamsNumber": "Selectionnez le nombre d'équipes",
-      "seed": "Comment voulez-vous assigner les équipes ?",
-      "automatically": "Automatiquement",
-      "manually": "Manuellement",
-      "date": "Date et heure de l'évènement",
-      "startDate": "Date de début",
-      "endDate": "Date de fin",
-      "location": "Lieu de l'évènement",
-      "online": "Online",
-      "lan": "LAN",
-      "specifyLocation": "Préciser le lieu...",
-      "terms": "Modalités d'inscription à l'évènement",
-      "fees": "Frais d'inscription",
-      "amount": "Montant en euro...",
-      "limitDate": "Date limite d'inscription à l'évènement",
-      "prizes": "Récompenses de l'évènement",
-      "cashPrize": "Cash prize (total)",
-      "otherPrizes": "Autres récompenses",
-      "rules": "Règles et restrictions",
-      "specifyRules": "Définissez les règles spécifiques du tournoi, les restrictions sur les joueurs éligibles, les règles de fair-play, etc..."
+      "creators": "Powered by <span class='pseudo'>\"Wolfound\"</span> & <span class='pseudo'>\"Luciole\"</span>"
     }
   }
 }

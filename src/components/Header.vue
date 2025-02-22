@@ -5,15 +5,16 @@
     <nav>
       <ul class="nav-list">
         <li>
-          <router-link class="nav-link" :to="{ name: 'Home' }"> À Propos </router-link>
-        </li>
-        <li>
           <router-link class="nav-link" :to="{ name: 'Competitions' }"> Compétitions </router-link>
         </li>
         <li>
           <router-link class="nav-link" :to="{ name: 'Statistiques' }"> Statistiques </router-link>
         </li>
+
         <li>
+          <p>Historiques</p>
+        </li>
+        <!-- <li>
           <a class="nav-link nav-soon">
             <svg class="sparks" viewBox="0 0 142 64">
               <defs>
@@ -30,7 +31,7 @@
             </svg>
             Boutique
           </a>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>

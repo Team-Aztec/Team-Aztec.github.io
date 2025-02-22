@@ -1,81 +1,93 @@
 <template>
   <div class="home">
-    <div class="home-content">
-      <h1 class="home-content-title">Qui sommes nous ?</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie sit
-        amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris in
-        eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo, ipsum
-        augue tincidunt lorem, eu iaculis est lectus non nisl. Curabitur id purus laoreet, aliquet enim vitae, gravida tortor.
-        Integer mi odio, consequat iaculis nunc vel, pellentesque euismod neque. Sed ultrices porttitor porta. In imperdiet eu
-        diam ac pretium. Nullam vulputate massa vitae enim sollicitudin rutrum. Donec ornare eleifend dui, vel ullamcorper metus
-        volutpat vitae. Nunc cursus auctor dui et consequat. Nulla facilisi. Aenean consectetur felis et mauris bibendum
-        elementum.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis diam odio, quis condimentum nibh molestie sit
-        amet. Nullam nisl neque, fringilla eget sollicitudin pellentesque, imperdiet eget arcu. Suspendisse potenti. Mauris in
-        eleifend enim. Morbi nec quam laoreet, porta nulla ac, facilisis nisi. Morbi vehicula, nunc a vestibulum commodo, ipsum
-        augue tincidunt lorem, eu iaculis est lectus non nisl. Curabitur id purus laoreet, aliquet enim vitae, gravida tortor.
-        Integer mi odio, consequat iaculis nunc vel, pellentesque euismod neque. Sed ultrices porttitor porta. In imperdiet eu
-        diam ac pretium. Nullam vulputate massa vitae enim sollicitudin rutrum. Donec ornare eleifend dui, vel ullamcorper metus
-        volutpat vitae. Nunc cursus auctor dui et consequat. Nulla facilisi. Aenean consectetur felis et mauris bibendum
-        elementum.
-      </p>
+    <div class="home-banner">
+      <button class="home-banner-button anim">Your Stage, Our Mission !</button>
     </div>
 
-    <iframe
-      class="home-video"
-      src="https://www.youtube.com/embed/YbJGUhsfnu4?si=mNA5IHyWff8TlEzw&autoplay=1&mute=1"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-
-    <Sponsors />
-
-    <Socials />
+    <div class="home-content">
+      <div class="home-content-count">
+        <div class="flex justify-center">
+          <a
+            href="https://www.faceit.com/fr/organizers/4a01f2c0-66f1-4958-944c-e67076dc9f41/Aztec"
+            class="home-content-count-button"
+            >Enregistre toi !</a
+          >
+        </div>
+        <Countdown :targetTime="new Date('2025-12-31T23:59:59').getTime()" />
+      </div>
+      <div class="home-content-news">
+        <h2 class="home-content-news-title">Nos dernières actualités</h2>
+        <div class="home-content-news-list">
+          <New class="home-content-news-list-item" />
+          <New class="home-content-news-list-item" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
-<script setup>
-  import Socials from '../components/Socials.vue'
-  import Sponsors from '../components/Sponsors.vue'
+<script setup lang="ts">
+  import Countdown from '../components/Countdown.vue'
+  import New from '../components/New.vue'
 </script>
 
 <style scoped lang="scss">
   .home {
-    max-width: 85%;
-    padding: 128px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    gap: 32px;
+    @apply h-full;
 
-    &-video {
-      width: 85%;
-      height: 500px;
+    &-banner {
+      @apply relative h-full bg-[url(./../assets/images/banniere.jpeg)] bg-no-repeat bg-cover bg-center;
+
+      &-button {
+        @apply absolute  left-1/2 top-1/2 -translate-x-1/2 px-4 py-2 bg-main-color text-white rounded-lg shadow-md;
+
+        &:hover,
+        &:focus {
+          @apply shadow-lg bg-white text-main-color;
+        }
+      }
     }
 
-    &-content-title {
-      text-align: center;
-      position: relative;
+    &-content {
+      @apply flex flex-col gap-12 mt-24 items-center;
 
-      &::after {
-        background-color: #f6a429;
-        bottom: 0;
-        content: '';
-        display: block;
-        height: 0.1875rem;
-        margin-top: 1rem;
-        width: 8rem;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        right: 0;
+      &-count {
+        @apply flex flex-col gap-4;
+
+        &-button {
+          @apply px-8 py-4 bg-main-color text-white rounded-full shadow-md;
+
+          &:hover,
+          &:focus {
+            @apply underline;
+          }
+        }
+      }
+
+      &-news {
+        @apply flex flex-col gap-4 w-[85%];
+
+        &-title {
+          @apply grid -translate-x-1/2 text-3xl font-bold items-center;
+
+          margin: 0 0 min(32px, 1vw) 0;
+          grid-template-columns: 1fr auto 1fr;
+          width: calc(100vw - 64px);
+          margin-left: 50%;
+
+          &::after,
+          &::before {
+            content: '';
+            border: solid 1px white;
+            margin: 0 min(5vw, 64px);
+          }
+        }
+        &-list {
+          @apply flex gap-8 flex-wrap;
+
+          &-item {
+            @apply flex-1 w-[200px];
+          }
+        }
       }
     }
   }

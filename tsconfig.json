@@ -16,6 +16,6 @@
     "allowImportingTsExtensions": true,
     "noEmit": true
   },
-  "include": ["**/*.vue", "**/*.ts", "**/*.d.ts"],
+  "include": ["**/*.vue", "**/*.ts", "**/*.d.ts", "vite.config.js"],
   "exclude": ["**/node_modules/**", "**/dist/**"]
 }
