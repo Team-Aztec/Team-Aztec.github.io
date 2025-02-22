@@ -18,6 +18,7 @@ export default {
       'lap-3xl': '1920px',
     },
     colors: {
+      black: '#000000',
       white: '#FFFFFF',
       'main-color': '#f6a429',
     },
