@@ -1,18 +1,24 @@
 <template>
   <div class="new">
     <div class="new-image">
-      <img src="./../assets/images/banniere.jpeg" alt="card-image" />
+      <img :src="image.url" :alt="image.alt" />
     </div>
     <div class="new-description">
-      <h6 class="new-description-title">Article</h6>
+      <h6 class="new-description-title">{{ title }}</h6>
       <p class="new-description-text">
-        The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to &quot;Naviglio&quot; where you can
-        enjoy the main night life in Barcelona.
+        {{ description }}
       </p>
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+
+<script setup lang="ts">
+  defineProps({
+    title: { type: String, default: '' },
+    description: { type: String, default: '' },
+    image: { url: { url: String, alt: String }, default: { url: '', alt: '' } },
+  })
+</script>
 
 <style scoped lang="scss">
   .new {

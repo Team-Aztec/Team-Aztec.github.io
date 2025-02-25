@@ -1,43 +1,36 @@
-<script setup lang="ts"></script>
-
 <template>
   <header is="azt-header" id="header">
     <nav>
-      <ul class="nav-list">
-        <li>
-          <router-link class="nav-link" :to="{ name: 'Competitions' }"> Compétitions </router-link>
-        </li>
-        <li>
-          <router-link class="nav-link" :to="{ name: 'Statistiques' }"> Statistiques </router-link>
-        </li>
-
-        <li>
-          <p>Historiques</p>
-        </li>
-        <!-- <li>
-          <a class="nav-link nav-soon">
-            <svg class="sparks" viewBox="0 0 142 64">
-              <defs>
-                <path
-                  id="spark"
-                  d="M 50,10 C 50,30 30,50 10,50 30,50 50,70 50,90 50,70 70,50 90,50 70,50 50,30 50,10 Z"
-                  fill="#f6a429"
-                ></path>
-              </defs>
-              <use xlink:href="#spark" style="--x: 60px; --y: 0px; --delay: -0ms"></use>
-              <use xlink:href="#spark" style="--x: 35px; --y: -30px; --delay: -400ms"></use>
-              <use xlink:href="#spark" style="--x: -16px; --y: -24px; --delay: -150ms"></use>
-              <use xlink:href="#spark" style="--x: 0px; --y: -6px; --delay: -800ms"></use>
-            </svg>
-            Boutique
-          </a>
-        </li> -->
-      </ul>
+      <div class="nav-content">
+        <div class="logo">
+          <img class="logo-icon" src="@/assets/favicon.ico" alt="Aztec icon" />
+          <router-link :to="{ name: 'Home' }"> Team Aztec </router-link>
+        </div>
+        <ul class="nav-links">
+          <li><router-link :to="{ name: 'Statistiques' }"> Statistiques </router-link></li>
+          <li><router-link :to="{ name: 'Competitions' }"> Compétitions </router-link></li>
+          <li><router-link :to="'#'"> Historique </router-link></li>
+        </ul>
+      </div>
     </nav>
   </header>
 </template>
 
-<style scoped>
+<script setup lang="ts"></script>
+
+<style scoped lang="scss">
+  .logo {
+    @apply flex gap-4 items-center font-semibold;
+
+    &-icon {
+      @apply w-[50px] h-[50px];
+    }
+
+    a {
+      @apply text-main-color text-4xl;
+    }
+  }
+
   header {
     color: #fff;
     position: absolute;
@@ -48,89 +41,52 @@
     z-index: 10;
   }
   nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    column-gap: min(16px, 1vw);
-    white-space: nowrap;
-    font-size: min(7vw, 1em);
     background: #0008;
-    border-bottom: solid 1px #000;
-    backdrop-filter: blur(5px);
-  }
-  .nav-list {
-    display: contents;
-    list-style: none;
-  }
-  .nav-link {
-    position: relative;
-    text-decoration: none;
-    padding: 0 8px;
-    line-height: 64px;
-    display: block;
-    transition: background 180ms ease-out;
-  }
-  .nav-link::before {
-    position: absolute;
-    content: '';
-    bottom: 0;
+    position: fixed;
+    top: 0;
     left: 0;
-    border-bottom: solid 2px;
-    transform-origin: center;
     width: 100%;
-    transform: scaleX(0);
-    transition: transform 180ms ease-out;
+    padding: 20px 40px;
+    transition: all 0.4s ease;
   }
-  .nav-link:hover {
-    background: #fff2;
+  nav.sticky {
+    padding: 15px 20px;
+    background: #2d5a42;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
-  .nav-link:hover::before {
-    transform: scaleX(1);
-    transition: transform 180ms ease-in;
-  }
-  .nav-soon::after {
-    position: absolute;
-    left: 50%;
-    top: 72px;
-    transform: translate(-50%, 0);
-    content: 'Bientôt !';
-    border-radius: 8px;
-    background: #000a;
-    padding: 8px 16px;
-    display: none;
-  }
-  .nav-soon:hover::after {
-    display: block;
-    line-height: 1.2em;
-    border: solid 2px #fff8;
-  }
-
-  .sparks {
-    position: absolute;
-    z-index: -1;
-    left: -2px;
+  nav .nav-content {
     height: 100%;
-    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .sparks use {
-    animation: spark infinite linear 2800ms var(--delay);
-    transform-origin: calc(var(--x) + 50px) calc(var(--y) + 50px);
-    x: var(--x);
-    y: var(--y);
+  .nav-content .nav-links {
+    display: flex;
   }
-  @keyframes spark {
-    from {
-      opacity: 0;
-      transform: scale(0.1) rotate(+100deg);
-    }
-    20% {
-      opacity: 0.4;
-      transform: scale(0.58) rotate(+20deg);
-    }
-    40%,
-    to {
-      opacity: 0;
-      transform: scale(0.2) rotate(-60deg);
-    }
+  .nav-content .nav-links li {
+    list-style: none;
+    margin: 0 8px;
+  }
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 4px;
+    transition: all 0.3s ease;
+  }
+  .nav-links li a:hover,
+  .nav-links li a:focus {
+    text-decoration: underline;
+  }
+  nav.sticky .nav-links li a {
+    color: #fff;
+    transition: all 0.4s ease;
+  }
+  nav.sticky .nav-links li a:hover,
+  nav.sticky .nav-links li a:focus {
+    text-decoration: underline;
   }
 </style>

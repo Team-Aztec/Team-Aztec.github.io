@@ -12,12 +12,12 @@ export const useFaceit = () => {
       })
   }
 
-  const getOrganizedDetails = async (): Promise<any> => {
+  const getFutureTournaments = async (): Promise<any> => {
     return await axios
-      .get('https://open.faceit.com/data/v4/organizers/4a01f2c0-66f1-4958-944c-e67076dc9f41', {
+      .get('https://open.faceit.com/data/v4/organizers/4a01f2c0-66f1-4958-944c-e67076dc9f41/championships', {
         headers: { Authorization: `Bearer ${import.meta.env.VITE_FACEIT_API_KEY}` },
       })
-      .then((resp) => resp.data)
+      .then((resp) => resp.data.items.filter((tournament: any) => tournament.status === 'upcoming'))
       .catch((error) => {
         console.log(error)
       })
@@ -25,6 +25,6 @@ export const useFaceit = () => {
 
   return {
     getTournament,
-    getOrganizedDetails,
+    getFutureTournaments,
   }
 }

@@ -18,16 +18,36 @@
       <div class="home-content-news">
         <h2 class="home-content-news-title">Nos dernières actualités</h2>
         <div class="home-content-news-list">
-          <New class="home-content-news-list-item" />
-          <New class="home-content-news-list-item" />
+          <New
+            v-for="(item, index) of newsList"
+            class="home-content-news-list-item"
+            :key="index"
+            :title="item.title"
+            :description="item.description"
+            :image="item.image"
+          />
+          <!-- <New class="home-content-news-list-item" /> -->
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
+  import { onBeforeMount, ref } from 'vue'
   import Countdown from '../components/Countdown.vue'
   import New from '../components/New.vue'
+  import { useFaceit } from '../domain/faceit/faceit'
+
+  import { newsHomepage } from '../../news.ts'
+
+  const faceit = useFaceit()
+  const futureTournaments = ref([])
+
+  const newsList = ref(newsHomepage)
+
+  onBeforeMount(async () => {
+    futureTournaments.value = await faceit.getFutureTournaments()
+  })
 </script>
 
 <style scoped lang="scss">
