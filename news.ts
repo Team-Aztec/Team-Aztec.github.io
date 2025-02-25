@@ -1,11 +1,4 @@
-interface New {
-  title: string
-  description: string
-  image: {
-    url: string
-    alt: string
-  }
-}
+import { New } from './src/types/types'
 
 export const newsHomepage: New[] = [
   {

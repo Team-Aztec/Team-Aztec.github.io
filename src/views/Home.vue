@@ -1,19 +1,18 @@
 <template>
   <div class="home">
     <div class="home-banner">
-      <button class="home-banner-button anim">Your Stage, Our Mission !</button>
+      <button class="home-banner-button anim">Your Stage, Our Mission ! </button>
     </div>
 
     <div class="home-content">
       <div class="home-content-count">
         <div class="flex justify-center">
-          <a
-            href="https://www.faceit.com/fr/organizers/4a01f2c0-66f1-4958-944c-e67076dc9f41/Aztec"
-            class="home-content-count-button"
-            >Enregistre toi !</a
-          >
+          <a :href="lastTournamentUrl" class="home-content-count-button">
+            Enregistre toi
+            <img class="home-content-count-button-arrow" src="@/assets/images/arrow-right.png" alt="arrow right" />
+          </a>
         </div>
-        <Countdown :targetTime="new Date('2025-12-31T23:59:59').getTime()" />
+        <Countdown :targetTime="new Date(futureTournaments[0].championship_start).getTime()" />
       </div>
       <div class="home-content-news">
         <h2 class="home-content-news-title">Nos dernières actualités</h2>
@@ -26,7 +25,6 @@
             :description="item.description"
             :image="item.image"
           />
-          <!-- <New class="home-content-news-list-item" /> -->
         </div>
       </div>
     </div>
@@ -39,30 +37,33 @@
   import { useFaceit } from '../domain/faceit/faceit'
 
   import { newsHomepage } from '../../news.ts'
+  import { Tournament } from '../types/types.ts'
 
   const faceit = useFaceit()
-  const futureTournaments = ref([])
+  const futureTournaments = ref<Tournament[]>([])
 
   const newsList = ref(newsHomepage)
+  const lastTournamentUrl = ref<string>('')
 
   onBeforeMount(async () => {
     futureTournaments.value = await faceit.getFutureTournaments()
+    lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
   })
 </script>
 
 <style scoped lang="scss">
   .home {
-    @apply h-full;
+    @apply h-full inline;
 
     &-banner {
-      @apply relative h-full bg-[url(./../assets/images/banniere.jpeg)] bg-no-repeat bg-cover bg-center;
+      @apply relative h-full bg-[#db7806] bg-no-repeat bg-cover bg-center;
 
       &-button {
-        @apply absolute  left-1/2 top-1/2 -translate-x-1/2 px-4 py-2 bg-main-color text-white rounded-lg shadow-md;
+        @apply flex flex-row justify-center items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 px-4 py-2 bg-black text-white rounded-xl shadow-md text-xl;
 
         &:hover,
         &:focus {
-          @apply shadow-lg bg-white text-main-color;
+          @apply shadow-lg bg-white text-black;
         }
       }
     }
@@ -74,11 +75,15 @@
         @apply flex flex-col gap-4;
 
         &-button {
-          @apply px-8 py-4 bg-main-color text-white rounded-full shadow-md;
+          @apply flex flex-row justify-center items-center gap-8 px-8 py-4 bg-main-color text-white rounded-full shadow-md;
 
-          &:hover,
-          &:focus {
-            @apply underline;
+          // &:hover,
+          // &:focus {
+          //   @apply underline;
+          // }
+
+          &-arrow {
+            @apply h-[19px];
           }
         }
       }

@@ -8,7 +8,7 @@
   <Header />
   <Background />
   <router-view />
-  <!-- <Footer /> -->
+  <Footer />
 </template>
 
 <style scoped></style>

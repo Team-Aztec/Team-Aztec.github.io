@@ -7,6 +7,7 @@
           <router-link :to="{ name: 'Home' }"> Team Aztec </router-link>
         </div>
         <ul class="nav-links">
+          <li><router-link :to="{ name: 'Home' }"> Accueil </router-link></li>
           <li><router-link :to="{ name: 'Statistiques' }"> Statistiques </router-link></li>
           <li><router-link :to="{ name: 'Competitions' }"> Compétitions </router-link></li>
           <li><router-link :to="'#'"> Historique </router-link></li>
@@ -48,45 +49,32 @@
     width: 100%;
     padding: 20px 40px;
     transition: all 0.4s ease;
+
+    .nav-content {
+      height: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
-  nav.sticky {
-    padding: 15px 20px;
-    background: #2d5a42;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  }
-  nav .nav-content {
-    height: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .nav-content .nav-links {
-    display: flex;
-  }
-  .nav-content .nav-links li {
-    list-style: none;
-    margin: 0 8px;
-  }
-  .nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 4px;
-    transition: all 0.3s ease;
-  }
-  .nav-links li a:hover,
-  .nav-links li a:focus {
-    text-decoration: underline;
-  }
-  nav.sticky .nav-links li a {
-    color: #fff;
-    transition: all 0.4s ease;
-  }
-  nav.sticky .nav-links li a:hover,
-  nav.sticky .nav-links li a:focus {
-    text-decoration: underline;
+
+  .nav-links {
+    @apply flex;
+
+    li {
+      @apply list-none mx-2;
+
+      a {
+        @apply text-white text-2xl py-3 px-1 font-bold;
+        transition: all 0.4s ease;
+
+        &:hover,
+        &.focus {
+          @apply underline;
+        }
+      }
+    }
   }
 </style>

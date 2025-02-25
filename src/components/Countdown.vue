@@ -16,7 +16,6 @@
       <span id="seconds">{{ formattedTime.seconds }}</span>
       <span>Secondes</span>
     </div>
-    <!--  -->
   </div>
 </template>
 <script setup lang="ts">
