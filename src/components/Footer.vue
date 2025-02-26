@@ -5,9 +5,11 @@
 <template>
   <footer id="footer" tabindex="-1" role="contentinfo">
     <div class="footer">
-      <div class="footer-content"></div>
+      <div class="footer-content">
+        <img class="footer-content-logo" src="@/assets/favicon.ico" alt="Aztec icon" />
+      </div>
       <div class="footer-copyright">
-        <p>&copy; Aztec since 2024</p>
+        <p>Tous droits réservés &copy; FRTV 2025.</p>
       </div>
     </div>
   </footer>

@@ -1,19 +1,21 @@
 <template>
   <div class="home">
     <div class="home-banner">
-      <button class="home-banner-button anim">Your Stage, Our Mission ! </button>
+      <div class="home-banner-content">
+        <Countdown :targetTime="new Date(futureTournaments[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()" />
+        <button class="home-banner-content-button">Your Stage, Our Mission !</button>
+      </div>
     </div>
 
     <div class="home-content">
-      <div class="home-content-count">
+      <!-- <div class="home-content-count">
         <div class="flex justify-center">
           <a :href="lastTournamentUrl" class="home-content-count-button">
             Enregistre toi
             <img class="home-content-count-button-arrow" src="@/assets/images/arrow-right.png" alt="arrow right" />
           </a>
         </div>
-        <Countdown :targetTime="new Date(futureTournaments[0].championship_start).getTime()" />
-      </div>
+      </div> -->
       <div class="home-content-news">
         <h2 class="home-content-news-title">Nos dernières actualités</h2>
         <div class="home-content-news-list">
@@ -47,7 +49,11 @@
 
   onBeforeMount(async () => {
     futureTournaments.value = await faceit.getFutureTournaments()
-    lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
+    if (futureTournaments.value.length > 0) {
+      lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
+    } else {
+      lastTournamentUrl.value = ''
+    }
   })
 </script>
 
@@ -56,14 +62,23 @@
     @apply h-full inline;
 
     &-banner {
-      @apply relative h-full bg-[#db7806] bg-no-repeat bg-cover bg-center;
+      @apply relative h-full bg-[url(@/assets/images/home-banner.png)] bg-no-repeat bg-cover bg-center;
 
-      &-button {
-        @apply flex flex-row justify-center items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 px-4 py-2 bg-black text-white rounded-xl shadow-md text-xl;
+      &-content {
+        @apply absolute left-1/2 top-1/2 -translate-x-1/2 flex flex-col items-center gap-8;
 
-        &:hover,
-        &:focus {
-          @apply shadow-lg bg-white text-black;
+        &-button {
+          @apply text-white font-bold border-2 border-[#ffd700] bg-black bg-opacity-80 py-3 px-6 rounded-lg text-base uppercase;
+
+          transition: all 0.3s ease-in-out;
+
+          &:hover,
+          &:focus {
+            @apply cursor-pointer text-black;
+
+            background: rgba(255, 215, 0, 0.8);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+          }
         }
       }
     }
@@ -76,11 +91,6 @@
 
         &-button {
           @apply flex flex-row justify-center items-center gap-8 px-8 py-4 bg-main-color text-white rounded-full shadow-md;
-
-          // &:hover,
-          // &:focus {
-          //   @apply underline;
-          // }
 
           &-arrow {
             @apply h-[19px];

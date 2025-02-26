@@ -4,7 +4,7 @@
       <div class="nav-content">
         <div class="logo">
           <img class="logo-icon" src="@/assets/favicon.ico" alt="Aztec icon" />
-          <router-link :to="{ name: 'Home' }"> Team Aztec </router-link>
+          <router-link :to="{ name: 'Home' }">Aztec </router-link>
         </div>
         <ul class="nav-links">
           <li><router-link :to="{ name: 'Home' }"> Accueil </router-link></li>

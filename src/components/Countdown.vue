@@ -1,20 +1,20 @@
 <template>
-  <div class="countdown">
-    <div>
-      <span id="days">{{ formattedTime.days }}</span>
-      <span>Jours</span>
+  <div class="countdown countdown-container">
+    <div class="countdown-item">
+      <span class="countdown-number" id="days">{{ formattedTime.days }}</span>
+      <span class="countdown-label">Jours</span>
     </div>
     <div>
-      <span id="hours">{{ formattedTime.hours }}</span>
-      <span>Heures</span>
+      <span class="countdown-number" id="hours">{{ formattedTime.hours }}</span>
+      <span class="countdown-label">Heures</span>
     </div>
     <div>
-      <span id="minutes">{{ formattedTime.minutes }}</span>
-      <span>Minutes</span>
+      <span class="countdown-number" id="minutes">{{ formattedTime.minutes }}</span>
+      <span class="countdown-label">Minutes</span>
     </div>
     <div>
-      <span id="seconds">{{ formattedTime.seconds }}</span>
-      <span>Secondes</span>
+      <span class="countdown-number" id="seconds">{{ formattedTime.seconds }}</span>
+      <span class="countdown-label">Secondes</span>
     </div>
   </div>
 </template>
@@ -71,16 +71,37 @@
       @apply flex flex-col items-center;
     }
 
-    span {
-      @apply text-4xl font-bold;
+    &-container {
+      @apply flex justify-center gap-5 bg-black bg-opacity-60 rounded-lg border-2 border-[#ffd700] p-6;
+    }
 
-      &:last-child {
-        @apply text-lg text-center relative;
+    &-item {
+      @apply text-center;
+    }
 
-        &::before {
-          @apply bg-white bottom-0 content-[''] block h-[0.1875rem] my-4 w-14 left-0 mx-auto right-0;
-        }
-      }
+    &-number {
+      @apply text-5xl font-bold text-white drop-shadow-lg; //animate-pulse
+    }
+
+    &-label {
+      @apply text-lg uppercase tracking-wide;
+
+      color: rgb(250 204 21 / var(--tw-text-opacity, 1));
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 </style>
