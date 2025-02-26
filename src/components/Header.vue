@@ -1,23 +1,36 @@
 <template>
   <header is="azt-header" id="header">
-    <nav>
+    <nav class="nav">
       <div class="nav-content">
-        <div class="logo">
+        <div className="nav-content-logo">
           <img class="logo-icon" src="@/assets/favicon.ico" alt="Aztec icon" />
           <router-link :to="{ name: 'Home' }">Aztec </router-link>
         </div>
-        <ul class="nav-links">
-          <li><router-link :to="{ name: 'Home' }"> Accueil </router-link></li>
-          <li><router-link :to="{ name: 'Statistiques' }"> Statistiques </router-link></li>
-          <li><router-link :to="{ name: 'Competitions' }"> Compétitions </router-link></li>
-          <li><router-link :to="'#'"> Historique </router-link></li>
+
+        <ul class="nav-content-list">
+          <li class="relative group">
+            <router-link :to="{ name: 'Home' }"> Accueil </router-link>
+            <div class="nav-content-list-dropdown"> </div>
+          </li>
+          <li class="relative group">
+            <router-link :to="{ name: 'Statistiques' }"> Statistiques </router-link>
+            <div class="nav-content-list-dropdown"> </div>
+          </li>
+          <li class="relative group">
+            <router-link :to="{ name: 'Competitions' }"> Compétitions </router-link>
+            <div class="nav-content-list-dropdown"> </div>
+          </li>
+          <li class="relative group">
+            <router-link :to="'#'"> Historique </router-link>
+            <div class="nav-content-list-dropdown"> </div>
+          </li>
         </ul>
+
+        <button class="lap-s:hidden text-main-color text-3xl">☰</button>
       </div>
     </nav>
   </header>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped lang="scss">
   .logo {
@@ -32,47 +45,31 @@
     }
   }
 
-  header {
-    color: #fff;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    height: 0;
-    font-size: 1.6em;
-    z-index: 10;
-  }
-  nav {
-    background: #0008;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 40px;
-    transition: all 0.4s ease;
+  .nav {
+    @apply fixed top-0 left-0 w-full bg-black/60 backdrop-blur-lg shadow-lg z-50;
 
-    .nav-content {
-      height: 100%;
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
+    &-content {
+      @apply container mx-auto flex justify-between items-center py-4 px-6;
 
-  .nav-links {
-    @apply flex;
+      &-logo {
+        @apply text-main-color text-2xl font-extrabold uppercase tracking-wider flex items-center gap-2;
+      }
 
-    li {
-      @apply list-none mx-2;
+      &-list {
+        @apply hidden space-x-8 text-white uppercase font-bold
+        lap-s:flex;
 
-      a {
-        @apply text-white text-2xl py-3 px-1 font-bold;
-        transition: all 0.4s ease;
+        a {
+          @apply transition duration-300;
 
-        &:hover,
-        &.focus {
-          @apply underline;
+          &:hover,
+          &:focus {
+            @apply text-main-color;
+          }
+        }
+
+        &-dropdown {
+          @apply absolute left-0 w-full h-1 bg-main-color scale-x-0 group-hover:scale-x-100 transition-transform duration-300;
         }
       }
     }

@@ -3,19 +3,11 @@
     <div class="home-banner">
       <div class="home-banner-content">
         <Countdown :targetTime="new Date(futureTournaments[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()" />
-        <button class="home-banner-content-button">Your Stage, Our Mission !</button>
+        <a :href="lastTournamentUrl" class="home-banner-content-button">Your Stage, Our Mission !</a>
       </div>
     </div>
 
     <div class="home-content">
-      <!-- <div class="home-content-count">
-        <div class="flex justify-center">
-          <a :href="lastTournamentUrl" class="home-content-count-button">
-            Enregistre toi
-            <img class="home-content-count-button-arrow" src="@/assets/images/arrow-right.png" alt="arrow right" />
-          </a>
-        </div>
-      </div> -->
       <div class="home-content-news">
         <h2 class="home-content-news-title">Nos dernières actualités</h2>
         <div class="home-content-news-list">
@@ -85,18 +77,6 @@
 
     &-content {
       @apply flex flex-col gap-12 mt-24 items-center;
-
-      &-count {
-        @apply flex flex-col gap-4;
-
-        &-button {
-          @apply flex flex-row justify-center items-center gap-8 px-8 py-4 bg-main-color text-white rounded-full shadow-md;
-
-          &-arrow {
-            @apply h-[19px];
-          }
-        }
-      }
 
       &-news {
         @apply flex flex-col gap-4 w-[85%];
