@@ -21,6 +21,7 @@ export default {
       green: '#2d5a42',
       black: '#000000',
       white: '#FFFFFF',
+      'light-grey': '#4a4949',
       'main-color': '#f6a429',
     },
   },
