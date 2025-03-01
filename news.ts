@@ -6,7 +6,7 @@ export const newsHomepage: New[] = [
     description:
       'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to &quot;Naviglio&quot; where you can enjoy the main night life in Barcelona.',
     image: {
-      url: '@/assets/images/banniere.jpeg',
+      url: '/src/assets/images/behop.jpeg',
       alt: 'alt',
     },
   },
@@ -15,7 +15,7 @@ export const newsHomepage: New[] = [
     description:
       'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to &quot;Naviglio&quot; where you can enjoy the main night life in Barcelona.',
     image: {
-      url: '@/assets/images/banniere.jpeg',
+      url: '/src/assets/images/behop.jpeg',
       alt: 'alt',
     },
   },
@@ -24,7 +24,7 @@ export const newsHomepage: New[] = [
     description:
       'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to &quot;Naviglio&quot; where you can enjoy the main night life in Barcelona.',
     image: {
-      url: '@/assets/images/banniere.jpeg',
+      url: '/src/assets/images/behop.jpeg',
       alt: 'alt',
     },
   },

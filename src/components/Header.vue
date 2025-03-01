@@ -21,7 +21,7 @@
             <div class="nav-content-list-dropdown"> </div>
           </li>
           <li class="relative group">
-            <router-link :to="'#'"> Historique </router-link>
+            <router-link :to="{ name: 'Historique' }"> Historique </router-link>
             <div class="nav-content-list-dropdown"> </div>
           </li>
         </ul>

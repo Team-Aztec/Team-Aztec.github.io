@@ -3,10 +3,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Competitions from '@/views/Competitions.vue'
 import Stats from '@/views/Stats.vue'
+import History from '@/views/History.vue'
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: Home,
   },
@@ -19,6 +20,11 @@ const routes = [
     path: '/statistiques',
     name: 'Statistiques',
     component: Stats,
+  },
+  {
+    path: '/historique',
+    name: 'Historique',
+    component: History,
   },
   {
     path: '/:catchAll(.*)',
