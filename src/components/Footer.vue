@@ -1,4 +1,7 @@
 <script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -7,15 +10,19 @@
 <template>
   <footer id="footer" tabindex="-1" role="contentinfo">
     <div class="scroll-to-top">
-      <button class="scroll-to-top-button" @click="scrollToTop()">Remonter en haut de la page</button>
+      <button class="scroll-to-top-button" @click="scrollToTop()">{{ t('app.footer.back_to_top.button') }}</button>
     </div>
     <div class="footer">
       <div class="footer-content">
         <div class="footer-content-left">
           <img class="footer-content-left-logo" src="@/assets/favicon.ico" alt="Aztec icon" />
           <ul class="footer-content-left-links">
-            <li><router-link :to="'#'"> Organisation </router-link></li>
-            <li><router-link :to="'#'"> Contact </router-link></li>
+            <li
+              ><router-link :to="'#'"> {{ t('app.footer.links.organisation') }} </router-link></li
+            >
+            <li
+              ><router-link :to="'#'"> {{ t('app.footer.links.contact') }} </router-link></li
+            >
           </ul>
         </div>
 
@@ -27,7 +34,7 @@
                 alt="Data analyst Counter-Strike 2 : Pause State"
                 title="Data analyst Counter-Strike 2 : Pause State"
               />
-              Pause State
+              {{ t('app.footer.sponsors.pause_stat') }}
             </a>
 
             <a style="--bg: #" href="https://jeydrop.com/" target="_blank">
@@ -37,13 +44,17 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <p>&copy; Aztec 2025 - Tous droits réservés</p>
+        <p v-html="t('app.footer.copyright')"></p>
       </div>
     </div>
   </footer>
 </template>
 
 <style scoped lang="scss">
+  #footer {
+    @apply mt-12;
+  }
+
   .scroll-to-top {
     @apply text-center border-t border-main-color mx-auto bg-light-grey/60 backdrop-blur-lg;
 

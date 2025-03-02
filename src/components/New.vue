@@ -22,7 +22,7 @@
 
 <style scoped lang="scss">
   .new {
-    @apply relative flex flex-col my-6 bg-white shadow-sm border rounded-lg transition-all cursor-pointer w-96;
+    @apply relative flex flex-col my-6 bg-white shadow-sm border rounded-lg transition-all w-96;
 
     &:hover {
       -webkit-box-shadow: 0px 5px 20px 3px rgba(255, 255, 255, 0.49);

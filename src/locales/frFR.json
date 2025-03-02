@@ -1,17 +1,12 @@
 {
-  "navbar": {
-    "home": "Globalement",
-    "tournament": "Tournoi",
-    "rankings": "Classements",
-    "login": "Se connecter",
-    "last": "Dernier évènement"
-  },
-  "general": {
-    "form": {
-      "writeHere": "écrire ici..."
-    },
-    "footer": {
-      "creators": "Powered by <span class='pseudo'>\"Wolfound\"</span> & <span class='pseudo'>\"Luciole\"</span>"
-    }
-  }
+  "app.header.logo.label": "Aztec",
+  "app.header.links.home.label": "Accueil",
+  "app.header.links.statistiques.label": "Statistiques",
+  "app.header.links.competitions.label": "Compétitions",
+  "app.header.links.history.label": "Historique",
+  "app.footer.back_to_top.button": "Remonter en haut de la page",
+  "app.footer.sponsors.pause_stat": "Pause Stat",
+  "app.footer.links.contact": "Contact",
+  "app.footer.links.organisation": "Organisation",
+  "app.footer.copyright": "&copy; Aztec 2025 - Tous droits réservés"
 }

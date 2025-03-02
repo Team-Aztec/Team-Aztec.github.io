@@ -1,27 +1,33 @@
+<script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
+</script>
+
 <template>
   <header is="azt-header" id="header">
     <nav class="nav">
       <div class="nav-content">
         <div className="nav-content-logo">
           <img class="logo-icon" src="@/assets/favicon.ico" alt="Aztec icon" />
-          <router-link :to="{ name: 'Home' }">Aztec </router-link>
+          <router-link :to="{ name: 'Home' }">{{ t('app.header.logo.label') }}</router-link>
         </div>
 
         <ul class="nav-content-list">
           <li class="relative group">
-            <router-link :to="{ name: 'Home' }"> Accueil </router-link>
+            <router-link :to="{ name: 'Home' }">{{ t('app.header.links.home.label') }}</router-link>
             <div class="nav-content-list-dropdown"> </div>
           </li>
           <li class="relative group">
-            <router-link :to="{ name: 'Statistiques' }"> Statistiques </router-link>
+            <router-link :to="{ name: 'Statistiques' }">{{ t('app.header.links.statistiques.label') }} </router-link>
             <div class="nav-content-list-dropdown"> </div>
           </li>
           <li class="relative group">
-            <router-link :to="{ name: 'Competitions' }"> Compétitions </router-link>
+            <router-link :to="{ name: 'Competitions' }">{{ t('app.header.links.statistiques.label') }} </router-link>
             <div class="nav-content-list-dropdown"> </div>
           </li>
           <li class="relative group">
-            <router-link :to="{ name: 'Historique' }"> Historique </router-link>
+            <router-link :to="{ name: 'Historique' }">{{ t('app.header.links.history.label') }}</router-link>
             <div class="nav-content-list-dropdown"> </div>
           </li>
         </ul>
