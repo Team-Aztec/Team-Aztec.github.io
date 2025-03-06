@@ -18,11 +18,11 @@
           <img class="footer-content-left-logo" src="@/assets/favicon.ico" alt="Aztec icon" />
           <ul class="footer-content-left-links">
             <li
-              ><router-link :to="'#'"> {{ t('app.footer.links.organisation') }} </router-link></li
+              ><router-link :to="''"> {{ t('app.footer.links.organisation') }} </router-link></li
             >
             <li
-              ><router-link :to="'#'"> {{ t('app.footer.links.contact') }} </router-link></li
-            >
+              ><a href="https://linktr.ee/aztecarena"> {{ t('app.footer.links.contact') }} </a>
+            </li>
           </ul>
         </div>
 
@@ -34,7 +34,6 @@
                 alt="Data analyst Counter-Strike 2 : Pause State"
                 title="Data analyst Counter-Strike 2 : Pause State"
               />
-              {{ t('app.footer.sponsors.pause_stat') }}
             </a>
 
             <a style="--bg: #" href="https://jeydrop.com/" target="_blank">

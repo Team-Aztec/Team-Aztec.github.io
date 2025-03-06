@@ -36,6 +36,20 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   linkActiveClass: 'is-active',
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
 })
 
 router.beforeEach((_to, _from, next) => {

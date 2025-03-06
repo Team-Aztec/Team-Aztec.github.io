@@ -1,11 +1,35 @@
 <script setup lang="ts">
+  import { onMounted, onUnmounted, ref, watch } from 'vue'
   import { useI18n } from 'vue-i18n'
+  import { useRoute } from 'vue-router'
 
   const { t } = useI18n()
+  const route = useRoute()
+
+  const displayHeader = ref(false)
+
+  const checkSticky = () => {
+    if (route.name === 'Home') {
+      displayHeader.value = window.scrollY > 0
+    }
+  }
+
+  onMounted(() => {
+    window.addEventListener('scroll', checkSticky)
+  })
+
+  onUnmounted(() => {
+    window.removeEventListener('scroll', checkSticky)
+  })
+
+  watch(
+    () => route.name,
+    (value) => (displayHeader.value = value !== 'Home')
+  )
 </script>
 
 <template>
-  <header is="azt-header" id="header">
+  <header v-show="displayHeader" is="azt-header" id="header">
     <nav class="nav">
       <div class="nav-content">
         <div className="nav-content-logo">
@@ -15,15 +39,11 @@
 
         <ul class="nav-content-list">
           <li class="relative group">
-            <router-link :to="{ name: 'Home' }">{{ t('app.header.links.home.label') }}</router-link>
-            <div class="nav-content-list-dropdown"> </div>
-          </li>
-          <li class="relative group">
             <router-link :to="{ name: 'Statistiques' }">{{ t('app.header.links.statistiques.label') }} </router-link>
             <div class="nav-content-list-dropdown"> </div>
           </li>
           <li class="relative group">
-            <router-link :to="{ name: 'Competitions' }">{{ t('app.header.links.statistiques.label') }} </router-link>
+            <router-link :to="{ name: 'Competitions' }">{{ t('app.header.links.competitions.label') }} </router-link>
             <div class="nav-content-list-dropdown"> </div>
           </li>
           <li class="relative group">

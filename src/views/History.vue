@@ -5,8 +5,8 @@
       <p>Aztec participe depuis quelques temps à l'organisation de compétitions sur Counter-Strike 2.</p>
       <p>Et voici quelques exemples de tournois organisés par l'organisation :</p>
       <ul class="history-content-links">
-        <li>Aztec Arena 1 <a href="https://liquipedia.net/counterstrike/Aztec_Arena/1" target="_blank">liquipedia</a> </li>
-        <li>Aztec Arena 2 <a href="https://liquipedia.net/counterstrike/Aztec_Arena/2" target="_blank">liquipedia</a></li>
+        <li><a href="https://liquipedia.net/counterstrike/Aztec_Arena/1" target="_blank">Aztec Arena 1 </a> </li>
+        <li><a href="https://liquipedia.net/counterstrike/Aztec_Arena/2" target="_blank">Aztec Arena 2</a></li>
       </ul>
       <img
         class="history-content-banner"

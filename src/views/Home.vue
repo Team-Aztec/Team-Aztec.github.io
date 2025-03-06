@@ -2,7 +2,7 @@
   <div class="home">
     <div class="home-banner">
       <div class="home-banner-content">
-        <Countdown :targetTime="new Date(futureTournaments[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()" />
+        <Countdown :targetTime="new Date(futureTournaments?.[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()" />
         <a :href="lastTournamentUrl" class="home-banner-content-button">Your Stage, Our Mission !</a>
       </div>
     </div>
@@ -41,7 +41,7 @@
 
   onBeforeMount(async () => {
     futureTournaments.value = await faceit.getFutureTournaments()
-    if (futureTournaments.value.length > 0) {
+    if (futureTournaments.value?.length > 0) {
       lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
     } else {
       lastTournamentUrl.value = ''
@@ -76,7 +76,7 @@
     }
 
     &-content {
-      @apply flex flex-col gap-12 mt-24 items-center;
+      @apply flex flex-col gap-12 mt-20 items-center;
 
       &-news {
         @apply flex flex-col gap-4 w-[85%];

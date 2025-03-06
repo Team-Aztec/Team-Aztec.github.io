@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 html {
-  overflow: hidden;
   --tag-tile-coef: 33.33%;
   --tag-bg-size: 400% 400%;
 }
 
 body {
+  background-color: gray;
   padding: 0;
   margin: 0;
   width: 100%;
