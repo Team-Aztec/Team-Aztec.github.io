@@ -6,7 +6,7 @@
     </div>
     <p class="stats-statistiques-partner">
       L'ensemble des statistiques sont fournies suite à notre partenariat avec
-      <a style="--bg: #" href="https://www.pause-stat.pro/" target="_blank">Pause State</a>. Merci à eux pour l'ensemble de leur
+      <a style="--bg: #" href="https://www.pause-stat.pro/" target="_blank">Pause Stat</a>. Merci à eux pour l'ensemble de leur
       travail.
     </p>
   </div>

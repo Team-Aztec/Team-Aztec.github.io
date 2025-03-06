@@ -18,7 +18,7 @@
           <img class="footer-content-left-logo" src="@/assets/favicon.ico" alt="Aztec icon" />
           <ul class="footer-content-left-links">
             <li
-              ><router-link :to="''"> {{ t('app.footer.links.organisation') }} </router-link></li
+              ><router-link :to="'Home'"> {{ t('app.footer.links.organisation') }} </router-link></li
             >
             <li
               ><a href="https://linktr.ee/aztecarena"> {{ t('app.footer.links.contact') }} </a>
@@ -74,7 +74,7 @@
           @apply flex flex-row gap-4;
 
           a {
-            @apply border-2 border-black/60 w-48 flex flex-row items-center gap-2;
+            @apply border-2 border-black/60 w-48 flex flex-row items-center gap-2 rounded-lg;
 
             &:hover,
             &:focus {
