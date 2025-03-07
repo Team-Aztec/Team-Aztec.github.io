@@ -30,7 +30,7 @@
   import New from '../components/New.vue'
   import { useFaceit } from '../domain/faceit/faceit'
 
-  import { newsHomepage } from '../../news.ts'
+  import { newsHomepage } from '../../data/news.ts'
   import { Tournament } from '../types/types.ts'
 
   const faceit = useFaceit()

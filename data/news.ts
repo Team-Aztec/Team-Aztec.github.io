@@ -1,4 +1,4 @@
-import { New } from './src/types/types'
+import { New } from '../src/types/types'
 
 export const newsHomepage: New[] = [
   {

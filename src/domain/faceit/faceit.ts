@@ -1,16 +1,27 @@
 import axios from 'axios'
 import { Tournament } from '../../types/types'
+import { tournamentStatistiques } from '../../../data/stats'
 
 export const useFaceit = () => {
-  const getTournament = async (): Promise<any> => {
+  const getTournament = async (tournamentId: string): Promise<Tournament> => {
     return await axios
-      .get('https://open.faceit.com/data/v4/tournaments/5284bce2-b0d0-4b9c-b66d-39ffc91881a3"', {
+      .get(`https://open.faceit.com/data/v4/championships/${tournamentId}`, {
         headers: { Authorization: `Bearer ${import.meta.env.VITE_FACEIT_API_KEY}` },
       })
       .then((resp) => resp.data)
       .catch((error) => {
         console.log(error)
       })
+  }
+
+  const getStatistiquesTournaments = async (): Promise<Tournament[]> => {
+    const promises: Promise<Tournament>[] = []
+
+    tournamentStatistiques.forEach((tournament: Tournament) => {
+      promises.push(getTournament(tournament.id))
+    })
+
+    return await Promise.all(promises)
   }
 
   const getFutureTournaments = async (): Promise<Tournament[]> => {
@@ -29,5 +40,6 @@ export const useFaceit = () => {
   return {
     getTournament,
     getFutureTournaments,
+    getStatistiquesTournaments,
   }
 }
