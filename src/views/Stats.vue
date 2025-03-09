@@ -19,7 +19,16 @@
     </div>
     <div class="stats-statistiques">
       <div class="stats-statistiques-tournaments" role="list">
-        <div v-for="(item, index) of tournaments" :key="index" class="stats-statistiques-tournaments-item" role="listitem">
+        <div
+          v-for="(item, index) of tournaments"
+          :key="index"
+          :class="{
+            'stats-statistiques-tournaments-item': true,
+            arena: item.name?.toLowerCase().includes('arena'),
+            cup: item.name?.toLowerCase()?.includes('cup'),
+          }"
+          role="listitem"
+        >
           <p>{{ item.name }}</p>
         </div>
       </div>
@@ -65,7 +74,7 @@
         @apply flex gap-4 flex-wrap justify-between;
 
         &-item {
-          @apply bg-[url(@/assets/images/arena.jpeg)] min-h-44 w-[32%] border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center;
+          @apply min-h-44 w-[32%] border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center;
 
           &:hover {
             -webkit-box-shadow: 0px 5px 20px 3px rgba(255, 255, 255, 0.49);
@@ -88,5 +97,13 @@
         }
       }
     }
+  }
+
+  .arena {
+    @apply bg-[url(@/assets/images/arena.jpeg)];
+  }
+
+  .cup {
+    @apply bg-[url(@/assets/images/cup.webp)];
   }
 </style>

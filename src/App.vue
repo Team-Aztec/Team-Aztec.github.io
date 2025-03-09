@@ -6,7 +6,7 @@
 
 <template>
   <Header />
-  <Background />
+  <!-- <Background /> -->
   <router-view />
   <Footer />
 </template>

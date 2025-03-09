@@ -29,8 +29,8 @@
 </script>
 
 <template>
-  <header v-show="displayHeader" is="azt-header" id="header">
-    <nav class="nav">
+  <header is="azt-header" id="header">
+    <nav :class="{ nav: true, show: displayHeader }">
       <div class="nav-content">
         <div className="nav-content-logo">
           <img class="logo-icon" src="@/assets/favicon.ico" alt="Aztec icon" />
@@ -72,7 +72,8 @@
   }
 
   .nav {
-    @apply fixed top-0 left-0 w-full bg-black/60 backdrop-blur-lg shadow-lg z-50;
+    @apply fixed top-0 left-0 w-full bg-black/60 backdrop-blur-lg shadow-lg z-50 transition-transform duration-500;
+    transform: translateY(-100%);
 
     &-content {
       @apply container mx-auto flex justify-between items-center py-4 px-6;
@@ -99,5 +100,9 @@
         }
       }
     }
+  }
+
+  .nav.show {
+    transform: translateY(0);
   }
 </style>
