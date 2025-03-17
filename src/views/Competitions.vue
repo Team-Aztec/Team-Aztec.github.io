@@ -39,13 +39,13 @@
         <!-- <router-link class="competitions-azteccup-content-link" :to="{ name: 'Aztec Cups' }"> En savoir plus </router-link> -->
       </div>
       <div class="competitions-azteccup-image">
-        <img src="./../assets/images/behop.jpeg" alt="Tournoi Behop x Aztec" title="Tournoi Behop x Aztec" />
+        <img src="./../assets/images/cup.webp" alt="Aztec cup" title="Aztec cup" />
       </div>
     </div>
 
     <div class="competitions-aztecarena">
       <div class="competitions-aztecarena-image">
-        <img src="./../assets/images/behop.jpeg" alt="Tournoi Behop x Aztec" title="Tournoi Behop x Aztec" />
+        <img src="./../assets/images/arena.jpeg" alt="Aztec Arena" title="Aztec Arena" />
       </div>
 
       <div class="competitions-aztecarena-content">
@@ -88,8 +88,7 @@
 
     &-description {
       &-title {
-        text-align: center;
-        position: relative;
+        @apply text-center relative font-bold text-2xl mb-4;
 
         &::after {
           background-color: #f6a429;
@@ -115,19 +114,19 @@
 
     &-azteccup,
     &-aztecarena {
-      display: flex;
-      gap: 20px;
+      @apply flex flex-col gap-5
+      tab-m:flex-row;
 
       &-image,
       &-content {
-        flex: 1;
+        @apply flex-1 flex flex-col gap-4;
 
         img {
-          width: 100%;
+          @apply w-full;
         }
 
         &-title {
-          position: relative;
+          @apply relative;
 
           &::after {
             background-color: #ffffff;
@@ -146,7 +145,7 @@
 
           &:hover,
           &:focus {
-            text-decoration: none;
+            @apply no-underline;
           }
         }
       }

@@ -74,7 +74,7 @@
         @apply flex gap-4 flex-wrap justify-between;
 
         &-item {
-          @apply min-h-44 w-[32%] border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center;
+          @apply min-h-60 w-[32%] border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center bg-black;
 
           &:hover {
             -webkit-box-shadow: 0px 5px 20px 3px rgba(255, 255, 255, 0.49);

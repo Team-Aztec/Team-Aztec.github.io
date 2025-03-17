@@ -26,7 +26,7 @@
       @apply flex flex-col gap-4;
 
       &-title {
-        @apply text-center relative;
+        @apply text-center relative font-bold text-2xl mb-4;
 
         &::after {
           background-color: #f6a429;
