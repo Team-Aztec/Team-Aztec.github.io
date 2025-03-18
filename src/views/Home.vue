@@ -2,8 +2,14 @@
   <div class="home">
     <div class="home-banner">
       <div class="home-banner-content">
-        <Countdown :targetTime="new Date(futureTournaments?.[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()" />
-        <a :href="lastTournamentUrl" class="home-banner-content-button">Your Stage, Our Mission !</a>
+        <div v-if="futureTournaments[0].status !== 'started'">
+          <Countdown
+            :targetTime="new Date(futureTournaments?.[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()"
+          />
+          <a :href="lastTournamentUrl" class="home-banner-content-button">Your Stage, Our Mission !</a>
+        </div>
+
+        <a v-else :href="lastTournamentUrl" class="home-banner-content-button">Un tournoi est en cours, rejoins maintenant !</a>
       </div>
     </div>
 
@@ -71,6 +77,10 @@
             background: rgba(255, 215, 0, 0.8);
             box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
           }
+        }
+
+        &-text {
+          @apply text-white font-bold border-2 border-[#ffd700] bg-black bg-opacity-80 py-3 px-6 rounded-lg text-base uppercase;
         }
       }
     }
