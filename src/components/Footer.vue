@@ -17,9 +17,9 @@
         <div class="footer-content-left">
           <img class="footer-content-left-logo" src="@/assets/favicon.ico" alt="Aztec icon" />
           <ul class="footer-content-left-links">
-            <li
+            <!-- <li
               ><router-link :to="'Home'"> {{ t('app.footer.links.organisation') }} </router-link></li
-            >
+            > -->
             <li
               ><a href="https://linktr.ee/aztecarena"> {{ t('app.footer.links.contact') }} </a>
             </li>

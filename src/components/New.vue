@@ -1,5 +1,5 @@
 <template>
-  <div class="new">
+  <a class="new" :href="link">
     <div class="new-image">
       <img :src="image.url" :alt="image.alt" />
     </div>
@@ -9,7 +9,7 @@
         {{ description }}
       </p>
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -17,6 +17,7 @@
     title: { type: String, default: '' },
     description: { type: String, default: '' },
     image: { url: { url: String, alt: String }, default: { url: '', alt: '' } },
+    link: { type: String, default: '' },
   })
 </script>
 

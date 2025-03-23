@@ -8,7 +8,7 @@ export const useFaceit = () => {
       .get(`https://open.faceit.com/data/v4/championships/${tournamentId}`, {
         headers: { Authorization: `Bearer ${import.meta.env.VITE_FACEIT_API_KEY}` },
       })
-      .then((resp) => resp.data)
+      .then((resp) => ({ ...resp.data, faceit_url: resp.data.faceit_url.replace('{lang}', 'fr') }))
       .catch((error) => {
         console.log(error)
       })

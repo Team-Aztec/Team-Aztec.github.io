@@ -79,25 +79,20 @@
           <circle cx="0" cy="0" r="16" fill="none" stroke="var(--target)" stroke-width="2" />
         </g>
       </defs>
-      <!--FAC868-->
       <path style="opacity: 0.25" fill="#F80" filter="url(#noiseFilter)" d="M0,0V1000H1000V0Z"></path>
-      <use class="bg-moving-target" xlink:href="#target" x="500" y="500" style="transform: translate(-150px, -250px)"></use>
-      <use class="bg-moving-target" xlink:href="#target" x="500" y="500" style="transform: translate(250px, -200px)"></use>
-      <use class="bg-moving-target" xlink:href="#target" x="500" y="500" style="transform: translate(-250px, 200px)"></use>
-      <use class="bg-moving-target" xlink:href="#target" x="500" y="500" style="transform: translate(150px, 250px)"></use>
     </svg>
-    <svg class="bg-center bg-green-box" viewbox="0 0 100 100" preserveAspectRatio="none">
+    <!-- <svg class="bg-center bg-green-box" viewbox="0 0 100 100" preserveAspectRatio="none">
       <path
         class="bg-green"
         d="M0,0L100,100 M100,0L0,100 M50,0L50,100 M0,50L100,50"
         stroke-width="2"
         vector-effect="non-scaling-stroke"
       ></path>
-    </svg>
-    <svg class="bg-arrow bg-arrow-top" viewbox="0 0 70 70" preserveaspectratio="xMidYMax meet">
+    </svg> -->
+    <!-- <svg class="bg-arrow bg-arrow-top" viewbox="0 0 70 70" preserveaspectratio="xMidYMax meet">
       <path class="bg-arrow-path" d="M23,23L47,47 M23,43L23,23L43,23"></path>
-    </svg>
-    <div class="bg-green-box bg-top"></div>
+    </svg> -->
+    <!-- <div class="bg-green-box bg-top"></div>
     <div class="bg-green-box bg-top"></div>
     <div class="bg-green-box bg-top bg-right"></div>
     <div class="bg-green-box bg-left"></div>
@@ -109,7 +104,7 @@
     <div class="bg-green-box bg-bottom"></div>
     <svg class="bg-arrow" viewbox="0 0 70 70">
       <path class="bg-arrow-path" d="M23,23L47,47 M27,47L47,47L47,27"></path>
-    </svg>
+    </svg> -->
     <svg class="bg-logo" viewBox="0 0 1000 1000" preserveaspectratio="xMidYMid slice">
       <use xlink:href="#logo-aztec"></use>
     </svg>

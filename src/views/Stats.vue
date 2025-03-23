@@ -19,7 +19,7 @@
     </div>
     <div class="stats-statistiques">
       <div class="stats-statistiques-tournaments" role="list">
-        <div
+        <a
           v-for="(item, index) of tournaments"
           :key="index"
           :class="{
@@ -28,9 +28,11 @@
             cup: item.name?.toLowerCase()?.includes('cup'),
           }"
           role="listitem"
+          :href="item.faceit_url"
+          target="_blank"
         >
           <p>{{ item.name }}</p>
-        </div>
+        </a>
       </div>
       <p class="stats-statistiques-partner">
         L'ensemble des statistiques sont fournies suite à notre partenariat avec
