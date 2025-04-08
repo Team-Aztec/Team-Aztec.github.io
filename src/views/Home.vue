@@ -2,7 +2,7 @@
   <div class="home">
     <div class="home-banner">
       <div class="home-banner-content">
-        <div v-if="futureTournaments[0].status !== 'started'">
+        <div v-if="futureTournaments[0]?.status !== 'started'" class="home-banner-content-content">
           <Countdown
             :targetTime="new Date(futureTournaments?.[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()"
           />
@@ -14,6 +14,17 @@
     </div>
 
     <div class="home-content">
+      <div class="home-content-video">
+        <iframe
+          class="home-content-video-iframe"
+          src="https://www.youtube.com/embed/TALOiC339MA?si=Dx56xXbL1bdzYxfD&autoplay=1&mute=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div class="home-content-news">
         <h2 class="home-content-news-title">Nos dernières actualités</h2>
         <div class="home-content-news-list">
@@ -65,6 +76,10 @@
       &-content {
         @apply absolute left-1/2 top-1/2 -translate-x-1/2 flex flex-col items-center gap-8;
 
+        &-content {
+          @apply flex flex-col items-center gap-8;
+        }
+
         &-button {
           @apply text-white font-bold border-2 border-[#ffd700] bg-black bg-opacity-80 py-3 px-6 rounded-lg text-base uppercase;
 
@@ -87,6 +102,14 @@
 
     &-content {
       @apply flex flex-col gap-12 mt-20 items-center;
+
+      &-video {
+        @apply h-[500px] w-[85%];
+
+        &-iframe {
+          @apply w-full h-full;
+        }
+      }
 
       &-news {
         @apply flex flex-col gap-4 w-[85%];

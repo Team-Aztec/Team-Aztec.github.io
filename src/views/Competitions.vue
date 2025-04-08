@@ -1,13 +1,13 @@
 <template>
   <div class="competitions">
     <div class="competitions-description">
-      <h1 class="competitions-description-title">Nos compétitions</h1>
+      <h1 class="competitions-description-title">Toutes nos compétitions</h1>
       <p>Aztec est un acteur majeur de la scène francophone dans l'organisation de compétitions sur Counter-Strike 2.</p>
       <p
         >Grâce à des événements compétitifs de qualité, Aztec s’impose comme une plateforme incontournable pour les joueurs et les
         équipes souhaitant se mesurer aux meilleurs. Vous pourrez notamment trouver ici :</p
       >
-      <ul>
+      <ul class="list-disc ml-4">
         <li>Les Aztec Cups</li>
         <li>La Aztec Arena</li>
       </ul>
@@ -106,9 +106,7 @@
       }
 
       &-banner {
-        width: 100%;
-        border: 1px solid #666;
-        border-radius: 4px;
+        @apply w-full border border-[#666] rounded mt-6;
       }
     }
 
@@ -122,7 +120,7 @@
         @apply flex-1 flex flex-col gap-4;
 
         img {
-          @apply w-full;
+          @apply w-full h-full object-cover;
         }
 
         &-title {

@@ -9,7 +9,7 @@
   const displayHeader = ref(false)
 
   const checkSticky = () => {
-    if (route.name === 'Home') {
+    if (route.name === 'Home' && !displayHeader.value) {
       displayHeader.value = window.scrollY > 0
     }
   }

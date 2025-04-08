@@ -14,8 +14,8 @@
 <template>
   <div class="stats">
     <div class="stats-content">
-      <h1 class="stats-content-title">Statistiques</h1>
-      <p> Vous pourrez prochainement consulter vos statistiques de vos différentes participations aux compétitions de Aztec : </p>
+      <h1 class="stats-content-title">Vos statistiques durant nos compétitions</h1>
+      <p> Vous pourrez prochainement consulter vos statistiques de vos différentes participations aux compétitions de Aztec</p>
     </div>
     <div class="stats-statistiques">
       <div class="stats-statistiques-tournaments" role="list">
