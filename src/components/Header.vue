@@ -32,10 +32,15 @@
   <header is="azt-header" id="header">
     <nav :class="{ nav: true, show: displayHeader }">
       <div class="nav-content">
-        <div className="nav-content-logo">
+        <router-link :to="{ name: 'Home' }" class="nav-content-logo">
+          <img class="logo-icon" src="@/assets/favicon.ico" alt="Aztec icon" />
+          {{ t('app.header.logo.label') }}
+        </router-link>
+        <!-- <div className="nav-content-logo">
+          <router-link :to="{ name: 'Home' }">{{ t('app.header.logo.label') }}</router-link>
           <img class="logo-icon" src="@/assets/favicon.ico" alt="Aztec icon" />
           <router-link :to="{ name: 'Home' }">{{ t('app.header.logo.label') }}</router-link>
-        </div>
+        </div> -->
 
         <ul class="nav-content-list">
           <li class="relative group">

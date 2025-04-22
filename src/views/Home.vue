@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="home-banner">
-      <div class="home-banner-content">
-        <div v-if="futureTournaments[0]?.status !== 'started'" class="home-banner-content-content">
+      <div v-if="futureTournaments[0]" class="home-banner-content">
+        <div v-if="futureTournaments[0].status !== 'started'" class="home-banner-content-content">
           <Countdown
             :targetTime="new Date(futureTournaments?.[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()"
           />
