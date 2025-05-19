@@ -52,7 +52,7 @@
     gap: 28px;
 
     &-content-title {
-      @apply text-center relative font-bold text-2xl mb-4;
+      @apply text-center relative font-bold text-3xl mb-4;
 
       &::after {
         background-color: #f6a429;

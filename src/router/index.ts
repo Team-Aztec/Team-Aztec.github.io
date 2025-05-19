@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue'
 import Competitions from '@/views/Competitions.vue'
 import Stats from '@/views/Stats.vue'
 import History from '@/views/History.vue'
+import Organisation from '@/views/Organisation.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: '/historique',
     name: 'Historique',
     component: History,
+  },
+  {
+    path: '/organisation',
+    name: 'Organisation',
+    component: Organisation,
   },
   {
     path: '/:catchAll(.*)',
