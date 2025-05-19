@@ -1,4 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue'
+  import { Pagination, Navigation } from 'swiper/modules'
+
+  // Import Swiper styles
+  import 'swiper/css'
+  import 'swiper/css/navigation'
+  import 'swiper/css/pagination'
+
+  const modules = [Pagination, Navigation]
+</script>
 
 <template>
   <div class="organisation">
@@ -20,13 +31,48 @@
         commodo justo quis risus aliquam, volutpat faucibus elit ultricies. Phasellus eget nisl vel magna bibendum aliquam. Sed
         lectus nisi, vehicula ut fermentum id, iaculis id ex.
       </p>
-
-      <a class="scroll-icon"> blahblah </a>
     </div>
+
     <div class="organisation-services">
       <h2 class="organisation-services-title">Nos services</h2>
 
-      <div class="organisation-services-list"> </div>
+      <div class="organisation-services-list">
+        <swiper pagination navigation :modules="modules" :space-between="100">
+          <swiper-slide>
+            <img
+              class="organisation-services-list-item-image"
+              src="@/assets/images/services/faceit-logo.png"
+              alt="Organisation de tournoi"
+            />
+            <div class="organisation-services-list-item-content">
+              <h3 class="organisation-services-list-item-content-title">Organisation de tournoi</h3>
+              <p>Lorem impseu nian nian naina nedfezf fez fez fez fez f ezfez fze fez</p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <img
+              class="organisation-services-list-item-image"
+              src="@/assets/images/services/faceit-logo.png"
+              alt="Organisation de tournoi"
+            />
+            <div class="organisation-services-list-item-content">
+              <h3 class="organisation-services-list-item-content-title">Casting de match/tournoi</h3>
+              <p>Lorem impseu nian nian naina nedfezf fez fez fez fez f ezfez fze fez</p>
+            </div>
+          </swiper-slide>
+          <swiper-slide
+            ><img
+              class="organisation-services-list-item-image"
+              src="@/assets/images/services/faceit-logo.png"
+              alt="Organisation de tournoi"
+            />
+            <div class="organisation-services-list-item-content">
+              <h3 class="organisation-services-list-item-content-title">Observateur de match/tournoi</h3>
+              <p>Lorem impseu nian nian naina nedfezf fez fez fez fez f ezfez fze fez</p>
+            </div></swiper-slide
+          >
+        </swiper>
+      </div>
     </div>
     <div class="organisation-people">
       <h2 class="organisation-people-title">L'équipe</h2>
@@ -59,7 +105,7 @@
 
 <style scoped lang="scss">
   .organisation {
-    @apply flex flex-col gap-32 max-w-[85%] mx-auto py-32;
+    @apply flex flex-col gap-16 max-w-[85%] mx-auto py-32;
 
     &-info {
       @apply flex flex-col gap-4;
@@ -85,7 +131,7 @@
 
     &-people,
     &-services {
-      @apply flex flex-col gap-6;
+      @apply flex flex-col gap-6 scroll-m-[82px];
 
       &-title {
         @apply grid -translate-x-1/2 text-3xl font-bold items-center;
@@ -132,7 +178,45 @@
     }
   }
 
+  .organisation-services-list {
+    @apply h-[400px];
+
+    .swiper {
+      @apply w-full bg-light-grey p-8 rounded-lg;
+
+      &-slide {
+        @apply w-full flex justify-center gap-8;
+      }
+
+      &-button-next {
+        color: white;
+      }
+    }
+
+    &-item {
+      &-image {
+        @apply w-[33%];
+      }
+
+      &-content {
+        @apply flex flex-col gap-4;
+
+        &-title {
+          @apply font-bold;
+        }
+      }
+    }
+  }
+
+  .swiper-button-next {
+    color: white !important;
+  }
+
   .scroll-icon {
     @apply block w-full text-center;
+
+    .icon:after {
+      content: '\e93f';
+    }
   }
 </style>

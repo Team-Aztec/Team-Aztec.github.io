@@ -5,6 +5,8 @@
 html {
   --tag-tile-coef: 33.33%;
   --tag-bg-size: 400% 400%;
+
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,4 +37,10 @@ a {
 section {
   display: block;
   margin: 0 auto;
+}
+
+:root {
+  --swiper-theme-color: #fff !important;
+  --swiper-pagination-bullet-inactive-color: grey !important;
+  --swiper-navigation-sides-offset: 2rem !important;
 }
