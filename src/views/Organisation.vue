@@ -46,7 +46,16 @@
             />
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Organisation de tournoi</h3>
-              <p>Lorem impseu nian nian naina nedfezf fez fez fez fez f ezfez fze fez</p>
+              <div class="organisation-services-list-item-content-description">
+                <p>Nous vous proposons un accompagnement complet pour votre événement :</p>
+                <ul>
+                  <li>Gestion de planning et coordination logistique</li>
+                  <li>Encadrement des admins et du staff technique</li>
+                  <li>Création de formats adaptés (groupes, brackets, BOs, etc.)</li>
+                  <li>Optimisation de l'événement en fonction du budget</li>
+                  <li>Scouting d’équipes pour assurer des affiches de qualité</li>
+                </ul>
+              </div>
             </div>
           </swiper-slide>
           <swiper-slide>
@@ -179,8 +188,6 @@
   }
 
   .organisation-services-list {
-    @apply h-[400px];
-
     .swiper {
       @apply w-full bg-light-grey p-8 rounded-lg;
 
@@ -203,6 +210,10 @@
 
         &-title {
           @apply font-bold;
+        }
+
+        &-description ul {
+          @apply list-disc pl-6;
         }
       }
     }
