@@ -16,20 +16,14 @@
     <div class="organisation-info">
       <h1 class="organisation-info-title">Qui sommes-nous ?</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis nunc mauris, rutrum tristique eros volutpat ac.
-        Vestibulum varius ultrices risus, vitae commodo ligula aliquam eu. Quisque vel lacus nibh. Duis vitae tincidunt ligula.
-        Vestibulum lacus enim, rutrum ac dui in, pellentesque ornare felis. Curabitur ipsum tellus, sodales id semper sit amet,
-        porta ac eros. Cras blandit risus id lectus molestie fermentum. Donec eget elementum nulla. Nam commodo ipsum ut finibus
-        congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum condimentum diam, vel fringilla libero
-        consequat in.
+        Aztec est une structure fondée par d’anciens joueurs semi-professionnels de CS:GO et CS2, avec une double expertise : le
+        terrain et l’organisation. Nous savons ce qui fait un bon tournoi, parce que nous l’avons vécu des deux côtés. Grâce à
+        plus de 20 événements organisés (Aztec Cup, Arena, IconX), nous proposons aujourd’hui des prestations fiables et
+        professionnelles : formats sur-mesure, production maîtrisée, casting de qualité.
       </p>
       <p>
-        Ut mattis ante sed purus lacinia elementum. Integer vel dolor sed ipsum lacinia feugiat. Nam condimentum eu tellus at
-        condimentum. Aenean sed commodo mauris. Mauris maximus ligula a nibh vestibulum, ac bibendum ante pulvinar. Aenean finibus
-        gravida urna, et fermentum diam ornare eget. In sit amet gravida massa. Suspendisse a ex ut quam efficitur mattis at eu
-        sapien. Sed ullamcorper, lorem posuere porttitor molestie, lorem mauris suscipit leo, a porttitor nunc massa eu mi. Mauris
-        commodo justo quis risus aliquam, volutpat faucibus elit ultricies. Phasellus eget nisl vel magna bibendum aliquam. Sed
-        lectus nisi, vehicula ut fermentum id, iaculis id ex.
+        Notre force : une approche humaine, ancrée dans la réalité des joueurs, et un niveau d’exigence à la hauteur des attentes
+        des partenaires.
       </p>
     </div>
 

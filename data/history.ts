@@ -2,6 +2,14 @@ import { History } from '../src/types/types'
 
 export const history: History[] = [
   {
+    title: 'IconX - First Blood : Qualifier 2',
+    url: 'https://www.faceit.com/fr/championship/cac1822b-550a-434d-a230-940054b20667/IconX%20-%20First%20Blood%20:%20Qualifier%202',
+    image: {
+      url: '/src/assets/history/iconX_first-blood.jpg',
+      alt: 'IconX - First Blood : Qualifier 2',
+    },
+  },
+  {
     title: 'IconX - First Blood : Qualifier 1',
     url: 'https://www.faceit.com/fr/championship/6372cec9-75b9-45e0-8a20-c9ee648b7e86/IconX%20-%20First%20Blood%20:%20Qualifier%201',
     image: {

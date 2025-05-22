@@ -4,10 +4,10 @@ Aztec is the website the Aztec Organization based on the organisation of CS2 tou
 
 ## Installation
 
-Use the package manager [npm](https://www.npmjs.com/) to install packages.
+Use the package manager [yarn](https://yarnpkg.com/) to install packages.
 
 ```bash
-npm install
+yarn install
 ```
 
 ## Usage
