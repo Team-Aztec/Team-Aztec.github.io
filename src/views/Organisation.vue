@@ -60,20 +60,41 @@
             />
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Casting de match/tournoi</h3>
-              <p>Lorem impseu nian nian naina nedfezf fez fez fez fez f ezfez fze fez</p>
+              <div class="organisation-services-list-item-content-description">
+                <p>
+                  Aztec propose des prestations de cast professionnel sur Counter-Strike 2, alliant dynamisme, clarté et expertise
+                  du jeu. Que ce soit pour des tournois, showmatches ou événements communautaires, nous serons là pour vous.
+                </p>
+                <ul>
+                  <li>Une narration vivante qui donne du rythme à chaque round</li>
+                  <li>Une meilleure rétention du public grâce à un cast engageant</li>
+                  <li>Une image plus pro pour votre événement ou stream</li>
+                  <li>Optimisation de l'événement en fonction du budget</li>
+                  <li>Une valeur ajoutée au spectacle, même pour les non-initiés</li>
+                </ul>
+              </div>
             </div>
           </swiper-slide>
-          <swiper-slide
-            ><img
+          <swiper-slide>
+            <img
               class="organisation-services-list-item-image"
               src="@/assets/images/services/faceit-logo.png"
               alt="Organisation de tournoi"
             />
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Observateur de match/tournoi</h3>
-              <p>Lorem impseu nian nian naina nedfezf fez fez fez fez f ezfez fze fez</p>
-            </div></swiper-slide
-          >
+              <div class="organisation-services-list-item-content-description">
+                <p> Nous proposons également un service d'observateur pour sublimer la diffusion de vos tournois : </p>
+                <ul>
+                  <li>Flux ou diffusion en direct (2K 60fps 20 000kbps/S)</li>
+                  <li>Plan caméra fixe et en mouvement créer par nos soins</li>
+                  <li>Régie en remote</li>
+                  <li>Système de replay instantané</li>
+                  <li>Capture en direct des moments les plus marquants des rencontres</li>
+                </ul>
+              </div>
+            </div>
+          </swiper-slide>
         </swiper>
       </div>
     </div>
@@ -82,8 +103,8 @@
 
       <div class="organisation-people-list">
         <div class="organisation-people-list-item">
-          <img src="@/assets/images/people/wolfound.webp" alt="Lucas VANTOMME" />
-          <h3 class="organisation-people-list-item-name">Lucas VANTOMME</h3>
+          <img src="@/assets/images/people/Djiimy.webp" alt="Donatien RAYNAUD" />
+          <h3 class="organisation-people-list-item-name">Donatien RAYNAUD</h3>
         </div>
         <div class="organisation-people-list-item">
           <img src="@/assets/images/people/wolfound.webp" alt="Wolfound" />
@@ -137,18 +158,20 @@
       @apply flex flex-col gap-6 scroll-m-[82px];
 
       &-title {
-        @apply grid -translate-x-1/2 text-3xl font-bold items-center;
+        @apply text-center relative font-bold text-3xl mb-4;
 
-        margin: 0 0 min(32px, 1vw) 0;
-        grid-template-columns: 1fr auto 1fr;
-        width: calc(100vw - 64px);
-        margin-left: 50%;
-
-        &::after,
-        &::before {
+        &::after {
+          background-color: #f6a429;
+          bottom: 0;
           content: '';
-          border: solid 1px white;
-          margin: 0 min(5vw, 64px);
+          display: block;
+          height: 0.1875rem;
+          margin-top: 0.5rem;
+          width: 8rem;
+          left: 0;
+          margin-left: auto;
+          margin-right: auto;
+          right: 0;
         }
       }
 
@@ -160,6 +183,10 @@
         &-item {
           @apply px-8 pb-8;
 
+          img {
+            @apply w-[215px] h-[215px];
+          }
+
           &-name {
             @apply text-center mt-8;
           }
@@ -168,6 +195,10 @@
             @apply px-8 pb-8;
 
             grid-row-start: 2;
+
+            img {
+              @apply w-[215px] h-[215px];
+            }
           }
 
           &-last {
@@ -175,6 +206,10 @@
 
             grid-column-start: 3;
             grid-row-start: 2;
+
+            img {
+              @apply w-[215px] h-[215px];
+            }
           }
         }
       }
@@ -196,7 +231,7 @@
 
     &-item {
       &-image {
-        @apply w-[33%];
+        @apply w-[25%];
       }
 
       &-content {

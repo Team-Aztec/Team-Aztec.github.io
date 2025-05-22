@@ -115,18 +115,20 @@
         @apply flex flex-col gap-4 w-[85%];
 
         &-title {
-          @apply grid -translate-x-1/2 text-3xl font-bold items-center;
+          @apply text-center relative font-bold text-3xl mb-4;
 
-          margin: 0 0 min(32px, 1vw) 0;
-          grid-template-columns: 1fr auto 1fr;
-          width: calc(100vw - 64px);
-          margin-left: 50%;
-
-          &::after,
-          &::before {
+          &::after {
+            background-color: #f6a429;
+            bottom: 0;
             content: '';
-            border: solid 1px white;
-            margin: 0 min(5vw, 64px);
+            display: block;
+            height: 0.1875rem;
+            margin-top: 0.5rem;
+            width: 8rem;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
           }
         }
         &-list {
