@@ -1,5 +1,30 @@
+<script setup lang="ts">
+  import { onBeforeMount, ref } from 'vue'
+  import Countdown from '../components/Countdown.vue'
+  import New from '../components/New.vue'
+  import { useFaceit } from '../domain/faceit/faceit'
+
+  import { newsHomepage } from '../../data/news.ts'
+  import { Tournament } from '../types/types.ts'
+
+  const faceit = useFaceit()
+  const futureTournaments = ref<Tournament[]>([])
+
+  const newsList = ref(newsHomepage)
+  const lastTournamentUrl = ref<string>('')
+
+  onBeforeMount(async () => {
+    futureTournaments.value = await faceit.getFutureTournaments()
+    if (futureTournaments.value?.length > 0) {
+      lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
+    } else {
+      lastTournamentUrl.value = ''
+    }
+  })
+</script>
+
 <template>
-  <div class="home">
+  <div class="home aztec-container">
     <div class="home-banner">
       <div v-if="futureTournaments[0]" class="home-banner-content">
         <div v-if="futureTournaments[0].status !== 'started'" class="home-banner-content-content">
@@ -41,30 +66,6 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-  import { onBeforeMount, ref } from 'vue'
-  import Countdown from '../components/Countdown.vue'
-  import New from '../components/New.vue'
-  import { useFaceit } from '../domain/faceit/faceit'
-
-  import { newsHomepage } from '../../data/news.ts'
-  import { Tournament } from '../types/types.ts'
-
-  const faceit = useFaceit()
-  const futureTournaments = ref<Tournament[]>([])
-
-  const newsList = ref(newsHomepage)
-  const lastTournamentUrl = ref<string>('')
-
-  onBeforeMount(async () => {
-    futureTournaments.value = await faceit.getFutureTournaments()
-    if (futureTournaments.value?.length > 0) {
-      lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
-    } else {
-      lastTournamentUrl.value = ''
-    }
-  })
-</script>
 
 <style scoped lang="scss">
   .home {

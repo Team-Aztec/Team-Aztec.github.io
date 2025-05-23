@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <div class="organisation">
+  <div class="organisation aztec-container">
     <div class="organisation-info">
       <h1 class="organisation-info-title">Qui sommes-nous ?</h1>
       <p>
@@ -33,11 +33,11 @@
       <div class="organisation-services-list">
         <swiper pagination navigation :modules="modules" :space-between="100">
           <swiper-slide>
-            <img
+            <!-- <img
               class="organisation-services-list-item-image"
               src="@/assets/images/services/faceit-logo.png"
               alt="Organisation de tournoi"
-            />
+            /> -->
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Organisation de tournoi</h3>
               <div class="organisation-services-list-item-content-description">
@@ -53,11 +53,11 @@
             </div>
           </swiper-slide>
           <swiper-slide>
-            <img
+            <!-- <img
               class="organisation-services-list-item-image"
               src="@/assets/images/services/faceit-logo.png"
               alt="Organisation de tournoi"
-            />
+            /> -->
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Casting de match/tournoi</h3>
               <div class="organisation-services-list-item-content-description">
@@ -76,11 +76,11 @@
             </div>
           </swiper-slide>
           <swiper-slide>
-            <img
+            <!-- <img
               class="organisation-services-list-item-image"
               src="@/assets/images/services/faceit-logo.png"
               alt="Organisation de tournoi"
-            />
+            /> -->
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Observateur de match/tournoi</h3>
               <div class="organisation-services-list-item-content-description">
@@ -129,7 +129,7 @@
 
 <style scoped lang="scss">
   .organisation {
-    @apply flex flex-col gap-16 max-w-[85%] mx-auto py-32;
+    @apply flex flex-col gap-16  mx-auto py-32;
 
     &-info {
       @apply flex flex-col gap-4;

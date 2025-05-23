@@ -1,5 +1,5 @@
 <template>
-  <div class="history">
+  <div class="history aztec-container">
     <div class="history-content">
       <h1 class="history-content-title">Historique</h1>
       <p>Aztec participe depuis quelques temps à l'organisation de compétitions sur Counter-Strike 2.</p>
@@ -29,7 +29,7 @@
 
 <style scoped lang="scss">
   .history {
-    @apply max-w-[85%] px-0 pt-32 pb-24 mx-auto flex flex-col gap-10;
+    @apply px-0 pt-32 pb-24 mx-auto flex flex-col gap-10;
 
     &-content {
       @apply flex flex-col gap-4;

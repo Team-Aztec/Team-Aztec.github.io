@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <div class="stats">
+  <div class="stats aztec-container">
     <div class="stats-content">
       <h1 class="stats-content-title">Vos statistiques durant nos compétitions</h1>
       <p> Vous pourrez prochainement consulter vos statistiques de vos différentes participations aux compétitions de Aztec</p>
@@ -44,7 +44,6 @@
 </template>
 <style scoped lang="scss">
   .stats {
-    max-width: 85%;
     padding: 128px 0;
     margin: 0 auto;
     display: flex;

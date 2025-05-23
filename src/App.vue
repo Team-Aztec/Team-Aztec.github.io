@@ -11,4 +11,6 @@
   <Footer />
 </template>
 
-<style scoped></style>
+<style lang="postcss">
+  @import './css/tailwind.pcss';
+</style>

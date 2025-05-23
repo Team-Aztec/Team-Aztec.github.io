@@ -1,5 +1,5 @@
 <template>
-  <div class="competitions">
+  <div class="competitions aztec-container">
     <div class="competitions-description">
       <h1 class="competitions-description-title">Toutes nos compétitions</h1>
       <p>Aztec est un acteur majeur de la scène francophone dans l'organisation de compétitions sur Counter-Strike 2.</p>
@@ -79,7 +79,6 @@
 <script setup lang="ts"></script>
 <style scoped lang="scss">
   .competitions {
-    max-width: 85%;
     padding: 128px 0;
     margin: 0 auto;
     display: flex;

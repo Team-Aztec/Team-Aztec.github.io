@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html {
   --tag-tile-coef: 33.33%;
   --tag-bg-size: 400% 400%;
@@ -43,4 +39,36 @@ section {
   --swiper-theme-color: #fff !important;
   --swiper-pagination-bullet-inactive-color: grey !important;
   --swiper-navigation-sides-offset: 2rem !important;
+}
+
+.aztec-container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 680px) {
+  .aztec-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aztec-container {
+    max-width: 64rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .aztec-container {
+    max-width: 80rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
