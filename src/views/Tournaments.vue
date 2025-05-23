@@ -1,12 +1,5 @@
-<script setup lang="ts">
-  import { ref } from 'vue'
-  import { history } from '../../data/history.ts'
-
-  const historyList = ref(history)
-</script>
-
 <template>
-  <div class="tournaments">
+  <div class="tournaments aztec-container">
     <div class="tournaments-list">
       <div class="tournaments-list-active">
         <h2 class="title">Tournois en cours</h2>
@@ -31,9 +24,16 @@
   </div>
 </template>
 
+<script setup lang="ts">
+  import { ref } from 'vue'
+  import { history } from '../../data/history.ts'
+
+  const historyList = ref(history)
+</script>
+
 <style scoped lang="scss">
   .tournaments {
-    @apply flex flex-col gap-16 max-w-[85%] mx-auto py-32;
+    @apply flex flex-col gap-16 mx-auto py-32;
 
     .title {
       @apply text-center relative font-bold text-3xl mb-4;

@@ -1,5 +1,30 @@
+<script setup lang="ts">
+  import { onBeforeMount, ref } from 'vue'
+  import Countdown from '../components/Countdown.vue'
+  import New from '../components/New.vue'
+  import { useFaceit } from '../domain/faceit/faceit'
+
+  import { newsHomepage } from '../../data/news.ts'
+  import { Tournament } from '../types/types.ts'
+
+  const faceit = useFaceit()
+  const futureTournaments = ref<Tournament[]>([])
+
+  const newsList = ref(newsHomepage)
+  const lastTournamentUrl = ref<string>('')
+
+  onBeforeMount(async () => {
+    futureTournaments.value = await faceit.getFutureTournaments()
+    if (futureTournaments.value?.length > 0) {
+      lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
+    } else {
+      lastTournamentUrl.value = ''
+    }
+  })
+</script>
+
 <template>
-  <div class="home">
+  <div class="home aztec-container">
     <div class="home-banner">
       <div v-if="futureTournaments[0]" class="home-banner-content">
         <div v-if="futureTournaments[0].status !== 'started'" class="home-banner-content-content">
@@ -41,30 +66,6 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-  import { onBeforeMount, ref } from 'vue'
-  import Countdown from '../components/Countdown.vue'
-  import New from '../components/New.vue'
-  import { useFaceit } from '../domain/faceit/faceit'
-
-  import { newsHomepage } from '../../data/news.ts'
-  import { Tournament } from '../types/types.ts'
-
-  const faceit = useFaceit()
-  const futureTournaments = ref<Tournament[]>([])
-
-  const newsList = ref(newsHomepage)
-  const lastTournamentUrl = ref<string>('')
-
-  onBeforeMount(async () => {
-    futureTournaments.value = await faceit.getFutureTournaments()
-    if (futureTournaments.value?.length > 0) {
-      lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
-    } else {
-      lastTournamentUrl.value = ''
-    }
-  })
-</script>
 
 <style scoped lang="scss">
   .home {
@@ -115,18 +116,20 @@
         @apply flex flex-col gap-4 w-[85%];
 
         &-title {
-          @apply grid -translate-x-1/2 text-3xl font-bold items-center;
+          @apply text-center relative font-bold text-3xl mb-4;
 
-          margin: 0 0 min(32px, 1vw) 0;
-          grid-template-columns: 1fr auto 1fr;
-          width: calc(100vw - 64px);
-          margin-left: 50%;
-
-          &::after,
-          &::before {
+          &::after {
+            background-color: #f6a429;
+            bottom: 0;
             content: '';
-            border: solid 1px white;
-            margin: 0 min(5vw, 64px);
+            display: block;
+            height: 0.1875rem;
+            margin-top: 0.5rem;
+            width: 8rem;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
           }
         }
         &-list {
