@@ -32,6 +32,10 @@
 
     &-image {
       @apply relative h-56 m-2.5 overflow-hidden text-white rounded-md;
+
+      img {
+        @apply w-full h-full object-cover;
+      }
     }
 
     &-description {
