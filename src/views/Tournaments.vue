@@ -63,7 +63,8 @@
           @apply mt-4 flex gap-4 flex-wrap justify-between;
 
           &-item {
-            @apply min-h-60 w-[32%] border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center bg-black;
+            @apply min-h-60 w-[45%] border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center bg-black
+            tab-m:w-[32%];
 
             &:hover {
               -webkit-box-shadow: 0px 5px 20px 3px rgba(255, 255, 255, 0.49);

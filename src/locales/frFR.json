@@ -3,6 +3,8 @@
   "app.header.links.statistiques.label": "Statistiques",
   "app.header.links.competitions.label": "Compétitions",
   "app.header.links.history.label": "Historique",
+  "app.header.links.organisation.label": "Organisation",
+  "app.header.links.contact.label": "Contact",
   "app.footer.back_to_top.button": "Remonter en haut de la page",
   "app.footer.sponsors.pause_stat": "Pause Stat",
   "app.footer.links.contact": "Contact",
