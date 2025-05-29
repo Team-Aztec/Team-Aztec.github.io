@@ -33,11 +33,11 @@
       <div class="organisation-services-list">
         <swiper pagination navigation :modules="modules" :space-between="100">
           <swiper-slide>
-            <!-- <img
+            <img
               class="organisation-services-list-item-image"
-              src="@/assets/images/services/faceit-logo.png"
-              alt="Organisation de tournoi"
-            /> -->
+              src="@/assets/images/services/logo_Aztec_black.png"
+              aria-hidden="true"
+            />
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Organisation de tournoi</h3>
               <div class="organisation-services-list-item-content-description">
@@ -53,11 +53,11 @@
             </div>
           </swiper-slide>
           <swiper-slide>
-            <!-- <img
+            <img
               class="organisation-services-list-item-image"
-              src="@/assets/images/services/faceit-logo.png"
-              alt="Organisation de tournoi"
-            /> -->
+              src="@/assets/images/services/logo_Aztec_classic.png"
+              aria-hidden="true"
+            />
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Casting de match/tournoi</h3>
               <div class="organisation-services-list-item-content-description">
@@ -76,11 +76,11 @@
             </div>
           </swiper-slide>
           <swiper-slide>
-            <!-- <img
+            <img
               class="organisation-services-list-item-image"
-              src="@/assets/images/services/faceit-logo.png"
-              alt="Organisation de tournoi"
-            /> -->
+              src="@/assets/images/services/logo_Aztec_classic_opposite.png"
+              aria-hidden="true"
+            />
             <div class="organisation-services-list-item-content">
               <h3 class="organisation-services-list-item-content-title">Observateur de match/tournoi</h3>
               <div class="organisation-services-list-item-content-description">
