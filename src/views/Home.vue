@@ -26,15 +26,27 @@
 <template>
   <div class="home aztec-container">
     <div class="home-banner">
-      <div v-if="futureTournaments[0]" class="home-banner-content">
-        <div v-if="futureTournaments[0].status !== 'started'" class="home-banner-content-content">
+      <div
+        :class="[
+          {
+            'home-banner-content': true,
+            'home-banner-content-center': futureTournaments[0] || lastTournamentUrl,
+            'home-banner-content-logo': !futureTournaments[0] && !lastTournamentUrl,
+          },
+        ]"
+      >
+        <div v-if="futureTournaments[0] && futureTournaments[0].status !== 'started'" class="home-banner-content-content">
           <Countdown
             :targetTime="new Date(futureTournaments?.[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()"
           />
           <a :href="lastTournamentUrl" class="home-banner-content-button">Your Stage, Our Mission !</a>
         </div>
 
-        <a v-else :href="lastTournamentUrl" class="home-banner-content-button">Un tournoi est en cours, rejoins maintenant !</a>
+        <a v-else-if="lastTournamentUrl" :href="lastTournamentUrl" class="home-banner-content-button"
+          >Un tournoi est en cours, rejoins maintenant !</a
+        >
+
+        <img src="@/assets/images/logo-aztec/Logo_Aztec_classic_opposite.png" aria-hidden="true" />
       </div>
     </div>
 
@@ -75,10 +87,18 @@
       @apply relative h-full bg-[url(@/assets/images/home-banner.png)] bg-no-repeat bg-cover bg-center;
 
       &-content {
-        @apply absolute left-1/2 top-1/2 -translate-x-1/2 flex flex-col items-center gap-8;
+        @apply absolute flex flex-col items-center gap-8;
+
+        &-center {
+          @apply top-1/2 -translate-x-1/2 left-1/2;
+        }
 
         &-content {
           @apply flex flex-col items-center gap-8;
+        }
+
+        &-logo {
+          @apply h-[300px] w-[300px]  top-1/3 -translate-x-1/2 left-1/2;
         }
 
         &-button {

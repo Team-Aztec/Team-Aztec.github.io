@@ -5,6 +5,10 @@
         <h2 class="title">Tournois en cours</h2>
         <p class="tournaments-list-active-none">Pas de tournois actifs pour le moment</p>
       </div>
+      <div class="tournaments-list-future">
+        <h2 class="title">Prochains tournois</h2>
+        <p class="tournaments-list-active-none">Pas de tournois prévus pour le moment</p>
+      </div>
       <div class="tournaments-list-past">
         <h2 class="title">Tournois passés</h2>
         <div class="tournaments-list-past-links" role="list">
@@ -56,8 +60,14 @@
     &-list {
       @apply flex flex-col gap-12;
 
-      &-past {
+      &-past,
+      &-active,
+      &-future {
         @apply flex flex-col justify-center items-center gap-2;
+
+        &-none {
+          @apply text-center opacity-65;
+        }
 
         &-links {
           @apply mt-4 flex gap-4 flex-wrap justify-between;
@@ -75,14 +85,6 @@
               @apply bg-black bg-opacity-80 w-full text-center;
             }
           }
-        }
-      }
-
-      &-active {
-        @apply flex flex-col justify-center items-center gap-2;
-
-        &-none {
-          @apply text-center opacity-65;
         }
       }
     }
