@@ -50,15 +50,11 @@
 
           <ul class="nav-content-list">
             <li class="relative group">
-              <router-link :to="{ name: 'Statistiques' }">{{ t('app.header.links.statistiques.label') }} </router-link>
+              <router-link :to="{ name: 'Organisation' }">{{ t('app.header.links.organisation.label') }}</router-link>
               <div class="nav-content-list-dropdown"> </div>
             </li>
             <li class="relative group">
-              <router-link :to="{ name: 'Competitions' }">{{ t('app.header.links.competitions.label') }} </router-link>
-              <div class="nav-content-list-dropdown"> </div>
-            </li>
-            <li class="relative group">
-              <router-link :to="{ name: 'Historique' }">{{ t('app.header.links.history.label') }}</router-link>
+              <router-link :to="{ name: 'Tournois' }">{{ t('app.header.links.tournaments.label') }} </router-link>
               <div class="nav-content-list-dropdown"> </div>
             </li>
           </ul>

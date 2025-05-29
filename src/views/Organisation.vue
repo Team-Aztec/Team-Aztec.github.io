@@ -242,7 +242,7 @@
 
           img {
             @apply w-[150px] h-[150px]
-            lap-l:w-[300px] lap-l:h-[300px];
+            lap-s:w-[300px] lap-s:h-[300px];
           }
 
           &-name {
