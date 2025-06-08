@@ -2,15 +2,18 @@
   import { onMounted, ref } from 'vue'
   import { history } from '../../data/history.ts'
   import { useFaceit } from '../domain/faceit/faceit.ts'
-  import { Tournament } from '../types/types.ts'
+  import { Tournament, TournamentPage } from '../types/types.ts'
 
   const faceit = useFaceit()
 
   const historyList = ref(history)
-  const futureTournaments = ref<Tournament[]>([])
+  const tournaments = ref<TournamentPage>({
+    actual: [],
+    future: [],
+  })
 
   onMounted(async () => {
-    futureTournaments.value = await faceit.getFutureTournaments()
+    tournaments.value = await faceit.getTournaments()
   })
 </script>
 
@@ -19,13 +22,9 @@
     <div class="tournaments-list">
       <div class="tournaments-list-active">
         <h2 class="title">Tournois en cours</h2>
-        <p class="tournaments-list-active-none">Pas de tournois actifs pour le moment</p>
-      </div>
-      <div class="tournaments-list-future">
-        <h2 class="title">Prochains tournois</h2>
-        <div v-if="futureTournaments.length" class="tournaments-list-active-links !justify-center">
+        <div v-if="tournaments.actual.length" class="tournaments-list-active-links !justify-center">
           <a
-            v-for="(tournament, key) in futureTournaments"
+            v-for="(tournament, key) in tournaments.actual"
             :key="key"
             :class="{
               'tournaments-list-active-links-item': true,
@@ -38,8 +37,29 @@
             <p>{{ tournament.name }}</p>
           </a>
         </div>
-        <p v-else class="tournaments-list-active-none">Pas de tournois prévus pour le moment</p>
+        <p class="tournaments-list-active-none">Pas de tournois actifs pour le moment</p>
       </div>
+
+      <div class="tournaments-list-future">
+        <h2 class="title">Prochains tournois</h2>
+        <div v-if="tournaments.future.length" class="tournaments-list-future-links !justify-center">
+          <a
+            v-for="(tournament, key) in tournaments.future"
+            :key="key"
+            :class="{
+              'tournaments-list-future-links-item': true,
+              arena: tournament.name?.toLowerCase().includes('arena'),
+              cup: tournament.name?.toLowerCase()?.includes('cup'),
+            }"
+            :href="tournament.faceit_url"
+            target="_blank"
+          >
+            <p>{{ tournament.name }}</p>
+          </a>
+        </div>
+        <p v-else class="tournaments-list-future-none">Pas de tournois prévus pour le moment</p>
+      </div>
+
       <div class="tournaments-list-past">
         <h2 class="title">Tournois passés</h2>
         <div class="tournaments-list-past-links" role="list">

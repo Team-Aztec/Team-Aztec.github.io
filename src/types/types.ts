@@ -25,3 +25,8 @@ export interface History {
     alt: string
   }
 }
+
+export interface TournamentPage {
+  actual: Tournament[]
+  future: Tournament[]
+}
