@@ -18,7 +18,10 @@
           <img class="footer-content-left-logo" src="@/assets/favicon.ico" alt="Aztec icon" />
           <ul class="footer-content-left-links">
             <li>
-              <router-link :to="{ name: 'Organisation' }">{{ t('app.footer.links.organisation') }} </router-link></li
+              <router-link :to="{ name: 'Competitions' }">{{ t('app.footer.links.competitions') }} </router-link></li
+            >
+            <li>
+              <router-link :to="{ name: 'Statistiques' }">{{ t('app.footer.links.statistiques') }} </router-link></li
             >
             <li
               ><a href="https://linktr.ee/aztecarena"> {{ t('app.footer.links.contact') }} </a>

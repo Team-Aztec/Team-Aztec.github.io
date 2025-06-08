@@ -1,3 +1,19 @@
+<script setup lang="ts">
+  import { onMounted, ref } from 'vue'
+  import { history } from '../../data/history.ts'
+  import { useFaceit } from '../domain/faceit/faceit.ts'
+  import { Tournament } from '../types/types.ts'
+
+  const faceit = useFaceit()
+
+  const historyList = ref(history)
+  const futureTournaments = ref<Tournament[]>([])
+
+  onMounted(async () => {
+    futureTournaments.value = await faceit.getFutureTournaments()
+  })
+</script>
+
 <template>
   <div class="tournaments aztec-container">
     <div class="tournaments-list">
@@ -7,7 +23,22 @@
       </div>
       <div class="tournaments-list-future">
         <h2 class="title">Prochains tournois</h2>
-        <p class="tournaments-list-active-none">Pas de tournois prévus pour le moment</p>
+        <div v-if="futureTournaments.length" class="tournaments-list-active-links !justify-center">
+          <a
+            v-for="(tournament, key) in futureTournaments"
+            :key="key"
+            :class="{
+              'tournaments-list-active-links-item': true,
+              arena: tournament.name?.toLowerCase().includes('arena'),
+              cup: tournament.name?.toLowerCase()?.includes('cup'),
+            }"
+            :href="tournament.faceit_url"
+            target="_blank"
+          >
+            <p>{{ tournament.name }}</p>
+          </a>
+        </div>
+        <p v-else class="tournaments-list-active-none">Pas de tournois prévus pour le moment</p>
       </div>
       <div class="tournaments-list-past">
         <h2 class="title">Tournois passés</h2>
@@ -19,6 +50,7 @@
             :style="{ 'background-image': 'url(' + tournament.image.url + ')' }"
             :href="tournament.url"
             target="_blank"
+            role="listitem"
           >
             <p>{{ tournament.title }}</p>
           </a>
@@ -27,13 +59,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-  import { ref } from 'vue'
-  import { history } from '../../data/history.ts'
-
-  const historyList = ref(history)
-</script>
 
 <style scoped lang="scss">
   .tournaments {
@@ -70,7 +95,7 @@
         }
 
         &-links {
-          @apply mt-4 flex gap-4 flex-wrap justify-between;
+          @apply mt-4 flex gap-4 flex-wrap justify-between w-full;
 
           &-item {
             @apply min-h-60 w-[45%] border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center bg-black

@@ -41,6 +41,14 @@ section {
   --swiper-navigation-sides-offset: 2rem !important;
 }
 
+.arena {
+  background-image: url(@/assets/images/arena.jpeg);
+}
+
+.cup {
+  background-image: url(@/assets/images/cup.webp);
+}
+
 .aztec-container {
   box-sizing: border-box;
   margin-left: auto;

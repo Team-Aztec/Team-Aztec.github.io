@@ -99,12 +99,4 @@
       }
     }
   }
-
-  .arena {
-    @apply bg-[url(@/assets/images/arena.jpeg)];
-  }
-
-  .cup {
-    @apply bg-[url(@/assets/images/cup.webp)];
-  }
 </style>
