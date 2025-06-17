@@ -1,0 +1,16 @@
+{
+  "app.header.logo.label": "Aztec France",
+  "app.header.links.statistiques.label": "Statistiques",
+  "app.header.links.competitions.label": "Compétitions",
+  "app.header.links.history.label": "Historique",
+  "app.header.links.organisation.label": "Qui sommes-nous ?",
+  "app.header.links.contact.label": "Contact",
+  "app.header.links.tournaments.label": "Nos tournois",
+  "app.footer.back_to_top.button": "Remonter en haut de la page",
+  "app.footer.sponsors.pause_stat": "Pause Stat",
+  "app.footer.links.contact": "Contact",
+  "app.footer.links.organisation": "Organisation",
+  "app.footer.links.competitions": "Compétitions",
+  "app.footer.links.statistiques": "Statistiques",
+  "app.footer.copyright": "&copy; Aztec France 2025 - Tous droits réservés"
+}

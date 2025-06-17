@@ -1,0 +1,1 @@
+{"root":["./src/app.vue","./src/components/background.vue","./src/components/footer.vue","./src/components/header.vue","./src/components/socials.vue","./src/views/competitions.vue","./src/views/home.vue","./src/views/stats.vue","./vite.config.ts","./src/main.ts","./src/ts-shim.d.ts","./src/vite-env.d.ts","./src/router/index.ts"],"version":"5.6.3"}
