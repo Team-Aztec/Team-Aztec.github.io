@@ -14,7 +14,7 @@
   const lastTournamentUrl = ref<string>('')
 
   onBeforeMount(async () => {
-    futureTournaments.value = await faceit.getFutureTournaments()
+    futureTournaments.value = await faceit.getHomeTournaments()
     if (futureTournaments.value?.length > 0) {
       lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
     } else {
@@ -46,7 +46,11 @@
           >Un tournoi est en cours, rejoins maintenant !</a
         >
 
-        <img src="@/assets/images/logo-aztec/Logo_Aztec_classic_opposite.png" aria-hidden="true" />
+        <img
+          v-if="!futureTournaments[0] && !lastTournamentUrl"
+          src="@/assets/images/logo-aztec/Logo_Aztec_classic_opposite.png"
+          aria-hidden="true"
+        />
       </div>
     </div>
 
