@@ -16,7 +16,7 @@
   onBeforeMount(async () => {
     futureTournaments.value = await faceit.getHomeTournaments()
     if (futureTournaments.value?.length > 0) {
-      lastTournamentUrl.value = futureTournaments.value[0].faceit_url.replace('{lang}', 'fr')
+      lastTournamentUrl.value = futureTournaments.value[0].faceit_url?.replace('{lang}', 'fr') || ''
     } else {
       lastTournamentUrl.value = ''
     }

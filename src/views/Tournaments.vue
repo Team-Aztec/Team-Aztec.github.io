@@ -2,7 +2,7 @@
   import { onMounted, ref } from 'vue'
   import { history } from '../../data/history.ts'
   import { useFaceit } from '../domain/faceit/faceit.ts'
-  import { Tournament, TournamentPage } from '../types/types.ts'
+  import { TournamentPage } from '../types/types.ts'
 
   const faceit = useFaceit()
 

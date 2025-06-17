@@ -10,7 +10,7 @@ export interface New {
 export interface Tournament {
   id: string
   status?: string
-  faceit_url: string
+  faceit_url?: string
   championship_start?: string
   image?: string
   name?: string
