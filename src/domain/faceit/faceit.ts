@@ -6,7 +6,7 @@ export const useFaceit = () => {
   const getTournament = async (tournamentId: string): Promise<Tournament> => {
     return await axios
       .get(`https://open.faceit.com/data/v4/championships/${tournamentId}`, {
-        headers: { Authorization: `Bearer ${import.meta.env.VITE_FACEIT_API_KEY}` },
+        headers: { Authorization: `Bearer d078eefb-d7d9-47ba-bdd2-e98137b39133` },
       })
       .then((resp) => ({ ...resp.data, faceit_url: resp.data.faceit_url.replace('{lang}', 'fr') }))
       .catch((error) => {
@@ -27,7 +27,7 @@ export const useFaceit = () => {
   const getHomeTournaments = async (): Promise<Tournament[]> => {
     return await axios
       .get('https://open.faceit.com/data/v4/organizers/4a01f2c0-66f1-4958-944c-e67076dc9f41/championships?limit=100', {
-        headers: { Authorization: `Bearer ${import.meta.env.VITE_FACEIT_API_KEY}` },
+        headers: { Authorization: `Bearer d078eefb-d7d9-47ba-bdd2-e98137b39133` },
       })
       .then((resp) =>
         resp.data.items.filter(
@@ -43,7 +43,7 @@ export const useFaceit = () => {
   const getTournaments = async (): Promise<TournamentPage> => {
     return await axios
       .get('https://open.faceit.com/data/v4/organizers/4a01f2c0-66f1-4958-944c-e67076dc9f41/championships?limit=100', {
-        headers: { Authorization: `Bearer ${import.meta.env.VITE_FACEIT_API_KEY}` },
+        headers: { Authorization: `Bearer d078eefb-d7d9-47ba-bdd2-e98137b39133` },
       })
       .then((resp) => {
         const future = resp.data.items.filter((tournament: Tournament) => tournament.status === 'join')
