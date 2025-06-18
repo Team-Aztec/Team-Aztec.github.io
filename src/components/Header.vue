@@ -67,19 +67,27 @@
             <button class="text-main-color text-2xl text-right" @click="displayDrawerMobile()">X</button>
             <ul class="drawer-nav-content-list">
               <li class="relative group">
-                <router-link :to="{ name: 'Statistiques' }">{{ t('app.header.links.statistiques.label') }} </router-link>
+                <router-link :to="{ name: 'Statistiques' }" @click="displayDrawerMobile()"
+                  >{{ t('app.header.links.statistiques.label') }}
+                </router-link>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">
-                <router-link :to="{ name: 'Competitions' }">{{ t('app.header.links.competitions.label') }} </router-link>
+                <router-link :to="{ name: 'Competitions' }" @click="displayDrawerMobile()"
+                  >{{ t('app.header.links.competitions.label') }}
+                </router-link>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">
-                <router-link :to="{ name: 'Historique' }">{{ t('app.header.links.history.label') }}</router-link>
+                <router-link :to="{ name: 'Historique' }" @click="displayDrawerMobile()">{{
+                  t('app.header.links.history.label')
+                }}</router-link>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">
-                <router-link :to="{ name: 'Organisation' }">{{ t('app.header.links.organisation.label') }}</router-link>
+                <router-link :to="{ name: 'Organisation' }" @click="displayDrawerMobile()">{{
+                  t('app.header.links.organisation.label')
+                }}</router-link>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">

@@ -95,7 +95,7 @@
 
 <style scoped lang="scss">
   .tournaments {
-    @apply flex flex-col gap-16 mx-auto py-32;
+    @apply flex flex-col gap-16 mx-auto pt-32;
 
     .title {
       @apply text-center relative font-bold text-3xl mb-4;

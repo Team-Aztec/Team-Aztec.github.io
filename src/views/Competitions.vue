@@ -45,7 +45,7 @@
 
     <div class="competitions-aztecarena">
       <div class="competitions-aztecarena-image">
-        <img src="./../assets/images/arena.jpeg" alt="Aztec Arena" title="Aztec Arena" />
+        <img src="./../assets/images/arena.png" alt="Aztec Arena" title="Aztec Arena" />
       </div>
 
       <div class="competitions-aztecarena-content">

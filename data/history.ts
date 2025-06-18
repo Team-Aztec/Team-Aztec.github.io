@@ -61,7 +61,7 @@ export const history: History[] = [
     title: 'Aztec Arena 2',
     url: 'https://liquipedia.net/counterstrike/Aztec_Arena/2',
     image: {
-      url: 'history/arena.jpeg',
+      url: 'history/arena.png',
       alt: 'Aztec Arena 2',
     },
   },
@@ -69,7 +69,7 @@ export const history: History[] = [
     title: 'Aztec Arena 1',
     url: 'https://liquipedia.net/counterstrike/Aztec_Arena/1',
     image: {
-      url: 'history/arena.jpeg',
+      url: 'history/arena.png',
       alt: 'Aztec Arena 1',
     },
   },

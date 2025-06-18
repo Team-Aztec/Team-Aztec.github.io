@@ -85,7 +85,7 @@
 
 <style scoped lang="scss">
   .home {
-    @apply h-full inline;
+    @apply h-full inline px-0;
 
     &-banner {
       @apply relative h-full bg-[url(@/assets/images/home-banner.png)] bg-no-repeat bg-cover bg-center;
