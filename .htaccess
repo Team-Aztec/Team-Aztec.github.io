@@ -1,6 +1,13 @@
 # .htaccess
+
+# Redirection vers HTTPS
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Rediriger vers HTTPS si ce n'est pas déjà le cas
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -8,6 +15,7 @@
   RewriteRule . /index.html [L]
 </IfModule>
 
+# Définition des types MIME
 <IfModule mod_mime.c>
   AddType application/javascript .js .mjs
   AddType text/css .css
