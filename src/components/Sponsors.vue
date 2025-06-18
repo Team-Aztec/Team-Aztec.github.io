@@ -13,9 +13,9 @@
         Data analyst Counter-Strike 2 : Pause State
       </a>
 
-      <a class="sponsor" style="--bg: #" href="https://jeydrop.com/" target="_blank">
+      <!-- <a class="sponsor" style="--bg: #" href="https://jeydrop.com/" target="_blank">
         <img src="./../assets/images/jeydrop.avif" alt="Jeydrop" title="Jeydrop" />
-      </a>
+      </a> -->
     </div>
 
     <!--a target="_blank" class="sponsor become-sponsor" href="./sponsor.html"> Devenir Sponsor </a-->
