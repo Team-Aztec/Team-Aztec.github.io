@@ -1,7 +1,18 @@
+<script setup lang="ts">
+  import ImageLoader from './ui/ImageLoader.vue'
+
+  defineProps({
+    title: { type: String, default: '' },
+    description: { type: String, default: '' },
+    image: { url: { url: String, alt: String }, default: { url: '', alt: '' } },
+    link: { type: String, default: '' },
+  })
+</script>
+
 <template>
   <a class="new" :href="link">
     <div class="new-image">
-      <img :src="image.url" :alt="image.alt" />
+      <ImageLoader :filename="image.url" :alt="image.alt" />
     </div>
     <div class="new-description">
       <h6 class="new-description-title">{{ title }}</h6>
@@ -11,15 +22,6 @@
     </div>
   </a>
 </template>
-
-<script setup lang="ts">
-  defineProps({
-    title: { type: String, default: '' },
-    description: { type: String, default: '' },
-    image: { url: { url: String, alt: String }, default: { url: '', alt: '' } },
-    link: { type: String, default: '' },
-  })
-</script>
 
 <style scoped lang="scss">
   .new {

@@ -4,8 +4,12 @@
   import { useFaceit } from '../domain/faceit/faceit.ts'
   import { TournamentPage } from '../types/types.ts'
 
-  const faceit = useFaceit()
+  import { useImage } from '../domain/images/useImage.ts'
 
+  const faceit = useFaceit()
+  const { getImage } = useImage()
+
+  const images = ref<Record<string, string>>({})
   const historyList = ref(history)
   const tournaments = ref<TournamentPage>({
     actual: [],
@@ -13,6 +17,13 @@
   })
 
   onMounted(async () => {
+    for (const tournament of historyList.value) {
+      const resolved = await getImage(tournament.image.url)
+      if (resolved) {
+        images.value[tournament.image.url] = resolved
+      }
+    }
+
     tournaments.value = await faceit.getTournaments()
   })
 </script>
@@ -67,7 +78,9 @@
             v-for="(tournament, key) in historyList"
             :key="key"
             class="tournaments-list-past-links-item"
-            :style="{ 'background-image': 'url(' + tournament.image.url + ')' }"
+            :style="{
+              'background-image': images[tournament.image.url] ? 'url(' + images[tournament.image.url] + ')' : 'none',
+            }"
             :href="tournament.url"
             target="_blank"
             role="listitem"
