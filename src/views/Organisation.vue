@@ -31,7 +31,7 @@
       <h2 class="organisation-services-title">Nos services</h2>
 
       <div class="organisation-services-list">
-        <swiper pagination navigation :modules="modules" :space-between="100">
+        <swiper pagination navigation :loop="true" :modules="modules" :space-between="100">
           <swiper-slide>
             <img
               class="organisation-services-list-item-image"
