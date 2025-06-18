@@ -129,7 +129,7 @@
 
 <style scoped lang="scss">
   .organisation {
-    @apply flex flex-col gap-16  mx-auto py-32;
+    @apply flex flex-col gap-16  mx-auto pt-32;
 
     &-info {
       @apply flex flex-col gap-4;
@@ -241,7 +241,7 @@
           @apply px-8 pb-8 flex flex-col items-center;
 
           img {
-            @apply w-[150px] h-[150px]
+            @apply w-[150px] h-[150px] rounded
             lap-s:w-[300px] lap-s:h-[300px];
           }
 
@@ -268,7 +268,8 @@
 
     &-item {
       &-image {
-        @apply w-[25%];
+        @apply w-[25%] hidden
+        lap-s:block;
       }
 
       &-content {
