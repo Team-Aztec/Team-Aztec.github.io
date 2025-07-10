@@ -25,6 +25,17 @@
         Notre force : une approche humaine, ancrée dans la réalité des joueurs, et un niveau d’exigence à la hauteur des attentes
         des partenaires.
       </p>
+      <div class="organisation-info-video">
+        <iframe
+          class="organisation-info-video-iframe"
+          src="https://www.youtube.com/embed/TALOiC339MA?si=Dx56xXbL1bdzYxfD&autoplay=1&mute=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
 
     <div class="organisation-services">
@@ -98,6 +109,7 @@
         </swiper>
       </div>
     </div>
+
     <div class="organisation-people">
       <h2 class="organisation-people-title">L'équipe</h2>
 
@@ -115,7 +127,7 @@
           <h3 class="organisation-people-list-item-name">Donatien RAYNAUD</h3>
         </div>
         <div class="organisation-people-list-item div4">
-          <img src="@/assets/images/people/arno3k.jpg" alt="Arnaud FRANCOIS" />
+          <img src="@/assets/images/people/arno3k.png" alt="Arnaud FRANCOIS" />
           <h3 class="organisation-people-list-item-name">Arnaud FRANCOIS</h3>
         </div>
         <div class="organisation-people-list-item div5">
@@ -133,6 +145,14 @@
 
     &-info {
       @apply flex flex-col gap-4;
+
+      &-video {
+        @apply mt-10 h-[500px];
+
+        &-iframe {
+          @apply w-full h-full;
+        }
+      }
 
       &-title {
         @apply text-center relative font-bold text-3xl mb-4;
