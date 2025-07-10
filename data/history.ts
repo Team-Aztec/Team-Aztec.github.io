@@ -45,7 +45,7 @@ export const history: History[] = [
     title: 'IESF - QUALIFIER FRANCE 2',
     url: 'https://www.faceit.com/fr/championship/e5a7f1d4-2e16-47aa-b92a-7d772dbc6124/IESF%20-%20QUALIFIER%20FRANCE%202',
     image: {
-      url: 'news/IESF_EEC25.jpeg',
+      url: 'history/IESF_EEC25.jpeg',
       alt: 'IESF - QUALIFIER FRANCE 2',
     },
   },
@@ -53,7 +53,7 @@ export const history: History[] = [
     title: 'IESF - QUALIFIER FRANCE 1',
     url: 'https://www.faceit.com/fr/championship/eff0ceb2-ffd5-4634-8bcc-2fc861156792/IESF%20-%20QUALIFIER%20FRANCE%201',
     image: {
-      url: 'news/IESF_EEC25.jpeg',
+      url: 'history/IESF_EEC25.jpeg',
       alt: 'IESF - QUALIFIER FRANCE 1',
     },
   },

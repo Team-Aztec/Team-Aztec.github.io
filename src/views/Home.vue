@@ -1,16 +1,13 @@
 <script setup lang="ts">
   import { onBeforeMount, ref } from 'vue'
   import Countdown from '../components/Countdown.vue'
-  import New from '../components/New.vue'
   import { useFaceit } from '../domain/faceit/faceit'
 
-  import { newsHomepage } from '../../data/news.ts'
   import { Tournament } from '../types/types.ts'
 
   const faceit = useFaceit()
   const futureTournaments = ref<Tournament[]>([])
 
-  const newsList = ref(newsHomepage)
   const lastTournamentUrl = ref<string>('')
 
   onBeforeMount(async () => {
