@@ -18,6 +18,30 @@ export const history: History[] = [
     },
   },
   {
+    title: 'IconX First Blood',
+    url: 'https://liquipedia.net/counterstrike/Icon.X/First_Blood',
+    image: {
+      url: 'history/iconX_first-blood.jpg',
+      alt: 'IconX First Blood',
+    },
+  },
+  {
+    title: 'IconX - First Blood : Qualifier 4',
+    url: 'https://www.faceit.com/fr/championship/e9acefac-7b0a-497c-8fe1-4bacad4380df/IconX%20-%20First%20Blood%20:%20Qualifier%204',
+    image: {
+      url: 'history/iconX_first-blood.jpg',
+      alt: 'IconX - First Blood : Qualifier 4',
+    },
+  },
+  {
+    title: 'IconX - First Blood : Qualifier 3',
+    url: 'https://www.faceit.com/fr/championship/9e5a0ecb-43ee-4f56-8115-365a5350d37f/IconX%20-%20First%20Blood%20:%20Qualifier%203',
+    image: {
+      url: 'history/iconX_first-blood.jpg',
+      alt: 'IconX - First Blood : Qualifier 3',
+    },
+  },
+  {
     title: 'IconX - First Blood : Qualifier 2',
     url: 'https://www.faceit.com/fr/championship/cac1822b-550a-434d-a230-940054b20667/IconX%20-%20First%20Blood%20:%20Qualifier%202',
     image: {
@@ -34,27 +58,43 @@ export const history: History[] = [
     },
   },
   {
-    title: 'Last Chance - IESF QUALIFIER FRANCE',
+    title: 'IESF - French Qualifier',
+    url: 'https://liquipedia.net/counterstrike/IESF/World_Esports_Championships/2025/France',
+    image: {
+      url: 'history/IESF_EEC25.jpeg',
+      alt: 'IESF French Qualifier',
+    },
+  },
+  {
+    title: 'IESF - Last Chance Qualifier France',
     url: 'https://www.faceit.com/fr/championship/603132ae-3ced-40ee-9a38-f987c9eb0f05/Last%20Chance%20-%20IESF%20QUALIFIER%20FRANCE',
     image: {
       url: 'history/IESF_EEC25.jpeg',
-      alt: 'Last Chance - IESF QUALIFIER FRANCE',
+      alt: 'IESF - Last Chance Qualifier France',
     },
   },
   {
-    title: 'IESF - QUALIFIER FRANCE 2',
+    title: 'IESF - Qualifier France 2',
     url: 'https://www.faceit.com/fr/championship/e5a7f1d4-2e16-47aa-b92a-7d772dbc6124/IESF%20-%20QUALIFIER%20FRANCE%202',
     image: {
       url: 'history/IESF_EEC25.jpeg',
-      alt: 'IESF - QUALIFIER FRANCE 2',
+      alt: 'IESF - Qualifier France 2',
     },
   },
   {
-    title: 'IESF - QUALIFIER FRANCE 1',
+    title: 'IESF - Qualifier France 1',
     url: 'https://www.faceit.com/fr/championship/eff0ceb2-ffd5-4634-8bcc-2fc861156792/IESF%20-%20QUALIFIER%20FRANCE%201',
     image: {
       url: 'history/IESF_EEC25.jpeg',
-      alt: 'IESF - QUALIFIER FRANCE 1',
+      alt: 'IESF - Qualifier France 1',
+    },
+  },
+  {
+    title: 'IESF - Closed Qualifier',
+    url: 'https://www.hltv.org/events/8464/iesf-world-esports-championship-2025-france-closed-qualifier',
+    image: {
+      url: 'history/IESF_EEC25.jpeg',
+      alt: 'IESF - Closed Qualifier',
     },
   },
   {
