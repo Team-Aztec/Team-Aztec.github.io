@@ -3,7 +3,7 @@
   import { useI18n } from 'vue-i18n'
   import { useRoute } from 'vue-router'
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const route = useRoute()
 
   const displayHeader = ref(false)
@@ -17,6 +17,10 @@
 
   const displayDrawerMobile = () => {
     displayDrawer.value = !displayDrawer.value
+  }
+
+  const switchLocale = (lang: string) => {
+    locale.value = lang
   }
 
   onMounted(() => {
@@ -56,6 +60,11 @@
             <li class="relative group">
               <router-link :to="{ name: 'Tournois' }">{{ t('app.header.links.tournaments.label') }} </router-link>
               <div class="nav-content-list-dropdown"> </div>
+            </li>
+            <li>
+              <button v-if="locale === 'fr'" @click="switchLocale('en')" v-html="t('app.header.links.locale.en_us')"> </button>
+              <button v-else-if="locale === 'en'" @click="switchLocale('fr')" v-html="t('app.header.links.locale.fr_fr')">
+              </button>
             </li>
           </ul>
 
@@ -130,7 +139,8 @@
         @apply hidden space-x-8 text-white uppercase font-bold
         lap-s:flex;
 
-        a {
+        a,
+        button {
           @apply transition duration-300;
 
           &:hover,
@@ -160,7 +170,8 @@
       &-list {
         @apply flex flex-col text-white uppercase font-bold text-center gap-6;
 
-        a {
+        a,
+        button {
           @apply transition duration-300;
 
           &:hover,

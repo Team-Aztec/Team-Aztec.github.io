@@ -14,16 +14,12 @@
 <template>
   <div class="organisation aztec-container">
     <div class="organisation-info">
-      <h1 class="organisation-info-title">Qui sommes-nous ?</h1>
+      <h1 class="organisation-info-title">{{ $t('app.pages.organisation.title') }}</h1>
       <p>
-        Aztec est une structure fondée par d’anciens joueurs semi-professionnels de CS:GO et CS2, avec une double expertise : le
-        terrain et l’organisation. Nous savons ce qui fait un bon tournoi, parce que nous l’avons vécu des deux côtés. Grâce à
-        plus de 20 événements organisés (Aztec Cup, Arena, IconX), nous proposons aujourd’hui des prestations fiables et
-        professionnelles : formats sur-mesure, production maîtrisée, casting de qualité.
+        {{ $t('app.pages.organisation.content.paragraph.1') }}
       </p>
       <p>
-        Notre force : une approche humaine, ancrée dans la réalité des joueurs, et un niveau d’exigence à la hauteur des attentes
-        des partenaires.
+        {{ $t('app.pages.organisation.content.paragraph.2') }}
       </p>
       <div class="organisation-info-video">
         <iframe
@@ -39,7 +35,7 @@
     </div>
 
     <div class="organisation-services">
-      <h2 class="organisation-services-title">Nos services</h2>
+      <h2 class="organisation-services-title">{{ $t('app.pages.organisation.services.title') }}</h2>
 
       <div class="organisation-services-list">
         <swiper pagination navigation :loop="true" :modules="modules" :space-between="100">
@@ -50,16 +46,13 @@
               aria-hidden="true"
             />
             <div class="organisation-services-list-item-content">
-              <h3 class="organisation-services-list-item-content-title">Organisation de tournoi</h3>
-              <div class="organisation-services-list-item-content-description">
-                <p>Nous vous proposons un accompagnement complet pour votre événement :</p>
-                <ul>
-                  <li>Gestion de planning et coordination logistique</li>
-                  <li>Encadrement des admins et du staff technique</li>
-                  <li>Création de formats adaptés (groupes, brackets, BOs, etc.)</li>
-                  <li>Optimisation de l'événement en fonction du budget</li>
-                  <li>Scouting d’équipes pour assurer des affiches de qualité</li>
-                </ul>
+              <h3 class="organisation-services-list-item-content-title">{{
+                $t('app.pages.organisation.service.event.title')
+              }}</h3>
+              <div
+                class="organisation-services-list-item-content-description"
+                v-html="$t('app.pages.organisation.service.event.description')"
+              >
               </div>
             </div>
           </swiper-slide>
@@ -70,19 +63,13 @@
               aria-hidden="true"
             />
             <div class="organisation-services-list-item-content">
-              <h3 class="organisation-services-list-item-content-title">Casting de match/tournoi</h3>
-              <div class="organisation-services-list-item-content-description">
-                <p>
-                  Aztec propose des prestations de cast professionnel sur Counter-Strike 2, alliant dynamisme, clarté et expertise
-                  du jeu. Que ce soit pour des tournois, showmatches ou événements communautaires, nous serons là pour vous.
-                </p>
-                <ul>
-                  <li>Une narration vivante qui donne du rythme à chaque round</li>
-                  <li>Une meilleure rétention du public grâce à un cast engageant</li>
-                  <li>Une image plus pro pour votre événement ou stream</li>
-                  <li>Optimisation de l'événement en fonction du budget</li>
-                  <li>Une valeur ajoutée au spectacle, même pour les non-initiés</li>
-                </ul>
+              <h3 class="organisation-services-list-item-content-title">{{
+                $t('app.pages.organisation.service.casting.title')
+              }}</h3>
+              <div
+                class="organisation-services-list-item-content-description"
+                v-html="$t('app.pages.organisation.service.casting.description')"
+              >
               </div>
             </div>
           </swiper-slide>
@@ -93,16 +80,11 @@
               aria-hidden="true"
             />
             <div class="organisation-services-list-item-content">
-              <h3 class="organisation-services-list-item-content-title">Observateur de match/tournoi</h3>
-              <div class="organisation-services-list-item-content-description">
-                <p> Nous proposons également un service d'observateur pour sublimer la diffusion de vos tournois : </p>
-                <ul>
-                  <li>Flux ou diffusion en direct (2K 60fps 20 000kbps/S)</li>
-                  <li>Plan caméra fixe et en mouvement créer par nos soins</li>
-                  <li>Régie en remote</li>
-                  <li>Système de replay instantané</li>
-                  <li>Capture en direct des moments les plus marquants des rencontres</li>
-                </ul>
+              <h3 class="organisation-services-list-item-content-title">{{ $t('app.pages.organisation.service.obs.title') }}</h3>
+              <div
+                class="organisation-services-list-item-content-description"
+                v-html="$t('app.pages.organisation.service.obs.description')"
+              >
               </div>
             </div>
           </swiper-slide>
@@ -111,28 +93,28 @@
     </div>
 
     <div class="organisation-people">
-      <h2 class="organisation-people-title">L'équipe</h2>
+      <h2 class="organisation-people-title">{{ $t('app.pages.organisation.team.title') }}</h2>
 
       <div class="organisation-people-list">
         <div class="organisation-people-list-item div1">
-          <img src="@/assets/images/people/riggow.jpg" alt="Thomas PAYAN" />
-          <h3 class="organisation-people-list-item-name">Thomas PAYAN</h3>
+          <img src="@/assets/images/people/riggow.jpg" :alt="$t('app.pages.organisation.team.riggow.name')" />
+          <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.riggow.name') }}</h3>
         </div>
         <div class="organisation-people-list-item div2">
-          <img src="@/assets/images/people/ironpol.jpg" alt="Paul BOUADJEMINE" />
-          <h3 class="organisation-people-list-item-name">Paul BOUADJEMINE</h3>
+          <img src="@/assets/images/people/ironpol.jpg" :alt="$t('app.pages.organisation.team.ironpol.name')" />
+          <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.ironpol.name') }}</h3>
         </div>
         <div class="organisation-people-list-item div3">
-          <img src="@/assets/images/people/Djiimy.jpg" alt="Donatien RAYNAUD" />
-          <h3 class="organisation-people-list-item-name">Donatien RAYNAUD</h3>
+          <img src="@/assets/images/people/Djiimy.jpg" :alt="$t('app.pages.organisation.team.djiimy.name')" />
+          <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.ironpol.name') }}</h3>
         </div>
         <div class="organisation-people-list-item div4">
-          <img src="@/assets/images/people/arno3k.png" alt="Arnaud FRANCOIS" />
-          <h3 class="organisation-people-list-item-name">Arnaud FRANCOIS</h3>
+          <img src="@/assets/images/people/arno3k.png" :alt="$t('app.pages.organisation.team.arno3K.name')" />
+          <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.arno3K.name') }}</h3>
         </div>
         <div class="organisation-people-list-item div5">
-          <img src="@/assets/images/people/wolfound.jpg" alt="Lucas VANTOMME" />
-          <h3 class="organisation-people-list-item-name">Lucas VANTOMME</h3>
+          <img src="@/assets/images/people/wolfound.jpg" :alt="$t('app.pages.organisation.team.wolfound.name')" />
+          <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.wolfound.name') }}</h3>
         </div>
       </div>
     </div>
