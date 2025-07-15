@@ -39,9 +39,9 @@
               />
             </a>
 
-            <a style="--bg: #" href="https://jeydrop.com/" target="_blank">
+            <!-- <a style="--bg: #" href="https://jeydrop.com/" target="_blank">
               <img src="@/assets/images/jeydrop.avif" alt="Jeydrop" title="Jeydrop" />
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
           tab-m:flex-row;
 
           a {
-            @apply border-2 border-black/60 w-48 flex flex-row items-center gap-2 rounded-lg;
+            @apply border-2 border-black/60 w-56 flex flex-row items-center gap-2 rounded-lg;
 
             &:hover,
             &:focus {

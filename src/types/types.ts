@@ -1,12 +1,3 @@
-export interface New {
-  title: string
-  description: string
-  image: {
-    url: string
-    alt: string
-  }
-  faceit_url?: string
-}
 export interface Tournament {
   id: string
   status?: string

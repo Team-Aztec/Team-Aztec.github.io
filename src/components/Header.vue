@@ -3,7 +3,7 @@
   import { useI18n } from 'vue-i18n'
   import { useRoute } from 'vue-router'
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const route = useRoute()
 
   const displayHeader = ref(false)
@@ -17,6 +17,10 @@
 
   const displayDrawerMobile = () => {
     displayDrawer.value = !displayDrawer.value
+  }
+
+  const switchLocale = (lang: string) => {
+    locale.value = lang
   }
 
   onMounted(() => {
@@ -57,6 +61,11 @@
               <router-link :to="{ name: 'Tournois' }">{{ t('app.header.links.tournaments.label') }} </router-link>
               <div class="nav-content-list-dropdown"> </div>
             </li>
+            <li>
+              <button v-if="locale === 'fr'" @click="switchLocale('en')" v-html="t('app.header.links.locale.en_us')"> </button>
+              <button v-else-if="locale === 'en'" @click="switchLocale('fr')" v-html="t('app.header.links.locale.fr_fr')">
+              </button>
+            </li>
           </ul>
 
           <button class="lap-s:hidden text-main-color text-3xl" @click="displayDrawerMobile()">☰</button>
@@ -67,19 +76,27 @@
             <button class="text-main-color text-2xl text-right" @click="displayDrawerMobile()">X</button>
             <ul class="drawer-nav-content-list">
               <li class="relative group">
-                <router-link :to="{ name: 'Statistiques' }">{{ t('app.header.links.statistiques.label') }} </router-link>
+                <router-link :to="{ name: 'Statistiques' }" @click="displayDrawerMobile()"
+                  >{{ t('app.header.links.statistiques.label') }}
+                </router-link>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">
-                <router-link :to="{ name: 'Competitions' }">{{ t('app.header.links.competitions.label') }} </router-link>
+                <router-link :to="{ name: 'Competitions' }" @click="displayDrawerMobile()"
+                  >{{ t('app.header.links.competitions.label') }}
+                </router-link>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">
-                <router-link :to="{ name: 'Historique' }">{{ t('app.header.links.history.label') }}</router-link>
+                <router-link :to="{ name: 'Historique' }" @click="displayDrawerMobile()">{{
+                  t('app.header.links.history.label')
+                }}</router-link>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">
-                <router-link :to="{ name: 'Organisation' }">{{ t('app.header.links.organisation.label') }}</router-link>
+                <router-link :to="{ name: 'Organisation' }" @click="displayDrawerMobile()">{{
+                  t('app.header.links.organisation.label')
+                }}</router-link>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">
@@ -122,7 +139,8 @@
         @apply hidden space-x-8 text-white uppercase font-bold
         lap-s:flex;
 
-        a {
+        a,
+        button {
           @apply transition duration-300;
 
           &:hover,
@@ -152,7 +170,8 @@
       &-list {
         @apply flex flex-col text-white uppercase font-bold text-center gap-6;
 
-        a {
+        a,
+        button {
           @apply transition duration-300;
 
           &:hover,

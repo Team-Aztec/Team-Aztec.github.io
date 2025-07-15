@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 import './css/style.scss'
+import './css/flag.min.scss'
 import App from './App.vue'
 
 import router from './router/index.ts'
