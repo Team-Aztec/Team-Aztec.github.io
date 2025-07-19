@@ -32,7 +32,7 @@
   <div class="tournaments aztec-container">
     <div class="tournaments-list">
       <div class="tournaments-list-active">
-        <h2 class="title">Tournois en cours</h2>
+        <h2 class="title">{{ $t('app.pages.tournaments.tournament_on_going.title') }}</h2>
         <div v-if="tournaments.actual.length" class="tournaments-list-active-links !justify-center">
           <a
             v-for="(tournament, key) in tournaments.actual"
@@ -48,11 +48,11 @@
             <p>{{ tournament.name }}</p>
           </a>
         </div>
-        <p class="tournaments-list-active-none">Pas de tournois actifs pour le moment</p>
+        <p class="tournaments-list-active-none">{{ $t('app.pages.tournaments.tournament_on_going.nothing.label') }}</p>
       </div>
 
       <div class="tournaments-list-future">
-        <h2 class="title">Prochains tournois</h2>
+        <h2 class="title">{{ $t('app.pages.tournaments.tournament_future.title') }}</h2>
         <div v-if="tournaments.future.length" class="tournaments-list-future-links !justify-center">
           <a
             v-for="(tournament, key) in tournaments.future"
@@ -68,11 +68,11 @@
             <p>{{ tournament.name }}</p>
           </a>
         </div>
-        <p v-else class="tournaments-list-future-none">Pas de tournois prévus pour le moment</p>
+        <p v-else class="tournaments-list-future-none">{{ $t('app.pages.tournaments.tournament_future.nothing.title') }}</p>
       </div>
 
       <div class="tournaments-list-past">
-        <h2 class="title">Tournois passés</h2>
+        <h2 class="title">{{ $t('app.pages.tournaments.tournament_past.title') }}</h2>
         <div class="tournaments-list-past-links" role="list">
           <a
             v-for="(tournament, key) in historyList"

@@ -30,5 +30,15 @@
   "app.pages.organisation.team.ironpol.name": "Paul BOUADJEMINE",
   "app.pages.organisation.team.djiimy.name": "Donatien RAYNAUD",
   "app.pages.organisation.team.arno3K.name": "Arnaud FRANCOIS",
-  "app.pages.organisation.team.wolfound.name": "Lucas VANTOMME"
+  "app.pages.organisation.team.wolfound.name": "Lucas VANTOMME",
+  "app.pages.home.banner.label": "Your Stage, Our Mission !",
+  "app.pages.home.banner.tournament_on_going.label": "A tournament is underway, so join in now!",
+  "app.pages.tournaments.tournament_on_going.title": "Tournaments in progress",
+  "app.pages.tournaments.tournament_on_going.nothin.label": "No active tournaments at the moment",
+  "app.pages.tournaments.tournament_future.title": "Upcoming tournaments",
+  "app.pages.tournaments.tournament_future.nothing.title": "No tournaments planned for the moment",
+  "app.pages.tournaments.tournament_past.title": "Past tournaments",
+  "app.pages.statistics.title": "Your statistics during our competitions",
+  "app.pages.statistics.description": "You will soon be able to consult your statistics on your participation in the various Aztec competitions.",
+  "app.pages.statistics.partner.label": " All the statistics are provided following our partnership with <a style=\"--bg: #\" href=\"https://www.pause-stat.pro/\" target=\"_blank\">Pause Stat</a>. Thank you to them for all their work."
 }
