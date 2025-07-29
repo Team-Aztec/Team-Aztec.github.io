@@ -1,8 +1,9 @@
 <script setup lang="ts">
   import { onBeforeMount, ref } from 'vue'
   import Countdown from '../components/Countdown.vue'
-  import { useFaceit } from '../domain/faceit/faceit'
+  import Socials from '../components/Socials.vue'
 
+  import { useFaceit } from '../domain/faceit/faceit'
   import { Tournament } from '../types/types.ts'
 
   const faceit = useFaceit()
@@ -36,12 +37,12 @@
           <Countdown
             :targetTime="new Date(futureTournaments?.[0]?.championship_start || 'December 17, 2025 03:24:00').getTime()"
           />
-          <a :href="lastTournamentUrl" class="home-banner-content-button">Your Stage, Our Mission !</a>
+          <a :href="lastTournamentUrl" class="home-banner-content-button">{{ $t('app.pages.home.banner.label') }}</a>
         </div>
 
-        <a v-else-if="lastTournamentUrl" :href="lastTournamentUrl" class="home-banner-content-button"
-          >Un tournoi est en cours, rejoins maintenant !</a
-        >
+        <a v-else-if="lastTournamentUrl" :href="lastTournamentUrl" class="home-banner-content-button">{{
+          $t('app.pages.home.banner.tournament_on_going.label')
+        }}</a>
 
         <img
           v-if="!futureTournaments[0] && !lastTournamentUrl"
@@ -50,6 +51,8 @@
         />
       </div>
     </div>
+
+    <Socials />
   </div>
 </template>
 

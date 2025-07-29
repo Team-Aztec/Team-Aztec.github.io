@@ -1,6 +1,8 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
+  import { useRoute } from 'vue-router'
 
+  const route = useRoute()
   const { t } = useI18n()
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -9,10 +11,10 @@
 
 <template>
   <footer id="footer" tabindex="-1" role="contentinfo">
-    <div class="scroll-to-top">
+    <div v-if="route.name !== 'Home'" class="scroll-to-top">
       <button class="scroll-to-top-button" @click="scrollToTop()">{{ t('app.footer.back_to_top.button') }}</button>
     </div>
-    <div class="footer">
+    <div :class="{ footer: true, 'border-t border-main-color': route.name === 'Home' }">
       <div class="footer-content">
         <div class="footer-content-left">
           <img class="footer-content-left-logo" src="@/assets/favicon.ico" alt="Aztec icon" />
@@ -23,9 +25,6 @@
             <li>
               <router-link :to="{ name: 'Statistiques' }">{{ t('app.footer.links.statistiques') }} </router-link></li
             >
-            <li
-              ><a href="https://linktr.ee/aztecarena"> {{ t('app.footer.links.contact') }} </a>
-            </li>
           </ul>
         </div>
 

@@ -4,7 +4,7 @@
   "app.header.links.competitions.label": "Compétitions",
   "app.header.links.history.label": "Historique",
   "app.header.links.organisation.label": "Qui sommes-nous ?",
-  "app.header.links.contact.label": "Contact",
+  "app.header.links.contact.label": "Contactez-nous",
   "app.header.links.tournaments.label": "Nos tournois",
   "app.header.links.locale.en_us": "<span class=\"flag-gb\"></span>",
   "app.header.links.locale.fr_fr": "<span class=\"flag-fr\"></span>",
@@ -30,5 +30,16 @@
   "app.pages.organisation.team.ironpol.name": "Paul BOUADJEMINE",
   "app.pages.organisation.team.djiimy.name": "Donatien RAYNAUD",
   "app.pages.organisation.team.arno3K.name": "Arnaud FRANCOIS",
-  "app.pages.organisation.team.wolfound.name": "Lucas VANTOMME"
+  "app.pages.organisation.team.wolfound.name": "Lucas VANTOMME",
+  "app.pages.home.banner.label": "Your Stage, Our Mission !",
+  "app.pages.home.banner.tournament_on_going.label": "Un tournoi est en cours, rejoins maintenant !",
+  "app.pages.tournaments.tournament_on_going.title": "Tournois en cours",
+  "app.pages.tournaments.tournament_on_going.nothing.label": "Pas de tournois actifs pour le moment",
+  "app.pages.tournaments.tournament_future.title": "Prochains tournois",
+  "app.pages.tournaments.tournament_future.nothing.title": "Pas de tournois prévus pour le moment",
+  "app.pages.tournaments.tournament_past.title": "Tournois passés",
+  "app.pages.statistics.title": "Vos statistiques durant nos compétitions",
+  "app.pages.statistics.description": "Vous pourrez prochainement consulter vos statistiques de vos différentes participations aux compétitions de Aztec",
+  "app.pages.statistics.partner.label": " L'ensemble des statistiques sont fournies suite à notre partenariat avec <a style=\"--bg: #\" href=\"https://www.pause-stat.pro/\" target=\"_blank\">Pause Stat</a>. Merci à eux pour l'ensemble de leur travail.",
+  "app.component.socials.title": "📱 Suivez Aztec sur les réseaux"
 }

@@ -109,7 +109,11 @@
           <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.ironpol.name') }}</h3>
         </div>
         <div class="organisation-people-list-item div4">
-          <img src="@/assets/images/people/arno3k.png" :alt="$t('app.pages.organisation.team.arno3K.name')" />
+          <img
+            class="lap-s:!w-[225px] lap-s:!h-[300px]"
+            src="@/assets/images/people/arno3k.png"
+            :alt="$t('app.pages.organisation.team.arno3K.name')"
+          />
           <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.arno3K.name') }}</h3>
         </div>
         <div class="organisation-people-list-item div5">

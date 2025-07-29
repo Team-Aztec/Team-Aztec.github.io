@@ -2,6 +2,14 @@ import { History } from '../src/types/types'
 
 export const history: History[] = [
   {
+    title: '3DMAX Scouting Tournament',
+    url: 'https://liquipedia.net/counterstrike/3DMAX_Scouting_Tournament',
+    image: {
+      url: 'history/3dmax.png',
+      alt: '3DMAX Scouting Tournament',
+    },
+  },
+  {
     title: 'Aztec Cup 18',
     url: 'https://www.faceit.com/fr/championship/152c9dc1-8f8d-4fad-b6bc-6e41c5807894/Aztec%20CUP%2018',
     image: {

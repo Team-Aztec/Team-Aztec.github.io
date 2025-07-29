@@ -14,8 +14,8 @@
 <template>
   <div class="stats aztec-container">
     <div class="stats-content">
-      <h1 class="stats-content-title">Vos statistiques durant nos compétitions</h1>
-      <p> Vous pourrez prochainement consulter vos statistiques de vos différentes participations aux compétitions de Aztec</p>
+      <h1 class="stats-content-title">{{ $t('app.pages.statistics.title') }}</h1>
+      <p>{{ $t('app.pages.statistics.description') }}</p>
     </div>
     <div class="stats-statistiques">
       <div class="stats-statistiques-tournaments" role="list">
@@ -34,11 +34,7 @@
           <p>{{ item.name }}</p>
         </a>
       </div>
-      <p class="stats-statistiques-partner">
-        L'ensemble des statistiques sont fournies suite à notre partenariat avec
-        <a style="--bg: #" href="https://www.pause-stat.pro/" target="_blank">Pause Stat</a>. Merci à eux pour l'ensemble de leur
-        travail.
-      </p>
+      <p class="stats-statistiques-partner" v-html="$t('app.pages.statistics.partner.label')"> </p>
     </div>
   </div>
 </template>
