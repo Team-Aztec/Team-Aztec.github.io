@@ -61,6 +61,10 @@
               <router-link :to="{ name: 'Tournois' }">{{ t('app.header.links.tournaments.label') }} </router-link>
               <div class="nav-content-list-dropdown"> </div>
             </li>
+            <li class="relative group">
+              <a target="_blank" href="https://linktr.ee/contactaztec"> {{ t('app.header.links.contact.label') }} </a>
+              <div class="nav-content-list-dropdown"> </div>
+            </li>
             <li>
               <button v-if="locale === 'fr'" @click="switchLocale('en')" v-html="t('app.header.links.locale.en_us')"> </button>
               <button v-else-if="locale === 'en'" @click="switchLocale('fr')" v-html="t('app.header.links.locale.fr_fr')">
@@ -100,7 +104,7 @@
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
               <li class="relative group">
-                <a href="https://linktr.ee/aztecarena"> {{ t('app.header.links.contact.label') }} </a>
+                <a target="_blank" href="https://linktr.ee/contactaztec"> {{ t('app.header.links.contact.label') }} </a>
                 <div class="drawer-nav-content-list-dropdown"> </div>
               </li>
             </ul>

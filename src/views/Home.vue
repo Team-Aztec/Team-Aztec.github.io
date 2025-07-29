@@ -1,8 +1,9 @@
 <script setup lang="ts">
   import { onBeforeMount, ref } from 'vue'
   import Countdown from '../components/Countdown.vue'
-  import { useFaceit } from '../domain/faceit/faceit'
+  import Socials from '../components/Socials.vue'
 
+  import { useFaceit } from '../domain/faceit/faceit'
   import { Tournament } from '../types/types.ts'
 
   const faceit = useFaceit()
@@ -50,6 +51,8 @@
         />
       </div>
     </div>
+
+    <Socials />
   </div>
 </template>
 

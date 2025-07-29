@@ -25,9 +25,6 @@
             <li>
               <router-link :to="{ name: 'Statistiques' }">{{ t('app.footer.links.statistiques') }} </router-link></li
             >
-            <li
-              ><a href="https://linktr.ee/aztecarena"> {{ t('app.footer.links.contact') }} </a>
-            </li>
           </ul>
         </div>
 
