@@ -15,6 +15,7 @@ export interface History {
     url: string
     alt: string
   }
+  winner?: string
 }
 
 export interface TournamentPage {

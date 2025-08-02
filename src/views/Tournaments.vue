@@ -85,6 +85,9 @@
             target="_blank"
             role="listitem"
           >
+            <div v-if="tournament.winner" class="tournaments-list-past-links-item-winner">{{
+              $t('app.pages.tournaments.tournament_winner.label', { winner: tournament.winner })
+            }}</div>
             <p>{{ tournament.title }}</p>
           </a>
         </div>
@@ -131,7 +134,7 @@
           @apply mt-4 flex gap-4 flex-wrap justify-between w-full;
 
           &-item {
-            @apply min-h-60 w-[45%] border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center bg-black
+            @apply min-h-60 w-[45%] relative border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center bg-black
             tab-m:w-[32%];
 
             &:hover {
@@ -141,6 +144,19 @@
 
             p {
               @apply bg-black bg-opacity-80 w-full text-center;
+            }
+
+            &-winner {
+              position: absolute;
+              top: 0;
+              right: 0;
+              background-color: #fbbf24;
+              color: black;
+              font-weight: bold;
+              font-size: 0.75rem;
+              padding: 4px 8px;
+              border-radius: 6px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
             }
           }
         }

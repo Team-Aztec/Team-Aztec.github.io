@@ -8,6 +8,7 @@ export const history: History[] = [
       url: 'history/3dmax.png',
       alt: '3DMAX Scouting Tournament',
     },
+    winner: 'Equipe N',
   },
   {
     title: 'Aztec Cup 18',
@@ -16,6 +17,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 18',
     },
+    winner: 'Adepts',
   },
   {
     title: 'Aztec Cup 17',
@@ -24,6 +26,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 17',
     },
+    winner: 'Adepts',
   },
   {
     title: 'IconX First Blood',
@@ -32,6 +35,7 @@ export const history: History[] = [
       url: 'history/iconX_first-blood.jpg',
       alt: 'IconX First Blood',
     },
+    winner: 'ATRIVM',
   },
   {
     title: 'IconX - First Blood : Qualifier 4',
@@ -40,6 +44,7 @@ export const history: History[] = [
       url: 'history/iconX_first-blood.jpg',
       alt: 'IconX - First Blood : Qualifier 4',
     },
+    winner: 'Insiders Esport',
   },
   {
     title: 'IconX - First Blood : Qualifier 3',
@@ -48,6 +53,7 @@ export const history: History[] = [
       url: 'history/iconX_first-blood.jpg',
       alt: 'IconX - First Blood : Qualifier 3',
     },
+    winner: 'Adepts',
   },
   {
     title: 'IconX - First Blood : Qualifier 2',
@@ -56,6 +62,7 @@ export const history: History[] = [
       url: 'history/iconX_first-blood.jpg',
       alt: 'IconX - First Blood : Qualifier 2',
     },
+    winner: 'ATRIVM',
   },
   {
     title: 'IconX - First Blood : Qualifier 1',
@@ -64,6 +71,7 @@ export const history: History[] = [
       url: 'history/iconX_first-blood.jpg',
       alt: 'IconX - First Blood : Qualifier 1',
     },
+    winner: 'Hermine Esports',
   },
   {
     title: 'IESF - French Qualifier',
@@ -72,6 +80,7 @@ export const history: History[] = [
       url: 'history/IESF_EEC25.jpeg',
       alt: 'IESF French Qualifier',
     },
+    winner: 'GenOne',
   },
   {
     title: 'IESF - Last Chance Qualifier France',
@@ -80,6 +89,7 @@ export const history: History[] = [
       url: 'history/IESF_EEC25.jpeg',
       alt: 'IESF - Last Chance Qualifier France',
     },
+    winner: 'ATRIVM',
   },
   {
     title: 'IESF - Qualifier France 2',
@@ -88,6 +98,7 @@ export const history: History[] = [
       url: 'history/IESF_EEC25.jpeg',
       alt: 'IESF - Qualifier France 2',
     },
+    winner: 'Loading',
   },
   {
     title: 'IESF - Qualifier France 1',
@@ -104,6 +115,7 @@ export const history: History[] = [
       url: 'history/IESF_EEC25.jpeg',
       alt: 'IESF - Closed Qualifier',
     },
+    winner: 'Grand Chelem',
   },
   {
     title: 'Aztec Arena 2',
@@ -112,6 +124,7 @@ export const history: History[] = [
       url: 'history/arena.png',
       alt: 'Aztec Arena 2',
     },
+    winner: 'Team Genesium',
   },
   {
     title: 'Aztec Arena 1',
@@ -120,6 +133,7 @@ export const history: History[] = [
       url: 'history/arena.png',
       alt: 'Aztec Arena 1',
     },
+    winner: 'Lausanne-Sport Esports',
   },
   {
     title: 'Aztec Cup 12',
@@ -128,6 +142,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 12',
     },
+    winner: 'Bulldozer',
   },
   {
     title: 'Aztec Cup 11',
@@ -136,6 +151,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 11',
     },
+    winner: 'GENESIUM',
   },
   {
     title: 'Aztec Cup 10',
@@ -144,6 +160,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 10',
     },
+    winner: 'GENESIUM',
   },
   {
     title: 'Aztec Cup 9',
@@ -152,6 +169,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 9',
     },
+    winner: '8morts 6blesses',
   },
   {
     title: 'Aztec Cup 8',
@@ -160,6 +178,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 8',
     },
+    winner: 'Caldya Academie',
   },
   {
     title: 'Aztec Cup 7',
@@ -168,6 +187,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 7',
     },
+    winner: 'BRODA',
   },
   {
     title: 'Aztec Cup 6',
@@ -176,6 +196,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 6',
     },
+    winner: '3K Esport',
   },
   {
     title: 'Aztec Cup 5',
@@ -184,6 +205,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 5',
     },
+    winner: 'GENESIUM',
   },
   {
     title: 'Aztec Cup 4',
@@ -192,6 +214,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 4',
     },
+    winner: 'Tyloo',
   },
   {
     title: 'Aztec Cup 3',
@@ -200,6 +223,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 3',
     },
+    winner: 'GenOne Academie',
   },
   {
     title: 'Aztec Cup 2',
@@ -208,6 +232,7 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 2',
     },
+    winner: 'fantastique',
   },
   {
     title: 'Aztec Cup 1',
@@ -216,5 +241,6 @@ export const history: History[] = [
       url: 'history/cup.webp',
       alt: 'Aztec Cup 1',
     },
+    winner: 'OldFriendsClub',
   },
 ]

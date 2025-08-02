@@ -38,6 +38,7 @@
   "app.pages.tournaments.tournament_future.title": "Upcoming tournaments",
   "app.pages.tournaments.tournament_future.nothing.title": "No tournaments planned for the moment",
   "app.pages.tournaments.tournament_past.title": "Past tournaments",
+  "app.pages.tournaments.tournament_winner.label": "Winner : {winner}",
   "app.pages.statistics.title": "Your statistics during our competitions",
   "app.pages.statistics.description": "You will soon be able to consult your statistics on your participation in the various Aztec competitions.",
   "app.pages.statistics.partner.label": " All the statistics are provided following our partnership with <a style=\"--bg: #\" href=\"https://www.pause-stat.pro/\" target=\"_blank\">Pause Stat</a>. Thank you to them for all their work.",
