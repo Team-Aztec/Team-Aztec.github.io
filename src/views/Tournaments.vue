@@ -73,6 +73,10 @@
 
       <div class="tournaments-list-past">
         <h2 class="title">{{ $t('app.pages.tournaments.tournament_past.title') }}</h2>
+        <p class="tournaments-list-past-number">
+          {{ $t('app.pages.tournaments.tournament_past.number.label')
+          }}<span style="color: #ffa500">{{ historyList.length }}</span>
+        </p>
         <div class="tournaments-list-past-links" role="list">
           <a
             v-for="(tournament, key) in historyList"
@@ -130,6 +134,13 @@
           @apply text-center opacity-65;
         }
 
+        &-number {
+          text-align: center;
+          font-size: 1em;
+          color: white;
+          margin-bottom: 10px;
+        }
+
         &-links {
           @apply mt-4 flex gap-4 flex-wrap justify-between w-full;
 
@@ -155,7 +166,7 @@
               font-weight: bold;
               font-size: 0.75rem;
               padding: 4px 8px;
-              border-radius: 6px;
+              border-radius: 0 6px 0 6px;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
             }
           }

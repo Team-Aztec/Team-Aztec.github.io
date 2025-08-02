@@ -38,6 +38,7 @@
   "app.pages.tournaments.tournament_future.title": "Prochains tournois",
   "app.pages.tournaments.tournament_future.nothing.title": "Pas de tournois prévus pour le moment",
   "app.pages.tournaments.tournament_past.title": "Tournois passés",
+  "app.pages.tournaments.tournament_past.number.label": "Nombre de tournois :",
   "app.pages.tournaments.tournament_winner.label": "Vainqueur : {winner}",
   "app.pages.statistics.title": "Vos statistiques durant nos compétitions",
   "app.pages.statistics.description": "Vous pourrez prochainement consulter vos statistiques de vos différentes participations aux compétitions de Aztec",
