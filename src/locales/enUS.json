@@ -6,8 +6,6 @@
   "app.header.links.organisation.label": "What abouts us ?",
   "app.header.links.contact.label": "Contac us",
   "app.header.links.tournaments.label": "Our tournaments",
-  "app.header.links.locale.en_us": "<span class=\"flag-gb\"></span>",
-  "app.header.links.locale.fr_fr": "<span class=\"flag-fr\"></span>",
   "app.footer.back_to_top.button": "Back to top of the page",
   "app.footer.sponsors.pause_stat": "Pause Stat",
   "app.footer.links.contact": "Contact",
@@ -43,5 +41,5 @@
   "app.pages.statistics.title": "Your statistics during our competitions",
   "app.pages.statistics.description": "You will soon be able to consult your statistics on your participation in the various Aztec competitions.",
   "app.pages.statistics.partner.label": " All the statistics are provided following our partnership with <a style=\"--bg: #\" href=\"https://www.pause-stat.pro/\" target=\"_blank\">Pause Stat</a>. Thank you to them for all their work.",
-  "app.component.socials.title": "📱 Follow Aztec on social media"
+  "app.component.socials.title": "Follow Aztec on social media"
 }

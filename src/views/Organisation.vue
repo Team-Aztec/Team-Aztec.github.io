@@ -106,7 +106,7 @@
         </div>
         <div class="organisation-people-list-item div3">
           <img src="@/assets/images/people/Djiimy.jpg" :alt="$t('app.pages.organisation.team.djiimy.name')" />
-          <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.ironpol.name') }}</h3>
+          <h3 class="organisation-people-list-item-name">{{ $t('app.pages.organisation.team.djiimy.name') }}</h3>
         </div>
         <div class="organisation-people-list-item div4">
           <img
@@ -220,28 +220,33 @@
         }
       }
 
+      @media (min-width: 1024px) {
+        &-list {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-column-gap: 16px;
+          grid-row-gap: 16px;
+
+          .div1 {
+            grid-area: 1 / 1 / 2 / 2;
+          }
+          .div2 {
+            grid-area: 1 / 2 / 2 / 3;
+          }
+          .div3 {
+            grid-area: 1 / 3 / 2 / 4;
+          }
+          .div4 {
+            grid-area: 2 / 1 / 3 / 2;
+          }
+          .div5 {
+            grid-area: 2 / 3 / 3 / 4;
+          }
+        }
+      }
+
       &-list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 16px;
-        grid-row-gap: 16px;
-
-        .div1 {
-          grid-area: 1 / 1 / 2 / 2;
-        }
-        .div2 {
-          grid-area: 1 / 2 / 2 / 3;
-        }
-        .div3 {
-          grid-area: 1 / 3 / 2 / 4;
-        }
-        .div4 {
-          grid-area: 2 / 1 / 3 / 2;
-        }
-        .div5 {
-          grid-area: 2 / 3 / 3 / 4;
-        }
 
         &-item {
           @apply px-8 pb-8 flex flex-col items-center;

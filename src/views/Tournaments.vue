@@ -39,8 +39,8 @@
             :key="key"
             :class="{
               'tournaments-list-active-links-item': true,
-              arena: tournament.name?.toLowerCase().includes('arena'),
-              cup: tournament.name?.toLowerCase()?.includes('cup'),
+              arena: tournament.name?.toLowerCase().includes('Aztec arena'),
+              cup: tournament.name?.toLowerCase()?.includes('Aztec cup'),
             }"
             :href="tournament.faceit_url"
             target="_blank"
@@ -59,8 +59,8 @@
             :key="key"
             :class="{
               'tournaments-list-future-links-item': true,
-              arena: tournament.name?.toLowerCase().includes('arena'),
-              cup: tournament.name?.toLowerCase()?.includes('cup'),
+              arena: tournament.name?.toLowerCase().includes('Aztec arena'),
+              cup: tournament.name?.toLowerCase()?.includes('Aztec cup'),
             }"
             :href="tournament.faceit_url"
             target="_blank"
@@ -147,6 +147,8 @@
           &-item {
             @apply min-h-60 w-[45%] relative border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center bg-black
             tab-m:w-[32%];
+
+            background-image: url(@/assets/images/default.jpg);
 
             &:hover {
               -webkit-box-shadow: 0px 5px 20px 3px rgba(255, 255, 255, 0.49);

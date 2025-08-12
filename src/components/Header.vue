@@ -66,8 +66,11 @@
               <div class="nav-content-list-dropdown"> </div>
             </li>
             <li>
-              <button v-if="locale === 'fr'" @click="switchLocale('en')" v-html="t('app.header.links.locale.en_us')"> </button>
-              <button v-else-if="locale === 'en'" @click="switchLocale('fr')" v-html="t('app.header.links.locale.fr_fr')">
+              <button v-if="locale === 'fr'" @click="switchLocale('en')">
+                <img src="@/assets/images/locales/united-kingdom.png" alt="united kingdom" />
+              </button>
+              <button v-else-if="locale === 'en'" @click="switchLocale('fr')">
+                <img src="@/assets/images/locales/france.png" alt="france" />
               </button>
             </li>
           </ul>
@@ -106,6 +109,14 @@
               <li class="relative group">
                 <a target="_blank" href="https://linktr.ee/contactaztec"> {{ t('app.header.links.contact.label') }} </a>
                 <div class="drawer-nav-content-list-dropdown"> </div>
+              </li>
+              <li>
+                <button v-if="locale === 'fr'" @click="switchLocale('en')">
+                  <img src="@/assets/images/locales/united-kingdom.png" alt="united kingdom" />
+                </button>
+                <button v-else-if="locale === 'en'" @click="switchLocale('fr')">
+                  <img src="@/assets/images/locales/france.png" alt="france" />
+                </button>
               </li>
             </ul>
           </div>
