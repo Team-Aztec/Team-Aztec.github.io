@@ -5,7 +5,10 @@
   import { TournamentPage } from '../types/types.ts'
 
   import { useImage } from '../domain/images/useImage.ts'
+  import { useHead } from '@unhead/vue'
+  import { useI18n } from 'vue-i18n'
 
+  const { t } = useI18n()
   const faceit = useFaceit()
   const { getImage } = useImage()
 
@@ -25,6 +28,10 @@
     }
 
     tournaments.value = await faceit.getTournaments()
+  })
+
+  useHead({
+    title: t('app.seo.pages.tournaments.title'),
   })
 </script>
 
