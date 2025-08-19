@@ -28,6 +28,25 @@
     }
 
     tournaments.value = await faceit.getTournaments()
+
+    const counters = document.querySelectorAll('.counter')
+    const speed = 50
+
+    counters.forEach((counter: any) => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target')
+        const count = +counter.innerText.replace(/\D/g, '')
+        const increment = Math.ceil(target / speed)
+
+        if (count < target) {
+          counter.innerText = count + increment > target ? target : count + increment
+          setTimeout(updateCount, 20)
+        } else {
+          counter.innerText = target.toLocaleString()
+        }
+      }
+      updateCount()
+    })
   })
 
   useHead({
@@ -37,6 +56,25 @@
 
 <template>
   <div class="tournaments aztec-container">
+    <div class="tournaments-description">
+      <div class="tournaments-description-stats">
+        <p class="tournaments-description-stats-item">
+          <span class="tournaments-description-stats-item-number counter" data-target="56">0</span>
+          <span class="text-2xl">Tournois organisés</span>
+        </p>
+
+        <p class="tournaments-description-stats-item">
+          <span class="tournaments-description-stats-item-number counter" data-target="5695">0</span>
+          <span class="text-2xl">Équipes participantes</span>
+        </p>
+
+        <p class="tournaments-description-stats-item">
+          <span class="tournaments-description-stats-item-number counter" data-target="10546">0</span>
+          <span class="text-2xl">de cashprize mis en jeu</span>
+        </p>
+      </div>
+    </div>
+
     <div class="tournaments-list">
       <div class="tournaments-list-active">
         <h2 class="title">{{ $t('app.pages.tournaments.tournament_on_going.title') }}</h2>
@@ -55,7 +93,7 @@
             <p>{{ tournament.name }}</p>
           </a>
         </div>
-        <p class="tournaments-list-active-none">{{ $t('app.pages.tournaments.tournament_on_going.nothing.label') }}</p>
+        <p v-else class="tournaments-list-active-none">{{ $t('app.pages.tournaments.tournament_on_going.nothing.label') }}</p>
       </div>
 
       <div class="tournaments-list-future">
@@ -80,10 +118,10 @@
 
       <div class="tournaments-list-past">
         <h2 class="title">{{ $t('app.pages.tournaments.tournament_past.title') }}</h2>
-        <p class="tournaments-list-past-number">
+        <!-- <p class="tournaments-list-past-number">
           {{ $t('app.pages.tournaments.tournament_past.number.label')
           }}<span style="color: #ffa500">{{ historyList.length }}</span>
-        </p>
+        </p> -->
         <div class="tournaments-list-past-links" role="list">
           <a
             v-for="(tournament, key) in historyList"
@@ -109,7 +147,7 @@
 
 <style scoped lang="scss">
   .tournaments {
-    @apply flex flex-col gap-16 mx-auto pt-32;
+    @apply flex flex-col gap-16 mx-auto;
 
     .title {
       @apply text-center relative font-bold text-3xl mb-4;
@@ -126,6 +164,27 @@
         margin-left: auto;
         margin-right: auto;
         right: 0;
+      }
+    }
+
+    &-description {
+      @apply flex items-center justify-center min-h-screen;
+
+      font-family: 'Orbitron', sans-serif;
+
+      &-stats {
+        @apply space-y-6 text-main-color font-bold tracking-wide uppercase;
+
+        &-item {
+          @apply flex items-center space-x-4;
+
+          &-number {
+            @apply text-6xl;
+
+            color: transparent;
+            -webkit-text-stroke: 2px #f6a429;
+          }
+        }
       }
     }
 
