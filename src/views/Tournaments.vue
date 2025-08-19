@@ -60,23 +60,35 @@
       <div class="tournaments-description-stats">
         <p class="tournaments-description-stats-item">
           <span class="tournaments-description-stats-item-number counter" data-target="56">0</span>
-          <span class="text-2xl">Tournois organisés</span>
+          <span class="text-2xl w-1/2">Tournois organisés</span>
         </p>
 
         <p class="tournaments-description-stats-item">
           <span class="tournaments-description-stats-item-number counter" data-target="5695">0</span>
-          <span class="text-2xl">Équipes participantes</span>
+          <span class="text-2xl w-1/2">Équipes participantes</span>
         </p>
 
         <p class="tournaments-description-stats-item">
           <span class="tournaments-description-stats-item-number counter" data-target="10546">0</span>
-          <span class="text-2xl">de cashprize mis en jeu</span>
+          <span class="text-2xl w-1/2">de cashprize mis en jeu</span>
         </p>
+      </div>
+
+      <div class="tournaments-description-actions">
+        <a class="tournaments-description-actions-link" href="#tournaments-active">
+          {{ $t('app.pages.tournaments.tournament_on_going.title') }}
+        </a>
+        <a class="tournaments-description-actions-link" href="#tournaments-future">
+          {{ $t('app.pages.tournaments.tournament_future.title') }}
+        </a>
+        <a class="tournaments-description-actions-link" href="#tournaments-past">
+          {{ $t('app.pages.tournaments.tournament_past.title') }}
+        </a>
       </div>
     </div>
 
     <div class="tournaments-list">
-      <div class="tournaments-list-active">
+      <div id="tournaments-active" class="tournaments-list-active">
         <h2 class="title">{{ $t('app.pages.tournaments.tournament_on_going.title') }}</h2>
         <div v-if="tournaments.actual.length" class="tournaments-list-active-links !justify-center">
           <a
@@ -96,7 +108,7 @@
         <p v-else class="tournaments-list-active-none">{{ $t('app.pages.tournaments.tournament_on_going.nothing.label') }}</p>
       </div>
 
-      <div class="tournaments-list-future">
+      <div id="tournaments-future" class="tournaments-list-future">
         <h2 class="title">{{ $t('app.pages.tournaments.tournament_future.title') }}</h2>
         <div v-if="tournaments.future.length" class="tournaments-list-future-links !justify-center">
           <a
@@ -116,7 +128,7 @@
         <p v-else class="tournaments-list-future-none">{{ $t('app.pages.tournaments.tournament_future.nothing.title') }}</p>
       </div>
 
-      <div class="tournaments-list-past">
+      <div id="tournaments-past" class="tournaments-list-past">
         <h2 class="title">{{ $t('app.pages.tournaments.tournament_past.title') }}</h2>
         <!-- <p class="tournaments-list-past-number">
           {{ $t('app.pages.tournaments.tournament_past.number.label')
@@ -168,21 +180,44 @@
     }
 
     &-description {
-      @apply flex items-center justify-center min-h-screen;
-
-      font-family: 'Orbitron', sans-serif;
+      @apply flex items-center justify-center min-h-screen flex-col gap-32;
 
       &-stats {
         @apply space-y-6 text-main-color font-bold tracking-wide uppercase;
 
+        font-family: 'Orbitron', sans-serif;
+
         &-item {
-          @apply flex items-center space-x-4;
+          @apply flex flex-col items-center space-x-4 w-full
+          tab-m:flex-row;
 
           &-number {
-            @apply text-6xl;
+            @apply text-8xl w-1/2 text-end;
 
             color: transparent;
             -webkit-text-stroke: 2px #f6a429;
+          }
+        }
+      }
+
+      &-actions {
+        @apply flex w-full justify-around;
+
+        &-link {
+          @apply text-center font-bold text-2xl mb-4;
+
+          &::after {
+            background-color: #f6a429;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 2px;
+            margin-top: 0.5rem;
+            width: 8rem;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
           }
         }
       }
