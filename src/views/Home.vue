@@ -61,7 +61,7 @@
     @apply h-full inline px-0;
 
     &-banner {
-      @apply relative h-full;
+      @apply relative min-h-full h-auto min-w-full w-auto object-cover;
 
       &-content {
         @apply absolute flex flex-col items-center gap-8;
