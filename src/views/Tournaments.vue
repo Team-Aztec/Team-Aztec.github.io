@@ -59,17 +59,21 @@
     <div class="tournaments-description">
       <div class="tournaments-description-stats">
         <p class="tournaments-description-stats-item">
-          <span class="tournaments-description-stats-item-number counter" data-target="56">0</span>
+          <span
+            class="tournaments-description-stats-item-number counter"
+            :data-target="historyList.length + tournaments.future.length + tournaments.actual.length"
+            >0</span
+          >
           <span class="text-2xl w-1/2">Tournois organisés</span>
         </p>
 
         <p class="tournaments-description-stats-item">
-          <span class="tournaments-description-stats-item-number counter" data-target="5695">0</span>
+          <span class="tournaments-description-stats-item-number counter" data-target="342">0</span>
           <span class="text-2xl w-1/2">Équipes participantes</span>
         </p>
 
         <p class="tournaments-description-stats-item">
-          <span class="tournaments-description-stats-item-number counter" data-target="10546">0</span>
+          <span class="tournaments-description-stats-item-number counter" data-target="13485">0</span>
           <span class="text-2xl w-1/2">de cashprize mis en jeu</span>
         </p>
       </div>
@@ -130,10 +134,6 @@
 
       <div id="tournaments-past" class="tournaments-list-past">
         <h2 class="title">{{ $t('app.pages.tournaments.tournament_past.title') }}</h2>
-        <!-- <p class="tournaments-list-past-number">
-          {{ $t('app.pages.tournaments.tournament_past.number.label')
-          }}<span style="color: #ffa500">{{ historyList.length }}</span>
-        </p> -->
         <div class="tournaments-list-past-links" role="list">
           <a
             v-for="(tournament, key) in historyList"
@@ -218,6 +218,16 @@
             margin-left: auto;
             margin-right: auto;
             right: 0;
+            transition: width 0.3s ease;
+          }
+
+          &:hover,
+          &:focus {
+            @apply text-main-color;
+
+            &::after {
+              @apply w-full;
+            }
           }
         }
       }
