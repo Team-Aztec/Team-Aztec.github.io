@@ -256,7 +256,7 @@
           @apply mt-4 flex gap-4 flex-wrap justify-between w-full;
 
           &-item {
-            @apply min-h-60 w-[45%] relative border rounded-lg transition-all cursor-pointer bg-cover bg-center flex items-end justify-center bg-black
+            @apply min-h-60 w-[45%] relative border rounded-lg transition-all cursor-pointer bg-contain bg-no-repeat bg-center flex items-end justify-center bg-black
             tab-m:w-[32%];
 
             background-image: url(@/assets/images/default.jpg);

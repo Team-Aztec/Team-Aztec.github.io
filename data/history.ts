@@ -2,6 +2,15 @@ import { History } from '../src/types/types'
 
 export const history: History[] = [
   {
+    title: 'Germany Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/67b951de-e41c-4055-bccc-6eb2d3fa5e4d/Germany%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'Germany Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'Ovoshi',
+  },
+  {
     title: 'Aztec Cup 19',
     url: 'hhttps://www.faceit.com/fr/championship/4f17f6b4-ce76-4b41-be2f-84194da4c369/Aztec%20CUP%2019',
     image: {

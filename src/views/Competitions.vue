@@ -74,6 +74,31 @@
         <!-- <router-link class="competitions-aztecarena-content-link" :to="{ name: 'Aztec Arena' }"> En savoir plus </router-link> -->
       </div>
     </div>
+
+    <div class="competitions-acn">
+      <div class="competitions-acn-content">
+        <h3 class="competitions-acn-content-title">Aztec Circuit National</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat nibh ac sagittis imperdiet. Ut iaculis quam
+          nec condimentum posuere. Sed eros velit, venenatis non tellus sit amet, dapibus porttitor ante. Quisque consequat, elit
+          ut tempor porta, velit odio dignissim nulla, id ullamcorper massa mi non metus. Suspendisse ornare massa at augue
+          iaculis ornare. Curabitur consectetur ipsum ligula, ac tincidunt mauris mattis ac. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae; Sed non diam ipsum. Curabitur in enim lacus. Maecenas vel mauris
+          nec diam efficitur sagittis nec eget mi. Sed sed augue id dui volutpat pulvinar.
+        </p>
+        <p>
+          Vestibulum iaculis porta sem, in consectetur nibh suscipit a. Duis non mi mollis, luctus massa nec, gravida est. Morbi
+          euismod sapien at velit tincidunt viverra. Sed pretium rhoncus nisi, in dignissim nibh accumsan ac. Aliquam tempor ac
+          massa quis hendrerit. Proin blandit nibh vel dolor posuere volutpat. Proin rhoncus ultricies nisi, ornare pulvinar lorem
+          facilisis at.
+        </p>
+        <br />
+        <!-- <router-link class="competitions-azteccup-content-link" :to="{ name: 'Aztec Cups' }"> En savoir plus </router-link> -->
+      </div>
+      <div class="competitions-acn-image">
+        <img src="./../assets/images/acn.png" alt="Aztec Circuit National" title="Aztec Circuit National" />
+      </div>
+    </div>
   </div>
 </template>
 <script setup lang="ts"></script>
@@ -110,7 +135,8 @@
     }
 
     &-azteccup,
-    &-aztecarena {
+    &-aztecarena,
+    &-acn {
       @apply flex flex-col gap-5
       tab-m:flex-row;
 

@@ -17,6 +17,26 @@
       </div>
     </div>
 
+    <div class="league-documents">
+      <div class="league-documents-rules">
+        <a href="#" class="league-documents-rules-pdf">
+          <span class="league-documents-rules-pdf-text">
+            <i class="fa-solid fa-file"></i>
+            RÈGLEMENT COMPLET (PDF)
+          </span>
+          <span class="league-documents-rules-pdf-arrow">›</span>
+        </a>
+
+        <a href="#" class="league-documents-rules-pdf">
+          <span class="league-documents-rules-pdf-text">
+            <i class="fa-solid fa-file"></i>
+            Format et Système de sélection
+          </span>
+          <span class="league-documents-rules-pdf-arrow">›</span>
+        </a>
+      </div>
+    </div>
+
     <div id="league-teams" class="league-teams">
       <h2 class="league-teams-title">Equipes participantes</h2>
       <div class="league-teams-list">
@@ -83,18 +103,7 @@
       <h2 class="league-partners-title">Nos partenaires</h2>
 
       <div class="league-partners-list">
-        <img
-          class="league-partners-list-item"
-          src="@/assets/images/pause-stat.webp"
-          alt="Data analyst Counter-Strike 2 : Pause State"
-          title="Data analyst Counter-Strike 2 : Pause State"
-        />
-        <img
-          class="league-partners-list-item"
-          src="@/assets/images/pause-stat.webp"
-          alt="Data analyst Counter-Strike 2 : Pause State"
-          title="Data analyst Counter-Strike 2 : Pause State"
-        />
+        <img class="league-partners-list-item" src="@/assets/sponsors/skinport.png" alt="Skinport" title="Skinport" />
         <img
           class="league-partners-list-item"
           src="@/assets/images/pause-stat.webp"
@@ -128,18 +137,66 @@
       }
     }
 
+    &-documents {
+      &-rules {
+        @apply flex flex-col px-8 gap-6;
+
+        &-pdf {
+          @apply flex items-center justify-between font-bold text-base border border-main-color py-3 px-6 rounded;
+
+          transition: background 0.3s ease;
+
+          &:hover,
+          &:focus {
+            @apply bg-black text-main-color;
+
+            .league-documents-rules-pdf-arrow {
+              @apply transform rotate-90;
+            }
+          }
+
+          &-arrow {
+            @apply text-main-color text-lg;
+          }
+
+          &-text {
+            @apply flex gap-6 items-center;
+          }
+        }
+      }
+    }
+
     &-description {
       @apply text-center flex flex-col gap-12;
 
       &-actions {
-        @apply flex gap-4 flex-1 justify-center;
+        @apply flex gap-4 flex-1 justify-around;
 
         &-link {
-          @apply border border-main-color rounded-full px-4;
+          @apply text-center font-bold text-2xl mb-4;
+
+          &::after {
+            background-color: #f6a429;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 2px;
+            margin-top: 0.5rem;
+            width: 8rem;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
+            transition: width 0.3s ease;
+          }
 
           &:hover,
           &:focus {
-            @apply bg-main-color text-white;
+            @apply text-main-color;
+
+            &::after {
+              @apply w-full;
+            }
           }
         }
       }
@@ -182,38 +239,9 @@
       }
     }
 
-    &-partners {
-      &-title {
-        @apply text-center relative font-bold text-3xl mb-4;
-
-        &::after {
-          background-color: #f6a429;
-          bottom: 0;
-          content: '';
-          display: block;
-          height: 0.1875rem;
-          margin-top: 0.5rem;
-          width: 8rem;
-          left: 0;
-          margin-left: auto;
-          margin-right: auto;
-          right: 0;
-        }
-      }
-
-      &-list {
-        @apply flex flex-col gap-8 justify-center items-center
-        tab-m:flex-row;
-
-        &-item {
-          @apply flex-1 max-h-64 max-w-64;
-        }
-      }
-    }
-
     &-streamers {
       &-title {
-        @apply text-center relative font-bold text-3xl mb-4;
+        @apply text-center relative font-bold text-3xl mb-6;
 
         &::after {
           background-color: #f6a429;
@@ -252,6 +280,35 @@
               }
             }
           }
+        }
+      }
+    }
+
+    &-partners {
+      &-title {
+        @apply text-center relative font-bold text-3xl mb-6;
+
+        &::after {
+          background-color: #f6a429;
+          bottom: 0;
+          content: '';
+          display: block;
+          height: 0.1875rem;
+          margin-top: 0.5rem;
+          width: 8rem;
+          left: 0;
+          margin-left: auto;
+          margin-right: auto;
+          right: 0;
+        }
+      }
+
+      &-list {
+        @apply flex flex-col gap-8 justify-center items-center
+        tab-m:flex-row;
+
+        &-item {
+          @apply flex-1 max-h-64 max-w-64;
         }
       }
     }
