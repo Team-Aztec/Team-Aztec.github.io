@@ -42,11 +42,11 @@ section {
 }
 
 .arena {
-  background-image: url(@/assets/images/arena.png);
+  background-image: url(@/assets/images/arena.png) !important;
 }
 
 .cup {
-  background-image: url(@/assets/images/cup.webp);
+  background-image: url(@/assets/images/cup.webp) !important;
 }
 
 .aztec-container {

@@ -6,8 +6,6 @@
   "app.header.links.organisation.label": "What abouts us ?",
   "app.header.links.contact.label": "Contac us",
   "app.header.links.tournaments.label": "Our tournaments",
-  "app.header.links.locale.en_us": "<span class=\"flag-gb\"></span>",
-  "app.header.links.locale.fr_fr": "<span class=\"flag-fr\"></span>",
   "app.footer.back_to_top.button": "Back to top of the page",
   "app.footer.sponsors.pause_stat": "Pause Stat",
   "app.footer.links.contact": "Contact",
@@ -15,8 +13,9 @@
   "app.footer.links.competitions": "Competitions",
   "app.footer.links.statistiques": "Statistics",
   "app.footer.copyright": "&copy; Aztec France 2025 - All rights reserved",
+  "app.seo.pages.tournaments.title": "Our tournaments",
   "app.pages.organisation.title": "What abouts us ?",
-  "app.pages.organisation.content.paragraph.1": "Aztec was founded by former semi-professional CS:GO and CS2 players, with a dual expertise in the field and in organisation. We know what makes a good tournament, because we've experienced it from both sides. Thanks to more than 20 events organised (Aztec Cup, Arena, IconX), we can now offer reliable and professional services: tailor-made formats, controlled production, quality casting.",
+  "app.pages.organisation.content.paragraph.1": "Aztec was founded by former semi-professional CS:GO and CS2 players, with a dual expertise in the field and in organisation. We know what makes a good tournament, because we've experienced it from both sides. Thanks to more than 20 events organised (Aztec Cup, Arena, 3DMAX tournaments, IESF Qualifers), we can now offer reliable and professional services: tailor-made formats, controlled production, quality casting.",
   "app.pages.organisation.content.paragraph.2": "Our strength: a human approach, rooted in the reality of the players, and a level of standards that live up to the expectations of our partners.",
   "app.pages.organisation.services.title": "Our services",
   "app.pages.organisation.service.event.title": "Tournament organisation",
@@ -43,5 +42,5 @@
   "app.pages.statistics.title": "Your statistics during our competitions",
   "app.pages.statistics.description": "You will soon be able to consult your statistics on your participation in the various Aztec competitions.",
   "app.pages.statistics.partner.label": " All the statistics are provided following our partnership with <a style=\"--bg: #\" href=\"https://www.pause-stat.pro/\" target=\"_blank\">Pause Stat</a>. Thank you to them for all their work.",
-  "app.component.socials.title": "📱 Follow Aztec on social media"
+  "app.component.socials.title": "Follow Aztec on social media"
 }

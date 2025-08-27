@@ -2,6 +2,51 @@ import { History } from '../src/types/types'
 
 export const history: History[] = [
   {
+    title: 'Germany Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/67b951de-e41c-4055-bccc-6eb2d3fa5e4d/Germany%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'Germany Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'Ovoshi',
+  },
+  {
+    title: 'Aztec Cup 19',
+    url: 'hhttps://www.faceit.com/fr/championship/4f17f6b4-ce76-4b41-be2f-84194da4c369/Aztec%20CUP%2019',
+    image: {
+      url: 'history/cup.webp',
+      alt: 'Aztec Cup 19',
+    },
+    winner: 'average 30yo',
+  },
+  {
+    title: 'Poland Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/dda41ba8-8d6b-4ace-a5ae-f1a326c6a519/Poland%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'Poland Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'Phantom Esports',
+  },
+  {
+    title: 'Netherlands Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/74cb2ad0-8a12-4c49-a022-938e97f6a385/Netherlands%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'Netherlands Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'Souls Hearts',
+  },
+  {
+    title: 'UK Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/ef77e44c-c1f5-4ffa-8bec-31b07ce1f2c9/UK%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'UK Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'On The Dool',
+  },
+  {
     title: '3DMAX Scouting Tournament',
     url: 'https://liquipedia.net/counterstrike/3DMAX_Scouting_Tournament',
     image: {

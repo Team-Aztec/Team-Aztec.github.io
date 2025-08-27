@@ -8,8 +8,8 @@
   <section class="socials">
     <h2>{{ t('app.component.socials.title') }}</h2>
     <div class="social-icons">
-      <a href="https://x.com/aztecarena" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
+      <a href="https://x.com/aztecarena" target="_blank" aria-label="X Twitter">
+        <i class="fa-brands fa-x-twitter"></i>
       </a>
       <a href="https://www.tiktok.com/@aztecarenac" target="_blank" aria-label="TikTok">
         <i class="fab fa-tiktok"></i>

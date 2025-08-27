@@ -6,8 +6,6 @@
   "app.header.links.organisation.label": "Qui sommes-nous ?",
   "app.header.links.contact.label": "Contactez-nous",
   "app.header.links.tournaments.label": "Nos tournois",
-  "app.header.links.locale.en_us": "<span class=\"flag-gb\"></span>",
-  "app.header.links.locale.fr_fr": "<span class=\"flag-fr\"></span>",
   "app.footer.back_to_top.button": "Remonter en haut de la page",
   "app.footer.sponsors.pause_stat": "Pause Stat",
   "app.footer.links.contact": "Contact",
@@ -15,8 +13,9 @@
   "app.footer.links.competitions": "Compétitions",
   "app.footer.links.statistiques": "Statistiques",
   "app.footer.copyright": "&copy; Aztec France 2025 - Tous droits réservés",
+  "app.seo.pages.tournaments.title": "Nos tournois",
   "app.pages.organisation.title": "Qui sommes-nous ?",
-  "app.pages.organisation.content.paragraph.1": "Aztec est une structure fondée par d’anciens joueurs semi-professionnels de CS:GO et CS2, avec une double expertise : le terrain et l’organisation. Nous savons ce qui fait un bon tournoi, parce que nous l’avons vécu des deux côtés. Grâce à plus de 20 événements organisés (Aztec Cup, Arena, IconX), nous proposons aujourd’hui des prestations fiables et professionnelles : formats sur-mesure, production maîtrisée, casting de qualité.",
+  "app.pages.organisation.content.paragraph.1": "Aztec est une structure fondée par d’anciens joueurs semi-professionnels de CS:GO et CS2, avec une double expertise : le terrain et l’organisation. Nous savons ce qui fait un bon tournoi, parce que nous l’avons vécu des deux côtés. Grâce à plus de 20 événements organisés (Aztec Cup, Arena, Tournois 3DMAX, IESF Qualifers), nous proposons aujourd’hui des prestations fiables et professionnelles : formats sur-mesure, production maîtrisée, casting de qualité.",
   "app.pages.organisation.content.paragraph.2": " Notre force : une approche humaine, ancrée dans la réalité des joueurs, et un niveau d’exigence à la hauteur des attentesdes partenaires.",
   "app.pages.organisation.services.title": "Nos services",
   "app.pages.organisation.service.event.title": "Organisation de tournoi",
@@ -43,5 +42,5 @@
   "app.pages.statistics.title": "Vos statistiques durant nos compétitions",
   "app.pages.statistics.description": "Vous pourrez prochainement consulter vos statistiques de vos différentes participations aux compétitions de Aztec",
   "app.pages.statistics.partner.label": " L'ensemble des statistiques sont fournies suite à notre partenariat avec <a style=\"--bg: #\" href=\"https://www.pause-stat.pro/\" target=\"_blank\">Pause Stat</a>. Merci à eux pour l'ensemble de leur travail.",
-  "app.component.socials.title": "📱 Suivez Aztec sur les réseaux"
+  "app.component.socials.title": "Suivez Aztec sur les réseaux"
 }

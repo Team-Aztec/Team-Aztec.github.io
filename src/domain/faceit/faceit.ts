@@ -46,9 +46,15 @@ export const useFaceit = () => {
         headers: { Authorization: `Bearer ${import.meta.env.VITE_FACEIT_API_KEY}` },
       })
       .then((resp) => {
-        const future = resp.data.items.filter((tournament: Tournament) => tournament.status === 'join')
-        const actual = resp.data.items.filter((tournament: Tournament) => tournament.status === 'started')
+        const future = resp.data.items
+          .filter((tournament: Tournament) => tournament.status === 'join')
+          .map((tournament) => ({ ...tournament, faceit_url: tournament.faceit_url.replace('{lang}', 'fr') }))
+        const actual = resp.data.items
+          .filter((tournament: Tournament) => tournament.status === 'started')
+          .map((tournament) => ({ ...tournament, faceit_url: tournament.faceit_url.replace('{lang}', 'fr') }))
         const tournaments: TournamentPage = { future, actual }
+
+        console.log(future)
 
         return tournaments
       })
