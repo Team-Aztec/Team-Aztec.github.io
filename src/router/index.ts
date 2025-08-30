@@ -20,6 +20,9 @@ const routes = [
     path: '/competitions',
     name: 'Competitions',
     component: Competitions,
+    meta: {
+      title: 'Nos compétitions -',
+    },
   },
   {
     path: '/statistiques',
@@ -35,11 +38,17 @@ const routes = [
     path: '/organisation',
     name: 'Organisation',
     component: Organisation,
+    meta: {
+      title: 'Qui sommes nous ? -',
+    },
   },
   {
     path: '/tournois',
     name: 'Tournois',
     component: Tournaments,
+    meta: {
+      title: 'Nos tournois -',
+    },
   },
   {
     path: '/aztec-circuit-national',

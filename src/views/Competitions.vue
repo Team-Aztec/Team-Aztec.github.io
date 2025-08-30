@@ -1,41 +1,49 @@
+<script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
+</script>
+
 <template>
   <div class="competitions aztec-container">
     <div class="competitions-description">
-      <h1 class="competitions-description-title">Toutes nos compétitions</h1>
-      <p>Aztec est un acteur majeur de la scène francophone dans l'organisation de compétitions sur Counter-Strike 2.</p>
-      <p
-        >Grâce à des événements compétitifs de qualité, Aztec s’impose comme une plateforme incontournable pour les joueurs et les
-        équipes souhaitant se mesurer aux meilleurs. Vous pourrez notamment trouver ici :</p
-      >
+      <h1 class="competitions-description-title">{{ t('app.pages.competitions.title') }}</h1>
+      <p>{{ t('app.pages.competitions.content.paragraph.1') }}</p>
+      <p>{{ t('app.pages.competitions.content.paragraph.2') }}</p>
       <ul class="list-disc ml-4">
-        <li>Les Aztec Cups</li>
-        <li>La Aztec Arena</li>
+        <li>Aztec Circuit National</li>
+        <li>Aztec Cups</li>
+        <li>Aztec Arena</li>
       </ul>
 
       <img
         class="competitions-description-banner"
         src="./../assets/images/banniere.jpeg"
-        alt="Bannière aztec organisateur de tournois esports"
-        title="Bannière aztec organisateur de tournois esports"
+        :alt="t('app.pages.competitions.content.image.label')"
+        :title="t('app.pages.competitions.content.image.label')"
       />
+    </div>
+
+    <div class="competitions-acn">
+      <div class="competitions-acn-content">
+        <h3 class="competitions-acn-content-title">{{ t('app.pages.competitions.acn.title') }}</h3>
+        <p v-html="t('app.pages.competitions.acn.paragraph.1')"> </p>
+        <p v-html="t('app.pages.competitions.acn.paragraph.2')"> </p>
+        <router-link class="competitions-acn-content-link" :to="{ name: 'Aztec Circuit National' }">{{
+          t('app.pages.competitions.acn.button.label')
+        }}</router-link>
+      </div>
+      <div class="competitions-acn-image">
+        <img src="./../assets/images/acn.png" alt="Aztec Circuit National" title="Aztec Circuit National" />
+      </div>
     </div>
 
     <div class="competitions-azteccup">
       <div class="competitions-azteccup-content">
-        <h3 class="competitions-azteccup-content-title">Aztec Cups</h3>
-        <p
-          >Les <strong>Aztec Cups</strong> sont des tournois hebdomadaires organisés chaque dimanche soir, servant de phase
-          qualificative pour les prestigieuses <strong>Aztec Arena</strong>.
-        </p>
-        <p>
-          Historiquement, ces compétitions ont permis aux équipes de s’affronter dans un
-          <strong>format 3 BO1 à élimination directe</strong>, avec <strong>50€</strong> en jeu pour le vainqueur.
-        </p>
-        <p
-          >Véritable tremplin pour les talents émergents, les Aztec Cups offrent une opportunité aux joueurs de prouver leur
-          valeur et de gravir les échelons vers la scène compétitive de haut niveau.</p
-        >
-        <br />
+        <h3 class="competitions-azteccup-content-title">{{ t('app.pages.competitions.cups.title') }}</h3>
+        <p v-html="t('app.pages.competitions.cups.paragraph.1')"></p>
+        <p v-html="t('app.pages.competitions.cups.paragraph.2')"> </p>
+        <p v-html="t('app.pages.competitions.cups.paragraph.3')"> </p>
         <!-- <router-link class="competitions-azteccup-content-link" :to="{ name: 'Aztec Cups' }"> En savoir plus </router-link> -->
       </div>
       <div class="competitions-azteccup-image">
@@ -49,59 +57,16 @@
       </div>
 
       <div class="competitions-aztecarena-content">
-        <h3 class="competitions-aztecarena-content-title">Aztec Arena</h3>
-        <p
-          >La <strong>Aztec Arena</strong> est un tournoi majeur rassemblant les meilleures équipes de Counter-Strike 2, avec un
-          cash prize de <strong>500€</strong>
-          en jeu.
-        </p>
-        <p>
-          Initialement disputée avec <strong>16 équipes</strong>, la compétition évolue désormais vers un format plus sélectif
-          avec <strong>8 équipes</strong>
-          qualifiées de différentes manières :
-        </p>
-        <ul>
-          <li>4 équipes ayant remporté une Aztec Cup et obtenu leur ticket direct.</li>
-          <li
-            >4 équipes sélectionnées grâce à un système de points, récompensant leur régularité et leur engagement, ou invitées si
-            elles évoluent au niveau Advanced ou supérieur.</li
-          >
-        </ul>
-        <p
-          >La Aztec Arena est l’ultime étape des compétitions Aztec, offrant un défi intense et un spectacle de haut niveau aux
-          joueurs comme aux spectateurs.</p
-        >
-        <!-- <router-link class="competitions-aztecarena-content-link" :to="{ name: 'Aztec Arena' }"> En savoir plus </router-link> -->
-      </div>
-    </div>
-
-    <div class="competitions-acn">
-      <div class="competitions-acn-content">
-        <h3 class="competitions-acn-content-title">Aztec Circuit National</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat nibh ac sagittis imperdiet. Ut iaculis quam
-          nec condimentum posuere. Sed eros velit, venenatis non tellus sit amet, dapibus porttitor ante. Quisque consequat, elit
-          ut tempor porta, velit odio dignissim nulla, id ullamcorper massa mi non metus. Suspendisse ornare massa at augue
-          iaculis ornare. Curabitur consectetur ipsum ligula, ac tincidunt mauris mattis ac. Vestibulum ante ipsum primis in
-          faucibus orci luctus et ultrices posuere cubilia curae; Sed non diam ipsum. Curabitur in enim lacus. Maecenas vel mauris
-          nec diam efficitur sagittis nec eget mi. Sed sed augue id dui volutpat pulvinar.
-        </p>
-        <p>
-          Vestibulum iaculis porta sem, in consectetur nibh suscipit a. Duis non mi mollis, luctus massa nec, gravida est. Morbi
-          euismod sapien at velit tincidunt viverra. Sed pretium rhoncus nisi, in dignissim nibh accumsan ac. Aliquam tempor ac
-          massa quis hendrerit. Proin blandit nibh vel dolor posuere volutpat. Proin rhoncus ultricies nisi, ornare pulvinar lorem
-          facilisis at.
-        </p>
-        <br />
-        <!-- <router-link class="competitions-azteccup-content-link" :to="{ name: 'Aztec Cups' }"> En savoir plus </router-link> -->
-      </div>
-      <div class="competitions-acn-image">
-        <img src="./../assets/images/acn.png" alt="Aztec Circuit National" title="Aztec Circuit National" />
+        <h3 class="competitions-aztecarena-content-title">{{ t('app.pages.competitions.arena.title') }}</h3>
+        <p v-html="t('app.pages.competitions.arena.paragraph.1')"></p>
+        <p v-html="t('app.pages.competitions.arena.paragraph.2')"></p>
+        <ul v-html="t('app.pages.competitions.arena.paragraph.3')"> </ul>
+        <p v-html="t('app.pages.competitions.arena.paragraph.4')"></p>
       </div>
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+
 <style scoped lang="scss">
   .competitions {
     padding: 128px 0;

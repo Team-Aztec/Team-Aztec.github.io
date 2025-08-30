@@ -139,7 +139,7 @@
 
     &-documents {
       &-rules {
-        @apply flex flex-col px-8 gap-6;
+        @apply flex flex-col gap-6;
 
         &-pdf {
           @apply flex items-center justify-between font-bold text-base border border-main-color py-3 px-6 rounded;
@@ -149,10 +149,6 @@
           &:hover,
           &:focus {
             @apply bg-black text-main-color;
-
-            .league-documents-rules-pdf-arrow {
-              @apply transform rotate-90;
-            }
           }
 
           &-arrow {
