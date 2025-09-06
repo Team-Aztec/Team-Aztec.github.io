@@ -41,8 +41,10 @@
       <h2 class="league-teams-title">Equipes participantes</h2>
       <div class="league-teams-list">
         <div class="league-teams-list-item">
-          <h3 class="league-teams-list-item-title">Division 1</h3>
+          <h3 class="league-teams-list-item-title">Equipes invitées</h3>
           <div class="league-teams-list-item-teams">
+            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
             <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
             <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
             <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
@@ -53,8 +55,10 @@
         </div>
 
         <div class="league-teams-list-item">
-          <h3 class="league-teams-list-item-title">Division 2</h3>
+          <h3 class="league-teams-list-item-title">Equipes qualifiées</h3>
           <div class="league-teams-list-item-teams">
+            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
             <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
             <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
             <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
@@ -100,7 +104,7 @@
     </div>
 
     <div class="league-partners">
-      <h2 class="league-partners-title">Nos partenaires</h2>
+      <h2 class="league-partners-title">Notre partenaire</h2>
 
       <div class="league-partners-list">
         <img class="league-partners-list-item" src="@/assets/sponsors/skinport.png" alt="Skinport" title="Skinport" />

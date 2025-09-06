@@ -2,6 +2,42 @@ import { History } from '../src/types/types'
 
 export const history: History[] = [
   {
+    title: 'Spain Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/e0ca55e1-28bc-4549-9785-5d2a205b8567/Spain%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'Spain Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'CarrittoSpain',
+  },
+  {
+    title: 'France Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/81dda46d-952f-40f4-adf3-5f311d2b62b1/France%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'France Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'ATRIVM',
+  },
+  {
+    title: 'Rep Czech Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/c587bd92-6e88-42d0-99c6-d8bd37496d59/Rep%20Czech%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'Rep Czech Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'YENKEE',
+  },
+  {
+    title: 'Turkey Qualifier : AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/ce4d0e83-37da-44c3-a8fa-6738e6a6a329/Turkey%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'Turkey Qualifier : AORUS X AMD Community CUP',
+    },
+    winner: 'Besiktas',
+  },
+  {
     title: 'Germany Qualifier : AORUS X AMD Community CUP',
     url: 'https://www.faceit.com/fr/championship/67b951de-e41c-4055-bccc-6eb2d3fa5e4d/Germany%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
     image: {
