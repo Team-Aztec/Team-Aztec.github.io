@@ -2,6 +2,15 @@ import { History } from '../src/types/types'
 
 export const history: History[] = [
   {
+    title: 'AORUS X AMD Community CUP',
+    url: 'https://www.faceit.com/fr/championship/7a8bf6f8-734f-48c6-8a4c-6a9fc7023cf3/AORUS%20X%20AMD%20Community%20CUP',
+    image: {
+      url: 'history/aorus.png',
+      alt: 'AORUS X AMD Community CUP',
+    },
+    winner: 'Hawaii',
+  },
+  {
     title: 'Spain Qualifier : AORUS X AMD Community CUP',
     url: 'https://www.faceit.com/fr/championship/e0ca55e1-28bc-4549-9785-5d2a205b8567/Spain%20Qualifier%20:%20AORUS%20X%20AMD%20Community%20CUP',
     image: {

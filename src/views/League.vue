@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import SwissRounds from '../components/formats/SwissRounds.vue'
+</script>
 
 <template>
   <div class="league aztec-container">
@@ -68,6 +70,11 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="league-swissrounds">
+      <h2 class="league-swissrounds-title">Stage 2</h2>
+      <SwissRounds />
     </div>
 
     <div class="league-streamers">
@@ -239,6 +246,26 @@
       }
     }
 
+    &-swissrounds {
+      &-title {
+        @apply text-center relative font-bold text-3xl mb-6;
+
+        &::after {
+          background-color: #f6a429;
+          bottom: 0;
+          content: '';
+          display: block;
+          height: 0.1875rem;
+          margin-top: 0.5rem;
+          width: 8rem;
+          left: 0;
+          margin-left: auto;
+          margin-right: auto;
+          right: 0;
+        }
+      }
+    }
+
     &-streamers {
       &-title {
         @apply text-center relative font-bold text-3xl mb-6;
@@ -259,7 +286,8 @@
       }
 
       &-list {
-        @apply grid grid-cols-3 gap-4;
+        @apply grid grid-cols-1 gap-4
+        tab-m:grid-cols-3;
 
         &-card {
           @apply flex flex-col gap-4 items-center border rounded border-main-color;

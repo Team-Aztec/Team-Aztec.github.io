@@ -54,8 +54,6 @@ export const useFaceit = () => {
           .map((tournament) => ({ ...tournament, faceit_url: tournament.faceit_url.replace('{lang}', 'fr') }))
         const tournaments: TournamentPage = { future, actual }
 
-        console.log(future)
-
         return tournaments
       })
       .catch((error) => {
