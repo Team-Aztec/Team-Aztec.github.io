@@ -1,7 +1,12 @@
 <script setup lang="ts">
+  import { useHead } from '@unhead/vue'
   import { useI18n } from 'vue-i18n'
 
   const { t } = useI18n()
+
+  useHead({
+    title: t('app.seo.pages.competitions.title'),
+  })
 </script>
 
 <template>
@@ -25,6 +30,9 @@
     </div>
 
     <div class="competitions-acn">
+      <div class="competitions-acn-image">
+        <img src="./../assets/images/acn.png" alt="Aztec Circuit National" title="Aztec Circuit National" />
+      </div>
       <div class="competitions-acn-content">
         <h3 class="competitions-acn-content-title">{{ t('app.pages.competitions.acn.title') }}</h3>
         <p v-html="t('app.pages.competitions.acn.paragraph.1')"> </p>
@@ -32,9 +40,6 @@
         <router-link class="competitions-acn-content-link" :to="{ name: 'Aztec Circuit National' }">{{
           t('app.pages.competitions.acn.button.label')
         }}</router-link>
-      </div>
-      <div class="competitions-acn-image">
-        <img src="./../assets/images/acn.png" alt="Aztec Circuit National" title="Aztec Circuit National" />
       </div>
     </div>
 

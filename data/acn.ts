@@ -1,6 +1,6 @@
 //////////////////////////////////////// Matchs
 
-export const teamsUnbeatable = [
+export const teams = [
   {
     name: 'NAVI MOUSSE',
     logo: 'navimousse_logo.png',

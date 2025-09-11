@@ -1,3 +1,28 @@
+<script setup lang="ts">
+  import DefaultTeamLogo from '../../assets/swissrounds/default_team.svg'
+  import DefaultTeamLogoWhite from '../../assets/swissrounds/default_team_white.svg'
+  import { unbeatableArena, teams, splitsRounds } from '../../../data/acn.ts'
+  import { filename } from 'pathe/utils'
+
+  const glob = import.meta.glob('@/assets/swissrounds/*.{png,jpg,jpeg,svg,webp}', { eager: true })
+  const images = Object.fromEntries(Object.entries(glob).map(([key, value]) => [filename(key), value.default]))
+
+  const tournaments = unbeatableArena
+
+  const teamLogo = (team, white) => {
+    const selectedTeam = teams.find((t) => t.name === team.name)
+
+    const logo = selectedTeam?.logo
+      .replace('.png', '')
+      .replace('.jpg', '')
+      .replace('.jpeg', '')
+      .replace('.svg', '')
+      .replace('.webp', '')
+
+    return selectedTeam && selectedTeam.logo ? images[`${logo}`] : !white ? DefaultTeamLogoWhite : DefaultTeamLogo
+  }
+</script>
+
 <template>
   <div class="swiss-rounds">
     <table class="hidden tab-m:inline-table table-fixed">
@@ -103,7 +128,9 @@
         </thead>
         <tbody>
           <tr>
-            <p class="text-format">{{ element.score }}</p>
+            <td>
+              <p class="text-format">{{ element.score }}</p>
+            </td>
           </tr>
           <tr :class="[element.matchs.round1?.win ? 'match-win' : element.matchs.round1?.win == false ? 'lose-win' : '']">
             <p v-if="element.matchs.round1" class="text-base">
@@ -192,23 +219,7 @@
     </div> -->
   </div>
 </template>
-<script setup>
-  import DefaultTeamLogo from '../../assets/swissrounds/default_team.svg'
-  import DefaultTeamLogoWhite from '../../assets/swissrounds/default_team_white.svg'
-  import { unbeatableArena, teamsUnbeatable, splitsRounds } from '../../../data/acn.ts'
 
-  const tournaments = unbeatableArena
-
-  const teamLogo = (team, white) => {
-    const selectedTeam = teamsUnbeatable.find((t) => t.name === team.name)
-
-    return selectedTeam && selectedTeam.logo
-      ? `@/assets/swissrounds/${selectedTeam.logo}`
-      : !white
-      ? DefaultTeamLogoWhite
-      : DefaultTeamLogo
-  }
-</script>
 <style scoped lang="scss">
   .swiss-rounds {
     @apply text-white flex flex-col gap-12;
