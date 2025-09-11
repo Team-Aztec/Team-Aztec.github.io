@@ -5,7 +5,9 @@
   import { filename } from 'pathe/utils'
 
   const glob = import.meta.glob('@/assets/swissrounds/*.{png,jpg,jpeg,svg,webp}', { eager: true })
-  const images = Object.fromEntries(Object.entries(glob).map(([key, value]) => [filename(key), value.default]))
+  const images = Object.fromEntries(
+    Object.entries(glob).map(([key, value]: [key: string, value: any]) => [filename(key), value.default])
+  )
 
   const tournaments = acnSwissRounds
 
@@ -107,7 +109,7 @@
     </table>
 
     <div class="swiss-rounds-cards">
-      <table v-for="(element, index) in tournaments" class="swiss-rounds-cards-item">
+      <table v-for="element in tournaments" class="swiss-rounds-cards-item">
         <thead>
           <tr>
             <th scope="col" class="text-base garet-bold-uppercase">
