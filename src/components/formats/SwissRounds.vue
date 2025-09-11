@@ -203,7 +203,7 @@
     const selectedTeam = teamsUnbeatable.find((t) => t.name === team.name)
 
     return selectedTeam && selectedTeam.logo
-      ? `/src/assets/swissrounds/${selectedTeam.logo}`
+      ? `@/assets/swissrounds/${selectedTeam.logo}`
       : !white
       ? DefaultTeamLogoWhite
       : DefaultTeamLogo
