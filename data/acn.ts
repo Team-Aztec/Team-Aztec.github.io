@@ -1,3 +1,5 @@
+import { LeagueSwissRound } from 'src/types/types'
+
 //////////////////////////////////////// Matchs
 
 export const teams = [
@@ -67,7 +69,7 @@ export const teams = [
   },
 ]
 
-export const unbeatableArena = [
+export const acnSwissRounds = [
   {
     name: 'NAVI MOUSSE',
     score: '2-1',
@@ -236,112 +238,4 @@ export const unbeatableArena = [
       },
     },
   },
-] as const
-
-export const splitsRounds = [
-  // {
-  //   name: "Round 1",
-  //   categories: [
-  //     {
-  //       title: "",
-  //       matchs: [
-  //         {
-  //           team1: "GenOne Academie",
-  //           team2: "ACTIVIT-E",
-  //           score: "13 - 0",
-  //         },
-  //         {
-  //           team1: "GBAS",
-  //           team2: "z pour avancer",
-  //           score: "13 - 0",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: "Round 2",
-  //   categories: [
-  //     {
-  //       title: "Equipes en 1-0",
-  //       matchs: [
-  //         {
-  //           team1: "GenOne Academie",
-  //           team2: "ACTIVIT-E",
-  //           score: "13 - 0",
-  //         },
-  //         {
-  //           team1: "GBAS",
-  //           team2: "z pour avancer",
-  //           score: "13 - 0",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       title: "Equipes en 0-1",
-  //       matchs: [
-  //         {
-  //           team1: "GenOne Academie",
-  //           team2: "ACTIVIT-E",
-  //           score: "13 - 0",
-  //         },
-  //         {
-  //           team1: "GBAS",
-  //           team2: "z pour avancer",
-  //           score: "13 - 0",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: "Round 3",
-  //   categories: [
-  //     {
-  //       title: "Equipes en 2-0",
-  //       matchs: [
-  //         {
-  //           team1: "GenOne Academie",
-  //           team2: "ACTIVIT-E",
-  //           score: "13 - 0",
-  //         },
-  //         {
-  //           team1: "GBAS",
-  //           team2: "z pour avancer",
-  //           score: "13 - 0",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       title: "Equipes en 1-1",
-  //       matchs: [
-  //         {
-  //           team1: "GenOne Academie",
-  //           team2: "ACTIVIT-E",
-  //           score: "13 - 0",
-  //         },
-  //         {
-  //           team1: "GBAS",
-  //           team2: "z pour avancer",
-  //           score: "13 - 0",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       title: "Equipes en 0-2",
-  //       matchs: [
-  //         {
-  //           team1: "GenOne Academie",
-  //           team2: "ACTIVIT-E",
-  //           score: "13 - 0",
-  //         },
-  //         {
-  //           team1: "GBAS",
-  //           team2: "z pour avancer",
-  //           score: "13 - 0",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-]
+] as LeagueSwissRound[]
