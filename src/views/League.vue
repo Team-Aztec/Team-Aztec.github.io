@@ -26,7 +26,7 @@
       </span>
 
       <div class="league-description-actions">
-        <a class="league-description-actions-link" href="#league-teams"> Voir les équipes</a>
+        <a class="league-description-actions-link" href="#league-stages"> Voir les étapes</a>
         <a class="league-description-actions-link" href="https://www.twitch.tv/aztec_fr" target="_blank"> Regarder en direct </a>
       </div>
     </div>
@@ -51,13 +51,13 @@
       </div>
     </div>
 
-    <Tabs v-slot="{ activeIndex }" :tabs="tabList" :defaultIndex="0">
+    <Tabs id="league-stages" v-slot="{ activeIndex }" :tabs="tabList" :defaultIndex="0">
       <div v-if="activeIndex === 0">
         <p>Bracket à venir</p>
       </div>
       <div v-else-if="activeIndex === 1" class="league-stages-container">
-        <div id="league-teams" class="league-teams">
-          <h2 class="league-teams-title">Equipes participantes</h2>
+        <div class="league-teams">
+          <!-- <h2 class="league-teams-title">Equipes participantes</h2> -->
           <div class="league-teams-list">
             <div class="league-teams-list-item">
               <h3 class="league-teams-list-item-title">Equipes invitées</h3>
@@ -73,7 +73,7 @@
               </div>
             </div>
 
-            <div class="league-teams-list-item">
+            <!-- <div class="league-teams-list-item">
               <h3 class="league-teams-list-item-title">Equipes qualifiées</h3>
               <div class="league-teams-list-item-teams">
                 <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
@@ -85,14 +85,14 @@
                 <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
 
-        <div class="league-swissrounds">
+        <!-- <div class="league-swissrounds">
           <h2 class="league-swissrounds-title">Classement</h2>
           <SwissRounds />
-        </div>
+        </div> -->
       </div>
       <div v-else-if="activeIndex === 2">
         <h2>📞 Contact</h2>

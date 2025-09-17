@@ -30,9 +30,11 @@
       </button>
     </div>
 
-    <div class="tabs-content">
-      <slot :activeIndex="activeIndex" :activeTab="tabs[activeIndex]" />
-    </div>
+    <transition name="fade-slide" mode="out-in">
+      <div class="tabs-content" :key="activeIndex">
+        <slot :activeIndex="activeIndex" :activeTab="tabs[activeIndex]" />
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -46,7 +48,7 @@
   }
 
   .tab-button {
-    @apply flex-1 cursor-pointer border-none border-r border-main-color text-3xl font-medium;
+    @apply flex-1 cursor-pointer border-none border-r border-main-color text-xl font-medium py-2 px-4;
 
     transition: background 0.2s;
   }
@@ -68,6 +70,31 @@
   }
 
   .tabs-content {
-    padding: 1rem;
+    @apply p-4;
+  }
+
+  .fade-slide-enter-active,
+  .fade-slide-leave-active {
+    transition: all 0.3s ease;
+  }
+
+  .fade-slide-enter-from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .fade-slide-enter-to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-slide-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-slide-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 </style>
