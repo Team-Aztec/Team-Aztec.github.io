@@ -1,10 +1,13 @@
 <script setup lang="ts">
   import SwissRounds from '../components/formats/SwissRounds.vue'
+  import Tabs from '../components/ui/Tabs.vue'
 
   import { useHead } from '@unhead/vue'
   import { useI18n } from 'vue-i18n'
 
   const { t } = useI18n()
+  const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }]
+  // const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }, { label: 'Stage 3' }]
 
   useHead({
     title: t('app.seo.pages.league.title'),
@@ -30,7 +33,7 @@
 
     <div class="league-documents">
       <div class="league-documents-rules">
-        <a href="#" class="league-documents-rules-pdf">
+        <a href="https://playaztec.com/acn/reglement.pdf" target="_blank" class="league-documents-rules-pdf">
           <span class="league-documents-rules-pdf-text">
             <i class="fa-solid fa-file"></i>
             RÈGLEMENT COMPLET (PDF)
@@ -38,7 +41,7 @@
           <span class="league-documents-rules-pdf-arrow">›</span>
         </a>
 
-        <a href="#" class="league-documents-rules-pdf">
+        <a href="https://playaztec.com/acn/reglement.pdf" target="_blank" class="league-documents-rules-pdf">
           <span class="league-documents-rules-pdf-text">
             <i class="fa-solid fa-file"></i>
             Format et Système de sélection
@@ -48,43 +51,54 @@
       </div>
     </div>
 
-    <div id="league-teams" class="league-teams">
-      <h2 class="league-teams-title">Equipes participantes</h2>
-      <div class="league-teams-list">
-        <div class="league-teams-list-item">
-          <h3 class="league-teams-list-item-title">Equipes invitées</h3>
-          <div class="league-teams-list-item-teams">
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+    <Tabs v-slot="{ activeIndex }" :tabs="tabList" :defaultIndex="0">
+      <div v-if="activeIndex === 0">
+        <p>Bracket à venir</p>
+      </div>
+      <div v-else-if="activeIndex === 1" class="league-stages-container">
+        <div id="league-teams" class="league-teams">
+          <h2 class="league-teams-title">Equipes participantes</h2>
+          <div class="league-teams-list">
+            <div class="league-teams-list-item">
+              <h3 class="league-teams-list-item-title">Equipes invitées</h3>
+              <div class="league-teams-list-item-teams">
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+              </div>
+            </div>
+
+            <div class="league-teams-list-item">
+              <h3 class="league-teams-list-item-title">Equipes qualifiées</h3>
+              <div class="league-teams-list-item-teams">
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="league-teams-list-item">
-          <h3 class="league-teams-list-item-title">Equipes qualifiées</h3>
-          <div class="league-teams-list-item-teams">
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-          </div>
+        <div class="league-swissrounds">
+          <h2 class="league-swissrounds-title">Classement</h2>
+          <SwissRounds />
         </div>
       </div>
-    </div>
-
-    <div class="league-swissrounds">
-      <h2 class="league-swissrounds-title">Stage 2</h2>
-      <SwissRounds />
-    </div>
+      <div v-else-if="activeIndex === 2">
+        <h2>📞 Contact</h2>
+        <p>Contactez-nous via email ou téléphone.</p>
+      </div>
+    </Tabs>
 
     <div class="league-streamers">
       <h2 class="league-streamers-title">Stream & Casteurs officiels</h2>
@@ -215,6 +229,12 @@
             }
           }
         }
+      }
+    }
+
+    &-stages {
+      &-container {
+        @apply flex flex-col gap-6;
       }
     }
 

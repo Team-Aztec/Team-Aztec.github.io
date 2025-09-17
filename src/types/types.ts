@@ -29,23 +29,23 @@ export interface LeagueSwissRound {
   matchs: {
     round1?: {
       name: string
-      win: boolean
+      win?: boolean
     }
     round2?: {
       name: string
-      win: boolean
+      win?: boolean
     }
     round3?: {
       name: string
-      win: boolean
+      win?: boolean
     }
     round4?: {
       name: string
-      win: boolean
+      win?: boolean
     }
     round5?: {
       name: string
-      win: boolean
+      win?: boolean
     }
   }
 }

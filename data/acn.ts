@@ -69,22 +69,33 @@ export const teams = [
   },
 ]
 
+// {
+//   name: 'NAVI MOUSSE',
+//   score: '0-0',
+//   matchs: {
+//     round1: {
+//       name: 'AIGRIPEEK',
+//       win: true,
+//     },
+//     round2: {
+//       name: 'APERO',
+//       win: false,
+//     },
+//     round3: {
+//       name: 'ArobaseGG',
+//       win: true,
+//     },
+//   },
+// },
+
 export const acnSwissRounds = [
   {
     name: 'NAVI MOUSSE',
-    score: '2-1',
+    score: '0-0',
     matchs: {
       round1: {
-        name: 'AIGRIPEEK',
-        win: true,
-      },
-      round2: {
-        name: 'APERO',
-        win: false,
-      },
-      round3: {
-        name: 'ArobaseGG',
-        win: true,
+        name: '',
+        win: null,
       },
     },
   },
@@ -238,4 +249,4 @@ export const acnSwissRounds = [
       },
     },
   },
-] as LeagueSwissRound[]
+] as any[]
