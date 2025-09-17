@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import SwissRounds from '../components/formats/SwissRounds.vue'
+  // import SwissRounds from '../components/formats/SwissRounds.vue'
   import Tabs from '../components/ui/Tabs.vue'
 
   import { useHead } from '@unhead/vue'

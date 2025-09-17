@@ -1,5 +1,3 @@
-import { LeagueSwissRound } from 'src/types/types'
-
 //////////////////////////////////////// Matchs
 
 export const teams = [
