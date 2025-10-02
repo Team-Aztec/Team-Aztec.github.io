@@ -99,34 +99,18 @@
         <p>Contactez-nous via email ou téléphone.</p>
       </div>
     </Tabs>
-
-    <div class="league-streamers">
-      <h2 class="league-streamers-title">Stream & Casteurs officiels</h2>
+    
+    <div class="league-footer">
+      <div class="league-streamers">
+      <h2 class="league-streamers-title">Stream officiel</h2>
 
       <div class="league-streamers-list">
         <div class="league-streamers-list-card">
-          <img src="@/assets/images/people/wolfound.jpg" :alt="$t('app.pages.organisation.team.wolfound.name')" />
+          <img src="@/assets/images/acn.png" :alt="'Aztec France ACN'" />
           <div class="league-streamers-list-card-info">
-            <span class="league-streamers-list-card-info-name">CasterKRL</span>
-            <a class="league-streamers-list-card-info-link" href="https://www.twitch.tv/casterkrl" target="_blank">
-              twitch.tv/casterkrl
-            </a>
-          </div>
-        </div>
-        <div class="league-streamers-list-card">
-          <img src="@/assets/images/people/wolfound.jpg" :alt="$t('app.pages.organisation.team.wolfound.name')" />
-          <div class="league-streamers-list-card-info">
-            <span class="league-streamers-list-card-info-name">CasterKRL</span>
-            <a class="league-streamers-list-card-info-link" href="https://www.twitch.tv/casterkrl" target="_blank">
-              twitch.tv/casterkrl
-            </a>
-          </div> </div
-        ><div class="league-streamers-list-card">
-          <img src="@/assets/images/people/wolfound.jpg" :alt="$t('app.pages.organisation.team.wolfound.name')" />
-          <div class="league-streamers-list-card-info">
-            <span class="league-streamers-list-card-info-name">CasterKRL</span>
-            <a class="league-streamers-list-card-info-link" href="https://www.twitch.tv/casterkrl" target="_blank">
-              twitch.tv/casterkrl
+            <span class="league-streamers-list-card-info-name">Aztec_fr</span>
+            <a class="league-streamers-list-card-info-link" href="https://www.twitch.tv/aztec_fr" target="_blank">
+              twitch.tv/aztec_fr
             </a>
           </div>
         </div>
@@ -137,14 +121,14 @@
       <h2 class="league-partners-title">Notre partenaire</h2>
 
       <div class="league-partners-list">
-        <img class="league-partners-list-item" src="@/assets/sponsors/skinport.png" alt="Skinport" title="Skinport" />
         <img
           class="league-partners-list-item"
-          src="@/assets/images/pause-stat.webp"
-          alt="Data analyst Counter-Strike 2 : Pause State"
-          title="Data analyst Counter-Strike 2 : Pause State"
+          src="@/assets/acn/INUI_Gaming__logo_white-and-cyan.svg"
+          alt="INUI Gaming"
+          title="INUI Gaming"
         />
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -296,6 +280,8 @@
     }
 
     &-streamers {
+@apply flex-1;
+
       &-title {
         @apply text-center relative font-bold text-3xl mb-6;
 
@@ -315,9 +301,6 @@
       }
 
       &-list {
-        @apply grid grid-cols-1 gap-4
-        tab-m:grid-cols-3;
-
         &-card {
           @apply flex flex-col gap-4 items-center border rounded border-main-color;
 
@@ -342,6 +325,8 @@
     }
 
     &-partners {
+      @apply flex-1;
+
       &-title {
         @apply text-center relative font-bold text-3xl mb-6;
 
@@ -361,13 +346,13 @@
       }
 
       &-list {
-        @apply flex flex-col gap-8 justify-center items-center
-        tab-m:flex-row;
-
-        &-item {
-          @apply flex-1 max-h-64 max-w-64;
-        }
+        @apply flex h-full justify-center items-center;
       }
+    }
+
+    &-footer {
+      @apply flex flex-col gap-6
+      tab-m:flex-row;
     }
   }
 </style>
