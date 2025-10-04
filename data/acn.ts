@@ -2,68 +2,68 @@
 
 export const teams = [
   {
-    name: 'NAVI MOUSSE',
-    logo: 'navimousse_logo.png',
+    name: '3DMAX INUI',
+    logo: '3DMAX_INUI.jpg',
   },
   {
-    name: 'AIGRIPEEK',
-    logo: 'aigripeek_logo.jpg',
+    name: 'Adepts',
+    logo: 'Adepts.png',
   },
   {
-    name: 'APERO',
-    logo: 'apero_logo.png',
+    name: 'CITRON',
+    logo: 'CITRON.png',
   },
   {
-    name: 'GENESIUM',
-    logo: 'genesium_logo.jpg',
+    name: 'ex-Atrivm',
+    logo: 'ex-Atrivm.png',
   },
   {
-    name: 'ArobaseGG',
-    logo: 'arobase_logo.png',
+    name: 'NEMESIS',
+    logo: 'NEMESIS.png',
   },
   {
-    name: 'CYBER ATHLETES',
-    logo: 'cyber-athletes_logo.png',
+    name: 'NueveCorp',
+    logo: 'NueveCorp.png',
   },
   {
     name: 'OldFriendsClub',
-    logo: 'oldfriendsclub_logo.png',
+    logo: 'OFC.png',
   },
   {
-    name: 'Trident Corp',
-    logo: 'trident-corp_logo.png',
+    name: 'Project Conqueros',
+    logo: 'PCS.png',
   },
   {
-    name: 'Paidactors',
-    logo: 'paidactors_logo.jpg',
+    name: 'Grand Chelem',
+    logo: '',
   },
   {
-    name: 'Mix&Co',
-    logo: 'mix-&-co_logo.jpg',
+    name: 'Incoming',
+    logo: '',
   },
   {
-    name: 'BULLDOZER',
-    logo: 'bulldozer_logo.png',
+    name: 'Incoming',
+    logo: '',
   },
   {
-    name: 'GDMT',
-    logo: 'gdmt_logo.png',
+    name: 'Incoming',
+    logo: '',
   },
   {
-    name: 'CAT&DOGPEEK',
-    logo: 'cat-dogpeek_logo.png',
+    name: 'Incoming',
+    logo: '',
   },
   {
-    name: 'Burger Flippers',
-    logo: 'burger-flippers_logo.png',
+    name: 'Incoming',
+    logo: '',
   },
   {
-    name: 'ABSTRACT',
-    logo: 'abstract_logo.jpg',
+    name: 'Incoming',
+    logo: '',
   },
   {
-    name: 'z pour avancer',
-    logo: 'z-pour-avancer_logo.jpg',
+    name: 'Incoming',
+    logo: 'Incoming',
   },
 ]
 
@@ -88,7 +88,7 @@ export const teams = [
 
 export const acnSwissRounds = [
   {
-    name: 'NAVI MOUSSE',
+    name: '3DMAX INUI',
     score: '0-0',
     matchs: {
       round1: {
@@ -98,7 +98,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'AIGRIPEEK',
+    name: 'Adepts',
     score: '0-0',
     matchs: {
       round1: {
@@ -108,7 +108,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'APERO',
+    name: 'CITRON',
     score: '0-0',
     matchs: {
       round1: {
@@ -118,7 +118,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'ArobaseGG',
+    name: 'ex-Atrivm',
     score: '0-0',
     matchs: {
       round1: {
@@ -128,7 +128,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'GENESIUM',
+    name: 'NEMESIS',
     score: '0-0',
     matchs: {
       round1: {
@@ -138,7 +138,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'CYBER ATHLETES',
+    name: 'NueveCorp',
     score: '0-0',
     matchs: {
       round1: {
@@ -158,7 +158,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Trident Corp',
+    name: 'Project Conqueros',
     score: '0-0',
     matchs: {
       round1: {
@@ -168,7 +168,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Paidactors',
+    name: 'Grand Chelem',
     score: '0-0',
     matchs: {
       round1: {
@@ -178,7 +178,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Mix&Co',
+    name: 'Incoming',
     score: '0-0',
     matchs: {
       round1: {
@@ -188,7 +188,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'BULLDOZER',
+    name: 'Incoming',
     score: '0-0',
     matchs: {
       round1: {
@@ -198,7 +198,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'GDMT',
+    name: 'Incoming',
     score: '0-0',
     matchs: {
       round1: {
@@ -208,7 +208,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'CAT&DOGPEEK',
+    name: 'Incoming',
     score: '0-0',
     matchs: {
       round1: {
@@ -218,7 +218,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Burger Flippers',
+    name: 'Incoming',
     score: '0-0',
     matchs: {
       round1: {
@@ -228,7 +228,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'ABSTRACT',
+    name: 'Incoming',
     score: '0-0',
     matchs: {
       round1: {
@@ -238,7 +238,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'z pour avancer',
+    name: 'Incoming',
     score: '0-0',
     matchs: {
       round1: {

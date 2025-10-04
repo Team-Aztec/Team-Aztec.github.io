@@ -1,13 +1,12 @@
 <script setup lang="ts">
-  // import SwissRounds from '../components/formats/SwissRounds.vue'
+  import SwissRounds from '../components/formats/SwissRounds.vue'
   import Tabs from '../components/ui/Tabs.vue'
 
   import { useHead } from '@unhead/vue'
   import { useI18n } from 'vue-i18n'
 
   const { t } = useI18n()
-  const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }]
-  // const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }, { label: 'Stage 3' }]
+  const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }, { label: 'Stage 3' }]
 
   useHead({
     title: t('app.seo.pages.league.title'),
@@ -57,46 +56,45 @@
       </div>
       <div v-else-if="activeIndex === 1" class="league-stages-container">
         <div class="league-teams">
-          <!-- <h2 class="league-teams-title">Equipes participantes</h2> -->
+          <h2 class="league-teams-title">Equipes participantes</h2>
           <div class="league-teams-list">
             <div class="league-teams-list-item">
               <h3 class="league-teams-list-item-title">Equipes invitées</h3>
               <div class="league-teams-list-item-teams">
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/ex-Atrivm.png" alt="ex-Atrivm logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/NEMESIS.jpg" alt="NEMESIS logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/Adepts.png" alt="Adepts logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OFC.png" alt="OFC logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
               </div>
             </div>
 
-            <!-- <div class="league-teams-list-item">
+            <div class="league-teams-list-item">
               <h3 class="league-teams-list-item-title">Equipes qualifiées</h3>
               <div class="league-teams-list-item-teams">
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/CITRON.png" alt="CITRON logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/NueveCorp.png" alt="NueveCorp logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/PCS.png" alt="PCS logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="grand chelem logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
 
-        <!-- <div class="league-swissrounds">
+        <div class="league-swissrounds">
           <h2 class="league-swissrounds-title">Classement</h2>
           <SwissRounds />
-        </div> -->
+        </div>
       </div>
       <div v-else-if="activeIndex === 2">
-        <h2>📞 Contact</h2>
-        <p>Contactez-nous via email ou téléphone.</p>
+        <p>Bracket à venir</p>
       </div>
     </Tabs>
     
@@ -254,6 +252,10 @@
 
           &-teams {
             @apply grid grid-cols-3 gap-4 border rounded border-main-color;
+
+            &-logo {
+              @apply w-[150px] h-[150px];
+            }
           }
         }
       }
