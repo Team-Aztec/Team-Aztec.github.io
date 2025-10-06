@@ -38,32 +38,32 @@ export const teams = [
     logo: '',
   },
   {
-    name: 'Incoming',
+    name: 'HSMOD',
+    logo: 'HSMOD.png',
+  },
+  {
+    name: 'MIX2LEGEND',
+    logo: 'MIX2LEGEND.jpg',
+  },
+  {
+    name: 'FULLSHOCK',
     logo: '',
   },
   {
-    name: 'Incoming',
+    name: 'aAa',
     logo: '',
   },
   {
-    name: 'Incoming',
+    name: 'Outcast',
     logo: '',
   },
   {
-    name: 'Incoming',
+    name: 'Owned Esport',
     logo: '',
   },
   {
-    name: 'Incoming',
+    name: 'Kova Aca',
     logo: '',
-  },
-  {
-    name: 'Incoming',
-    logo: '',
-  },
-  {
-    name: 'Incoming',
-    logo: 'Incoming',
   },
 ]
 
@@ -178,7 +178,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Incoming',
+    name: 'MIX2LEGEND',
     score: '0-0',
     matchs: {
       round1: {
@@ -188,7 +188,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Incoming',
+    name: 'HSMOD',
     score: '0-0',
     matchs: {
       round1: {
@@ -198,7 +198,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Incoming',
+    name: 'FULLSHOCK',
     score: '0-0',
     matchs: {
       round1: {
@@ -208,7 +208,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Incoming',
+    name: 'aAa',
     score: '0-0',
     matchs: {
       round1: {
@@ -218,7 +218,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Incoming',
+    name: 'Outcast',
     score: '0-0',
     matchs: {
       round1: {
@@ -228,7 +228,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Incoming',
+    name: 'Owned Esport',
     score: '0-0',
     matchs: {
       round1: {
@@ -238,7 +238,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Incoming',
+    name: 'Kova Aca',
     score: '0-0',
     matchs: {
       round1: {

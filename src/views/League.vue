@@ -67,8 +67,8 @@
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/Adepts.png" alt="Adepts logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OFC.png" alt="OFC logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="aAa logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="FULLSHOCK logo" />
               </div>
             </div>
 
@@ -79,10 +79,10 @@
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/NueveCorp.png" alt="NueveCorp logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/PCS.png" alt="PCS logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="grand chelem logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/MIX2LEGEND.jpg" alt="MIX2LEGEND logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/HSMOD.png" alt="HSMOD logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="Owned Esport logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="Kova Aca logo" />
               </div>
             </div>
           </div>
@@ -251,10 +251,12 @@
           @apply flex flex-col flex-1 text-center gap-2;
 
           &-teams {
-            @apply grid grid-cols-3 gap-4 border rounded border-main-color;
+            @apply grid grid-cols-1 gap-4 border rounded border-main-color p-2
+            mob-m:grid-cols-2
+            tab-m:grid-cols-3;
 
             &-logo {
-              @apply w-[150px] h-[150px];
+              @apply w-[150px] h-[150px] mx-auto;
             }
           }
         }
