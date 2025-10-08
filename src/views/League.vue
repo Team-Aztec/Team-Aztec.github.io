@@ -66,9 +66,9 @@
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/NEMESIS.jpg" alt="NEMESIS logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/Adepts.png" alt="Adepts logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OFC.png" alt="OFC logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="aAa logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="FULLSHOCK logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/fullshock.webp" alt="FULLSHOCK logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="Outcast logo" />
               </div>
             </div>
 
@@ -81,8 +81,8 @@
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="grand chelem logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/MIX2LEGEND.jpg" alt="MIX2LEGEND logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/HSMOD.png" alt="HSMOD logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="Owned Esport logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="Kova Aca logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/owned.webp" alt="Owned Esport logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/kova.jpg" alt="Kova Aca logo" />
               </div>
             </div>
           </div>
@@ -329,7 +329,7 @@
     }
 
     &-partners {
-      @apply flex-1;
+      @apply flex flex-col flex-1;
 
       &-title {
         @apply text-center relative font-bold text-3xl mb-6;
@@ -350,7 +350,7 @@
       }
 
       &-list {
-        @apply flex h-full justify-center items-center;
+        @apply flex flex-1 justify-center items-center;
       }
     }
 

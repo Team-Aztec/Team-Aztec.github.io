@@ -47,7 +47,7 @@ export const teams = [
   },
   {
     name: 'FULLSHOCK',
-    logo: '',
+    logo: 'fullshock.webp',
   },
   {
     name: 'aAa',
@@ -59,11 +59,11 @@ export const teams = [
   },
   {
     name: 'Owned Esport',
-    logo: '',
+    logo: 'owned.webp',
   },
   {
     name: 'Kova Aca',
-    logo: '',
+    logo: 'kova.jpg',
   },
 ]
 
