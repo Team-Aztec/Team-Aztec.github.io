@@ -3,7 +3,7 @@
 export const teams = [
   {
     name: '3DMAX INUI',
-    logo: '3DMAX_INUI.jpg',
+    logo: '3DMAX_INUI.png',
   },
   {
     name: 'Adepts',
@@ -11,7 +11,7 @@ export const teams = [
   },
   {
     name: 'CITRON',
-    logo: 'CITRON.png',
+    logo: 'CIRTON.png',
   },
   {
     name: 'ex-Atrivm',
@@ -50,20 +50,20 @@ export const teams = [
     logo: 'fullshock.webp',
   },
   {
-    name: 'aAa',
-    logo: '',
+    name: 'TOP12 Team',
+    logo: 'AAA.png',
   },
   {
-    name: 'Outcast',
-    logo: '',
+    name: 'Oldboys',
+    logo: 'OLDBOYS.png',
   },
   {
     name: 'Owned Esport',
-    logo: 'owned.webp',
+    logo: 'OWNED-ESPORT.png',
   },
   {
     name: 'Kova Aca',
-    logo: 'kova.jpg',
+    logo: 'KOVA.png',
   },
 ]
 
@@ -208,7 +208,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'aAa',
+    name: 'TOP12 Team',
     score: '0-0',
     matchs: {
       round1: {
@@ -218,7 +218,7 @@ export const acnSwissRounds = [
     },
   },
   {
-    name: 'Outcast',
+    name: 'Oldboys',
     score: '0-0',
     matchs: {
       round1: {

@@ -6,7 +6,8 @@
   import { useI18n } from 'vue-i18n'
 
   const { t } = useI18n()
-  const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }, { label: 'Stage 3' }]
+  const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }]
+  //const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }, { label: 'Stage 3' }]
 
   useHead({
     title: t('app.seo.pages.league.title'),
@@ -51,8 +52,21 @@
     </div>
 
     <Tabs id="league-stages" v-slot="{ activeIndex }" :tabs="tabList" :defaultIndex="0">
-      <div v-if="activeIndex === 0">
-        <p>Bracket à venir</p>
+      <div v-if="activeIndex === 0" class="league-stages-stage1">
+        <div class="league-stages-stage1-item">
+          <h3 class="league-stages-stage1-item-title">Qualifier 1</h3>
+          <img
+            src="@/assets/acn/qualif1.jpg"
+            alt="Bracket qualifier 1"
+          />
+        </div>
+        <div class="league-stages-stage1-item">
+          <h3 class="league-stages-stage1-item-title">Qualifier 2</h3>
+          <img
+            src="@/assets/acn/qualif2.jpg"
+            alt="Bracket qualifier 2"
+          />
+        </div>
       </div>
       <div v-else-if="activeIndex === 1" class="league-stages-container">
         <div class="league-teams">
@@ -61,28 +75,28 @@
             <div class="league-teams-list-item">
               <h3 class="league-teams-list-item-title">Equipes invitées</h3>
               <div class="league-teams-list-item-teams">
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.jpg" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.png" alt="3Dmax logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/ex-Atrivm.png" alt="ex-Atrivm logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/NEMESIS.jpg" alt="NEMESIS logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/Adepts.png" alt="Adepts logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OFC.png" alt="OFC logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="aAa logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/AAA.png" alt="TOP 12 logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/fullshock.webp" alt="FULLSHOCK logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="Outcast logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OLDBOYS.png" alt="Oldboys logo" />
               </div>
             </div>
 
             <div class="league-teams-list-item">
               <h3 class="league-teams-list-item-title">Equipes qualifiées</h3>
               <div class="league-teams-list-item-teams">
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/CITRON.png" alt="CITRON logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/CIRTON.png" alt="CIRTON logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/NueveCorp.png" alt="NueveCorp logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/PCS.png" alt="PCS logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="grand chelem logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/MIX2LEGEND.jpg" alt="MIX2LEGEND logo" />
                 <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/HSMOD.png" alt="HSMOD logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/owned.webp" alt="Owned Esport logo" />
-                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/kova.jpg" alt="Kova Aca logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OWNED-esport.png" alt="Owned Esport logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/KOVA.png" alt="Kova Aca logo" />
               </div>
             </div>
           </div>
@@ -217,6 +231,11 @@
     &-stages {
       &-container {
         @apply flex flex-col gap-6;
+      }
+
+      &-stage1 {
+        @apply grid grid-cols-1 gap-4 text-center
+        mob-m:grid-cols-2;
       }
     }
 
