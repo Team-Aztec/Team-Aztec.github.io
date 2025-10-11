@@ -30,16 +30,12 @@
 
         <div class="footer-content-sponsors">
           <div class="footer-content-sponsors-items">
-            <a style="--bg: #" href="https://skinport.com/r/aztec" target="_blank">
+            <!-- <a style="--bg: #" href="https://skinport.com/r/aztec" target="_blank">
               <img src="@/assets/sponsors/skinport.png" alt="Skinport" title="Skinport" />
-            </a>
+            </a> -->
 
-            <a style="--bg: #" href="https://www.pause-stat.pro/" target="_blank">
-              <img
-                src="@/assets/images/pause-stat.webp"
-                alt="Data analyst Counter-Strike 2 : Pause State"
-                title="Data analyst Counter-Strike 2 : Pause State"
-              />
+            <a style="--bg: #" href="https://inui.com/" target="_blank">
+              <img src="@/assets/acn/INUI_Gaming__logo_white-and-cyan.svg" alt="INUI Gaming" title="INUI Gaming" />
             </a>
 
             <!-- <a style="--bg: #" href="https://jeydrop.com/" target="_blank">

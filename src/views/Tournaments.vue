@@ -64,17 +64,17 @@
             :data-target="historyList.length + tournaments.future.length + tournaments.actual.length"
             >0</span
           >
-          <span class="text-2xl w-1/2">Tournois organisés</span>
+          <span class="text-2xl w-1/2">{{ $t('app.pages.tournaments.descriptions.tournaments.label') }}</span>
         </p>
 
         <p class="tournaments-description-stats-item">
           <span class="tournaments-description-stats-item-number counter" data-target="342">0</span>
-          <span class="text-2xl w-1/2">Équipes participantes</span>
+          <span class="text-2xl w-1/2">{{ $t('app.pages.tournaments.descriptions.teams.label') }}</span>
         </p>
 
         <p class="tournaments-description-stats-item">
           <span class="tournaments-description-stats-item-number counter" data-target="13485">0</span>
-          <span class="text-2xl w-1/2">de cashprize mis en jeu</span>
+          <span class="text-2xl w-1/2">{{ $t('app.pages.tournaments.descriptions.cashprize.label') }}</span>
         </p>
       </div>
 

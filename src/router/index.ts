@@ -8,8 +8,6 @@ import Organisation from '@/views/Organisation.vue'
 import Tournaments from '@/views/Tournaments.vue'
 import League from '@/views/League.vue'
 
-const DEFAULT_TITLE = 'Aztec France'
-
 const routes = [
   {
     path: '/',
@@ -45,9 +43,6 @@ const routes = [
     path: '/aztec-circuit-national',
     name: 'Aztec Circuit National',
     component: League,
-    meta: {
-      title: 'Aztec Circuit National -',
-    },
   },
   {
     path: '/:catchAll(.*)',
@@ -73,12 +68,6 @@ const router = createRouter({
       return { top: 0, behavior: 'smooth' }
     }
   },
-})
-
-router.beforeEach((_to, _from, next) => {
-  next()
-
-  document.title = `${_to.meta.title ?? ''}${DEFAULT_TITLE}`
 })
 
 export default router

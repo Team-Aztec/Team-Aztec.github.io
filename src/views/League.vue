@@ -1,4 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import SwissRounds from '../components/formats/SwissRounds.vue'
+  import Tabs from '../components/ui/Tabs.vue'
+
+  import { useHead } from '@unhead/vue'
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
+  const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }]
+  //const tabList = [{ label: 'Stage 1' }, { label: 'Stage 2' }, { label: 'Stage 3' }]
+
+  useHead({
+    title: t('app.seo.pages.league.title'),
+  })
+</script>
 
 <template>
   <div class="league aztec-container">
@@ -12,14 +26,14 @@
       </span>
 
       <div class="league-description-actions">
-        <a class="league-description-actions-link" href="#league-teams"> Voir les équipes</a>
+        <a class="league-description-actions-link" href="#league-stages"> Voir les étapes</a>
         <a class="league-description-actions-link" href="https://www.twitch.tv/aztec_fr" target="_blank"> Regarder en direct </a>
       </div>
     </div>
 
     <div class="league-documents">
       <div class="league-documents-rules">
-        <a href="#" class="league-documents-rules-pdf">
+        <a href="https://playaztec.com/acn/reglement.pdf" target="_blank" class="league-documents-rules-pdf">
           <span class="league-documents-rules-pdf-text">
             <i class="fa-solid fa-file"></i>
             RÈGLEMENT COMPLET (PDF)
@@ -27,7 +41,7 @@
           <span class="league-documents-rules-pdf-arrow">›</span>
         </a>
 
-        <a href="#" class="league-documents-rules-pdf">
+        <a href="https://playaztec.com/acn/reglement.pdf" target="_blank" class="league-documents-rules-pdf">
           <span class="league-documents-rules-pdf-text">
             <i class="fa-solid fa-file"></i>
             Format et Système de sélection
@@ -37,62 +51,78 @@
       </div>
     </div>
 
-    <div id="league-teams" class="league-teams">
-      <h2 class="league-teams-title">Equipes participantes</h2>
-      <div class="league-teams-list">
-        <div class="league-teams-list-item">
-          <h3 class="league-teams-list-item-title">Division 1</h3>
-          <div class="league-teams-list-item-teams">
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-          </div>
+    <Tabs id="league-stages" v-slot="{ activeIndex }" :tabs="tabList" :defaultIndex="0">
+      <div v-if="activeIndex === 0" class="league-stages-stage1">
+        <div class="league-stages-stage1-item">
+          <h3 class="league-stages-stage1-item-title">Qualifier 1</h3>
+          <img
+            src="@/assets/acn/qualif1.jpg"
+            alt="Bracket qualifier 1"
+          />
         </div>
-
-        <div class="league-teams-list-item">
-          <h3 class="league-teams-list-item-title">Division 2</h3>
-          <div class="league-teams-list-item-teams">
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-            <img class="league-teams-list-item-teams-logo" src="@/assets/history/3dmax.png" alt="3Dmax logo" />
-          </div>
+        <div class="league-stages-stage1-item">
+          <h3 class="league-stages-stage1-item-title">Qualifier 2</h3>
+          <img
+            src="@/assets/acn/qualif2.jpg"
+            alt="Bracket qualifier 2"
+          />
         </div>
       </div>
-    </div>
+      <div v-else-if="activeIndex === 1" class="league-stages-container">
+        <div class="league-teams">
+          <h2 class="league-teams-title">Equipes participantes</h2>
+          <div class="league-teams-list">
+            <div class="league-teams-list-item">
+              <h3 class="league-teams-list-item-title">Equipes invitées</h3>
+              <div class="league-teams-list-item-teams">
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/3DMAX_INUI.png" alt="3Dmax logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/ex-Atrivm.png" alt="ex-Atrivm logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/NEMESIS.jpg" alt="NEMESIS logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/Adepts.png" alt="Adepts logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OFC.png" alt="OFC logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/AAA.png" alt="TOP 12 logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/fullshock.webp" alt="FULLSHOCK logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OLDBOYS.png" alt="Oldboys logo" />
+              </div>
+            </div>
 
-    <div class="league-streamers">
-      <h2 class="league-streamers-title">Stream & Casteurs officiels</h2>
+            <div class="league-teams-list-item">
+              <h3 class="league-teams-list-item-title">Equipes qualifiées</h3>
+              <div class="league-teams-list-item-teams">
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/CIRTON.png" alt="CIRTON logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/NueveCorp.png" alt="NueveCorp logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/PCS.png" alt="PCS logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/default_team_white.svg" alt="grand chelem logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/MIX2LEGEND.jpg" alt="MIX2LEGEND logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/HSMOD.png" alt="HSMOD logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/OWNED-esport.png" alt="Owned Esport logo" />
+                <img class="league-teams-list-item-teams-logo" src="@/assets/swissrounds/KOVA.png" alt="Kova Aca logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="league-swissrounds">
+          <h2 class="league-swissrounds-title">Classement</h2>
+          <SwissRounds />
+        </div>
+      </div>
+      <div v-else-if="activeIndex === 2">
+        <p>Bracket à venir</p>
+      </div>
+    </Tabs>
+    
+    <div class="league-footer">
+      <div class="league-streamers">
+      <h2 class="league-streamers-title">Stream officiel</h2>
 
       <div class="league-streamers-list">
         <div class="league-streamers-list-card">
-          <img src="@/assets/images/people/wolfound.jpg" :alt="$t('app.pages.organisation.team.wolfound.name')" />
+          <img src="@/assets/images/acn.png" :alt="'Aztec France ACN'" />
           <div class="league-streamers-list-card-info">
-            <span class="league-streamers-list-card-info-name">CasterKRL</span>
-            <a class="league-streamers-list-card-info-link" href="https://www.twitch.tv/casterkrl" target="_blank">
-              twitch.tv/casterkrl
-            </a>
-          </div>
-        </div>
-        <div class="league-streamers-list-card">
-          <img src="@/assets/images/people/wolfound.jpg" :alt="$t('app.pages.organisation.team.wolfound.name')" />
-          <div class="league-streamers-list-card-info">
-            <span class="league-streamers-list-card-info-name">CasterKRL</span>
-            <a class="league-streamers-list-card-info-link" href="https://www.twitch.tv/casterkrl" target="_blank">
-              twitch.tv/casterkrl
-            </a>
-          </div> </div
-        ><div class="league-streamers-list-card">
-          <img src="@/assets/images/people/wolfound.jpg" :alt="$t('app.pages.organisation.team.wolfound.name')" />
-          <div class="league-streamers-list-card-info">
-            <span class="league-streamers-list-card-info-name">CasterKRL</span>
-            <a class="league-streamers-list-card-info-link" href="https://www.twitch.tv/casterkrl" target="_blank">
-              twitch.tv/casterkrl
+            <span class="league-streamers-list-card-info-name">Aztec_fr</span>
+            <a class="league-streamers-list-card-info-link" href="https://www.twitch.tv/aztec_fr" target="_blank">
+              twitch.tv/aztec_fr
             </a>
           </div>
         </div>
@@ -100,17 +130,17 @@
     </div>
 
     <div class="league-partners">
-      <h2 class="league-partners-title">Nos partenaires</h2>
+      <h2 class="league-partners-title">Notre partenaire</h2>
 
       <div class="league-partners-list">
-        <img class="league-partners-list-item" src="@/assets/sponsors/skinport.png" alt="Skinport" title="Skinport" />
         <img
           class="league-partners-list-item"
-          src="@/assets/images/pause-stat.webp"
-          alt="Data analyst Counter-Strike 2 : Pause State"
-          title="Data analyst Counter-Strike 2 : Pause State"
+          src="@/assets/acn/INUI_Gaming__logo_white-and-cyan.svg"
+          alt="INUI Gaming"
+          title="INUI Gaming"
         />
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -139,7 +169,7 @@
 
     &-documents {
       &-rules {
-        @apply flex flex-col px-8 gap-6;
+        @apply flex flex-col gap-6;
 
         &-pdf {
           @apply flex items-center justify-between font-bold text-base border border-main-color py-3 px-6 rounded;
@@ -149,10 +179,6 @@
           &:hover,
           &:focus {
             @apply bg-black text-main-color;
-
-            .league-documents-rules-pdf-arrow {
-              @apply transform rotate-90;
-            }
           }
 
           &-arrow {
@@ -202,6 +228,17 @@
       }
     }
 
+    &-stages {
+      &-container {
+        @apply flex flex-col gap-6;
+      }
+
+      &-stage1 {
+        @apply grid grid-cols-1 gap-4 text-center
+        mob-m:grid-cols-2;
+      }
+    }
+
     &-teams {
       &-title {
         @apply text-center relative font-bold text-3xl mb-4;
@@ -233,13 +270,41 @@
           @apply flex flex-col flex-1 text-center gap-2;
 
           &-teams {
-            @apply grid grid-cols-3 gap-4 border rounded border-main-color;
+            @apply grid grid-cols-1 gap-4 border rounded border-main-color p-2
+            mob-m:grid-cols-2
+            tab-m:grid-cols-3;
+
+            &-logo {
+              @apply w-[150px] h-[150px] mx-auto;
+            }
           }
         }
       }
     }
 
+    &-swissrounds {
+      &-title {
+        @apply text-center relative font-bold text-3xl mb-6;
+
+        &::after {
+          background-color: #f6a429;
+          bottom: 0;
+          content: '';
+          display: block;
+          height: 0.1875rem;
+          margin-top: 0.5rem;
+          width: 8rem;
+          left: 0;
+          margin-left: auto;
+          margin-right: auto;
+          right: 0;
+        }
+      }
+    }
+
     &-streamers {
+@apply flex-1;
+
       &-title {
         @apply text-center relative font-bold text-3xl mb-6;
 
@@ -259,8 +324,6 @@
       }
 
       &-list {
-        @apply grid grid-cols-3 gap-4;
-
         &-card {
           @apply flex flex-col gap-4 items-center border rounded border-main-color;
 
@@ -285,6 +348,8 @@
     }
 
     &-partners {
+      @apply flex flex-col flex-1;
+
       &-title {
         @apply text-center relative font-bold text-3xl mb-6;
 
@@ -304,13 +369,13 @@
       }
 
       &-list {
-        @apply flex flex-col gap-8 justify-center items-center
-        tab-m:flex-row;
-
-        &-item {
-          @apply flex-1 max-h-64 max-w-64;
-        }
+        @apply flex flex-1 justify-center items-center;
       }
+    }
+
+    &-footer {
+      @apply flex flex-col gap-6
+      tab-m:flex-row;
     }
   }
 </style>

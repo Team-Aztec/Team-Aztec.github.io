@@ -22,3 +22,30 @@ export interface TournamentPage {
   actual: Tournament[]
   future: Tournament[]
 }
+
+export interface LeagueSwissRound {
+  name: string
+  score: string
+  matchs: {
+    round1?: {
+      name: string
+      win?: boolean
+    }
+    round2?: {
+      name: string
+      win?: boolean
+    }
+    round3?: {
+      name: string
+      win?: boolean
+    }
+    round4?: {
+      name: string
+      win?: boolean
+    }
+    round5?: {
+      name: string
+      win?: boolean
+    }
+  }
+}

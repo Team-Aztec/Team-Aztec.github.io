@@ -7,8 +7,15 @@
   import 'swiper/css'
   import 'swiper/css/navigation'
   import 'swiper/css/pagination'
+  import { useHead } from '@unhead/vue'
+  import { useI18n } from 'vue-i18n'
 
+  const { t } = useI18n()
   const modules = [Pagination, Navigation]
+
+  useHead({
+    title: t('app.seo.pages.organisation.title'),
+  })
 </script>
 
 <template>
